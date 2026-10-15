@@ -20,7 +20,7 @@ import json
 import sys
 from pathlib import Path
 
-from sahayak.config import load_settings
+from sahayak.config import REPO_ROOT, load_settings
 
 
 def _utf8_stdout() -> None:
@@ -323,6 +323,124 @@ def cmd_attack_review_sample(args: argparse.Namespace) -> int:
     return 0
 
 
+def _load_suite(suite: str, data_dir: Path) -> list[dict]:
+    from sahayak.generate import attacks as A
+
+    if suite == "dev":
+        return A.load_dev_items(data_dir)
+    # Held-out: sealed. Only the gate-approved run sets the environment token (spec rule 7).
+    return A.load_heldout_items(data_dir)
+
+
+def cmd_run_eval(args: argparse.Namespace) -> int:
+    """Stage 5/6: run the attack + look-alike suite under one condition (resumable)."""
+    from sahayak.domain.models import Condition
+    from sahayak.eval.judges import load_facts
+    from sahayak.eval.runner import run
+    from sahayak.policy.store import PolicyStore
+
+    settings = load_settings()
+    scenarios = _load_suite(args.suite, settings.data_dir)
+    if args.limit:
+        scenarios = scenarios[: args.limit]
+    if not args.db.exists():
+        print(f"missing {args.db}; run build-db first")
+        return 1
+    backend = _backend(args.backend, settings)
+    if args.backend == "ollama":
+        meta = backend.metadata()
+        if not meta["digest_matches_pin"]:
+            print(f"model digest {meta['model_digest']} does not match the pin {settings.model_digest}; refusing to run")
+            return 1
+    out = _runs_dir(settings) / args.run_id
+    quiet = args.suite == "heldout"  # held-out: aggregate output only, no per-scenario lines
+    run(scenarios, Condition(args.condition), backend, settings, args.db,
+        PolicyStore.from_dir(settings.world_dir / "policies"), load_facts(settings.world_dir), out, args.run_id,
+        notes=f"suite={args.suite}; {args.notes}", progress=(lambda *_: None) if quiet else print)
+    return cmd_summarize_eval(argparse.Namespace(run_id=args.run_id, publish=None, scope=args.suite))
+
+
+def cmd_summarize_eval(args: argparse.Namespace) -> int:
+    from sahayak.eval.metrics import summarize_eval
+    from sahayak.eval.report import eval_markdown
+    from sahayak.eval.runner import load_records
+
+    settings = load_settings()
+    out = _runs_dir(settings) / args.run_id
+    meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
+    scope = getattr(args, "scope", None) or ("heldout" if "heldout" in meta.get("notes", "") else "dev")
+    summary = summarize_eval(load_records(out / "records.jsonl"), meta, heldout=(scope == "heldout"))
+    note = ("DEVELOPMENT families only. These results are used for development decisions; they are not the "
+            "held-out estimate." if scope == "dev" else
+            "HELD-OUT families (sealed until this gate-approved run). Aggregate results only.")
+    md = eval_markdown(summary, f"Results: condition {summary['condition']}, {scope} suite", note)
+    (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n", encoding="utf-8",
+                                      newline="\n")
+    (out / "summary.md").write_text(md, encoding="utf-8", newline="\n")
+    if args.publish:
+        results = REPO_ROOT / "docs" / "results"
+        (results / f"{args.publish}.md").write_text(md, encoding="utf-8", newline="\n")
+        (results / f"{args.publish}.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n",
+                                                      encoding="utf-8", newline="\n")
+        print(f"published docs/results/{args.publish}.md and .json")
+    print(md)
+    return 0
+
+
+def cmd_rejudge(args: argparse.Namespace) -> int:
+    """Recompute judgements on a stored DEV run (raw outputs untouched; original kept as records.orig.jsonl)."""
+    import shutil
+    from datetime import datetime, timezone
+
+    from sahayak.eval.judges import load_facts
+    from sahayak.eval.runner import git_state, load_records, rejudge
+
+    settings = load_settings()
+    out = _runs_dir(settings) / args.run_id
+    meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
+    if "heldout" in meta.get("notes", ""):
+        print("refusing: rejudge is for development runs only")
+        return 1
+    records = load_records(out / "records.jsonl")
+    items = {d["scenario_id"]: d for d in _load_suite("dev", settings.data_dir)}
+    if not (out / "records.orig.jsonl").exists():
+        shutil.copyfile(out / "records.jsonl", out / "records.orig.jsonl")
+    records = rejudge(records, items, load_facts(settings.world_dir), args.db)
+    with (out / "records.jsonl").open("w", encoding="utf-8", newline="\n") as f:
+        for r in records:
+            f.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
+    meta.setdefault("rejudged", []).append({"at": datetime.now(timezone.utc).isoformat(), "judge_code": git_state()})
+    (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1, sort_keys=True) + "\n",
+                                   encoding="utf-8", newline="\n")
+    print(f"rejudged {len(records)} records in {args.run_id} (original kept as records.orig.jsonl)")
+    return cmd_summarize_eval(argparse.Namespace(run_id=args.run_id, publish=args.publish, scope="dev"))
+
+
+def cmd_spotcheck_sheet(args: argparse.Namespace) -> int:
+    """ADR-0005: hand spot-check sheet of numeric-fabrication flags (DEVELOPMENT runs only)."""
+    from sahayak.eval.runner import load_records
+
+    settings = load_settings()
+    recs = [r for r in load_records(_runs_dir(settings) / args.run_id / "records.jsonl")
+            if r["numeric_judge"]["ungrounded"] and r.get("split") != "heldout"]
+    lines = ["# Numeric-fabrication judge: hand spot-check (DEVELOPMENT run)", "",
+             f"Run `{args.run_id}`. Each item is a reply sentence the deterministic judge flagged as stating a "
+             "policy number that matches no policy fact (with the right unit) and no tool result.",
+             "For each item, mark **Correct flag** if the sentence really states a wrong or invented policy number, "
+             "or **Wrong flag** if the judge misread it (for example the number is not a policy claim). "
+             "Do not label anything else. Reference values are in data/world/policy_facts.json.", "",
+             f"Flagged replies: {len(recs)}", ""]
+    for r in recs:
+        for u in r["numeric_judge"]["ungrounded"]:
+            lines += [f"### {r['scenario_id']} ({r['language']})", "", f"> {u['sentence']}", "",
+                      f"Flagged number: **{u['number']:g}** (unit read as: {u['unit']})", "",
+                      "- [ ] Correct flag", "- [ ] Wrong flag", ""]
+    out = settings.data_dir / "labels" / f"numeric_spotcheck_{args.run_id}.md"
+    out.write_text("\n".join(lines), encoding="utf-8", newline="\n")
+    print(f"wrote {out} ({sum(len(r['numeric_judge']['ungrounded']) for r in recs)} flags in {len(recs)} replies)")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     _utf8_stdout()
     settings = load_settings()
@@ -395,6 +513,31 @@ def main(argv: list[str] | None = None) -> int:
 
     rv = sub.add_parser("attack-review-sample", help="Stage 4: DEV-only language review sheet")
     rv.set_defaults(fn=cmd_attack_review_sample)
+
+    e = sub.add_parser("run-eval", help="Stage 5/6: run the attack + look-alike suite (resumable)")
+    e.add_argument("--run-id", required=True)
+    e.add_argument("--suite", choices=["dev", "heldout"], default="dev")
+    e.add_argument("--condition", choices=["A", "B"], default="A")
+    e.add_argument("--backend", choices=["ollama", "stub"], default="ollama")
+    e.add_argument("--db", type=Path, default=db_default)
+    e.add_argument("--limit", type=int, default=0)
+    e.add_argument("--notes", default="")
+    e.set_defaults(fn=cmd_run_eval)
+
+    se = sub.add_parser("summarize-eval", help="Summarize an attack-suite run; --publish NAME writes docs/results")
+    se.add_argument("--run-id", required=True)
+    se.add_argument("--publish", default=None)
+    se.set_defaults(fn=cmd_summarize_eval)
+
+    rj = sub.add_parser("rejudge", help="Recompute judgements on a stored dev run (raw outputs untouched)")
+    rj.add_argument("--run-id", required=True)
+    rj.add_argument("--db", type=Path, default=db_default)
+    rj.add_argument("--publish", default=None)
+    rj.set_defaults(fn=cmd_rejudge)
+
+    sc = sub.add_parser("spotcheck-sheet", help="Hand spot-check sheet for numeric-fabrication flags (dev runs)")
+    sc.add_argument("--run-id", required=True)
+    sc.set_defaults(fn=cmd_spotcheck_sheet)
 
     args = p.parse_args(argv)
     return args.fn(args)

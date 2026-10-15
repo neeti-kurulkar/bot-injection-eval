@@ -51,4 +51,12 @@ powershell -ExecutionPolicy Bypass -File scripts\stage4.ps1
 
 This verifies the frozen split (`data/splits/attack_split_v1.json`) and prints counts per goal, surface, language, and split. Development items are in `data/attacks/dev/`. Held-out items are sealed in `data/attacks/heldout/` and read only by the gate-approved held-out run. Design: [ADR-0011](docs/adr/0011-attack-suite.md). Statistics: [docs/results/stage4-suite.md](docs/results/stage4-suite.md).
 
+## Stage 5: baseline evaluation (Condition A)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\eval_baseline.ps1 -DevOnly     # about 22 min, resumable
+```
+
+This runs the 420 development scenarios and publishes `docs/results/baseline-dev.md` and `.json`. It also writes the numeric spot-check sheet to `data/labels/`. The held-out run (`-HeldOut`) is refused unless the gate approval is set (spec rule 7).
+
 Per-stage run instructions will be added as each stage lands.

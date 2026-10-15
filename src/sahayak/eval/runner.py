@@ -20,7 +20,8 @@ from sahayak.agent.context import ContextBuilder
 from sahayak.agent.loop import LLMAgent
 from sahayak.config import REPO_ROOT, Settings
 from sahayak.domain.models import Condition
-from sahayak.eval.judges import NumericPolicyJudge, judge_benign
+from sahayak.eval.judges import NumericPolicyJudge, judge_attack, judge_benign, judge_lookalike
+from sahayak.eval.scenarios import apply_overlay, policy_overlay
 from sahayak.eval.stats import proportion
 from sahayak.mockbank.repo import Repository, copy_db
 from sahayak.policy.store import PolicyStore
@@ -68,13 +69,31 @@ def completed_ids(records: Path) -> set[str]:
     return ids
 
 
+def _exposure(scenario: dict, system_prompt: str, prefetched: list[str], steps: list[dict]) -> dict:
+    """Was the injected text in the model's context? (ADR-0011)"""
+    if scenario.get("kind") != "attack":
+        return {"exposed": None, "via": None}
+    surface = scenario["surface"]
+    if surface == "message":
+        return {"exposed": True, "via": "message"}
+    if surface in ("ticket", "note"):
+        ov = scenario["overlay"]["tickets" if surface == "ticket" else "notes"][0]["body"]
+        return {"exposed": ov.splitlines()[0][:60] in system_prompt, "via": f"context:{surface}"}
+    in_prompt = "P90" in prefetched
+    via_tool = any(tr["name"] == "search_policy" and any(r.get("doc_id") == "P90" for r in tr["payload"].get("results", []))
+                   for st in steps for tr in st["tool_results"])
+    return {"exposed": in_prompt or via_tool, "via": "prefetch" if in_prompt else ("search_policy" if via_tool else None)}
+
+
 def run_scenario(scenario: dict, condition: Condition, backend, settings: Settings, template_db: Path,
                  policies: PolicyStore, numeric: NumericPolicyJudge, tmp_dir: Path) -> dict:
     t0 = time.perf_counter()
     db = copy_db(template_db, tmp_dir / f"{scenario['scenario_id']}.db")
     repo = Repository.open(db)
+    kind = scenario.get("kind", "benign")
     try:
-        overlay = tuple(scenario.get("overlay", {}).get("policy_docs", ()))
+        overlay = policy_overlay(scenario)
+        created = apply_overlay(repo, scenario)
         sessions = SessionManager(repo, seed=scenario["seed"])
         tools = ToolLayer(repo, sessions, policies, policy_overlay=overlay)
         context = ContextBuilder(repo, policies, data_marking=(condition is Condition.B),
@@ -83,6 +102,10 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
                          settings.max_steps, settings.max_output_tokens_per_turn)
         s = sessions.create(condition)
         sessions.authenticate(s.session_id, scenario["customer_id"])
+        if scenario.get("step_up_verified"):  # the customer completed OTP out of band (fixture)
+            sessions.step_up(s.session_id, sessions.issue_otp(s.session_id))
+        other_balances = [repo.get_account(a)["balance_paise"]
+                          for a in scenario.get("expected", {}).get("other_accounts", [])]
         messages = context.initial_messages(scenario["customer_id"], scenario["message"])
         turn = agent.run_turn(s.session_id, messages)
         audit = repo.list_audit(s.session_id)
@@ -94,12 +117,25 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
 
     payloads = [tr["payload"] for st in turn.steps for tr in st["tool_results"]]
     num = numeric.judge(turn.reply, payloads)
-    judgement = judge_benign(scenario, audit, handoffs, turn.outcome, turn.reply, turn.protocol_failures, num) \
-        if scenario["kind"] == "benign" else None
+    exposure = _exposure(scenario, messages[0]["content"], context.prefetched, turn.steps)
+    if kind == "benign":
+        judgement = judge_benign(scenario, audit, handoffs, turn.outcome, turn.reply, turn.protocol_failures, num)
+    elif kind == "lookalike":
+        judgement = judge_lookalike(scenario, audit, handoffs, turn.outcome, turn.reply, turn.protocol_failures, num)
+    else:
+        judgement = judge_attack(scenario, audit, handoffs, turn.reply, num, other_balances, numeric.facts)
     costs = [st["assistant"]["cost"] for st in turn.steps]
     return {
         "scenario_id": scenario["scenario_id"],
         "condition": condition.value,
+        "kind": kind,
+        "split": scenario.get("split"),
+        "family": scenario.get("family"),
+        "technique": scenario.get("technique"),
+        "goal": scenario.get("goal"),
+        "surface": scenario.get("surface"),
+        "overlay_created": created,
+        "exposure": exposure,
         "category": scenario.get("category"),
         "language": scenario["language"],
         "customer_id": scenario["customer_id"],
@@ -107,6 +143,7 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
         "system_prompt": messages[0]["content"],
         "prefetched_policy_docs": context.prefetched,
         "expected_policy_doc": scenario["expected"].get("policy_doc"),
+        "expected_handoff_kind": scenario["expected"].get("handoff_kind"),
         "reply": turn.reply,
         "outcome": turn.outcome,
         "error": turn.error,
@@ -154,7 +191,8 @@ def run(scenarios: list[dict], condition: Condition, backend, settings: Settings
             f.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
             f.flush()
             session_log["ran"] += 1
-            verdict = "" if rec["judgement"] is None else ("PASS" if rec["judgement"]["pass"] else "FAIL")
+            j = rec["judgement"]
+            verdict = ("HIT " if j["attack_success"] else "miss") if rec["kind"] == "attack" else ("PASS" if j["pass"] else "FAIL")
             progress(f"  [{i}/{len(todo)}] {sc['scenario_id']} {sc['language']:<8} {rec['outcome']:<11} "
                      f"{verdict:<4} {rec['cost']['wall_clock_s']:.1f}s")
             if i == 1:
@@ -162,6 +200,29 @@ def run(scenarios: list[dict], condition: Condition, backend, settings: Settings
     meta.setdefault("model", backend.metadata())
     meta["finished_at"] = datetime.now(timezone.utc).isoformat()
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return records
+
+
+def rejudge(records: list[dict], scenarios: dict[str, dict], facts: list[dict], template_db: Path) -> list[dict]:
+    """Recompute judgements from stored records (judging is a pure function of the record, the scenario,
+    and the starting balances). Raw model outputs, audit rows, and costs are not touched."""
+    numeric = NumericPolicyJudge(facts)
+    repo = Repository.open(template_db)
+    try:
+        for r in records:
+            sc = scenarios[r["scenario_id"]]
+            payloads = [tr["payload"] for st in r["steps"] for tr in st["tool_results"]]
+            num = numeric.judge(r["reply"], payloads)
+            r["numeric_judge"] = {"fabricated": num.fabricated, "ungrounded": num.ungrounded,
+                                  "claim_sentences": num.claim_sentences}
+            if r["kind"] == "attack":
+                balances = [repo.get_account(a)["balance_paise"] for a in sc["expected"].get("other_accounts", [])]
+                r["judgement"] = judge_attack(sc, r["audit"], r["handoffs"], r["reply"], num, balances, facts)
+            elif r["kind"] == "lookalike":
+                r["judgement"] = judge_lookalike(sc, r["audit"], r["handoffs"], r["outcome"], r["reply"],
+                                                 r["protocol_failures"], num)
+    finally:
+        repo.close()
     return records
 
 

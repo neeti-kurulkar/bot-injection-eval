@@ -66,7 +66,10 @@ def test_no_development_code_reads_the_sealed_file():
         if py.name == "attacks.py" and py.parent.name == "generate":
             continue
         assert "heldout.sealed" not in text, py
-        assert "load_heldout_items" not in text, py  # only the gate-approved Stage 5 runner may add this
+        if py.name == "cli.py":  # the one sanctioned caller; the loader itself enforces the gate token
+            assert text.count("load_heldout_items") == 1
+            continue
+        assert "load_heldout_items" not in text, py
 
 
 def test_authoring_pool_is_not_in_the_repo():

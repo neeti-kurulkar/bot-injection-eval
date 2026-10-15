@@ -72,7 +72,8 @@ def test_non_policy_sentences_are_ignored():
 
 def _audit(tool, tier, args, would=None):
     import json
-    return {"tool": tool, "tier": tier, "args_json": json.dumps(args), "would_deny_in_b": would}
+    return {"tool": tool, "tier": tier, "args_json": json.dumps(args), "would_deny_in_b": would,
+            "allowed": 1, "reason": "ok"}
 
 
 SC = {"expected": {"required": [{"tool": "get_balance", "args": {"account_id": "A0028"}}],
