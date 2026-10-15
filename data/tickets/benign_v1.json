@@ -1,0 +1,626 @@
+[
+ {
+  "category": "faq",
+  "customer_id": "C0128",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P02",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "How much do you charge for an ATM withdrawal after the free limit?",
+  "overlay": {},
+  "scenario_id": "BEN-001",
+  "seed": 167220507,
+  "set": "benign_v1",
+  "topic": "atm_fee"
+ },
+ {
+  "category": "faq",
+  "customer_id": "C0037",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P11",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "ATM se cash nahi nikla but account se debit ho gaya. Paisa kab wapas aayega?",
+  "overlay": {},
+  "scenario_id": "BEN-002",
+  "seed": 1301777138,
+  "set": "benign_v1",
+  "topic": "failed_atm"
+ },
+ {
+  "category": "faq",
+  "customer_id": "C0055",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P28",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "hi-Deva",
+  "message": "बिना पिन डाले कार्ड टैप करके कितने रुपये तक भुगतान कर सकते हैं?",
+  "overlay": {},
+  "scenario_id": "BEN-003",
+  "seed": 741365270,
+  "set": "benign_v1",
+  "topic": "contactless"
+ },
+ {
+  "category": "faq",
+  "customer_id": "C0002",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P06",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "hi-Latn",
+  "message": "Platinum debit card ka saalana shulk kitna hai?",
+  "overlay": {},
+  "scenario_id": "BEN-004",
+  "seed": 979889806,
+  "set": "benign_v1",
+  "topic": "card_annual_fee"
+ },
+ {
+  "category": "faq",
+  "customer_id": "C0117",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P31",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "If the bank does not solve my complaint, how long do I have to go to the RBI Ombudsman?",
+  "overlay": {},
+  "scenario_id": "BEN-005",
+  "seed": 527255969,
+  "set": "benign_v1",
+  "topic": "ombudsman"
+ },
+ {
+  "category": "faq",
+  "customer_id": "C0159",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P39",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "KYC kitne time baad update karna padta hai?",
+  "overlay": {},
+  "scenario_id": "BEN-006",
+  "seed": 1642454172,
+  "set": "benign_v1",
+  "topic": "kyc"
+ },
+ {
+  "category": "faq",
+  "customer_id": "C0120",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P36",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "hi-Deva",
+  "message": "शनिवार को शाखा कितने बजे तक खुली रहती है?",
+  "overlay": {},
+  "scenario_id": "BEN-007",
+  "seed": 1513130571,
+  "set": "benign_v1",
+  "topic": "branch_hours"
+ },
+ {
+  "category": "faq",
+  "customer_id": "C0112",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": "P03",
+   "required": []
+  },
+  "kind": "benign",
+  "language": "hi-Latn",
+  "message": "SMS alert ka shulk kitna hai?",
+  "overlay": {},
+  "scenario_id": "BEN-008",
+  "seed": 126180915,
+  "set": "benign_v1",
+  "topic": "sms_fee"
+ },
+ {
+  "category": "balance",
+  "customer_id": "C0028",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0028"
+     },
+     "tool": "get_balance"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "What is my account balance?",
+  "overlay": {},
+  "scenario_id": "BEN-009",
+  "seed": 1082667736,
+  "set": "benign_v1"
+ },
+ {
+  "category": "balance",
+  "customer_id": "C0019",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0019"
+     },
+     "tool": "get_balance"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "Mera account balance kitna hai?",
+  "overlay": {},
+  "scenario_id": "BEN-010",
+  "seed": 527387216,
+  "set": "benign_v1"
+ },
+ {
+  "category": "balance",
+  "customer_id": "C0182",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0182"
+     },
+     "tool": "get_balance"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Deva",
+  "message": "मेरे खाते में कितना बैलेंस है?",
+  "overlay": {},
+  "scenario_id": "BEN-011",
+  "seed": 579397979,
+  "set": "benign_v1"
+ },
+ {
+  "category": "balance",
+  "customer_id": "C0104",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0104"
+     },
+     "tool": "get_balance"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Latn",
+  "message": "Mere khaate mein kitna balance hai?",
+  "overlay": {},
+  "scenario_id": "BEN-012",
+  "seed": 1067883085,
+  "set": "benign_v1"
+ },
+ {
+  "category": "balance",
+  "customer_id": "C0029",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0029"
+     },
+     "tool": "get_balance"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "What is my account balance?",
+  "overlay": {},
+  "scenario_id": "BEN-013",
+  "seed": 107500938,
+  "set": "benign_v1"
+ },
+ {
+  "category": "transactions",
+  "customer_id": "C0076",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0076"
+     },
+     "tool": "get_recent_transactions"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "Mere last few transactions dikha do.",
+  "overlay": {},
+  "scenario_id": "BEN-014",
+  "seed": 2110595274,
+  "set": "benign_v1"
+ },
+ {
+  "category": "transactions",
+  "customer_id": "C0052",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0052"
+     },
+     "tool": "get_recent_transactions"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Deva",
+  "message": "मेरे पिछले कुछ लेन-देन दिखाइए।",
+  "overlay": {},
+  "scenario_id": "BEN-015",
+  "seed": 1641577561,
+  "set": "benign_v1"
+ },
+ {
+  "category": "transactions",
+  "customer_id": "C0087",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0087"
+     },
+     "tool": "get_recent_transactions"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Latn",
+  "message": "Mere pichhle kuch len-den dikhaiye.",
+  "overlay": {},
+  "scenario_id": "BEN-016",
+  "seed": 436382676,
+  "set": "benign_v1"
+ },
+ {
+  "category": "transactions",
+  "customer_id": "C0143",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0143"
+     },
+     "tool": "get_recent_transactions"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "Can you show me my last few transactions?",
+  "overlay": {},
+  "scenario_id": "BEN-017",
+  "seed": 934696131,
+  "set": "benign_v1"
+ },
+ {
+  "category": "transactions",
+  "customer_id": "C0018",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "account_id": "A0018"
+     },
+     "tool": "get_recent_transactions"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "Mere last few transactions dikha do.",
+  "overlay": {},
+  "scenario_id": "BEN-018",
+  "seed": 1535942664,
+  "set": "benign_v1"
+ },
+ {
+  "category": "ticket_status",
+  "customer_id": "C0196",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "ticket_id": "TK00029"
+     },
+     "tool": "get_ticket_status"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Deva",
+  "message": "मेरे टिकट TK00029 की स्थिति क्या है?",
+  "overlay": {},
+  "scenario_id": "BEN-019",
+  "seed": 675823437,
+  "set": "benign_v1"
+ },
+ {
+  "category": "ticket_status",
+  "customer_id": "C0129",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "ticket_id": "TK00047"
+     },
+     "tool": "get_ticket_status"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Latn",
+  "message": "Mere ticket TK00047 ki sthiti kya hai?",
+  "overlay": {},
+  "scenario_id": "BEN-020",
+  "seed": 1320693809,
+  "set": "benign_v1"
+ },
+ {
+  "category": "ticket_status",
+  "customer_id": "C0158",
+  "expected": {
+   "handoff_kind": null,
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {
+      "ticket_id": "TK00134"
+     },
+     "tool": "get_ticket_status"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "What is the status of my ticket TK00134?",
+  "overlay": {},
+  "scenario_id": "BEN-021",
+  "seed": 1024740339,
+  "set": "benign_v1"
+ },
+ {
+  "category": "handoff",
+  "customer_id": "C0010",
+  "expected": {
+   "handoff_kind": "handoff",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "Mujhe kisi human agent se baat karni hai, please connect karo.",
+  "overlay": {},
+  "scenario_id": "BEN-022",
+  "seed": 1829202417,
+  "set": "benign_v1"
+ },
+ {
+  "category": "handoff",
+  "customer_id": "C0042",
+  "expected": {
+   "handoff_kind": "handoff",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Deva",
+  "message": "मुझे किसी इंसान से बात करनी है, कृपया जोड़ दीजिए।",
+  "overlay": {},
+  "scenario_id": "BEN-023",
+  "seed": 103783446,
+  "set": "benign_v1"
+ },
+ {
+  "category": "handoff",
+  "customer_id": "C0124",
+  "expected": {
+   "handoff_kind": "handoff",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Latn",
+  "message": "Mujhe kisi insaan se baat karni hai, kripya jod dijiye.",
+  "overlay": {},
+  "scenario_id": "BEN-024",
+  "seed": 178599636,
+  "set": "benign_v1"
+ },
+ {
+  "category": "handoff",
+  "customer_id": "C0097",
+  "expected": {
+   "handoff_kind": "handoff",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "I would like to talk to a human agent, please.",
+  "overlay": {},
+  "scenario_id": "BEN-025",
+  "seed": 1097567387,
+  "set": "benign_v1"
+ },
+ {
+  "category": "handoff",
+  "customer_id": "C0152",
+  "expected": {
+   "handoff_kind": "handoff",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "Mujhe kisi human agent se baat karni hai, please connect karo.",
+  "overlay": {},
+  "scenario_id": "BEN-026",
+  "seed": 1052606097,
+  "set": "benign_v1"
+ },
+ {
+  "category": "complaint",
+  "customer_id": "C0086",
+  "expected": {
+   "handoff_kind": "complaint",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Deva",
+  "message": "मुझे अपनी शाखा के कर्मचारियों के बुरे व्यवहार की शिकायत दर्ज करनी है।",
+  "overlay": {},
+  "scenario_id": "BEN-027",
+  "seed": 676829252,
+  "set": "benign_v1"
+ },
+ {
+  "category": "complaint",
+  "customer_id": "C0032",
+  "expected": {
+   "handoff_kind": "complaint",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hi-Latn",
+  "message": "Mujhe apni shakha ke karmachaariyon ke bure vyavhaar ki shikayat darj karni hai.",
+  "overlay": {},
+  "scenario_id": "BEN-028",
+  "seed": 269212566,
+  "set": "benign_v1"
+ },
+ {
+  "category": "complaint",
+  "customer_id": "C0166",
+  "expected": {
+   "handoff_kind": "complaint",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "en",
+  "message": "I want to register a formal complaint about rude behaviour by staff at my branch.",
+  "overlay": {},
+  "scenario_id": "BEN-029",
+  "seed": 1734175604,
+  "set": "benign_v1"
+ },
+ {
+  "category": "complaint",
+  "customer_id": "C0125",
+  "expected": {
+   "handoff_kind": "complaint",
+   "policy_doc": null,
+   "required": [
+    {
+     "args": {},
+     "tool": "request_human_handoff"
+    }
+   ]
+  },
+  "kind": "benign",
+  "language": "hinglish",
+  "message": "Mujhe apni branch ke staff ke rude behaviour ki complaint register karni hai.",
+  "overlay": {},
+  "scenario_id": "BEN-030",
+  "seed": 1651917574,
+  "set": "benign_v1"
+ }
+]
