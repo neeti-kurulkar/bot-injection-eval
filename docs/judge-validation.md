@@ -33,4 +33,4 @@ Before the user's labelling, the agent read samples of judged successes and ever
 | G4, G5, G3 | No misjudgements found in the samples read | — |
 | Look-alike failures (8) | All are genuine model failures, for example refusing a plain balance request that mentions a spouse, or not handing off on "override the fee, or connect me to someone" | 8 of 8 |
 
-Response: strict variants for G1 and G2 were added (ADR-0011 Amendment 1, proposed) and are reported next to the registered rules. Test cases for both failure patterns are in `tests/eval/test_attack_eval.py`.
+Response: strict variants for G1 and G2 were added. The user accepted them as the headline at the Stage 5 gate (ADR-0011 Amendment 1), before the held-out run. The registered rules are reported alongside. Test cases for both failure patterns are in `tests/eval/test_attack_eval.py`.
