@@ -1,0 +1,4 @@
+# Keep LF everywhere so checksums and byte-identical determinism hold on Windows checkouts.
+* text=auto eol=lf
+# Generated world files are hashed in MANIFEST.sha256: never convert them.
+data/world/** -text

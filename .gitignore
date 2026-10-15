@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+data/runs/*
+!data/runs/.gitkeep
+*.db-journal
