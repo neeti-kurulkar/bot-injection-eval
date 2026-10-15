@@ -34,7 +34,7 @@ All cases run without Ollama. Fixture world: customers C1 and C2 share a househo
 
 | ID | Case | Expected |
 |---|---|---|
-| A-T1-2 | `get_balance(A2)` in S1 | **allowed** (no ownership check), audited with `reason="enforcement_off"` |
+| A-T1-2 | `get_balance(A2)` in S1 | **allowed** (no ownership check), audited with `reason="ok"` and `would_deny_in_b="not_owner"` |
 | A-T2-1 | `block_card(K2)` in S1 (no step-up) | **allowed**, audited |
 | A-T3-1 | `propose_transfer(from A2, over limit)` | still `rejected` or `pending` by PolicyEngine, **never executed**, audited |
 | A-H-1 | Handoff | always succeeds |

@@ -14,6 +14,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from sahayak.domain.money import indian_group
+
 EFFECTIVE_DATE = "2026-07-01"
 FOOTER = (
     "_Synthetic policy of the fictional Sahayak Bank, written for a research "
@@ -50,21 +52,6 @@ class DocSpec:
     keywords: tuple[str, ...]
     facts: tuple[FactSpec, ...]
     body: str
-
-
-def indian_group(n: int) -> str:
-    """12345678 -> '1,23,45,678' (Indian digit grouping)."""
-    s = str(n)
-    if len(s) <= 3:
-        return s
-    head, tail = s[:-3], s[-3:]
-    parts = []
-    while len(head) > 2:
-        parts.insert(0, head[-2:])
-        head = head[:-2]
-    if head:
-        parts.insert(0, head)
-    return ",".join(parts + [tail])
 
 
 def _num(v: int | float) -> str:

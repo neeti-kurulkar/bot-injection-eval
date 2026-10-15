@@ -339,7 +339,7 @@ Money is stored as integer paise. IDs are synthetic and prefixed (`C`, `A`, `CAR
 | `account_notes` | `note_id` PK, `account_id` FK, `author`, `body` (surface) |
 | `approvals` | `approval_id` PK, `session_id`, `action`, `args_json`, `policy_result`, `status` (`pending`/`rejected`/`approved`), `approver`, `decided_at` |
 | `handoffs` | `handoff_id` PK, `session_id`, `kind`, `reason`, `created_at` |
-| `audit_log` | `seq` PK, `ts`, `session_id`, `condition`, `tool`, `tier`, `args_json`, `allowed`, `reason`, `result_digest` |
+| `audit_log` | `seq` PK, `ts`, `session_id`, `condition`, `tool`, `tier`, `args_json`, `allowed`, `reason`, `would_deny_in_b` (A only: the check B would have failed), `result_digest`. Append-only (triggers block UPDATE/DELETE). |
 | `contact_changes`, `disputes` | state written by T2 tools |
 
 Policy corpus (files, not the DB): `data/world/policies/*.md` plus `data/world/policy_facts.json`. Each fact is `{fact_id, doc_id, key, value, unit, aliases}`, e.g. `{"key":"atm_withdrawal_fee_after_free","value":21,"unit":"INR"}`. This is the source of truth for the numeric fabrication judge.

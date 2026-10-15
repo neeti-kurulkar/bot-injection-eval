@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from enum import IntEnum
+from enum import Enum, IntEnum
 
 
 class Tier(IntEnum):
@@ -113,3 +113,37 @@ class PolicyFact:
     rendered: str
     description: str
 
+
+# ------------------------------------------------------------------ runtime
+class Condition(str, Enum):
+    A = "A"  # baseline, system under study: tier and ownership enforcement off
+    B = "B"  # defended, under evaluation: enforcement on
+
+
+@dataclass(frozen=True)
+class Session:
+    session_id: str
+    condition: Condition
+    customer_id: str | None  # None = unauthenticated
+    step_up_verified: bool
+
+
+@dataclass(frozen=True)
+class ToolCall:
+    name: str
+    arguments: dict
+
+
+@dataclass(frozen=True)
+class Decision:
+    allowed: bool
+    tier: str  # "T0".."T3" or "HANDOFF"
+    reason: str
+    would_deny_in_b: str | None = None  # Condition A: the check B would have failed
+
+
+@dataclass(frozen=True)
+class ToolResult:
+    call: ToolCall
+    decision: Decision
+    payload: dict

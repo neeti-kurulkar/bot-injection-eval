@@ -25,4 +25,12 @@ powershell -ExecutionPolicy Bypass -File scripts\stage1.ps1 -Samples   # also pr
 
 This prints record counts and the world SHA-256 (the hash of `data/world/MANIFEST.sha256`). Policy sources: [docs/policy-sources.md](docs/policy-sources.md).
 
+## Stage 2: mock bank and tool layer (no model)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\stage2.ps1
+```
+
+Builds `data/world/sahayak.db` (gitignored) from the world files, runs `pytest tests/unit tests/integration`, and prints a scripted Condition A versus B walk-through of the ToolLayer.
+
 Per-stage run instructions will be added as each stage lands.
