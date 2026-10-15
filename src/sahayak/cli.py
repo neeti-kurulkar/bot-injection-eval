@@ -10,6 +10,7 @@
     python -m sahayak.cli summarize --run-id ID
     python -m sahayak.cli transcript --run-id ID --scenario BEN-001
     python -m sahayak.cli compare-runs --a RUN1 --b RUN2
+    python -m sahayak.cli attack-stats
 """
 
 from __future__ import annotations
@@ -261,6 +262,67 @@ def cmd_compare_runs(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_freeze_attacks(args: argparse.Namespace) -> int:
+    """Stage 4: one-time freeze of the attack suite. Prints counts only (held-out protection)."""
+    from sahayak.generate.attacks import freeze_suite
+
+    settings = load_settings()
+    pool = json.loads(Path(args.pool).read_text(encoding="utf-8"))
+    res = freeze_suite(pool, settings.world_dir, settings.data_dir, args.seed)
+    print(json.dumps({"manifest_sha256": res["manifest_sha256"], "stats": res["stats"]}, indent=1))
+    return 0
+
+
+def cmd_attack_stats(args: argparse.Namespace) -> int:
+    """Counts only. Verifies the split manifest and file checksums without reading held-out content."""
+    from sahayak.generate.attacks import SPLIT_NAME, verify_split
+
+    settings = load_settings()
+    manifest = verify_split(settings.data_dir)
+    sha = (settings.data_dir / "splits" / f"{SPLIT_NAME}.sha256").read_text(encoding="utf-8").split()[0]
+    stats = json.loads((settings.data_dir / "attacks" / "stats.json").read_text(encoding="utf-8"))
+    print(f"split manifest {SPLIT_NAME}.json SHA-256 {sha} (verified; all listed files match)")
+    print(f"dev families: {', '.join(manifest['dev']['families'])}")
+    print(f"held-out families: {len(manifest['heldout']['families'])} (opaque ids {', '.join(manifest['heldout']['families'])})")
+    for split in ("dev", "heldout"):
+        st = stats[split]
+        print(f"[{split}] attacks {st['attacks']}, look-alikes {st['lookalikes']}")
+        for key in ("by_goal", "by_surface", "by_language"):
+            print(f"  {key}: {json.dumps(st[key])}")
+    return 0
+
+
+def cmd_attack_review_sample(args: argparse.Namespace) -> int:
+    """Writes a DEVELOPMENT-only language review sheet (actual text) for the human check (spec Stage 4)."""
+    import random
+
+    from sahayak.generate.attacks import load_dev_items
+
+    settings = load_settings()
+    dev = load_dev_items(settings.data_dir)
+    rng = random.Random(f"review:{settings.seed}")
+    lines = ["# Language review sample (DEVELOPMENT items only)", "",
+             "Internal evaluation data for the mock Sahayak Bank. Do not publish. Held-out items are sealed and not included.",
+             "For each item, check that the Hinglish / Devanagari / romanized-Hindi text is natural and means the same as",
+             "the English version of its template. Note problems by scenario ID.", ""]
+    for lang in ("hinglish", "hi-Deva", "hi-Latn", "en"):
+        pool = [d for d in dev if d["language"] == lang and d["kind"] == "attack"]
+        looks = [d for d in dev if d["language"] == lang and d["kind"] == "lookalike"]
+        families = rng.sample(sorted({d["family"] for d in pool}), 3)  # three different families per language
+        picks = [rng.choice([d for d in pool if d["family"] == f]) for f in families] + rng.sample(looks, 1)
+        lines += [f"## {lang}", ""]
+        for d in sorted(picks, key=lambda x: x["scenario_id"]):
+            text = d["message"] if d["surface"] == "message" else (
+                (d["overlay"]["tickets"] or d["overlay"]["notes"] or [{"body": ""}])[0]["body"]
+                or d["overlay"]["policy_docs"][0].split("## Update", 1)[1].strip())
+            lines += [f"### {d['scenario_id']} | {d['kind']} | {d['technique'] if d['kind'] == 'lookalike' else d['family']}"
+                      f" | {d['goal'] or '-'} | surface {d['surface']}", "", "```", text.strip(), "```", ""]
+    out = settings.data_dir / "attacks" / "dev" / "review_sample.md"
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"wrote {out} ({sum(1 for x in lines if x.startswith('### '))} items)")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     _utf8_stdout()
     settings = load_settings()
@@ -322,6 +384,17 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("--a", required=True)
     c.add_argument("--b", required=True)
     c.set_defaults(fn=cmd_compare_runs)
+
+    f = sub.add_parser("freeze-attacks", help="Stage 4: one-time freeze of the attack suite (refuses to re-run)")
+    f.add_argument("--pool", required=True)
+    f.add_argument("--seed", type=int, default=settings.seed)
+    f.set_defaults(fn=cmd_freeze_attacks)
+
+    a = sub.add_parser("attack-stats", help="Stage 4: verified counts per goal, surface, language, split")
+    a.set_defaults(fn=cmd_attack_stats)
+
+    rv = sub.add_parser("attack-review-sample", help="Stage 4: DEV-only language review sheet")
+    rv.set_defaults(fn=cmd_attack_review_sample)
 
     args = p.parse_args(argv)
     return args.fn(args)

@@ -1,0 +1,68 @@
+{
+ "dev": {
+  "attacks": 380,
+  "by_family": {
+   "delimiter_spoof": 76,
+   "fake_system_notice": 76,
+   "obfuscated_instruction": 76,
+   "policy_spoof": 76,
+   "urgency_pressure": 76
+  },
+  "by_goal": {
+   "G1_fabricated_policy": 80,
+   "G2_cross_customer_leak": 80,
+   "G3_handoff_blocking": 60,
+   "G4_unauthorized_T2": 80,
+   "G5_unauthorized_T3": 80
+  },
+  "by_language": {
+   "en": 95,
+   "hi-Deva": 95,
+   "hi-Latn": 95,
+   "hinglish": 95
+  },
+  "by_surface": {
+   "message": 80,
+   "note": 100,
+   "policy": 100,
+   "ticket": 100
+  },
+  "lookalikes": 40,
+  "lookalikes_by_language": {
+   "en": 10,
+   "hi-Deva": 10,
+   "hi-Latn": 10,
+   "hinglish": 10
+  }
+ },
+ "heldout": {
+  "attacks": 228,
+  "by_goal": {
+   "G1_fabricated_policy": 48,
+   "G2_cross_customer_leak": 48,
+   "G3_handoff_blocking": 36,
+   "G4_unauthorized_T2": 48,
+   "G5_unauthorized_T3": 48
+  },
+  "by_language": {
+   "en": 57,
+   "hi-Deva": 57,
+   "hi-Latn": 57,
+   "hinglish": 57
+  },
+  "by_surface": {
+   "message": 48,
+   "note": 60,
+   "policy": 60,
+   "ticket": 60
+  },
+  "families": 3,
+  "lookalikes": 40,
+  "lookalikes_by_language": {
+   "en": 10,
+   "hi-Deva": 10,
+   "hi-Latn": 10,
+   "hinglish": 10
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "dev": {
+  "families": [
+   "delimiter_spoof",
+   "fake_system_notice",
+   "obfuscated_instruction",
+   "policy_spoof",
+   "urgency_pressure"
+  ],
+  "items": 420,
+  "lookalike_templates": [
+   "L01",
+   "L05",
+   "L06",
+   "L07",
+   "L09",
+   "L14",
+   "L16",
+   "L17",
+   "L18",
+   "L19"
+  ]
+ },
+ "files": {
+  "attacks/dev/items.json": "fcdf606f372ebce36eedaeb3e0a74b98734ff1045337a9c289a2d09ae58b1702",
+  "attacks/dev/templates.json": "aead35dfa7b0fbd0b5639801dbe368ba207a1ee4e819ab2049135534bf0614b4",
+  "attacks/heldout/heldout.sealed": "0987256dd443158290f34db01adcfb4709cf6c7f39d6a33c30704e4fc561e6d6"
+ },
+ "heldout": {
+  "families": [
+   "HF-1",
+   "HF-2",
+   "HF-3"
+  ],
+  "family_item_counts": {
+   "HF-1": 76,
+   "HF-2": 76,
+   "HF-3": 76
+  },
+  "items": 268,
+  "lookalike_templates": 10
+ },
+ "procedure": "ADR-0011",
+ "seed": 20261015,
+ "split": "attack_split_v1"
+}

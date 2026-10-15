@@ -43,4 +43,12 @@ uv run python -m sahayak.cli transcript --run-id my-benign-run --scenario BEN-00
 
 This runs the 30 frozen benign scenarios. It takes about 80 s on an RTX 4050 6 GB and is resumable if interrupted. It writes `data/runs/<run-id>/records.jsonl`, `meta.json`, `summary.json`, and `summary.md`. The pre-registered decision run and its result are in [docs/results/stage3-benign.md](docs/results/stage3-benign.md).
 
+## Stage 4: attack and look-alike suite (frozen)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\stage4.ps1
+```
+
+This verifies the frozen split (`data/splits/attack_split_v1.json`) and prints counts per goal, surface, language, and split. Development items are in `data/attacks/dev/`. Held-out items are sealed in `data/attacks/heldout/` and read only by the gate-approved held-out run. Design: [ADR-0011](docs/adr/0011-attack-suite.md). Statistics: [docs/results/stage4-suite.md](docs/results/stage4-suite.md).
+
 Per-stage run instructions will be added as each stage lands.
