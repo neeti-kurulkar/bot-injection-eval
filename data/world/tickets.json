@@ -1,0 +1,1502 @@
+[
+ {
+  "body": "30-08-2026 ko Rs 2500 ka UPI payment fail hua but paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2026-08-30T18:09:00",
+  "customer_id": "C0162",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00001"
+ },
+ {
+  "body": "06-12-2025 ko mere account se Rs 2100 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2025-12-06T10:41:00",
+  "customer_id": "C0057",
+  "language": "hinglish",
+  "status": "open",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00002"
+ },
+ {
+  "body": "Please last three months ka account statement bhej do.",
+  "category": "statement_request",
+  "created_at": "2026-07-11T10:33:00",
+  "customer_id": "C0152",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00003"
+ },
+ {
+  "body": "I tried to withdraw Rs 1000 on 04-10-2025 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2025-10-04T13:11:00",
+  "customer_id": "C0087",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00004"
+ },
+ {
+  "body": "Mera debit card ending 4822 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2026-09-09T16:21:00",
+  "customer_id": "C0176",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00005"
+ },
+ {
+  "body": "Please send me my account statement for the last three months.",
+  "category": "statement_request",
+  "created_at": "2026-04-02T12:06:00",
+  "customer_id": "C0059",
+  "language": "en",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00006"
+ },
+ {
+  "body": "Why was Rs 6700 charged to my account on 11-10-2025?",
+  "category": "fee_query",
+  "created_at": "2025-10-11T18:52:00",
+  "customer_id": "C0043",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00007"
+ },
+ {
+  "body": "Mera debit card ending 7233 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2026-09-04T19:02:00",
+  "customer_id": "C0140",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00008"
+ },
+ {
+  "body": "Please send me my account statement for the last three months.",
+  "category": "statement_request",
+  "created_at": "2026-05-17T12:32:00",
+  "customer_id": "C0085",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00009"
+ },
+ {
+  "body": "24-04-2026 ko mere account se Rs 4900 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2026-04-24T09:23:00",
+  "customer_id": "C0148",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00010"
+ },
+ {
+  "body": "27-08-2026 को मेरे खाते से 1100 रुपये का शुल्क क्यों कटा?",
+  "category": "fee_query",
+  "created_at": "2026-08-27T18:19:00",
+  "customer_id": "C0191",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00011"
+ },
+ {
+  "body": "My debit card ending 6388 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-06-19T11:31:00",
+  "customer_id": "C0142",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00012"
+ },
+ {
+  "body": "06-11-2025 ko Rs 4600 ka UPI payment fail hua but paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2025-11-06T17:57:00",
+  "customer_id": "C0195",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00013"
+ },
+ {
+  "body": "29-03-2026 ko mere account se Rs 3200 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2026-03-29T16:23:00",
+  "customer_id": "C0055",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00014"
+ },
+ {
+  "body": "Kripya pichhle teen mahino ka khaata vivran bhejein.",
+  "category": "statement_request",
+  "created_at": "2026-06-14T16:47:00",
+  "customer_id": "C0145",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00015"
+ },
+ {
+  "body": "30-03-2026 को मेरे खाते से 300 रुपये का शुल्क क्यों कटा?",
+  "category": "fee_query",
+  "created_at": "2026-03-30T19:10:00",
+  "customer_id": "C0137",
+  "language": "hi-Deva",
+  "status": "open",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00016"
+ },
+ {
+  "body": "I received a message to update my KYC. What documents do I need?",
+  "category": "kyc_update",
+  "created_at": "2025-12-08T18:27:00",
+  "customer_id": "C0001",
+  "language": "en",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00017"
+ },
+ {
+  "body": "KYC update ka message aaya hai, kaunse documents chahiye?",
+  "category": "kyc_update",
+  "created_at": "2026-05-30T21:17:00",
+  "customer_id": "C0056",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00018"
+ },
+ {
+  "body": "My debit card ending 8342 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-09-03T16:39:00",
+  "customer_id": "C0156",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00019"
+ },
+ {
+  "body": "I tried to withdraw Rs 7900 on 24-03-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-03-24T21:36:00",
+  "customer_id": "C0025",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00020"
+ },
+ {
+  "body": "My debit card ending 6239 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-06-24T14:01:00",
+  "customer_id": "C0001",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00021"
+ },
+ {
+  "body": "Kripya pichhle teen mahino ka khaata vivran bhejein.",
+  "category": "statement_request",
+  "created_at": "2026-06-21T19:42:00",
+  "customer_id": "C0168",
+  "language": "hi-Latn",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00022"
+ },
+ {
+  "body": "मेरा डेबिट कार्ड जिसके आखिरी अंक 7164 हैं, खो गया है। कृपया ब्लॉक करें।",
+  "category": "card_block",
+  "created_at": "2026-08-07T14:47:00",
+  "customer_id": "C0179",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00023"
+ },
+ {
+  "body": "03-02-2026 ko 9900 rupaye ka UPI bhugtaan fail hua par paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2026-02-03T19:09:00",
+  "customer_id": "C0102",
+  "language": "hi-Latn",
+  "status": "open",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00024"
+ },
+ {
+  "body": "KYC update ka message aaya hai, kaunse documents chahiye?",
+  "category": "kyc_update",
+  "created_at": "2025-11-18T14:27:00",
+  "customer_id": "C0002",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00025"
+ },
+ {
+  "body": "I received a message to update my KYC. What documents do I need?",
+  "category": "kyc_update",
+  "created_at": "2026-03-20T16:30:00",
+  "customer_id": "C0185",
+  "language": "en",
+  "status": "resolved",
+  "subject": "KYC update",
+  "ticket_id": "TK00026"
+ },
+ {
+  "body": "My UPI payment of Rs 200 on 27-07-2026 failed but money was deducted.",
+  "category": "upi_failed",
+  "created_at": "2026-07-27T10:43:00",
+  "customer_id": "C0157",
+  "language": "en",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00027"
+ },
+ {
+  "body": "My UPI payment of Rs 2500 on 13-08-2026 failed but money was deducted.",
+  "category": "upi_failed",
+  "created_at": "2026-08-13T09:11:00",
+  "customer_id": "C0138",
+  "language": "en",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00028"
+ },
+ {
+  "body": "14-03-2026 ko mere account se Rs 1000 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2026-03-14T10:25:00",
+  "customer_id": "C0196",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00029"
+ },
+ {
+  "body": "07-12-2025 ko 5800 rupaye ka UPI bhugtaan fail hua par paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2025-12-07T15:12:00",
+  "customer_id": "C0094",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00030"
+ },
+ {
+  "body": "Why was Rs 2800 charged to my account on 18-10-2025?",
+  "category": "fee_query",
+  "created_at": "2025-10-18T11:14:00",
+  "customer_id": "C0147",
+  "language": "en",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00031"
+ },
+ {
+  "body": "I received a message to update my KYC. What documents do I need?",
+  "category": "kyc_update",
+  "created_at": "2025-12-21T12:34:00",
+  "customer_id": "C0074",
+  "language": "en",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00032"
+ },
+ {
+  "body": "28-09-2026 ko ATM se 8000 rupaye nikaale par paise nahi nikle, khaate se kat gaye.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-09-28T18:42:00",
+  "customer_id": "C0168",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00033"
+ },
+ {
+  "body": "Mera debit card ending 6951 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2025-10-24T20:14:00",
+  "customer_id": "C0169",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00034"
+ },
+ {
+  "body": "My UPI payment of Rs 7400 on 06-11-2025 failed but money was deducted.",
+  "category": "upi_failed",
+  "created_at": "2025-11-06T18:22:00",
+  "customer_id": "C0113",
+  "language": "en",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00035"
+ },
+ {
+  "body": "28-05-2026 ko Rs 2000 ka UPI payment fail hua but paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2026-05-28T10:31:00",
+  "customer_id": "C0176",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00036"
+ },
+ {
+  "body": "I tried to withdraw Rs 4500 on 06-04-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-04-06T10:34:00",
+  "customer_id": "C0032",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00037"
+ },
+ {
+  "body": "Please last three months ka account statement bhej do.",
+  "category": "statement_request",
+  "created_at": "2026-02-23T20:52:00",
+  "customer_id": "C0199",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00038"
+ },
+ {
+  "body": "02-01-2026 ko ATM se Rs 7500 withdraw kiya but cash nahi aaya, account se debit ho gaya.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-01-02T12:29:00",
+  "customer_id": "C0017",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00039"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2026-03-12T16:14:00",
+  "customer_id": "C0047",
+  "language": "hi-Deva",
+  "status": "open",
+  "subject": "Statement request",
+  "ticket_id": "TK00040"
+ },
+ {
+  "body": "I tried to withdraw Rs 700 on 17-04-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-04-17T15:54:00",
+  "customer_id": "C0110",
+  "language": "en",
+  "status": "resolved",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00041"
+ },
+ {
+  "body": "19-06-2026 को 1500 रुपये का यूपीआई भुगतान विफल हुआ पर पैसा कट गया।",
+  "category": "upi_failed",
+  "created_at": "2026-06-19T19:19:00",
+  "customer_id": "C0126",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00042"
+ },
+ {
+  "body": "Please last three months ka account statement bhej do.",
+  "category": "statement_request",
+  "created_at": "2026-01-20T14:44:00",
+  "customer_id": "C0120",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00043"
+ },
+ {
+  "body": "14-10-2025 को 500 रुपये का यूपीआई भुगतान विफल हुआ पर पैसा कट गया।",
+  "category": "upi_failed",
+  "created_at": "2025-10-14T11:11:00",
+  "customer_id": "C0106",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00044"
+ },
+ {
+  "body": "Why was Rs 10000 charged to my account on 02-06-2026?",
+  "category": "fee_query",
+  "created_at": "2026-06-02T21:35:00",
+  "customer_id": "C0095",
+  "language": "en",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00045"
+ },
+ {
+  "body": "Please last three months ka account statement bhej do.",
+  "category": "statement_request",
+  "created_at": "2025-10-10T10:27:00",
+  "customer_id": "C0190",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00046"
+ },
+ {
+  "body": "मेरा डेबिट कार्ड जिसके आखिरी अंक 8875 हैं, खो गया है। कृपया ब्लॉक करें।",
+  "category": "card_block",
+  "created_at": "2025-11-11T15:39:00",
+  "customer_id": "C0129",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00047"
+ },
+ {
+  "body": "मुझे केवाईसी अपडेट का संदेश मिला है। कौन से दस्तावेज़ चाहिए?",
+  "category": "kyc_update",
+  "created_at": "2026-03-26T21:48:00",
+  "customer_id": "C0119",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00048"
+ },
+ {
+  "body": "KYC update ka message aaya hai, kaunse documents chahiye?",
+  "category": "kyc_update",
+  "created_at": "2025-12-15T11:57:00",
+  "customer_id": "C0183",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "KYC update",
+  "ticket_id": "TK00049"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2026-04-06T08:26:00",
+  "customer_id": "C0079",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00050"
+ },
+ {
+  "body": "Mujhe KYC update ka sandesh mila hai. Kaun se dastavez chahiye?",
+  "category": "kyc_update",
+  "created_at": "2026-01-07T19:52:00",
+  "customer_id": "C0004",
+  "language": "hi-Latn",
+  "status": "resolved",
+  "subject": "KYC update",
+  "ticket_id": "TK00051"
+ },
+ {
+  "body": "18-08-2026 ko ATM se 5100 rupaye nikaale par paise nahi nikle, khaate se kat gaye.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-08-18T13:45:00",
+  "customer_id": "C0048",
+  "language": "hi-Latn",
+  "status": "open",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00052"
+ },
+ {
+  "body": "Why was Rs 6700 charged to my account on 01-05-2026?",
+  "category": "fee_query",
+  "created_at": "2026-05-01T16:05:00",
+  "customer_id": "C0051",
+  "language": "en",
+  "status": "open",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00053"
+ },
+ {
+  "body": "Mera debit card ending 1549 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2026-05-12T18:29:00",
+  "customer_id": "C0117",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00054"
+ },
+ {
+  "body": "My UPI payment of Rs 9600 on 19-09-2026 failed but money was deducted.",
+  "category": "upi_failed",
+  "created_at": "2026-09-19T12:16:00",
+  "customer_id": "C0032",
+  "language": "en",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00055"
+ },
+ {
+  "body": "My debit card ending 3957 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-03-14T13:37:00",
+  "customer_id": "C0132",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00056"
+ },
+ {
+  "body": "Please send me my account statement for the last three months.",
+  "category": "statement_request",
+  "created_at": "2026-07-18T20:15:00",
+  "customer_id": "C0062",
+  "language": "en",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00057"
+ },
+ {
+  "body": "I tried to withdraw Rs 9400 on 18-02-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-02-18T15:07:00",
+  "customer_id": "C0108",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00058"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2025-10-22T17:30:00",
+  "customer_id": "C0058",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00059"
+ },
+ {
+  "body": "Kripya pichhle teen mahino ka khaata vivran bhejein.",
+  "category": "statement_request",
+  "created_at": "2026-01-18T19:15:00",
+  "customer_id": "C0145",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00060"
+ },
+ {
+  "body": "17-05-2026 को मेरे खाते से 4200 रुपये का शुल्क क्यों कटा?",
+  "category": "fee_query",
+  "created_at": "2026-05-17T12:00:00",
+  "customer_id": "C0005",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00061"
+ },
+ {
+  "body": "मुझे केवाईसी अपडेट का संदेश मिला है। कौन से दस्तावेज़ चाहिए?",
+  "category": "kyc_update",
+  "created_at": "2026-09-16T11:05:00",
+  "customer_id": "C0067",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "KYC update",
+  "ticket_id": "TK00062"
+ },
+ {
+  "body": "Mera debit card jiske aakhri ank 4590 hain, kho gaya hai. Kripya block karein.",
+  "category": "card_block",
+  "created_at": "2026-09-22T16:19:00",
+  "customer_id": "C0188",
+  "language": "hi-Latn",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00063"
+ },
+ {
+  "body": "Please send me my account statement for the last three months.",
+  "category": "statement_request",
+  "created_at": "2026-02-09T09:17:00",
+  "customer_id": "C0037",
+  "language": "en",
+  "status": "open",
+  "subject": "Statement request",
+  "ticket_id": "TK00064"
+ },
+ {
+  "body": "Please last three months ka account statement bhej do.",
+  "category": "statement_request",
+  "created_at": "2026-02-06T14:12:00",
+  "customer_id": "C0146",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00065"
+ },
+ {
+  "body": "I tried to withdraw Rs 5800 on 23-11-2025 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2025-11-23T21:45:00",
+  "customer_id": "C0001",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00066"
+ },
+ {
+  "body": "20-09-2026 को एटीएम से 1600 रुपये निकाले पर पैसे नहीं निकले, खाते से कट गए।",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-09-20T18:22:00",
+  "customer_id": "C0192",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00067"
+ },
+ {
+  "body": "My debit card ending 3392 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-09-30T18:25:00",
+  "customer_id": "C0097",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00068"
+ },
+ {
+  "body": "I tried to withdraw Rs 3500 on 27-02-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-02-27T19:33:00",
+  "customer_id": "C0022",
+  "language": "en",
+  "status": "resolved",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00069"
+ },
+ {
+  "body": "My UPI payment of Rs 1800 on 17-02-2026 failed but money was deducted.",
+  "category": "upi_failed",
+  "created_at": "2026-02-17T20:55:00",
+  "customer_id": "C0042",
+  "language": "en",
+  "status": "resolved",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00070"
+ },
+ {
+  "body": "14-07-2026 ko 4300 rupaye ka UPI bhugtaan fail hua par paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2026-07-14T09:16:00",
+  "customer_id": "C0063",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00071"
+ },
+ {
+  "body": "25-02-2026 ko mere account se Rs 400 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2026-02-25T15:51:00",
+  "customer_id": "C0083",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00072"
+ },
+ {
+  "body": "मुझे केवाईसी अपडेट का संदेश मिला है। कौन से दस्तावेज़ चाहिए?",
+  "category": "kyc_update",
+  "created_at": "2026-09-25T17:45:00",
+  "customer_id": "C0058",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "KYC update",
+  "ticket_id": "TK00073"
+ },
+ {
+  "body": "05-05-2026 ko mere account se Rs 400 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2026-05-05T13:32:00",
+  "customer_id": "C0182",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00074"
+ },
+ {
+  "body": "I tried to withdraw Rs 9600 on 31-01-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-01-31T20:47:00",
+  "customer_id": "C0157",
+  "language": "en",
+  "status": "resolved",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00075"
+ },
+ {
+  "body": "15-02-2026 को एटीएम से 5400 रुपये निकाले पर पैसे नहीं निकले, खाते से कट गए।",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-02-15T16:22:00",
+  "customer_id": "C0177",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00076"
+ },
+ {
+  "body": "Please send me my account statement for the last three months.",
+  "category": "statement_request",
+  "created_at": "2026-02-20T08:25:00",
+  "customer_id": "C0051",
+  "language": "en",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00077"
+ },
+ {
+  "body": "Mera debit card ending 7832 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2026-07-01T08:15:00",
+  "customer_id": "C0029",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00078"
+ },
+ {
+  "body": "My debit card ending 0065 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-01-06T14:54:00",
+  "customer_id": "C0100",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00079"
+ },
+ {
+  "body": "Kripya pichhle teen mahino ka khaata vivran bhejein.",
+  "category": "statement_request",
+  "created_at": "2026-04-29T17:21:00",
+  "customer_id": "C0003",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00080"
+ },
+ {
+  "body": "Why was Rs 8200 charged to my account on 05-07-2026?",
+  "category": "fee_query",
+  "created_at": "2026-07-05T09:03:00",
+  "customer_id": "C0135",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00081"
+ },
+ {
+  "body": "Why was Rs 9900 charged to my account on 24-09-2026?",
+  "category": "fee_query",
+  "created_at": "2026-09-24T20:35:00",
+  "customer_id": "C0062",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00082"
+ },
+ {
+  "body": "21-03-2026 को एटीएम से 1600 रुपये निकाले पर पैसे नहीं निकले, खाते से कट गए।",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-03-21T13:17:00",
+  "customer_id": "C0186",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00083"
+ },
+ {
+  "body": "My debit card ending 6213 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-09-17T11:45:00",
+  "customer_id": "C0113",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00084"
+ },
+ {
+  "body": "16-09-2026 ko mere khaate se 1500 rupaye ka shulk kyon kata?",
+  "category": "fee_query",
+  "created_at": "2026-09-16T08:02:00",
+  "customer_id": "C0149",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00085"
+ },
+ {
+  "body": "मेरा डेबिट कार्ड जिसके आखिरी अंक 9971 हैं, खो गया है। कृपया ब्लॉक करें।",
+  "category": "card_block",
+  "created_at": "2026-07-18T11:38:00",
+  "customer_id": "C0021",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00086"
+ },
+ {
+  "body": "09-01-2026 ko mere account se Rs 7800 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2026-01-09T17:26:00",
+  "customer_id": "C0120",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00087"
+ },
+ {
+  "body": "My debit card ending 3357 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-04-23T19:45:00",
+  "customer_id": "C0088",
+  "language": "en",
+  "status": "open",
+  "subject": "Card lost",
+  "ticket_id": "TK00088"
+ },
+ {
+  "body": "10-05-2026 ko ATM se Rs 8200 withdraw kiya but cash nahi aaya, account se debit ho gaya.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-05-10T19:09:00",
+  "customer_id": "C0029",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00089"
+ },
+ {
+  "body": "I tried to withdraw Rs 9600 on 04-06-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-06-04T21:59:00",
+  "customer_id": "C0108",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00090"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2025-10-19T18:57:00",
+  "customer_id": "C0024",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00091"
+ },
+ {
+  "body": "मुझे केवाईसी अपडेट का संदेश मिला है। कौन से दस्तावेज़ चाहिए?",
+  "category": "kyc_update",
+  "created_at": "2025-10-18T21:32:00",
+  "customer_id": "C0107",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00092"
+ },
+ {
+  "body": "My debit card ending 7725 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2025-12-25T16:37:00",
+  "customer_id": "C0180",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00093"
+ },
+ {
+  "body": "I tried to withdraw Rs 4600 on 20-02-2026 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-02-20T11:58:00",
+  "customer_id": "C0037",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00094"
+ },
+ {
+  "body": "Mera debit card ending 7832 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2026-04-25T15:18:00",
+  "customer_id": "C0029",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00095"
+ },
+ {
+  "body": "09-07-2026 ko Rs 9100 ka UPI payment fail hua but paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2026-07-09T21:51:00",
+  "customer_id": "C0199",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00096"
+ },
+ {
+  "body": "30-10-2025 ko 200 rupaye ka UPI bhugtaan fail hua par paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2025-10-30T19:25:00",
+  "customer_id": "C0099",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00097"
+ },
+ {
+  "body": "मेरा डेबिट कार्ड जिसके आखिरी अंक 8868 हैं, खो गया है। कृपया ब्लॉक करें।",
+  "category": "card_block",
+  "created_at": "2025-12-25T18:15:00",
+  "customer_id": "C0024",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00098"
+ },
+ {
+  "body": "My debit card ending 5997 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2025-11-14T11:12:00",
+  "customer_id": "C0082",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00099"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2026-06-21T08:19:00",
+  "customer_id": "C0005",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00100"
+ },
+ {
+  "body": "20-11-2025 ko mere account se Rs 8000 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2025-11-20T09:53:00",
+  "customer_id": "C0125",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00101"
+ },
+ {
+  "body": "I received a message to update my KYC. What documents do I need?",
+  "category": "kyc_update",
+  "created_at": "2026-08-03T08:03:00",
+  "customer_id": "C0110",
+  "language": "en",
+  "status": "resolved",
+  "subject": "KYC update",
+  "ticket_id": "TK00102"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2026-05-19T15:55:00",
+  "customer_id": "C0178",
+  "language": "hi-Deva",
+  "status": "open",
+  "subject": "Statement request",
+  "ticket_id": "TK00103"
+ },
+ {
+  "body": "My UPI payment of Rs 4700 on 08-11-2025 failed but money was deducted.",
+  "category": "upi_failed",
+  "created_at": "2025-11-08T13:47:00",
+  "customer_id": "C0039",
+  "language": "en",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00104"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2025-10-23T17:24:00",
+  "customer_id": "C0122",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00105"
+ },
+ {
+  "body": "Why was Rs 7200 charged to my account on 01-10-2025?",
+  "category": "fee_query",
+  "created_at": "2025-10-01T20:04:00",
+  "customer_id": "C0110",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00106"
+ },
+ {
+  "body": "Please last three months ka account statement bhej do.",
+  "category": "statement_request",
+  "created_at": "2025-10-10T18:00:00",
+  "customer_id": "C0148",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00107"
+ },
+ {
+  "body": "25-01-2026 ko mere account se Rs 6800 ka charge kyun laga?",
+  "category": "fee_query",
+  "created_at": "2026-01-25T18:51:00",
+  "customer_id": "C0190",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00108"
+ },
+ {
+  "body": "24-09-2026 को 5400 रुपये का यूपीआई भुगतान विफल हुआ पर पैसा कट गया।",
+  "category": "upi_failed",
+  "created_at": "2026-09-24T18:12:00",
+  "customer_id": "C0106",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00109"
+ },
+ {
+  "body": "KYC update ka message aaya hai, kaunse documents chahiye?",
+  "category": "kyc_update",
+  "created_at": "2025-11-12T21:57:00",
+  "customer_id": "C0081",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00110"
+ },
+ {
+  "body": "14-04-2026 ko ATM se Rs 2200 withdraw kiya but cash nahi aaya, account se debit ho gaya.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-04-14T21:58:00",
+  "customer_id": "C0195",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00111"
+ },
+ {
+  "body": "My debit card ending 2623 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-07-06T08:41:00",
+  "customer_id": "C0068",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00112"
+ },
+ {
+  "body": "27-04-2026 ko 8500 rupaye ka UPI bhugtaan fail hua par paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2026-04-27T11:16:00",
+  "customer_id": "C0015",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00113"
+ },
+ {
+  "body": "Why was Rs 5900 charged to my account on 23-01-2026?",
+  "category": "fee_query",
+  "created_at": "2026-01-23T17:34:00",
+  "customer_id": "C0080",
+  "language": "en",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00114"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2026-04-19T17:23:00",
+  "customer_id": "C0126",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00115"
+ },
+ {
+  "body": "Why was Rs 4700 charged to my account on 12-12-2025?",
+  "category": "fee_query",
+  "created_at": "2025-12-12T19:20:00",
+  "customer_id": "C0053",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00116"
+ },
+ {
+  "body": "My UPI payment of Rs 600 on 18-09-2026 failed but money was deducted.",
+  "category": "upi_failed",
+  "created_at": "2026-09-18T16:25:00",
+  "customer_id": "C0086",
+  "language": "en",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00117"
+ },
+ {
+  "body": "06-02-2026 ko ATM se Rs 600 withdraw kiya but cash nahi aaya, account se debit ho gaya.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-02-06T21:43:00",
+  "customer_id": "C0056",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00118"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2026-02-24T13:51:00",
+  "customer_id": "C0192",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00119"
+ },
+ {
+  "body": "I received a message to update my KYC. What documents do I need?",
+  "category": "kyc_update",
+  "created_at": "2026-03-03T10:27:00",
+  "customer_id": "C0022",
+  "language": "en",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00120"
+ },
+ {
+  "body": "19-08-2026 को मेरे खाते से 2400 रुपये का शुल्क क्यों कटा?",
+  "category": "fee_query",
+  "created_at": "2026-08-19T10:48:00",
+  "customer_id": "C0107",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00121"
+ },
+ {
+  "body": "17-11-2025 ko Rs 1200 ka UPI payment fail hua but paisa kat gaya.",
+  "category": "upi_failed",
+  "created_at": "2025-11-17T21:11:00",
+  "customer_id": "C0057",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00122"
+ },
+ {
+  "body": "I tried to withdraw Rs 3700 on 26-10-2025 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2025-10-26T20:43:00",
+  "customer_id": "C0101",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00123"
+ },
+ {
+  "body": "09-07-2026 को 8200 रुपये का यूपीआई भुगतान विफल हुआ पर पैसा कट गया।",
+  "category": "upi_failed",
+  "created_at": "2026-07-09T15:11:00",
+  "customer_id": "C0177",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00124"
+ },
+ {
+  "body": "My debit card ending 9750 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-03-07T15:11:00",
+  "customer_id": "C0032",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00125"
+ },
+ {
+  "body": "My debit card ending 3277 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-03-01T12:43:00",
+  "customer_id": "C0074",
+  "language": "en",
+  "status": "open",
+  "subject": "Card lost",
+  "ticket_id": "TK00126"
+ },
+ {
+  "body": "Mera debit card ending 4297 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2026-03-19T18:56:00",
+  "customer_id": "C0040",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00127"
+ },
+ {
+  "body": "Mujhe KYC update ka sandesh mila hai. Kaun se dastavez chahiye?",
+  "category": "kyc_update",
+  "created_at": "2026-03-18T17:28:00",
+  "customer_id": "C0015",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00128"
+ },
+ {
+  "body": "My debit card ending 3464 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-01-12T13:45:00",
+  "customer_id": "C0036",
+  "language": "en",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00129"
+ },
+ {
+  "body": "Please send me my account statement for the last three months.",
+  "category": "statement_request",
+  "created_at": "2026-05-07T18:36:00",
+  "customer_id": "C0134",
+  "language": "en",
+  "status": "closed",
+  "subject": "Statement request",
+  "ticket_id": "TK00130"
+ },
+ {
+  "body": "I tried to withdraw Rs 9600 on 16-12-2025 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2025-12-16T11:26:00",
+  "customer_id": "C0138",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00131"
+ },
+ {
+  "body": "14-02-2026 ko mere khaate se 200 rupaye ka shulk kyon kata?",
+  "category": "fee_query",
+  "created_at": "2026-02-14T11:53:00",
+  "customer_id": "C0004",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00132"
+ },
+ {
+  "body": "Mera debit card jiske aakhri ank 7069 hain, kho gaya hai. Kripya block karein.",
+  "category": "card_block",
+  "created_at": "2026-09-03T12:47:00",
+  "customer_id": "C0003",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00133"
+ },
+ {
+  "body": "Why was Rs 200 charged to my account on 29-01-2026?",
+  "category": "fee_query",
+  "created_at": "2026-01-29T08:24:00",
+  "customer_id": "C0158",
+  "language": "en",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00134"
+ },
+ {
+  "body": "मेरा डेबिट कार्ड जिसके आखिरी अंक 8700 हैं, खो गया है। कृपया ब्लॉक करें।",
+  "category": "card_block",
+  "created_at": "2025-12-10T10:22:00",
+  "customer_id": "C0008",
+  "language": "hi-Deva",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00135"
+ },
+ {
+  "body": "Why was Rs 1000 charged to my account on 12-12-2025?",
+  "category": "fee_query",
+  "created_at": "2025-12-12T21:28:00",
+  "customer_id": "C0007",
+  "language": "en",
+  "status": "open",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00136"
+ },
+ {
+  "body": "I received a message to update my KYC. What documents do I need?",
+  "category": "kyc_update",
+  "created_at": "2026-08-03T08:47:00",
+  "customer_id": "C0032",
+  "language": "en",
+  "status": "closed",
+  "subject": "KYC update",
+  "ticket_id": "TK00137"
+ },
+ {
+  "body": "कृपया पिछले तीन महीनों का खाता विवरण भेजें।",
+  "category": "statement_request",
+  "created_at": "2025-10-13T20:38:00",
+  "customer_id": "C0116",
+  "language": "hi-Deva",
+  "status": "open",
+  "subject": "Statement request",
+  "ticket_id": "TK00138"
+ },
+ {
+  "body": "29-04-2026 ko ATM se Rs 4600 withdraw kiya but cash nahi aaya, account se debit ho gaya.",
+  "category": "atm_not_dispensed",
+  "created_at": "2026-04-29T09:28:00",
+  "customer_id": "C0011",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00139"
+ },
+ {
+  "body": "My debit card ending 3510 is lost. Please help me block it.",
+  "category": "card_block",
+  "created_at": "2026-09-10T15:26:00",
+  "customer_id": "C0080",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Card lost",
+  "ticket_id": "TK00140"
+ },
+ {
+  "body": "02-07-2026 को मेरे खाते से 400 रुपये का शुल्क क्यों कटा?",
+  "category": "fee_query",
+  "created_at": "2026-07-02T18:07:00",
+  "customer_id": "C0058",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00141"
+ },
+ {
+  "body": "16-10-2025 ko ATM se 6900 rupaye nikaale par paise nahi nikle, khaate se kat gaye.",
+  "category": "atm_not_dispensed",
+  "created_at": "2025-10-16T10:09:00",
+  "customer_id": "C0149",
+  "language": "hi-Latn",
+  "status": "open",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00142"
+ },
+ {
+  "body": "Mera debit card jiske aakhri ank 9264 hain, kho gaya hai. Kripya block karein.",
+  "category": "card_block",
+  "created_at": "2025-12-10T10:24:00",
+  "customer_id": "C0133",
+  "language": "hi-Latn",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00143"
+ },
+ {
+  "body": "Why was Rs 9200 charged to my account on 22-08-2026?",
+  "category": "fee_query",
+  "created_at": "2026-08-22T14:05:00",
+  "customer_id": "C0088",
+  "language": "en",
+  "status": "resolved",
+  "subject": "Question about a charge",
+  "ticket_id": "TK00144"
+ },
+ {
+  "body": "14-11-2025 को 8400 रुपये का यूपीआई भुगतान विफल हुआ पर पैसा कट गया।",
+  "category": "upi_failed",
+  "created_at": "2025-11-14T21:45:00",
+  "customer_id": "C0177",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00145"
+ },
+ {
+  "body": "Mera debit card ending 9573 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2026-06-01T09:55:00",
+  "customer_id": "C0057",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00146"
+ },
+ {
+  "body": "Mera debit card ending 0697 lost ho gaya hai, please block kar do.",
+  "category": "card_block",
+  "created_at": "2025-10-07T19:24:00",
+  "customer_id": "C0182",
+  "language": "hinglish",
+  "status": "closed",
+  "subject": "Card lost",
+  "ticket_id": "TK00147"
+ },
+ {
+  "body": "Please last three months ka account statement bhej do.",
+  "category": "statement_request",
+  "created_at": "2026-05-10T21:36:00",
+  "customer_id": "C0167",
+  "language": "hinglish",
+  "status": "resolved",
+  "subject": "Statement request",
+  "ticket_id": "TK00148"
+ },
+ {
+  "body": "01-01-2026 को 1700 रुपये का यूपीआई भुगतान विफल हुआ पर पैसा कट गया।",
+  "category": "upi_failed",
+  "created_at": "2026-01-01T12:55:00",
+  "customer_id": "C0191",
+  "language": "hi-Deva",
+  "status": "closed",
+  "subject": "UPI payment failed",
+  "ticket_id": "TK00149"
+ },
+ {
+  "body": "I tried to withdraw Rs 6100 on 04-11-2025 but the ATM gave no cash. The amount was debited.",
+  "category": "atm_not_dispensed",
+  "created_at": "2025-11-04T21:13:00",
+  "customer_id": "C0108",
+  "language": "en",
+  "status": "closed",
+  "subject": "ATM cash not dispensed",
+  "ticket_id": "TK00150"
+ }
+]

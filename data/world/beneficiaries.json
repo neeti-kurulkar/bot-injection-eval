@@ -1,0 +1,2370 @@
+[
+ {
+  "account_ref": "A0002",
+  "added_on": "2024-11-20",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0001",
+  "customer_id": "C0001",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-6059201075",
+  "added_on": "2025-05-30",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0002",
+  "customer_id": "C0001",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0142",
+  "added_on": "2023-08-31",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0003",
+  "customer_id": "C0001",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0213",
+  "added_on": "2025-06-16",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0004",
+  "customer_id": "C0003",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0005",
+  "added_on": "2025-03-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0005",
+  "customer_id": "C0004",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0005",
+  "added_on": "2025-07-09",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0006",
+  "customer_id": "C0004",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0004",
+  "added_on": "2025-08-09",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0007",
+  "customer_id": "C0005",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0087",
+  "added_on": "2025-02-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0008",
+  "customer_id": "C0006",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0024",
+  "added_on": "2024-03-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0009",
+  "customer_id": "C0006",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-8787828018",
+  "added_on": "2024-11-23",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0010",
+  "customer_id": "C0006",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-1742999339",
+  "added_on": "2025-02-24",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0011",
+  "customer_id": "C0008",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0274",
+  "added_on": "2025-07-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0012",
+  "customer_id": "C0009",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0067",
+  "added_on": "2025-02-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0013",
+  "customer_id": "C0009",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3264678456",
+  "added_on": "2025-06-03",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0014",
+  "customer_id": "C0010",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-4513384166",
+  "added_on": "2024-01-02",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0015",
+  "customer_id": "C0012",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0006",
+  "added_on": "2024-09-09",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0016",
+  "customer_id": "C0013",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-1184170823",
+  "added_on": "2024-07-26",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0017",
+  "customer_id": "C0016",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0017",
+  "added_on": "2025-07-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0018",
+  "customer_id": "C0016",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-5556559194",
+  "added_on": "2023-05-29",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0019",
+  "customer_id": "C0016",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "EXT-7029440617",
+  "added_on": "2023-03-02",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0020",
+  "customer_id": "C0018",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0157",
+  "added_on": "2024-06-07",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0021",
+  "customer_id": "C0018",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0155",
+  "added_on": "2025-06-04",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0022",
+  "customer_id": "C0018",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-8783009493",
+  "added_on": "2025-03-19",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0023",
+  "customer_id": "C0019",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0217",
+  "added_on": "2024-09-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0024",
+  "customer_id": "C0019",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-7429230241",
+  "added_on": "2023-12-11",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0025",
+  "customer_id": "C0020",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0209",
+  "added_on": "2025-07-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0026",
+  "customer_id": "C0021",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0209",
+  "added_on": "2024-07-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0027",
+  "customer_id": "C0021",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0251",
+  "added_on": "2024-04-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0028",
+  "customer_id": "C0022",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-4600040911",
+  "added_on": "2025-08-15",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0029",
+  "customer_id": "C0024",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-3571540065",
+  "added_on": "2025-03-01",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0030",
+  "customer_id": "C0024",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-8137201742",
+  "added_on": "2024-04-18",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0031",
+  "customer_id": "C0026",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0027",
+  "added_on": "2023-05-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0032",
+  "customer_id": "C0026",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0026",
+  "added_on": "2023-02-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0033",
+  "customer_id": "C0027",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-1871316169",
+  "added_on": "2023-05-03",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0034",
+  "customer_id": "C0027",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0028",
+  "added_on": "2025-08-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0035",
+  "customer_id": "C0029",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0079",
+  "added_on": "2025-03-31",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0036",
+  "customer_id": "C0029",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0120",
+  "added_on": "2023-09-14",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0037",
+  "customer_id": "C0030",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0258",
+  "added_on": "2023-12-15",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0038",
+  "customer_id": "C0030",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0121",
+  "added_on": "2025-07-29",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0039",
+  "customer_id": "C0031",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0161",
+  "added_on": "2024-04-15",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0040",
+  "customer_id": "C0032",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0159",
+  "added_on": "2025-09-20",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0041",
+  "customer_id": "C0032",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-1651526015",
+  "added_on": "2025-08-08",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0042",
+  "customer_id": "C0035",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3124179326",
+  "added_on": "2023-09-05",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0043",
+  "customer_id": "C0035",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0129",
+  "added_on": "2025-04-11",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0044",
+  "customer_id": "C0035",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0028",
+  "added_on": "2025-01-17",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0045",
+  "customer_id": "C0036",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3846899401",
+  "added_on": "2025-08-11",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0046",
+  "customer_id": "C0036",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "EXT-2505969838",
+  "added_on": "2023-02-26",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0047",
+  "customer_id": "C0038",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-8702043176",
+  "added_on": "2025-07-09",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0048",
+  "customer_id": "C0038",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-7948528210",
+  "added_on": "2023-08-20",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0049",
+  "customer_id": "C0038",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0255",
+  "added_on": "2024-01-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0050",
+  "customer_id": "C0040",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0133",
+  "added_on": "2025-02-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0051",
+  "customer_id": "C0040",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0262",
+  "added_on": "2025-02-11",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0052",
+  "customer_id": "C0042",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0041",
+  "added_on": "2025-06-21",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0053",
+  "customer_id": "C0042",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0084",
+  "added_on": "2024-05-21",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0054",
+  "customer_id": "C0044",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0043",
+  "added_on": "2024-03-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0055",
+  "customer_id": "C0044",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0131",
+  "added_on": "2024-09-11",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0056",
+  "customer_id": "C0045",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0290",
+  "added_on": "2025-08-09",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0057",
+  "customer_id": "C0048",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0049",
+  "added_on": "2024-08-19",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0058",
+  "customer_id": "C0050",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-9217916780",
+  "added_on": "2025-05-12",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0059",
+  "customer_id": "C0051",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0290",
+  "added_on": "2024-07-04",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0060",
+  "customer_id": "C0052",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0033",
+  "added_on": "2025-09-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0061",
+  "customer_id": "C0054",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0028",
+  "added_on": "2024-04-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0062",
+  "customer_id": "C0055",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-6820237464",
+  "added_on": "2025-08-27",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0063",
+  "customer_id": "C0055",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0289",
+  "added_on": "2024-02-21",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0064",
+  "customer_id": "C0056",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0289",
+  "added_on": "2025-07-17",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0065",
+  "customer_id": "C0056",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0289",
+  "added_on": "2023-04-30",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0066",
+  "customer_id": "C0056",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0218",
+  "added_on": "2023-07-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0067",
+  "customer_id": "C0057",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-7405680589",
+  "added_on": "2023-04-08",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0068",
+  "customer_id": "C0057",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-2804170000",
+  "added_on": "2024-09-04",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0069",
+  "customer_id": "C0059",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0081",
+  "added_on": "2023-11-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0070",
+  "customer_id": "C0059",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-2912068892",
+  "added_on": "2025-03-13",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0071",
+  "customer_id": "C0060",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0030",
+  "added_on": "2023-01-29",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0072",
+  "customer_id": "C0060",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0062",
+  "added_on": "2023-02-14",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0073",
+  "customer_id": "C0061",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0158",
+  "added_on": "2025-07-07",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0074",
+  "customer_id": "C0062",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0061",
+  "added_on": "2024-01-05",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0075",
+  "customer_id": "C0062",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0278",
+  "added_on": "2023-01-30",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0076",
+  "customer_id": "C0062",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-2373378377",
+  "added_on": "2024-04-06",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0077",
+  "customer_id": "C0063",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0065",
+  "added_on": "2023-11-29",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0078",
+  "customer_id": "C0064",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0242",
+  "added_on": "2023-04-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0079",
+  "customer_id": "C0064",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-8634741559",
+  "added_on": "2024-07-09",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0080",
+  "customer_id": "C0064",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0224",
+  "added_on": "2023-03-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0081",
+  "customer_id": "C0065",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0224",
+  "added_on": "2025-06-11",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0082",
+  "customer_id": "C0065",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0108",
+  "added_on": "2023-04-04",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0083",
+  "customer_id": "C0065",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0112",
+  "added_on": "2024-10-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0084",
+  "customer_id": "C0066",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-5762159370",
+  "added_on": "2023-12-03",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0085",
+  "customer_id": "C0066",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0037",
+  "added_on": "2025-05-14",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0086",
+  "customer_id": "C0066",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-9207008483",
+  "added_on": "2023-05-09",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0087",
+  "customer_id": "C0067",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0093",
+  "added_on": "2025-03-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0088",
+  "customer_id": "C0067",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0184",
+  "added_on": "2023-12-06",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0089",
+  "customer_id": "C0067",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0067",
+  "added_on": "2025-08-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0090",
+  "customer_id": "C0069",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0068",
+  "added_on": "2025-05-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0091",
+  "customer_id": "C0069",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0068",
+  "added_on": "2025-04-10",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0092",
+  "customer_id": "C0069",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-7235864358",
+  "added_on": "2024-12-23",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0093",
+  "customer_id": "C0070",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-1782955620",
+  "added_on": "2023-10-07",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0094",
+  "customer_id": "C0070",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "EXT-1150789643",
+  "added_on": "2025-08-30",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0095",
+  "customer_id": "C0070",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0072",
+  "added_on": "2024-05-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0096",
+  "customer_id": "C0071",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-4586021839",
+  "added_on": "2023-04-29",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0097",
+  "customer_id": "C0073",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0012",
+  "added_on": "2025-06-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0098",
+  "customer_id": "C0073",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-1590354496",
+  "added_on": "2024-07-12",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0099",
+  "customer_id": "C0074",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "EXT-5373835582",
+  "added_on": "2023-08-27",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0100",
+  "customer_id": "C0074",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-9998520338",
+  "added_on": "2024-08-21",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0101",
+  "customer_id": "C0077",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0076",
+  "added_on": "2025-08-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0102",
+  "customer_id": "C0077",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0076",
+  "added_on": "2024-12-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0103",
+  "customer_id": "C0077",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-3696280669",
+  "added_on": "2023-08-31",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0104",
+  "customer_id": "C0078",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-7886990678",
+  "added_on": "2023-08-06",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0105",
+  "customer_id": "C0078",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "EXT-9623909792",
+  "added_on": "2025-08-08",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0106",
+  "customer_id": "C0078",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-7055834673",
+  "added_on": "2024-08-07",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0107",
+  "customer_id": "C0079",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0259",
+  "added_on": "2025-01-17",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0108",
+  "customer_id": "C0079",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-7197328982",
+  "added_on": "2023-07-22",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0109",
+  "customer_id": "C0080",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-8390298344",
+  "added_on": "2025-01-20",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0110",
+  "customer_id": "C0080",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0082",
+  "added_on": "2023-02-10",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0111",
+  "customer_id": "C0081",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0244",
+  "added_on": "2024-12-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0112",
+  "customer_id": "C0081",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0057",
+  "added_on": "2024-01-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0113",
+  "customer_id": "C0081",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0081",
+  "added_on": "2025-07-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0114",
+  "customer_id": "C0082",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0252",
+  "added_on": "2023-12-21",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0115",
+  "customer_id": "C0082",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0252",
+  "added_on": "2025-03-18",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0116",
+  "customer_id": "C0082",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-5008648193",
+  "added_on": "2023-05-04",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0117",
+  "customer_id": "C0083",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0120",
+  "added_on": "2024-08-13",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0118",
+  "customer_id": "C0083",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-2698085272",
+  "added_on": "2023-11-13",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0119",
+  "customer_id": "C0084",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0199",
+  "added_on": "2025-06-06",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0120",
+  "customer_id": "C0084",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0188",
+  "added_on": "2023-01-08",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0121",
+  "customer_id": "C0085",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0129",
+  "added_on": "2025-07-06",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0122",
+  "customer_id": "C0085",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0141",
+  "added_on": "2025-04-17",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0123",
+  "customer_id": "C0085",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-1642936621",
+  "added_on": "2023-09-08",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0124",
+  "customer_id": "C0086",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0176",
+  "added_on": "2023-05-09",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0125",
+  "customer_id": "C0086",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0087",
+  "added_on": "2025-01-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0126",
+  "customer_id": "C0088",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0087",
+  "added_on": "2023-03-11",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0127",
+  "customer_id": "C0088",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-8511583868",
+  "added_on": "2025-07-24",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0128",
+  "customer_id": "C0089",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0090",
+  "added_on": "2025-09-20",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0129",
+  "customer_id": "C0089",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-9055326406",
+  "added_on": "2023-12-20",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0130",
+  "customer_id": "C0090",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0089",
+  "added_on": "2025-08-16",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0131",
+  "customer_id": "C0090",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-9314389898",
+  "added_on": "2025-09-28",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0132",
+  "customer_id": "C0090",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0182",
+  "added_on": "2025-09-15",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0133",
+  "customer_id": "C0091",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-9054621020",
+  "added_on": "2023-04-22",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0134",
+  "customer_id": "C0092",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-3946261897",
+  "added_on": "2023-05-07",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0135",
+  "customer_id": "C0094",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0124",
+  "added_on": "2023-04-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0136",
+  "customer_id": "C0095",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0094",
+  "added_on": "2024-12-05",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0137",
+  "customer_id": "C0095",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0188",
+  "added_on": "2024-11-17",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0138",
+  "customer_id": "C0095",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0018",
+  "added_on": "2025-07-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0139",
+  "customer_id": "C0096",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0267",
+  "added_on": "2025-06-29",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0140",
+  "customer_id": "C0097",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-7451828336",
+  "added_on": "2023-10-17",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0141",
+  "customer_id": "C0098",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "EXT-7247143972",
+  "added_on": "2023-12-11",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0142",
+  "customer_id": "C0098",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0099",
+  "added_on": "2025-07-18",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0143",
+  "customer_id": "C0098",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0288",
+  "added_on": "2024-11-10",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0144",
+  "customer_id": "C0100",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-2858315366",
+  "added_on": "2024-02-27",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0145",
+  "customer_id": "C0100",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-7125616237",
+  "added_on": "2024-05-22",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0146",
+  "customer_id": "C0100",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0071",
+  "added_on": "2025-06-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0147",
+  "customer_id": "C0101",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0103",
+  "added_on": "2023-02-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0148",
+  "customer_id": "C0102",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-2207613142",
+  "added_on": "2025-05-14",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0149",
+  "customer_id": "C0102",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0133",
+  "added_on": "2023-05-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0150",
+  "customer_id": "C0102",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0105",
+  "added_on": "2023-06-20",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0151",
+  "customer_id": "C0104",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0133",
+  "added_on": "2025-02-08",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0152",
+  "customer_id": "C0104",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0105",
+  "added_on": "2025-07-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0153",
+  "customer_id": "C0104",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-5448109532",
+  "added_on": "2023-11-15",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0154",
+  "customer_id": "C0105",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0104",
+  "added_on": "2023-04-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0155",
+  "customer_id": "C0105",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0106",
+  "added_on": "2024-04-18",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0156",
+  "customer_id": "C0107",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0221",
+  "added_on": "2024-03-22",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0157",
+  "customer_id": "C0109",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0110",
+  "added_on": "2024-09-18",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0158",
+  "customer_id": "C0109",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0110",
+  "added_on": "2025-02-21",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0159",
+  "customer_id": "C0109",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-7293229901",
+  "added_on": "2024-02-20",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0160",
+  "customer_id": "C0110",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0261",
+  "added_on": "2023-12-07",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0161",
+  "customer_id": "C0110",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0109",
+  "added_on": "2024-04-18",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0162",
+  "customer_id": "C0110",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0125",
+  "added_on": "2024-04-20",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0163",
+  "customer_id": "C0112",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-2861516575",
+  "added_on": "2024-04-12",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0164",
+  "customer_id": "C0112",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-5375767964",
+  "added_on": "2024-10-28",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0165",
+  "customer_id": "C0114",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0012",
+  "added_on": "2023-02-13",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0166",
+  "customer_id": "C0115",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0281",
+  "added_on": "2024-01-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0167",
+  "customer_id": "C0115",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0201",
+  "added_on": "2025-06-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0168",
+  "customer_id": "C0116",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-8424892937",
+  "added_on": "2025-07-30",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0169",
+  "customer_id": "C0117",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0033",
+  "added_on": "2023-02-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0170",
+  "customer_id": "C0117",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-7065850506",
+  "added_on": "2023-08-14",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0171",
+  "customer_id": "C0117",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0276",
+  "added_on": "2023-03-31",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0172",
+  "customer_id": "C0118",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0248",
+  "added_on": "2023-06-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0173",
+  "customer_id": "C0118",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0118",
+  "added_on": "2024-10-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0174",
+  "customer_id": "C0119",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0118",
+  "added_on": "2025-03-06",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0175",
+  "customer_id": "C0119",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-2894082295",
+  "added_on": "2023-10-21",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0176",
+  "customer_id": "C0119",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0160",
+  "added_on": "2023-02-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0177",
+  "customer_id": "C0120",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0122",
+  "added_on": "2025-05-22",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0178",
+  "customer_id": "C0121",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-2244519769",
+  "added_on": "2023-08-29",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0179",
+  "customer_id": "C0121",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0121",
+  "added_on": "2025-05-19",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0180",
+  "customer_id": "C0122",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-3702525902",
+  "added_on": "2023-09-01",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0181",
+  "customer_id": "C0122",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0191",
+  "added_on": "2025-02-05",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0182",
+  "customer_id": "C0123",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0125",
+  "added_on": "2024-01-17",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0183",
+  "customer_id": "C0124",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-6312245799",
+  "added_on": "2024-11-08",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0184",
+  "customer_id": "C0125",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "EXT-1232563826",
+  "added_on": "2024-07-18",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0185",
+  "customer_id": "C0125",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0176",
+  "added_on": "2023-08-11",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0186",
+  "customer_id": "C0125",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3590848149",
+  "added_on": "2025-07-30",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0187",
+  "customer_id": "C0126",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0238",
+  "added_on": "2023-12-31",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0188",
+  "customer_id": "C0126",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-7299650008",
+  "added_on": "2023-11-08",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0189",
+  "customer_id": "C0126",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-9839952062",
+  "added_on": "2025-05-05",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0190",
+  "customer_id": "C0127",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0128",
+  "added_on": "2023-06-14",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0191",
+  "customer_id": "C0127",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0163",
+  "added_on": "2024-02-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0192",
+  "customer_id": "C0128",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0127",
+  "added_on": "2023-02-14",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0193",
+  "customer_id": "C0128",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-5170336126",
+  "added_on": "2024-05-12",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0194",
+  "customer_id": "C0131",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0077",
+  "added_on": "2025-08-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0195",
+  "customer_id": "C0131",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0134",
+  "added_on": "2025-05-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0196",
+  "customer_id": "C0132",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0133",
+  "added_on": "2024-12-06",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0197",
+  "customer_id": "C0132",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-8766745662",
+  "added_on": "2025-05-17",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0198",
+  "customer_id": "C0132",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0134",
+  "added_on": "2023-11-03",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0199",
+  "customer_id": "C0133",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0132",
+  "added_on": "2025-08-02",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0200",
+  "customer_id": "C0133",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0132",
+  "added_on": "2025-04-19",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0201",
+  "customer_id": "C0134",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0238",
+  "added_on": "2025-02-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0202",
+  "customer_id": "C0134",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0205",
+  "added_on": "2023-02-14",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0203",
+  "customer_id": "C0135",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0136",
+  "added_on": "2024-11-16",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0204",
+  "customer_id": "C0135",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0263",
+  "added_on": "2025-05-19",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0205",
+  "customer_id": "C0135",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0288",
+  "added_on": "2023-03-16",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0206",
+  "customer_id": "C0137",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-6665396594",
+  "added_on": "2023-07-21",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0207",
+  "customer_id": "C0137",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-4572914826",
+  "added_on": "2025-08-28",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0208",
+  "customer_id": "C0138",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-8318448537",
+  "added_on": "2023-03-12",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0209",
+  "customer_id": "C0138",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-4473589811",
+  "added_on": "2023-04-15",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0210",
+  "customer_id": "C0138",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0277",
+  "added_on": "2024-12-19",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0211",
+  "customer_id": "C0139",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0277",
+  "added_on": "2025-06-06",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0212",
+  "customer_id": "C0139",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0077",
+  "added_on": "2023-08-19",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0213",
+  "customer_id": "C0140",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0139",
+  "added_on": "2023-05-03",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0214",
+  "customer_id": "C0140",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0139",
+  "added_on": "2025-03-16",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0215",
+  "customer_id": "C0140",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-7405420681",
+  "added_on": "2024-06-16",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0216",
+  "customer_id": "C0141",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-5242910461",
+  "added_on": "2025-05-16",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0217",
+  "customer_id": "C0141",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0147",
+  "added_on": "2023-05-22",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0218",
+  "customer_id": "C0142",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0028",
+  "added_on": "2025-07-30",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0219",
+  "customer_id": "C0143",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0099",
+  "added_on": "2025-08-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0220",
+  "customer_id": "C0144",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0145",
+  "added_on": "2024-01-07",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0221",
+  "customer_id": "C0144",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-4493982889",
+  "added_on": "2023-01-20",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0222",
+  "customer_id": "C0146",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-6536353266",
+  "added_on": "2023-08-04",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0223",
+  "customer_id": "C0147",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0186",
+  "added_on": "2025-08-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0224",
+  "customer_id": "C0147",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0148",
+  "added_on": "2024-07-09",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0225",
+  "customer_id": "C0149",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-9618954089",
+  "added_on": "2023-06-11",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0226",
+  "customer_id": "C0149",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0026",
+  "added_on": "2024-09-19",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0227",
+  "customer_id": "C0152",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3183559262",
+  "added_on": "2024-07-29",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0228",
+  "customer_id": "C0153",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0096",
+  "added_on": "2024-05-31",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0229",
+  "customer_id": "C0153",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3536236407",
+  "added_on": "2025-08-02",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0230",
+  "customer_id": "C0153",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0292",
+  "added_on": "2024-04-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0231",
+  "customer_id": "C0154",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0154",
+  "added_on": "2024-05-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0232",
+  "customer_id": "C0155",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-4714298017",
+  "added_on": "2023-06-28",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0233",
+  "customer_id": "C0156",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0280",
+  "added_on": "2024-06-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0234",
+  "customer_id": "C0156",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0154",
+  "added_on": "2023-11-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0235",
+  "customer_id": "C0156",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0133",
+  "added_on": "2024-10-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0236",
+  "customer_id": "C0157",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-8808983304",
+  "added_on": "2024-12-23",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0237",
+  "customer_id": "C0157",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0253",
+  "added_on": "2023-06-10",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0238",
+  "customer_id": "C0157",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0019",
+  "added_on": "2023-05-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0239",
+  "customer_id": "C0158",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-8579251333",
+  "added_on": "2024-06-04",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0240",
+  "customer_id": "C0158",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-7951895821",
+  "added_on": "2025-04-15",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0241",
+  "customer_id": "C0159",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0160",
+  "added_on": "2025-07-05",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0242",
+  "customer_id": "C0161",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0160",
+  "added_on": "2023-11-08",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0243",
+  "customer_id": "C0161",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0160",
+  "added_on": "2024-12-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0244",
+  "customer_id": "C0161",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0163",
+  "added_on": "2024-12-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0245",
+  "customer_id": "C0162",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-1397805767",
+  "added_on": "2025-01-15",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0246",
+  "customer_id": "C0163",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-8829524968",
+  "added_on": "2023-07-31",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0247",
+  "customer_id": "C0164",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0019",
+  "added_on": "2023-02-21",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0248",
+  "customer_id": "C0164",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0153",
+  "added_on": "2025-04-08",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0249",
+  "customer_id": "C0165",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0257",
+  "added_on": "2025-03-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0250",
+  "customer_id": "C0165",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3702037098",
+  "added_on": "2025-01-20",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0251",
+  "customer_id": "C0165",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-7947596787",
+  "added_on": "2025-09-05",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0252",
+  "customer_id": "C0167",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "EXT-2565545597",
+  "added_on": "2024-06-12",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0253",
+  "customer_id": "C0167",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0029",
+  "added_on": "2024-03-20",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0254",
+  "customer_id": "C0168",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-1902443408",
+  "added_on": "2023-08-02",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0255",
+  "customer_id": "C0168",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-4666420857",
+  "added_on": "2024-08-23",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0256",
+  "customer_id": "C0170",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0171",
+  "added_on": "2024-01-23",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0257",
+  "customer_id": "C0170",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0298",
+  "added_on": "2025-06-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0258",
+  "customer_id": "C0170",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-3101694814",
+  "added_on": "2023-02-06",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0259",
+  "customer_id": "C0171",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0103",
+  "added_on": "2024-02-17",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0260",
+  "customer_id": "C0171",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0173",
+  "added_on": "2024-02-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0261",
+  "customer_id": "C0172",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0174",
+  "added_on": "2023-09-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0262",
+  "customer_id": "C0172",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-4760362609",
+  "added_on": "2025-09-24",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0263",
+  "customer_id": "C0172",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0172",
+  "added_on": "2024-12-18",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0264",
+  "customer_id": "C0173",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0211",
+  "added_on": "2025-02-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0265",
+  "customer_id": "C0173",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0070",
+  "added_on": "2023-05-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0266",
+  "customer_id": "C0174",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-3259542079",
+  "added_on": "2023-05-14",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0267",
+  "customer_id": "C0177",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "EXT-5407408187",
+  "added_on": "2023-08-27",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0268",
+  "customer_id": "C0177",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0283",
+  "added_on": "2025-06-09",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0269",
+  "customer_id": "C0177",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "EXT-5852930616",
+  "added_on": "2024-07-19",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0270",
+  "customer_id": "C0180",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0182",
+  "added_on": "2024-04-16",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0271",
+  "customer_id": "C0181",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0182",
+  "added_on": "2025-06-04",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0272",
+  "customer_id": "C0181",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0205",
+  "added_on": "2024-09-13",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0273",
+  "customer_id": "C0182",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-2422603550",
+  "added_on": "2023-11-29",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0274",
+  "customer_id": "C0182",
+  "nickname": "Landlord"
+ },
+ {
+  "account_ref": "A0106",
+  "added_on": "2023-08-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0275",
+  "customer_id": "C0183",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0151",
+  "added_on": "2025-02-26",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0276",
+  "customer_id": "C0184",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0085",
+  "added_on": "2024-04-11",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0277",
+  "customer_id": "C0186",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-9854863355",
+  "added_on": "2025-03-28",
+  "bank": "Example Co-operative Bank",
+  "beneficiary_id": "BEN-0278",
+  "customer_id": "C0187",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-1270637346",
+  "added_on": "2023-08-16",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0279",
+  "customer_id": "C0187",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0243",
+  "added_on": "2025-05-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0280",
+  "customer_id": "C0187",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0187",
+  "added_on": "2024-09-01",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0281",
+  "customer_id": "C0188",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0164",
+  "added_on": "2023-09-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0282",
+  "customer_id": "C0189",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0121",
+  "added_on": "2023-05-12",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0283",
+  "customer_id": "C0189",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0138",
+  "added_on": "2023-05-04",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0284",
+  "customer_id": "C0190",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-1042454598",
+  "added_on": "2023-08-03",
+  "bank": "Sample Urban Bank",
+  "beneficiary_id": "BEN-0285",
+  "customer_id": "C0190",
+  "nickname": "Tutor"
+ },
+ {
+  "account_ref": "A0140",
+  "added_on": "2023-09-25",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0286",
+  "customer_id": "C0190",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0134",
+  "added_on": "2024-07-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0287",
+  "customer_id": "C0191",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-6420005186",
+  "added_on": "2023-11-01",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0288",
+  "customer_id": "C0192",
+  "nickname": "Shop"
+ },
+ {
+  "account_ref": "A0116",
+  "added_on": "2025-09-24",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0289",
+  "customer_id": "C0192",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0192",
+  "added_on": "2024-12-03",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0290",
+  "customer_id": "C0193",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0167",
+  "added_on": "2024-05-27",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0291",
+  "customer_id": "C0193",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0191",
+  "added_on": "2023-05-28",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0292",
+  "customer_id": "C0193",
+  "nickname": "Family member"
+ },
+ {
+  "account_ref": "A0137",
+  "added_on": "2023-02-07",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0293",
+  "customer_id": "C0194",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-4972690088",
+  "added_on": "2024-10-05",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0294",
+  "customer_id": "C0200",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "A0146",
+  "added_on": "2023-07-10",
+  "bank": "Sahayak Bank",
+  "beneficiary_id": "BEN-0295",
+  "customer_id": "C0200",
+  "nickname": "Friend"
+ },
+ {
+  "account_ref": "EXT-6939279669",
+  "added_on": "2024-12-06",
+  "bank": "Demo Gramin Bank",
+  "beneficiary_id": "BEN-0296",
+  "customer_id": "C0200",
+  "nickname": "Friend"
+ }
+]

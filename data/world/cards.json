@@ -1,0 +1,2298 @@
+[
+ {
+  "account_id": "A0001",
+  "card_id": "CARD-0001",
+  "expiry": "2028-02",
+  "last4": "6239",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0002",
+  "card_id": "CARD-0002",
+  "expiry": "2029-12",
+  "last4": "3715",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0003",
+  "card_id": "CARD-0003",
+  "expiry": "2028-06",
+  "last4": "3575",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0004",
+  "card_id": "CARD-0004",
+  "expiry": "2028-11",
+  "last4": "9775",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0005",
+  "card_id": "CARD-0005",
+  "expiry": "2027-02",
+  "last4": "4372",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0006",
+  "card_id": "CARD-0006",
+  "expiry": "2029-03",
+  "last4": "9807",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0007",
+  "card_id": "CARD-0007",
+  "expiry": "2028-04",
+  "last4": "8996",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0008",
+  "card_id": "CARD-0008",
+  "expiry": "2028-08",
+  "last4": "8700",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0009",
+  "card_id": "CARD-0009",
+  "expiry": "2029-08",
+  "last4": "4445",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0010",
+  "card_id": "CARD-0010",
+  "expiry": "2031-02",
+  "last4": "6622",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0011",
+  "card_id": "CARD-0011",
+  "expiry": "2029-10",
+  "last4": "6034",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0012",
+  "card_id": "CARD-0012",
+  "expiry": "2030-04",
+  "last4": "3189",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0013",
+  "card_id": "CARD-0013",
+  "expiry": "2029-11",
+  "last4": "9016",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0014",
+  "card_id": "CARD-0014",
+  "expiry": "2029-01",
+  "last4": "4892",
+  "status": "blocked",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0015",
+  "card_id": "CARD-0015",
+  "expiry": "2031-10",
+  "last4": "5366",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0016",
+  "card_id": "CARD-0016",
+  "expiry": "2027-09",
+  "last4": "9022",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0017",
+  "card_id": "CARD-0017",
+  "expiry": "2031-03",
+  "last4": "8952",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0018",
+  "card_id": "CARD-0018",
+  "expiry": "2029-11",
+  "last4": "9540",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0019",
+  "card_id": "CARD-0019",
+  "expiry": "2027-01",
+  "last4": "4436",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0020",
+  "card_id": "CARD-0020",
+  "expiry": "2031-10",
+  "last4": "3401",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0021",
+  "card_id": "CARD-0021",
+  "expiry": "2027-01",
+  "last4": "9971",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0022",
+  "card_id": "CARD-0022",
+  "expiry": "2027-03",
+  "last4": "2499",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0023",
+  "card_id": "CARD-0023",
+  "expiry": "2030-07",
+  "last4": "9071",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0024",
+  "card_id": "CARD-0024",
+  "expiry": "2028-03",
+  "last4": "8868",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0025",
+  "card_id": "CARD-0025",
+  "expiry": "2029-01",
+  "last4": "0555",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0026",
+  "card_id": "CARD-0026",
+  "expiry": "2028-11",
+  "last4": "2035",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0027",
+  "card_id": "CARD-0027",
+  "expiry": "2027-05",
+  "last4": "4343",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0028",
+  "card_id": "CARD-0028",
+  "expiry": "2030-02",
+  "last4": "2473",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0029",
+  "card_id": "CARD-0029",
+  "expiry": "2027-05",
+  "last4": "7832",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0030",
+  "card_id": "CARD-0030",
+  "expiry": "2029-08",
+  "last4": "5318",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0031",
+  "card_id": "CARD-0031",
+  "expiry": "2028-08",
+  "last4": "2026",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0032",
+  "card_id": "CARD-0032",
+  "expiry": "2028-11",
+  "last4": "9750",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0033",
+  "card_id": "CARD-0033",
+  "expiry": "2028-05",
+  "last4": "8664",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0034",
+  "card_id": "CARD-0034",
+  "expiry": "2029-01",
+  "last4": "6709",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0035",
+  "card_id": "CARD-0035",
+  "expiry": "2029-08",
+  "last4": "0459",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0036",
+  "card_id": "CARD-0036",
+  "expiry": "2028-08",
+  "last4": "2459",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0037",
+  "card_id": "CARD-0037",
+  "expiry": "2029-10",
+  "last4": "7820",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0038",
+  "card_id": "CARD-0038",
+  "expiry": "2031-08",
+  "last4": "8189",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0039",
+  "card_id": "CARD-0039",
+  "expiry": "2030-06",
+  "last4": "7370",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0040",
+  "card_id": "CARD-0040",
+  "expiry": "2029-07",
+  "last4": "4297",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0041",
+  "card_id": "CARD-0041",
+  "expiry": "2030-10",
+  "last4": "9398",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0042",
+  "card_id": "CARD-0042",
+  "expiry": "2029-12",
+  "last4": "3140",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0043",
+  "card_id": "CARD-0043",
+  "expiry": "2028-11",
+  "last4": "2391",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0044",
+  "card_id": "CARD-0044",
+  "expiry": "2027-03",
+  "last4": "3537",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0045",
+  "card_id": "CARD-0045",
+  "expiry": "2030-11",
+  "last4": "0816",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0046",
+  "card_id": "CARD-0046",
+  "expiry": "2027-09",
+  "last4": "5290",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0047",
+  "card_id": "CARD-0047",
+  "expiry": "2028-08",
+  "last4": "0545",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0048",
+  "card_id": "CARD-0048",
+  "expiry": "2031-02",
+  "last4": "0258",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0049",
+  "card_id": "CARD-0049",
+  "expiry": "2029-05",
+  "last4": "9369",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0050",
+  "card_id": "CARD-0050",
+  "expiry": "2027-09",
+  "last4": "6948",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0051",
+  "card_id": "CARD-0051",
+  "expiry": "2030-07",
+  "last4": "3365",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0052",
+  "card_id": "CARD-0052",
+  "expiry": "2027-05",
+  "last4": "7367",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0053",
+  "card_id": "CARD-0053",
+  "expiry": "2031-08",
+  "last4": "3956",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0054",
+  "card_id": "CARD-0054",
+  "expiry": "2030-11",
+  "last4": "6874",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0055",
+  "card_id": "CARD-0055",
+  "expiry": "2030-02",
+  "last4": "5665",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0056",
+  "card_id": "CARD-0056",
+  "expiry": "2027-11",
+  "last4": "4281",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0057",
+  "card_id": "CARD-0057",
+  "expiry": "2028-10",
+  "last4": "9573",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0058",
+  "card_id": "CARD-0058",
+  "expiry": "2027-06",
+  "last4": "4538",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0059",
+  "card_id": "CARD-0059",
+  "expiry": "2027-08",
+  "last4": "5133",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0060",
+  "card_id": "CARD-0060",
+  "expiry": "2031-11",
+  "last4": "4355",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0061",
+  "card_id": "CARD-0061",
+  "expiry": "2030-02",
+  "last4": "0831",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0062",
+  "card_id": "CARD-0062",
+  "expiry": "2027-10",
+  "last4": "7495",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0063",
+  "card_id": "CARD-0063",
+  "expiry": "2029-01",
+  "last4": "2606",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0064",
+  "card_id": "CARD-0064",
+  "expiry": "2030-04",
+  "last4": "8798",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0065",
+  "card_id": "CARD-0065",
+  "expiry": "2028-03",
+  "last4": "5959",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0066",
+  "card_id": "CARD-0066",
+  "expiry": "2028-02",
+  "last4": "6351",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0067",
+  "card_id": "CARD-0067",
+  "expiry": "2031-09",
+  "last4": "3911",
+  "status": "blocked",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0068",
+  "card_id": "CARD-0068",
+  "expiry": "2030-10",
+  "last4": "2623",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0069",
+  "card_id": "CARD-0069",
+  "expiry": "2029-07",
+  "last4": "4597",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0070",
+  "card_id": "CARD-0070",
+  "expiry": "2030-07",
+  "last4": "1086",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0071",
+  "card_id": "CARD-0071",
+  "expiry": "2029-04",
+  "last4": "2146",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0072",
+  "card_id": "CARD-0072",
+  "expiry": "2027-04",
+  "last4": "6939",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0073",
+  "card_id": "CARD-0073",
+  "expiry": "2029-10",
+  "last4": "2271",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0074",
+  "card_id": "CARD-0074",
+  "expiry": "2030-12",
+  "last4": "6716",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0075",
+  "card_id": "CARD-0075",
+  "expiry": "2031-03",
+  "last4": "8860",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0076",
+  "card_id": "CARD-0076",
+  "expiry": "2029-07",
+  "last4": "2425",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0077",
+  "card_id": "CARD-0077",
+  "expiry": "2027-06",
+  "last4": "3981",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0078",
+  "card_id": "CARD-0078",
+  "expiry": "2027-04",
+  "last4": "8864",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0079",
+  "card_id": "CARD-0079",
+  "expiry": "2030-02",
+  "last4": "7810",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0080",
+  "card_id": "CARD-0080",
+  "expiry": "2027-09",
+  "last4": "3510",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0081",
+  "card_id": "CARD-0081",
+  "expiry": "2031-06",
+  "last4": "3155",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0082",
+  "card_id": "CARD-0082",
+  "expiry": "2028-12",
+  "last4": "5997",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0083",
+  "card_id": "CARD-0083",
+  "expiry": "2031-08",
+  "last4": "4530",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0084",
+  "card_id": "CARD-0084",
+  "expiry": "2030-07",
+  "last4": "9088",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0085",
+  "card_id": "CARD-0085",
+  "expiry": "2030-12",
+  "last4": "6015",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0086",
+  "card_id": "CARD-0086",
+  "expiry": "2028-10",
+  "last4": "0622",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0087",
+  "card_id": "CARD-0087",
+  "expiry": "2028-05",
+  "last4": "1310",
+  "status": "blocked",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0088",
+  "card_id": "CARD-0088",
+  "expiry": "2029-05",
+  "last4": "3357",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0089",
+  "card_id": "CARD-0089",
+  "expiry": "2030-05",
+  "last4": "9443",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0090",
+  "card_id": "CARD-0090",
+  "expiry": "2027-11",
+  "last4": "9057",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0091",
+  "card_id": "CARD-0091",
+  "expiry": "2027-09",
+  "last4": "1159",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0092",
+  "card_id": "CARD-0092",
+  "expiry": "2030-02",
+  "last4": "2089",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0093",
+  "card_id": "CARD-0093",
+  "expiry": "2027-07",
+  "last4": "2400",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0094",
+  "card_id": "CARD-0094",
+  "expiry": "2029-09",
+  "last4": "9263",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0095",
+  "card_id": "CARD-0095",
+  "expiry": "2031-08",
+  "last4": "0354",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0096",
+  "card_id": "CARD-0096",
+  "expiry": "2027-01",
+  "last4": "0160",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0097",
+  "card_id": "CARD-0097",
+  "expiry": "2030-04",
+  "last4": "3392",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0098",
+  "card_id": "CARD-0098",
+  "expiry": "2031-10",
+  "last4": "8324",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0099",
+  "card_id": "CARD-0099",
+  "expiry": "2027-09",
+  "last4": "8436",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0100",
+  "card_id": "CARD-0100",
+  "expiry": "2029-08",
+  "last4": "9942",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0101",
+  "card_id": "CARD-0101",
+  "expiry": "2029-06",
+  "last4": "1359",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0102",
+  "card_id": "CARD-0102",
+  "expiry": "2029-09",
+  "last4": "6570",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0103",
+  "card_id": "CARD-0103",
+  "expiry": "2028-07",
+  "last4": "5926",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0104",
+  "card_id": "CARD-0104",
+  "expiry": "2030-04",
+  "last4": "6445",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0105",
+  "card_id": "CARD-0105",
+  "expiry": "2027-12",
+  "last4": "1068",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0106",
+  "card_id": "CARD-0106",
+  "expiry": "2031-04",
+  "last4": "3564",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0107",
+  "card_id": "CARD-0107",
+  "expiry": "2027-08",
+  "last4": "9334",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0108",
+  "card_id": "CARD-0108",
+  "expiry": "2029-06",
+  "last4": "5486",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0109",
+  "card_id": "CARD-0109",
+  "expiry": "2031-02",
+  "last4": "4486",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0110",
+  "card_id": "CARD-0110",
+  "expiry": "2027-07",
+  "last4": "7848",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0111",
+  "card_id": "CARD-0111",
+  "expiry": "2031-05",
+  "last4": "5304",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0112",
+  "card_id": "CARD-0112",
+  "expiry": "2027-02",
+  "last4": "1410",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0113",
+  "card_id": "CARD-0113",
+  "expiry": "2030-12",
+  "last4": "6213",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0114",
+  "card_id": "CARD-0114",
+  "expiry": "2030-03",
+  "last4": "6675",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0115",
+  "card_id": "CARD-0115",
+  "expiry": "2027-06",
+  "last4": "0797",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0116",
+  "card_id": "CARD-0116",
+  "expiry": "2029-07",
+  "last4": "0553",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0117",
+  "card_id": "CARD-0117",
+  "expiry": "2027-05",
+  "last4": "8199",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0118",
+  "card_id": "CARD-0118",
+  "expiry": "2028-02",
+  "last4": "0689",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0119",
+  "card_id": "CARD-0119",
+  "expiry": "2030-05",
+  "last4": "3468",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0120",
+  "card_id": "CARD-0120",
+  "expiry": "2027-01",
+  "last4": "8538",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0121",
+  "card_id": "CARD-0121",
+  "expiry": "2028-07",
+  "last4": "1978",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0122",
+  "card_id": "CARD-0122",
+  "expiry": "2031-03",
+  "last4": "8330",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0123",
+  "card_id": "CARD-0123",
+  "expiry": "2031-05",
+  "last4": "2299",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0124",
+  "card_id": "CARD-0124",
+  "expiry": "2031-03",
+  "last4": "4699",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0125",
+  "card_id": "CARD-0125",
+  "expiry": "2031-02",
+  "last4": "0590",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0126",
+  "card_id": "CARD-0126",
+  "expiry": "2030-03",
+  "last4": "5771",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0127",
+  "card_id": "CARD-0127",
+  "expiry": "2030-11",
+  "last4": "5197",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0128",
+  "card_id": "CARD-0128",
+  "expiry": "2031-04",
+  "last4": "6602",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0129",
+  "card_id": "CARD-0129",
+  "expiry": "2028-01",
+  "last4": "8875",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0130",
+  "card_id": "CARD-0130",
+  "expiry": "2030-09",
+  "last4": "8635",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0131",
+  "card_id": "CARD-0131",
+  "expiry": "2027-05",
+  "last4": "7346",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0132",
+  "card_id": "CARD-0132",
+  "expiry": "2029-07",
+  "last4": "5237",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0133",
+  "card_id": "CARD-0133",
+  "expiry": "2029-04",
+  "last4": "9264",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0134",
+  "card_id": "CARD-0134",
+  "expiry": "2031-11",
+  "last4": "3944",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0135",
+  "card_id": "CARD-0135",
+  "expiry": "2028-04",
+  "last4": "0082",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0136",
+  "card_id": "CARD-0136",
+  "expiry": "2030-09",
+  "last4": "1778",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0137",
+  "card_id": "CARD-0137",
+  "expiry": "2031-12",
+  "last4": "5893",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0138",
+  "card_id": "CARD-0138",
+  "expiry": "2030-07",
+  "last4": "6785",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0139",
+  "card_id": "CARD-0139",
+  "expiry": "2030-07",
+  "last4": "3679",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0140",
+  "card_id": "CARD-0140",
+  "expiry": "2027-01",
+  "last4": "1797",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0141",
+  "card_id": "CARD-0141",
+  "expiry": "2027-11",
+  "last4": "7303",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0142",
+  "card_id": "CARD-0142",
+  "expiry": "2029-11",
+  "last4": "6388",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0143",
+  "card_id": "CARD-0143",
+  "expiry": "2030-03",
+  "last4": "4657",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0144",
+  "card_id": "CARD-0144",
+  "expiry": "2031-10",
+  "last4": "6020",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0145",
+  "card_id": "CARD-0145",
+  "expiry": "2031-03",
+  "last4": "4965",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0146",
+  "card_id": "CARD-0146",
+  "expiry": "2028-07",
+  "last4": "8924",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0147",
+  "card_id": "CARD-0147",
+  "expiry": "2030-12",
+  "last4": "9015",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0148",
+  "card_id": "CARD-0148",
+  "expiry": "2029-01",
+  "last4": "3760",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0149",
+  "card_id": "CARD-0149",
+  "expiry": "2028-12",
+  "last4": "6272",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0150",
+  "card_id": "CARD-0150",
+  "expiry": "2030-09",
+  "last4": "6970",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0151",
+  "card_id": "CARD-0151",
+  "expiry": "2029-01",
+  "last4": "2541",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0152",
+  "card_id": "CARD-0152",
+  "expiry": "2030-05",
+  "last4": "6330",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0153",
+  "card_id": "CARD-0153",
+  "expiry": "2030-11",
+  "last4": "8643",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0154",
+  "card_id": "CARD-0154",
+  "expiry": "2029-11",
+  "last4": "4209",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0155",
+  "card_id": "CARD-0155",
+  "expiry": "2027-08",
+  "last4": "5442",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0156",
+  "card_id": "CARD-0156",
+  "expiry": "2027-06",
+  "last4": "0947",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0157",
+  "card_id": "CARD-0157",
+  "expiry": "2027-09",
+  "last4": "3345",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0158",
+  "card_id": "CARD-0158",
+  "expiry": "2031-04",
+  "last4": "0699",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0159",
+  "card_id": "CARD-0159",
+  "expiry": "2030-09",
+  "last4": "3237",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0160",
+  "card_id": "CARD-0160",
+  "expiry": "2031-10",
+  "last4": "8430",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0161",
+  "card_id": "CARD-0161",
+  "expiry": "2031-05",
+  "last4": "6146",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0162",
+  "card_id": "CARD-0162",
+  "expiry": "2030-10",
+  "last4": "6383",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0163",
+  "card_id": "CARD-0163",
+  "expiry": "2027-06",
+  "last4": "2666",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0164",
+  "card_id": "CARD-0164",
+  "expiry": "2027-01",
+  "last4": "3126",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0165",
+  "card_id": "CARD-0165",
+  "expiry": "2029-07",
+  "last4": "8799",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0166",
+  "card_id": "CARD-0166",
+  "expiry": "2030-02",
+  "last4": "5414",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0167",
+  "card_id": "CARD-0167",
+  "expiry": "2031-04",
+  "last4": "3837",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0168",
+  "card_id": "CARD-0168",
+  "expiry": "2028-05",
+  "last4": "3864",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0169",
+  "card_id": "CARD-0169",
+  "expiry": "2029-05",
+  "last4": "4165",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0170",
+  "card_id": "CARD-0170",
+  "expiry": "2030-09",
+  "last4": "7611",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0171",
+  "card_id": "CARD-0171",
+  "expiry": "2027-01",
+  "last4": "6633",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0172",
+  "card_id": "CARD-0172",
+  "expiry": "2027-10",
+  "last4": "0839",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0173",
+  "card_id": "CARD-0173",
+  "expiry": "2027-03",
+  "last4": "0122",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0174",
+  "card_id": "CARD-0174",
+  "expiry": "2028-07",
+  "last4": "6770",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0175",
+  "card_id": "CARD-0175",
+  "expiry": "2027-02",
+  "last4": "4297",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0176",
+  "card_id": "CARD-0176",
+  "expiry": "2029-05",
+  "last4": "4822",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0177",
+  "card_id": "CARD-0177",
+  "expiry": "2028-10",
+  "last4": "8526",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0178",
+  "card_id": "CARD-0178",
+  "expiry": "2031-02",
+  "last4": "6982",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0179",
+  "card_id": "CARD-0179",
+  "expiry": "2028-12",
+  "last4": "5820",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0180",
+  "card_id": "CARD-0180",
+  "expiry": "2028-12",
+  "last4": "7725",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0181",
+  "card_id": "CARD-0181",
+  "expiry": "2028-11",
+  "last4": "6676",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0182",
+  "card_id": "CARD-0182",
+  "expiry": "2030-09",
+  "last4": "0697",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0183",
+  "card_id": "CARD-0183",
+  "expiry": "2027-11",
+  "last4": "4441",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0184",
+  "card_id": "CARD-0184",
+  "expiry": "2030-04",
+  "last4": "5003",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0185",
+  "card_id": "CARD-0185",
+  "expiry": "2031-10",
+  "last4": "1120",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0186",
+  "card_id": "CARD-0186",
+  "expiry": "2031-02",
+  "last4": "3685",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0187",
+  "card_id": "CARD-0187",
+  "expiry": "2031-12",
+  "last4": "9192",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0188",
+  "card_id": "CARD-0188",
+  "expiry": "2028-02",
+  "last4": "4590",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0189",
+  "card_id": "CARD-0189",
+  "expiry": "2029-11",
+  "last4": "4375",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0190",
+  "card_id": "CARD-0190",
+  "expiry": "2028-06",
+  "last4": "3979",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0191",
+  "card_id": "CARD-0191",
+  "expiry": "2028-05",
+  "last4": "9302",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0192",
+  "card_id": "CARD-0192",
+  "expiry": "2028-04",
+  "last4": "8620",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0193",
+  "card_id": "CARD-0193",
+  "expiry": "2027-06",
+  "last4": "5085",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0194",
+  "card_id": "CARD-0194",
+  "expiry": "2031-06",
+  "last4": "9652",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0195",
+  "card_id": "CARD-0195",
+  "expiry": "2028-01",
+  "last4": "5483",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0196",
+  "card_id": "CARD-0196",
+  "expiry": "2029-05",
+  "last4": "3603",
+  "status": "blocked",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0197",
+  "card_id": "CARD-0197",
+  "expiry": "2028-06",
+  "last4": "4230",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0198",
+  "card_id": "CARD-0198",
+  "expiry": "2031-09",
+  "last4": "1306",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0199",
+  "card_id": "CARD-0199",
+  "expiry": "2031-12",
+  "last4": "3017",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0200",
+  "card_id": "CARD-0200",
+  "expiry": "2031-03",
+  "last4": "5194",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0201",
+  "card_id": "CARD-0201",
+  "expiry": "2027-07",
+  "last4": "6719",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0202",
+  "card_id": "CARD-0202",
+  "expiry": "2029-11",
+  "last4": "1485",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0203",
+  "card_id": "CARD-0203",
+  "expiry": "2027-03",
+  "last4": "3816",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0204",
+  "card_id": "CARD-0204",
+  "expiry": "2029-06",
+  "last4": "6420",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0205",
+  "card_id": "CARD-0205",
+  "expiry": "2028-01",
+  "last4": "4607",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0206",
+  "card_id": "CARD-0206",
+  "expiry": "2030-12",
+  "last4": "9703",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0207",
+  "card_id": "CARD-0207",
+  "expiry": "2027-04",
+  "last4": "4631",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0208",
+  "card_id": "CARD-0208",
+  "expiry": "2030-05",
+  "last4": "2150",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0210",
+  "card_id": "CARD-0209",
+  "expiry": "2030-08",
+  "last4": "6769",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0211",
+  "card_id": "CARD-0210",
+  "expiry": "2027-08",
+  "last4": "6122",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0212",
+  "card_id": "CARD-0211",
+  "expiry": "2027-08",
+  "last4": "5489",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0214",
+  "card_id": "CARD-0212",
+  "expiry": "2030-05",
+  "last4": "3775",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0215",
+  "card_id": "CARD-0213",
+  "expiry": "2031-06",
+  "last4": "0954",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0217",
+  "card_id": "CARD-0214",
+  "expiry": "2031-02",
+  "last4": "8766",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0218",
+  "card_id": "CARD-0215",
+  "expiry": "2031-11",
+  "last4": "2963",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0219",
+  "card_id": "CARD-0216",
+  "expiry": "2028-07",
+  "last4": "8561",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0220",
+  "card_id": "CARD-0217",
+  "expiry": "2030-10",
+  "last4": "0127",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0221",
+  "card_id": "CARD-0218",
+  "expiry": "2031-01",
+  "last4": "0818",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0222",
+  "card_id": "CARD-0219",
+  "expiry": "2027-02",
+  "last4": "4466",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0223",
+  "card_id": "CARD-0220",
+  "expiry": "2030-05",
+  "last4": "5869",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0224",
+  "card_id": "CARD-0221",
+  "expiry": "2028-02",
+  "last4": "9216",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0225",
+  "card_id": "CARD-0222",
+  "expiry": "2030-06",
+  "last4": "1620",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0226",
+  "card_id": "CARD-0223",
+  "expiry": "2031-01",
+  "last4": "5080",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0227",
+  "card_id": "CARD-0224",
+  "expiry": "2030-06",
+  "last4": "6127",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0228",
+  "card_id": "CARD-0225",
+  "expiry": "2030-03",
+  "last4": "9271",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0229",
+  "card_id": "CARD-0226",
+  "expiry": "2027-03",
+  "last4": "3674",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0230",
+  "card_id": "CARD-0227",
+  "expiry": "2029-01",
+  "last4": "5655",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0232",
+  "card_id": "CARD-0228",
+  "expiry": "2028-12",
+  "last4": "1549",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0233",
+  "card_id": "CARD-0229",
+  "expiry": "2028-02",
+  "last4": "4865",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0235",
+  "card_id": "CARD-0230",
+  "expiry": "2030-07",
+  "last4": "7069",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0236",
+  "card_id": "CARD-0231",
+  "expiry": "2029-05",
+  "last4": "9923",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0237",
+  "card_id": "CARD-0232",
+  "expiry": "2027-12",
+  "last4": "2705",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0238",
+  "card_id": "CARD-0233",
+  "expiry": "2030-11",
+  "last4": "3957",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0239",
+  "card_id": "CARD-0234",
+  "expiry": "2027-01",
+  "last4": "3422",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0240",
+  "card_id": "CARD-0235",
+  "expiry": "2030-09",
+  "last4": "8342",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0241",
+  "card_id": "CARD-0236",
+  "expiry": "2031-06",
+  "last4": "2183",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0242",
+  "card_id": "CARD-0237",
+  "expiry": "2031-02",
+  "last4": "0344",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0244",
+  "card_id": "CARD-0238",
+  "expiry": "2031-12",
+  "last4": "9132",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0245",
+  "card_id": "CARD-0239",
+  "expiry": "2028-08",
+  "last4": "2779",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0246",
+  "card_id": "CARD-0240",
+  "expiry": "2028-02",
+  "last4": "1285",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0247",
+  "card_id": "CARD-0241",
+  "expiry": "2029-04",
+  "last4": "4072",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0248",
+  "card_id": "CARD-0242",
+  "expiry": "2030-09",
+  "last4": "5740",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0249",
+  "card_id": "CARD-0243",
+  "expiry": "2027-07",
+  "last4": "8032",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0250",
+  "card_id": "CARD-0244",
+  "expiry": "2030-07",
+  "last4": "0700",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0251",
+  "card_id": "CARD-0245",
+  "expiry": "2029-04",
+  "last4": "8348",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0252",
+  "card_id": "CARD-0246",
+  "expiry": "2029-08",
+  "last4": "6032",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0253",
+  "card_id": "CARD-0247",
+  "expiry": "2027-04",
+  "last4": "6951",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0254",
+  "card_id": "CARD-0248",
+  "expiry": "2030-02",
+  "last4": "5669",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0255",
+  "card_id": "CARD-0249",
+  "expiry": "2031-06",
+  "last4": "2799",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0257",
+  "card_id": "CARD-0250",
+  "expiry": "2031-09",
+  "last4": "9586",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0259",
+  "card_id": "CARD-0251",
+  "expiry": "2027-03",
+  "last4": "5708",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0260",
+  "card_id": "CARD-0252",
+  "expiry": "2031-05",
+  "last4": "0590",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0261",
+  "card_id": "CARD-0253",
+  "expiry": "2028-07",
+  "last4": "8045",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0262",
+  "card_id": "CARD-0254",
+  "expiry": "2027-04",
+  "last4": "0776",
+  "status": "blocked",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0263",
+  "card_id": "CARD-0255",
+  "expiry": "2031-03",
+  "last4": "2589",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0264",
+  "card_id": "CARD-0256",
+  "expiry": "2029-11",
+  "last4": "0377",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0265",
+  "card_id": "CARD-0257",
+  "expiry": "2027-02",
+  "last4": "0065",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0266",
+  "card_id": "CARD-0258",
+  "expiry": "2030-06",
+  "last4": "3277",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0267",
+  "card_id": "CARD-0259",
+  "expiry": "2030-12",
+  "last4": "6737",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0268",
+  "card_id": "CARD-0260",
+  "expiry": "2030-07",
+  "last4": "7259",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0269",
+  "card_id": "CARD-0261",
+  "expiry": "2027-05",
+  "last4": "0463",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0270",
+  "card_id": "CARD-0262",
+  "expiry": "2029-06",
+  "last4": "2754",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0272",
+  "card_id": "CARD-0263",
+  "expiry": "2028-09",
+  "last4": "2933",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0273",
+  "card_id": "CARD-0264",
+  "expiry": "2029-08",
+  "last4": "5396",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0274",
+  "card_id": "CARD-0265",
+  "expiry": "2028-12",
+  "last4": "4697",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0275",
+  "card_id": "CARD-0266",
+  "expiry": "2027-01",
+  "last4": "1029",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0276",
+  "card_id": "CARD-0267",
+  "expiry": "2028-10",
+  "last4": "6109",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0277",
+  "card_id": "CARD-0268",
+  "expiry": "2027-11",
+  "last4": "7233",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0278",
+  "card_id": "CARD-0269",
+  "expiry": "2030-11",
+  "last4": "8104",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0279",
+  "card_id": "CARD-0270",
+  "expiry": "2031-05",
+  "last4": "1053",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0280",
+  "card_id": "CARD-0271",
+  "expiry": "2030-05",
+  "last4": "9327",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0281",
+  "card_id": "CARD-0272",
+  "expiry": "2030-05",
+  "last4": "8351",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0282",
+  "card_id": "CARD-0273",
+  "expiry": "2031-08",
+  "last4": "3464",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0283",
+  "card_id": "CARD-0274",
+  "expiry": "2031-07",
+  "last4": "7164",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0284",
+  "card_id": "CARD-0275",
+  "expiry": "2029-04",
+  "last4": "6617",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0287",
+  "card_id": "CARD-0276",
+  "expiry": "2029-11",
+  "last4": "5933",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0288",
+  "card_id": "CARD-0277",
+  "expiry": "2030-11",
+  "last4": "7223",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0289",
+  "card_id": "CARD-0278",
+  "expiry": "2027-03",
+  "last4": "8351",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0290",
+  "card_id": "CARD-0279",
+  "expiry": "2029-01",
+  "last4": "5355",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0291",
+  "card_id": "CARD-0280",
+  "expiry": "2030-01",
+  "last4": "0861",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0292",
+  "card_id": "CARD-0281",
+  "expiry": "2030-06",
+  "last4": "1874",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0293",
+  "card_id": "CARD-0282",
+  "expiry": "2030-10",
+  "last4": "0344",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0294",
+  "card_id": "CARD-0283",
+  "expiry": "2029-11",
+  "last4": "3984",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0295",
+  "card_id": "CARD-0284",
+  "expiry": "2031-07",
+  "last4": "0477",
+  "status": "active",
+  "variant": "classic"
+ },
+ {
+  "account_id": "A0296",
+  "card_id": "CARD-0285",
+  "expiry": "2027-06",
+  "last4": "9129",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0297",
+  "card_id": "CARD-0286",
+  "expiry": "2028-08",
+  "last4": "3514",
+  "status": "active",
+  "variant": "platinum"
+ },
+ {
+  "account_id": "A0298",
+  "card_id": "CARD-0287",
+  "expiry": "2029-03",
+  "last4": "4559",
+  "status": "active",
+  "variant": "platinum"
+ }
+]

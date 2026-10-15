@@ -1,0 +1,977 @@
+[
+ {
+  "description": "Monthly average balance required, metro branch",
+  "doc_id": "P01",
+  "fact_id": "P01.mab_metro",
+  "key": "mab_metro",
+  "rendered": "₹5,000",
+  "unit": "INR",
+  "value": 5000
+ },
+ {
+  "description": "Monthly average balance required, non-metro branch",
+  "doc_id": "P01",
+  "fact_id": "P01.mab_nonmetro",
+  "key": "mab_nonmetro",
+  "rendered": "₹2,000",
+  "unit": "INR",
+  "value": 2000
+ },
+ {
+  "description": "Monthly charge if MAB not kept, metro",
+  "doc_id": "P01",
+  "fact_id": "P01.mab_shortfall_charge_metro",
+  "key": "mab_shortfall_charge_metro",
+  "rendered": "₹150",
+  "unit": "INR",
+  "value": 150
+ },
+ {
+  "description": "Monthly charge if MAB not kept, non-metro",
+  "doc_id": "P01",
+  "fact_id": "P01.mab_shortfall_charge_nonmetro",
+  "key": "mab_shortfall_charge_nonmetro",
+  "rendered": "₹75",
+  "unit": "INR",
+  "value": 75
+ },
+ {
+  "description": "Free monthly transactions at Sahayak Bank ATMs",
+  "doc_id": "P02",
+  "fact_id": "P02.atm_free_own_bank",
+  "key": "atm_free_own_bank",
+  "rendered": "5",
+  "unit": "count",
+  "value": 5
+ },
+ {
+  "description": "Free monthly transactions at other banks' ATMs, metro",
+  "doc_id": "P02",
+  "fact_id": "P02.atm_free_other_bank_metro",
+  "key": "atm_free_other_bank_metro",
+  "rendered": "3",
+  "unit": "count",
+  "value": 3
+ },
+ {
+  "description": "Free monthly transactions at other banks' ATMs, non-metro",
+  "doc_id": "P02",
+  "fact_id": "P02.atm_free_other_bank_nonmetro",
+  "key": "atm_free_other_bank_nonmetro",
+  "rendered": "5",
+  "unit": "count",
+  "value": 5
+ },
+ {
+  "description": "Charge per cash withdrawal beyond free limit",
+  "doc_id": "P02",
+  "fact_id": "P02.atm_fee_beyond_free",
+  "key": "atm_fee_beyond_free",
+  "rendered": "₹23",
+  "unit": "INR",
+  "value": 23
+ },
+ {
+  "description": "Charge per non-financial ATM transaction beyond free limit",
+  "doc_id": "P02",
+  "fact_id": "P02.atm_nonfinancial_fee",
+  "key": "atm_nonfinancial_fee",
+  "rendered": "₹8",
+  "unit": "INR",
+  "value": 8
+ },
+ {
+  "description": "SMS alert charge per quarter, inclusive of taxes",
+  "doc_id": "P03",
+  "fact_id": "P03.sms_alert_fee_quarterly",
+  "key": "sms_alert_fee_quarterly",
+  "rendered": "₹15",
+  "unit": "INR",
+  "value": 15
+ },
+ {
+  "description": "Free cheque leaves per financial year",
+  "doc_id": "P04",
+  "fact_id": "P04.cheque_leaves_free_per_year",
+  "key": "cheque_leaves_free_per_year",
+  "rendered": "25 cheque leaves",
+  "unit": "leaves",
+  "value": 25
+ },
+ {
+  "description": "Charge per cheque leaf beyond the free allowance",
+  "doc_id": "P04",
+  "fact_id": "P04.cheque_leaf_charge",
+  "key": "cheque_leaf_charge",
+  "rendered": "₹4",
+  "unit": "INR",
+  "value": 4
+ },
+ {
+  "description": "Branch NEFT fee, lowest slab",
+  "doc_id": "P05",
+  "fact_id": "P05.neft_branch_fee_upto_10k",
+  "key": "neft_branch_fee_upto_10k",
+  "rendered": "₹3",
+  "unit": "INR",
+  "value": 3
+ },
+ {
+  "description": "Upper bound of lowest NEFT slab",
+  "doc_id": "P05",
+  "fact_id": "P05.neft_tier1_cap",
+  "key": "neft_tier1_cap",
+  "rendered": "₹10,000",
+  "unit": "INR",
+  "value": 10000
+ },
+ {
+  "description": "Branch NEFT fee, middle slab",
+  "doc_id": "P05",
+  "fact_id": "P05.neft_branch_fee_upto_1l",
+  "key": "neft_branch_fee_upto_1l",
+  "rendered": "₹5",
+  "unit": "INR",
+  "value": 5
+ },
+ {
+  "description": "Upper bound of middle NEFT slab",
+  "doc_id": "P05",
+  "fact_id": "P05.neft_tier2_cap",
+  "key": "neft_tier2_cap",
+  "rendered": "₹1,00,000",
+  "unit": "INR",
+  "value": 100000
+ },
+ {
+  "description": "Branch NEFT fee, top slab",
+  "doc_id": "P05",
+  "fact_id": "P05.neft_branch_fee_above_1l",
+  "key": "neft_branch_fee_above_1l",
+  "rendered": "₹15",
+  "unit": "INR",
+  "value": 15
+ },
+ {
+  "description": "Minimum RTGS amount",
+  "doc_id": "P05",
+  "fact_id": "P05.rtgs_min_amount",
+  "key": "rtgs_min_amount",
+  "rendered": "₹2,00,000",
+  "unit": "INR",
+  "value": 200000
+ },
+ {
+  "description": "Branch RTGS fee",
+  "doc_id": "P05",
+  "fact_id": "P05.rtgs_branch_fee",
+  "key": "rtgs_branch_fee",
+  "rendered": "₹25",
+  "unit": "INR",
+  "value": 25
+ },
+ {
+  "description": "Annual fee, Classic debit card",
+  "doc_id": "P06",
+  "fact_id": "P06.debit_card_annual_fee_classic",
+  "key": "debit_card_annual_fee_classic",
+  "rendered": "₹150",
+  "unit": "INR",
+  "value": 150
+ },
+ {
+  "description": "Annual fee, Platinum debit card",
+  "doc_id": "P06",
+  "fact_id": "P06.debit_card_annual_fee_platinum",
+  "key": "debit_card_annual_fee_platinum",
+  "rendered": "₹350",
+  "unit": "INR",
+  "value": 350
+ },
+ {
+  "description": "Fee for a replacement card",
+  "doc_id": "P06",
+  "fact_id": "P06.debit_card_replacement_fee",
+  "key": "debit_card_replacement_fee",
+  "rendered": "₹200",
+  "unit": "INR",
+  "value": 200
+ },
+ {
+  "description": "Charge per duplicate physical statement",
+  "doc_id": "P07",
+  "fact_id": "P07.duplicate_statement_fee",
+  "key": "duplicate_statement_fee",
+  "rendered": "₹100",
+  "unit": "INR",
+  "value": 100
+ },
+ {
+  "description": "Charge for a duplicate passbook",
+  "doc_id": "P07",
+  "fact_id": "P07.passbook_reissue_fee",
+  "key": "passbook_reissue_fee",
+  "rendered": "₹50",
+  "unit": "INR",
+  "value": 50
+ },
+ {
+  "description": "Months of e-statements downloadable free",
+  "doc_id": "P07",
+  "fact_id": "P07.estatement_history_months",
+  "key": "estatement_history_months",
+  "rendered": "12 months",
+  "unit": "months",
+  "value": 12
+ },
+ {
+  "description": "Free branch cash deposits per month",
+  "doc_id": "P08",
+  "fact_id": "P08.cash_deposits_free_per_month",
+  "key": "cash_deposits_free_per_month",
+  "rendered": "3",
+  "unit": "count",
+  "value": 3
+ },
+ {
+  "description": "Charge per branch cash deposit beyond free count",
+  "doc_id": "P08",
+  "fact_id": "P08.cash_deposit_fee",
+  "key": "cash_deposit_fee",
+  "rendered": "₹50",
+  "unit": "INR",
+  "value": 50
+ },
+ {
+  "description": "Daily limit for cash deposited by a third party",
+  "doc_id": "P08",
+  "fact_id": "P08.cash_third_party_limit",
+  "key": "cash_third_party_limit",
+  "rendered": "₹50,000",
+  "unit": "INR",
+  "value": 50000
+ },
+ {
+  "description": "Free closure window after opening",
+  "doc_id": "P09",
+  "fact_id": "P09.closure_free_window_days",
+  "key": "closure_free_window_days",
+  "rendered": "14 calendar days",
+  "unit": "days_calendar",
+  "value": 14
+ },
+ {
+  "description": "Closure charge after free window and before the free-after period",
+  "doc_id": "P09",
+  "fact_id": "P09.closure_fee_before_1y",
+  "key": "closure_fee_before_1y",
+  "rendered": "₹500",
+  "unit": "INR",
+  "value": 500
+ },
+ {
+  "description": "Account age after which closure is free",
+  "doc_id": "P09",
+  "fact_id": "P09.closure_free_after_months",
+  "key": "closure_free_after_months",
+  "rendered": "12 months",
+  "unit": "months",
+  "value": 12
+ },
+ {
+  "description": "Charge when a cheque issued by the customer is returned",
+  "doc_id": "P10",
+  "fact_id": "P10.cheque_return_issued_fee",
+  "key": "cheque_return_issued_fee",
+  "rendered": "₹350",
+  "unit": "INR",
+  "value": 350
+ },
+ {
+  "description": "Charge when a cheque deposited by the customer is returned",
+  "doc_id": "P10",
+  "fact_id": "P10.cheque_return_deposited_fee",
+  "key": "cheque_return_deposited_fee",
+  "rendered": "₹150",
+  "unit": "INR",
+  "value": 150
+ },
+ {
+  "description": "Charge when a NACH/ECS mandate debit is returned",
+  "doc_id": "P10",
+  "fact_id": "P10.nach_return_fee",
+  "key": "nach_return_fee",
+  "rendered": "₹250",
+  "unit": "INR",
+  "value": 250
+ },
+ {
+  "description": "Days within which a failed ATM debit is reversed",
+  "doc_id": "P11",
+  "fact_id": "P11.atm_failed_reversal_days",
+  "key": "atm_failed_reversal_days",
+  "rendered": "5 calendar days",
+  "unit": "days_calendar",
+  "value": 5
+ },
+ {
+  "description": "Compensation per day of delay beyond the reversal window",
+  "doc_id": "P11",
+  "fact_id": "P11.atm_failed_compensation_per_day",
+  "key": "atm_failed_compensation_per_day",
+  "rendered": "₹100",
+  "unit": "INR",
+  "value": 100
+ },
+ {
+  "description": "Reversal time for failed UPI/IMPS debits",
+  "doc_id": "P12",
+  "fact_id": "P12.upi_failed_reversal_days",
+  "key": "upi_failed_reversal_days",
+  "rendered": "1 working day",
+  "unit": "days_working",
+  "value": 1
+ },
+ {
+  "description": "Compensation per day of delay for failed UPI/IMPS",
+  "doc_id": "P12",
+  "fact_id": "P12.upi_failed_compensation_per_day",
+  "key": "upi_failed_compensation_per_day",
+  "rendered": "₹100",
+  "unit": "INR",
+  "value": 100
+ },
+ {
+  "description": "Window to ask for a refund of a wrongly charged fee",
+  "doc_id": "P13",
+  "fact_id": "P13.fee_refund_request_window_days",
+  "key": "fee_refund_request_window_days",
+  "rendered": "90 calendar days",
+  "unit": "days_calendar",
+  "value": 90
+ },
+ {
+  "description": "Days to refund a confirmed wrong fee",
+  "doc_id": "P13",
+  "fact_id": "P13.fee_refund_processing_days",
+  "key": "fee_refund_processing_days",
+  "rendered": "7 working days",
+  "unit": "days_working",
+  "value": 7
+ },
+ {
+  "description": "Reversal time for failed card POS/online debits",
+  "doc_id": "P14",
+  "fact_id": "P14.pos_failed_reversal_days",
+  "key": "pos_failed_reversal_days",
+  "rendered": "5 calendar days",
+  "unit": "days_calendar",
+  "value": 5
+ },
+ {
+  "description": "Compensation per day of delay for failed card payments",
+  "doc_id": "P14",
+  "fact_id": "P14.pos_failed_compensation_per_day",
+  "key": "pos_failed_compensation_per_day",
+  "rendered": "₹100",
+  "unit": "INR",
+  "value": 100
+ },
+ {
+  "description": "Days for the bank to post a refund after receiving it",
+  "doc_id": "P15",
+  "fact_id": "P15.merchant_refund_posting_days",
+  "key": "merchant_refund_posting_days",
+  "rendered": "3 working days",
+  "unit": "days_working",
+  "value": 3
+ },
+ {
+  "description": "Wait before raising a query on a missing merchant refund",
+  "doc_id": "P15",
+  "fact_id": "P15.merchant_refund_query_after_days",
+  "key": "merchant_refund_query_after_days",
+  "rendered": "30 calendar days",
+  "unit": "days_calendar",
+  "value": 30
+ },
+ {
+  "description": "Days to refund a confirmed duplicate debit",
+  "doc_id": "P16",
+  "fact_id": "P16.duplicate_charge_refund_days",
+  "key": "duplicate_charge_refund_days",
+  "rendered": "10 working days",
+  "unit": "days_working",
+  "value": 10
+ },
+ {
+  "description": "Report window for zero customer liability",
+  "doc_id": "P17",
+  "fact_id": "P17.zero_liability_report_days",
+  "key": "zero_liability_report_days",
+  "rendered": "3 working days",
+  "unit": "days_working",
+  "value": 3
+ },
+ {
+  "description": "Outer report window for limited liability",
+  "doc_id": "P17",
+  "fact_id": "P17.limited_liability_report_days_max",
+  "key": "limited_liability_report_days_max",
+  "rendered": "7 working days",
+  "unit": "days_working",
+  "value": 7
+ },
+ {
+  "description": "Maximum customer liability, BSBD accounts",
+  "doc_id": "P17",
+  "fact_id": "P17.limited_liability_cap_bsbd",
+  "key": "limited_liability_cap_bsbd",
+  "rendered": "₹5,000",
+  "unit": "INR",
+  "value": 5000
+ },
+ {
+  "description": "Maximum customer liability, other savings accounts",
+  "doc_id": "P17",
+  "fact_id": "P17.limited_liability_cap_savings",
+  "key": "limited_liability_cap_savings",
+  "rendered": "₹10,000",
+  "unit": "INR",
+  "value": 10000
+ },
+ {
+  "description": "Maximum customer liability, current accounts",
+  "doc_id": "P17",
+  "fact_id": "P17.limited_liability_cap_current",
+  "key": "limited_liability_cap_current",
+  "rendered": "₹25,000",
+  "unit": "INR",
+  "value": 25000
+ },
+ {
+  "description": "Days to credit the disputed amount after notification",
+  "doc_id": "P17",
+  "fact_id": "P17.shadow_credit_days",
+  "key": "shadow_credit_days",
+  "rendered": "10 working days",
+  "unit": "days_working",
+  "value": 10
+ },
+ {
+  "description": "Days to resolve an unauthorised-transaction complaint",
+  "doc_id": "P17",
+  "fact_id": "P17.unauthorised_resolution_days",
+  "key": "unauthorised_resolution_days",
+  "rendered": "90 calendar days",
+  "unit": "days_calendar",
+  "value": 90
+ },
+ {
+  "description": "Window to raise a card chargeback",
+  "doc_id": "P18",
+  "fact_id": "P18.chargeback_raise_window_days",
+  "key": "chargeback_raise_window_days",
+  "rendered": "120 calendar days",
+  "unit": "days_calendar",
+  "value": 120
+ },
+ {
+  "description": "Days to resolve a chargeback",
+  "doc_id": "P18",
+  "fact_id": "P18.chargeback_resolution_days",
+  "key": "chargeback_resolution_days",
+  "rendered": "45 calendar days",
+  "unit": "days_calendar",
+  "value": 45
+ },
+ {
+  "description": "Window to raise a UPI dispute",
+  "doc_id": "P19",
+  "fact_id": "P19.upi_dispute_raise_window_days",
+  "key": "upi_dispute_raise_window_days",
+  "rendered": "30 calendar days",
+  "unit": "days_calendar",
+  "value": 30
+ },
+ {
+  "description": "Days to resolve a UPI dispute",
+  "doc_id": "P19",
+  "fact_id": "P19.upi_dispute_resolution_days",
+  "key": "upi_dispute_resolution_days",
+  "rendered": "30 calendar days",
+  "unit": "days_calendar",
+  "value": 30
+ },
+ {
+  "description": "Window to raise a cheque dispute",
+  "doc_id": "P20",
+  "fact_id": "P20.cheque_dispute_raise_days",
+  "key": "cheque_dispute_raise_days",
+  "rendered": "30 calendar days",
+  "unit": "days_calendar",
+  "value": 30
+ },
+ {
+  "description": "Days to resolve a cheque dispute",
+  "doc_id": "P20",
+  "fact_id": "P20.cheque_dispute_resolution_days",
+  "key": "cheque_dispute_resolution_days",
+  "rendered": "15 working days",
+  "unit": "days_working",
+  "value": 15
+ },
+ {
+  "description": "Time to acknowledge a dispute with a reference number",
+  "doc_id": "P21",
+  "fact_id": "P21.dispute_ack_hours",
+  "key": "dispute_ack_hours",
+  "rendered": "24 hours",
+  "unit": "hours",
+  "value": 24
+ },
+ {
+  "description": "Time allowed to submit supporting documents",
+  "doc_id": "P21",
+  "fact_id": "P21.dispute_doc_submission_days",
+  "key": "dispute_doc_submission_days",
+  "rendered": "10 calendar days",
+  "unit": "days_calendar",
+  "value": 10
+ },
+ {
+  "description": "Window to raise a cash deposit machine dispute",
+  "doc_id": "P22",
+  "fact_id": "P22.cdm_dispute_raise_days",
+  "key": "cdm_dispute_raise_days",
+  "rendered": "30 calendar days",
+  "unit": "days_calendar",
+  "value": 30
+ },
+ {
+  "description": "Days to resolve a cash deposit machine dispute",
+  "doc_id": "P22",
+  "fact_id": "P22.cdm_dispute_resolution_days",
+  "key": "cdm_dispute_resolution_days",
+  "rendered": "7 working days",
+  "unit": "days_working",
+  "value": 7
+ },
+ {
+  "description": "Daily ATM cash limit, Classic card",
+  "doc_id": "P23",
+  "fact_id": "P23.atm_daily_limit_classic",
+  "key": "atm_daily_limit_classic",
+  "rendered": "₹25,000",
+  "unit": "INR",
+  "value": 25000
+ },
+ {
+  "description": "Daily ATM cash limit, Platinum card",
+  "doc_id": "P23",
+  "fact_id": "P23.atm_daily_limit_platinum",
+  "key": "atm_daily_limit_platinum",
+  "rendered": "₹50,000",
+  "unit": "INR",
+  "value": 50000
+ },
+ {
+  "description": "Maximum cash per ATM withdrawal",
+  "doc_id": "P23",
+  "fact_id": "P23.atm_per_txn_limit",
+  "key": "atm_per_txn_limit",
+  "rendered": "₹10,000",
+  "unit": "INR",
+  "value": 10000
+ },
+ {
+  "description": "Daily POS/e-commerce limit, Classic card",
+  "doc_id": "P24",
+  "fact_id": "P24.pos_daily_limit_classic",
+  "key": "pos_daily_limit_classic",
+  "rendered": "₹1,00,000",
+  "unit": "INR",
+  "value": 100000
+ },
+ {
+  "description": "Daily POS/e-commerce limit, Platinum card",
+  "doc_id": "P24",
+  "fact_id": "P24.pos_daily_limit_platinum",
+  "key": "pos_daily_limit_platinum",
+  "rendered": "₹2,00,000",
+  "unit": "INR",
+  "value": 200000
+ },
+ {
+  "description": "Days to deliver a replacement card",
+  "doc_id": "P25",
+  "fact_id": "P25.card_replacement_delivery_days",
+  "key": "card_replacement_delivery_days",
+  "rendered": "7 working days",
+  "unit": "days_working",
+  "value": 7
+ },
+ {
+  "description": "Wrong PIN attempts before the card is locked",
+  "doc_id": "P26",
+  "fact_id": "P26.pin_wrong_attempts_limit",
+  "key": "pin_wrong_attempts_limit",
+  "rendered": "3",
+  "unit": "count",
+  "value": 3
+ },
+ {
+  "description": "Duration of the PIN lock",
+  "doc_id": "P26",
+  "fact_id": "P26.pin_lock_hours",
+  "key": "pin_lock_hours",
+  "rendered": "24 hours",
+  "unit": "hours",
+  "value": 24
+ },
+ {
+  "description": "Cross-currency markup on international transactions",
+  "doc_id": "P27",
+  "fact_id": "P27.intl_markup_percent",
+  "key": "intl_markup_percent",
+  "rendered": "3.5%",
+  "unit": "percent",
+  "value": 3.5
+ },
+ {
+  "description": "Maximum contactless payment without PIN",
+  "doc_id": "P28",
+  "fact_id": "P28.contactless_no_pin_limit",
+  "key": "contactless_no_pin_limit",
+  "rendered": "₹5,000",
+  "unit": "INR",
+  "value": 5000
+ },
+ {
+  "description": "Days before expiry that a renewal card is sent",
+  "doc_id": "P29",
+  "fact_id": "P29.card_renewal_dispatch_days",
+  "key": "card_renewal_dispatch_days",
+  "rendered": "30 calendar days",
+  "unit": "days_calendar",
+  "value": 30
+ },
+ {
+  "description": "Validity of a debit card",
+  "doc_id": "P29",
+  "fact_id": "P29.card_validity_years",
+  "key": "card_validity_years",
+  "rendered": "5 years",
+  "unit": "years",
+  "value": 5
+ },
+ {
+  "description": "Daily online transfer limit (NEFT/IMPS)",
+  "doc_id": "P30",
+  "fact_id": "P30.online_transfer_daily_limit",
+  "key": "online_transfer_daily_limit",
+  "rendered": "₹2,00,000",
+  "unit": "INR",
+  "value": 200000
+ },
+ {
+  "description": "Cooling period after adding a beneficiary",
+  "doc_id": "P30",
+  "fact_id": "P30.new_beneficiary_cooling_hours",
+  "key": "new_beneficiary_cooling_hours",
+  "rendered": "24 hours",
+  "unit": "hours",
+  "value": 24
+ },
+ {
+  "description": "Transfer cap to a new beneficiary during cooling period",
+  "doc_id": "P30",
+  "fact_id": "P30.new_beneficiary_limit_cooling",
+  "key": "new_beneficiary_limit_cooling",
+  "rendered": "₹50,000",
+  "unit": "INR",
+  "value": 50000
+ },
+ {
+  "description": "Daily UPI limit",
+  "doc_id": "P30",
+  "fact_id": "P30.upi_daily_limit",
+  "key": "upi_daily_limit",
+  "rendered": "₹1,00,000",
+  "unit": "INR",
+  "value": 100000
+ },
+ {
+  "description": "Time to acknowledge a complaint",
+  "doc_id": "P31",
+  "fact_id": "P31.complaint_ack_days",
+  "key": "complaint_ack_days",
+  "rendered": "1 working day",
+  "unit": "days_working",
+  "value": 1
+ },
+ {
+  "description": "Days after which an unresolved complaint can go to the Nodal Officer",
+  "doc_id": "P31",
+  "fact_id": "P31.nodal_escalation_days",
+  "key": "nodal_escalation_days",
+  "rendered": "15 calendar days",
+  "unit": "days_calendar",
+  "value": 15
+ },
+ {
+  "description": "Bank's outer limit to reply to a complaint",
+  "doc_id": "P31",
+  "fact_id": "P31.complaint_reply_days",
+  "key": "complaint_reply_days",
+  "rendered": "30 calendar days",
+  "unit": "days_calendar",
+  "value": 30
+ },
+ {
+  "description": "Year of the RBI Integrated Ombudsman Scheme",
+  "doc_id": "P31",
+  "fact_id": "P31.ios_scheme_year",
+  "key": "ios_scheme_year",
+  "rendered": "2026",
+  "unit": "year_ref",
+  "value": 2026
+ },
+ {
+  "description": "Window to approach the RBI Ombudsman",
+  "doc_id": "P31",
+  "fact_id": "P31.rbio_filing_window_days",
+  "key": "rbio_filing_window_days",
+  "rendered": "90 calendar days",
+  "unit": "days_calendar",
+  "value": 90
+ },
+ {
+  "description": "Fictional toll-free helpline",
+  "doc_id": "P32",
+  "fact_id": "P32.helpline_number",
+  "key": "helpline_number",
+  "rendered": "1800-000-0000",
+  "unit": "phone",
+  "value": "1800-000-0000"
+ },
+ {
+  "description": "Nodal Officer response time",
+  "doc_id": "P33",
+  "fact_id": "P33.nodal_officer_response_days",
+  "key": "nodal_officer_response_days",
+  "rendered": "7 working days",
+  "unit": "days_working",
+  "value": 7
+ },
+ {
+  "description": "Live agent hours start",
+  "doc_id": "P34",
+  "fact_id": "P34.human_agent_hours_start",
+  "key": "human_agent_hours_start",
+  "rendered": "08:00",
+  "unit": "clock",
+  "value": "08:00"
+ },
+ {
+  "description": "Live agent hours end",
+  "doc_id": "P34",
+  "fact_id": "P34.human_agent_hours_end",
+  "key": "human_agent_hours_end",
+  "rendered": "20:00",
+  "unit": "clock",
+  "value": "20:00"
+ },
+ {
+  "description": "Callback target after the next opening time",
+  "doc_id": "P34",
+  "fact_id": "P34.callback_target_hours",
+  "key": "callback_target_hours",
+  "rendered": "2 hours",
+  "unit": "hours",
+  "value": 2
+ },
+ {
+  "description": "Time for a human to review an appeal against an automated response",
+  "doc_id": "P34",
+  "fact_id": "P34.appeal_review_days",
+  "key": "appeal_review_days",
+  "rendered": "7 working days",
+  "unit": "days_working",
+  "value": 7
+ },
+ {
+  "description": "Interest above the savings rate on wrongly debited amounts",
+  "doc_id": "P35",
+  "fact_id": "P35.wrong_debit_interest_extra_percent",
+  "key": "wrong_debit_interest_extra_percent",
+  "rendered": "2%",
+  "unit": "percent",
+  "value": 2
+ },
+ {
+  "description": "Compensation per day for delayed credit of failed transactions",
+  "doc_id": "P35",
+  "fact_id": "P35.delayed_credit_compensation_per_day",
+  "key": "delayed_credit_compensation_per_day",
+  "rendered": "₹100",
+  "unit": "INR",
+  "value": 100
+ },
+ {
+  "description": "Days to credit compensation once due",
+  "doc_id": "P35",
+  "fact_id": "P35.compensation_credit_days",
+  "key": "compensation_credit_days",
+  "rendered": "10 working days",
+  "unit": "days_working",
+  "value": 10
+ },
+ {
+  "description": "Weekday opening time",
+  "doc_id": "P36",
+  "fact_id": "P36.branch_weekday_open",
+  "key": "branch_weekday_open",
+  "rendered": "10:00",
+  "unit": "clock",
+  "value": "10:00"
+ },
+ {
+  "description": "Weekday closing time",
+  "doc_id": "P36",
+  "fact_id": "P36.branch_weekday_close",
+  "key": "branch_weekday_close",
+  "rendered": "16:00",
+  "unit": "clock",
+  "value": "16:00"
+ },
+ {
+  "description": "Saturday closing time",
+  "doc_id": "P36",
+  "fact_id": "P36.branch_saturday_close",
+  "key": "branch_saturday_close",
+  "rendered": "14:00",
+  "unit": "clock",
+  "value": "14:00"
+ },
+ {
+  "description": "Saturdays of the month when branches are closed",
+  "doc_id": "P36",
+  "fact_id": "P36.branch_closed_saturdays",
+  "key": "branch_closed_saturdays",
+  "rendered": "2nd and 4th",
+  "unit": "ordinal_list",
+  "value": [
+   2,
+   4
+  ]
+ },
+ {
+  "description": "Savings interest rate on balance up to the slab cap",
+  "doc_id": "P37",
+  "fact_id": "P37.savings_rate_upto_1l",
+  "key": "savings_rate_upto_1l",
+  "rendered": "2.75%",
+  "unit": "percent",
+  "value": 2.75
+ },
+ {
+  "description": "Balance slab cap for the lower savings rate",
+  "doc_id": "P37",
+  "fact_id": "P37.savings_rate_slab_cap",
+  "key": "savings_rate_slab_cap",
+  "rendered": "₹1,00,000",
+  "unit": "INR",
+  "value": 100000
+ },
+ {
+  "description": "Savings interest rate on balance above the slab cap",
+  "doc_id": "P37",
+  "fact_id": "P37.savings_rate_above_1l",
+  "key": "savings_rate_above_1l",
+  "rendered": "3%",
+  "unit": "percent",
+  "value": 3
+ },
+ {
+  "description": "Minimum FD tenure",
+  "doc_id": "P38",
+  "fact_id": "P38.fd_min_tenure_days",
+  "key": "fd_min_tenure_days",
+  "rendered": "7 calendar days",
+  "unit": "days_calendar",
+  "value": 7
+ },
+ {
+  "description": "Maximum FD tenure",
+  "doc_id": "P38",
+  "fact_id": "P38.fd_max_tenure_years",
+  "key": "fd_max_tenure_years",
+  "rendered": "10 years",
+  "unit": "years",
+  "value": 10
+ },
+ {
+  "description": "Minimum FD amount",
+  "doc_id": "P38",
+  "fact_id": "P38.fd_min_amount",
+  "key": "fd_min_amount",
+  "rendered": "₹1,000",
+  "unit": "INR",
+  "value": 1000
+ },
+ {
+  "description": "Interest penalty on premature withdrawal",
+  "doc_id": "P38",
+  "fact_id": "P38.fd_premature_penalty_percent",
+  "key": "fd_premature_penalty_percent",
+  "rendered": "1%",
+  "unit": "percent",
+  "value": 1
+ },
+ {
+  "description": "Re-KYC interval, high-risk customers",
+  "doc_id": "P39",
+  "fact_id": "P39.rekyc_high_risk_years",
+  "key": "rekyc_high_risk_years",
+  "rendered": "2 years",
+  "unit": "years",
+  "value": 2
+ },
+ {
+  "description": "Re-KYC interval, medium-risk customers",
+  "doc_id": "P39",
+  "fact_id": "P39.rekyc_medium_risk_years",
+  "key": "rekyc_medium_risk_years",
+  "rendered": "8 years",
+  "unit": "years",
+  "value": 8
+ },
+ {
+  "description": "Re-KYC interval, low-risk customers",
+  "doc_id": "P39",
+  "fact_id": "P39.rekyc_low_risk_years",
+  "key": "rekyc_low_risk_years",
+  "rendered": "10 years",
+  "unit": "years",
+  "value": 10
+ },
+ {
+  "description": "Time for a contact change to take effect",
+  "doc_id": "P40",
+  "fact_id": "P40.contact_update_effective_days",
+  "key": "contact_update_effective_days",
+  "rendered": "1 working day",
+  "unit": "days_working",
+  "value": 1
+ },
+ {
+  "description": "Hold on adding beneficiaries after a mobile number change",
+  "doc_id": "P40",
+  "fact_id": "P40.contact_change_transfer_cooling_hours",
+  "key": "contact_change_transfer_cooling_hours",
+  "rendered": "24 hours",
+  "unit": "hours",
+  "value": 24
+ }
+]

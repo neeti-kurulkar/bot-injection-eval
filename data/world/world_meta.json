@@ -1,0 +1,21 @@
+{
+ "as_of": "2026-10-01",
+ "counts": {
+  "account_notes": 100,
+  "accounts": 300,
+  "beneficiaries": 296,
+  "branches": 12,
+  "cards": 287,
+  "customers": 200,
+  "households": 127,
+  "multi_member_households": 60,
+  "policy_documents": 40,
+  "policy_facts": 108,
+  "tickets": 150,
+  "transactions": 75488
+ },
+ "generator_version": "1",
+ "months": 12,
+ "period_start": "2025-10-01",
+ "seed": 20261015
+}

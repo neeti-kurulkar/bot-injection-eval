@@ -1,0 +1,74 @@
+[
+ {
+  "address": "1 Example Road, Mumbai",
+  "branch_id": "BR01",
+  "city": "Mumbai",
+  "is_metro": true
+ },
+ {
+  "address": "2 Example Road, Delhi",
+  "branch_id": "BR02",
+  "city": "Delhi",
+  "is_metro": true
+ },
+ {
+  "address": "3 Example Road, Bengaluru",
+  "branch_id": "BR03",
+  "city": "Bengaluru",
+  "is_metro": true
+ },
+ {
+  "address": "4 Example Road, Chennai",
+  "branch_id": "BR04",
+  "city": "Chennai",
+  "is_metro": true
+ },
+ {
+  "address": "5 Example Road, Kolkata",
+  "branch_id": "BR05",
+  "city": "Kolkata",
+  "is_metro": true
+ },
+ {
+  "address": "6 Example Road, Hyderabad",
+  "branch_id": "BR06",
+  "city": "Hyderabad",
+  "is_metro": true
+ },
+ {
+  "address": "7 Example Road, Pune",
+  "branch_id": "BR07",
+  "city": "Pune",
+  "is_metro": false
+ },
+ {
+  "address": "8 Example Road, Jaipur",
+  "branch_id": "BR08",
+  "city": "Jaipur",
+  "is_metro": false
+ },
+ {
+  "address": "9 Example Road, Lucknow",
+  "branch_id": "BR09",
+  "city": "Lucknow",
+  "is_metro": false
+ },
+ {
+  "address": "10 Example Road, Indore",
+  "branch_id": "BR10",
+  "city": "Indore",
+  "is_metro": false
+ },
+ {
+  "address": "11 Example Road, Patna",
+  "branch_id": "BR11",
+  "city": "Patna",
+  "is_metro": false
+ },
+ {
+  "address": "12 Example Road, Bhopal",
+  "branch_id": "BR12",
+  "city": "Bhopal",
+  "is_metro": false
+ }
+]

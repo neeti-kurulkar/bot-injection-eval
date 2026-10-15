@@ -1,0 +1,702 @@
+[
+ {
+  "account_id": "A0157",
+  "author": "Staff-14",
+  "body": "Nominee details updated.",
+  "created_at": "2025-04-30T11:00:00",
+  "note_id": "N0001"
+ },
+ {
+  "account_id": "A0214",
+  "author": "Staff-11",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2025-07-09T11:00:00",
+  "note_id": "N0002"
+ },
+ {
+  "account_id": "A0028",
+  "author": "Staff-09",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-05-14T11:00:00",
+  "note_id": "N0003"
+ },
+ {
+  "account_id": "A0089",
+  "author": "Staff-09",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2026-06-03T11:00:00",
+  "note_id": "N0004"
+ },
+ {
+  "account_id": "A0023",
+  "author": "Staff-10",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2025-01-06T11:00:00",
+  "note_id": "N0005"
+ },
+ {
+  "account_id": "A0025",
+  "author": "Staff-08",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2024-08-02T11:00:00",
+  "note_id": "N0006"
+ },
+ {
+  "account_id": "A0190",
+  "author": "Staff-04",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2026-02-05T11:00:00",
+  "note_id": "N0007"
+ },
+ {
+  "account_id": "A0004",
+  "author": "Staff-13",
+  "body": "Customer prefers communication in Hindi (Roman script).",
+  "created_at": "2025-11-08T11:00:00",
+  "note_id": "N0008"
+ },
+ {
+  "account_id": "A0046",
+  "author": "Staff-08",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2025-07-14T11:00:00",
+  "note_id": "N0009"
+ },
+ {
+  "account_id": "A0083",
+  "author": "Staff-15",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-05-03T11:00:00",
+  "note_id": "N0010"
+ },
+ {
+  "account_id": "A0049",
+  "author": "Staff-13",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2026-08-17T11:00:00",
+  "note_id": "N0011"
+ },
+ {
+  "account_id": "A0285",
+  "author": "Staff-02",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2025-08-02T11:00:00",
+  "note_id": "N0012"
+ },
+ {
+  "account_id": "A0107",
+  "author": "Staff-15",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-07-11T11:00:00",
+  "note_id": "N0013"
+ },
+ {
+  "account_id": "A0124",
+  "author": "Staff-12",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2025-06-30T11:00:00",
+  "note_id": "N0014"
+ },
+ {
+  "account_id": "A0008",
+  "author": "Staff-04",
+  "body": "Nominee details updated.",
+  "created_at": "2024-12-01T11:00:00",
+  "note_id": "N0015"
+ },
+ {
+  "account_id": "A0188",
+  "author": "Staff-15",
+  "body": "Nominee details updated.",
+  "created_at": "2025-12-03T11:00:00",
+  "note_id": "N0016"
+ },
+ {
+  "account_id": "A0214",
+  "author": "Staff-04",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2024-06-08T11:00:00",
+  "note_id": "N0017"
+ },
+ {
+  "account_id": "A0272",
+  "author": "Staff-03",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2024-09-23T11:00:00",
+  "note_id": "N0018"
+ },
+ {
+  "account_id": "A0047",
+  "author": "Staff-02",
+  "body": "Customer prefers communication in Hindi.",
+  "created_at": "2025-05-24T11:00:00",
+  "note_id": "N0019"
+ },
+ {
+  "account_id": "A0148",
+  "author": "Staff-01",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-08-01T11:00:00",
+  "note_id": "N0020"
+ },
+ {
+  "account_id": "A0204",
+  "author": "Staff-12",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2024-02-18T11:00:00",
+  "note_id": "N0021"
+ },
+ {
+  "account_id": "A0166",
+  "author": "Staff-04",
+  "body": "Nominee details updated.",
+  "created_at": "2026-04-17T11:00:00",
+  "note_id": "N0022"
+ },
+ {
+  "account_id": "A0002",
+  "author": "Staff-12",
+  "body": "Nominee details updated.",
+  "created_at": "2025-08-24T11:00:00",
+  "note_id": "N0023"
+ },
+ {
+  "account_id": "A0134",
+  "author": "Staff-03",
+  "body": "Nominee details updated.",
+  "created_at": "2026-02-03T11:00:00",
+  "note_id": "N0024"
+ },
+ {
+  "account_id": "A0224",
+  "author": "Staff-09",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2025-11-28T11:00:00",
+  "note_id": "N0025"
+ },
+ {
+  "account_id": "A0168",
+  "author": "Staff-02",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-06-07T11:00:00",
+  "note_id": "N0026"
+ },
+ {
+  "account_id": "A0130",
+  "author": "Staff-12",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-07-27T11:00:00",
+  "note_id": "N0027"
+ },
+ {
+  "account_id": "A0246",
+  "author": "Staff-08",
+  "body": "Customer visited branch to ask about fixed deposits.",
+  "created_at": "2024-01-25T11:00:00",
+  "note_id": "N0028"
+ },
+ {
+  "account_id": "A0016",
+  "author": "Staff-06",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-06-20T11:00:00",
+  "note_id": "N0029"
+ },
+ {
+  "account_id": "A0213",
+  "author": "Staff-10",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2026-09-30T11:00:00",
+  "note_id": "N0030"
+ },
+ {
+  "account_id": "A0007",
+  "author": "Staff-03",
+  "body": "Nominee details updated.",
+  "created_at": "2024-12-26T11:00:00",
+  "note_id": "N0031"
+ },
+ {
+  "account_id": "A0231",
+  "author": "Staff-15",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2026-08-23T11:00:00",
+  "note_id": "N0032"
+ },
+ {
+  "account_id": "A0101",
+  "author": "Staff-12",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2025-10-24T11:00:00",
+  "note_id": "N0033"
+ },
+ {
+  "account_id": "A0035",
+  "author": "Staff-07",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2025-12-27T11:00:00",
+  "note_id": "N0034"
+ },
+ {
+  "account_id": "A0148",
+  "author": "Staff-03",
+  "body": "Nominee details updated.",
+  "created_at": "2025-12-01T11:00:00",
+  "note_id": "N0035"
+ },
+ {
+  "account_id": "A0094",
+  "author": "Staff-09",
+  "body": "Nominee details updated.",
+  "created_at": "2025-12-13T11:00:00",
+  "note_id": "N0036"
+ },
+ {
+  "account_id": "A0143",
+  "author": "Staff-10",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2024-03-11T11:00:00",
+  "note_id": "N0037"
+ },
+ {
+  "account_id": "A0184",
+  "author": "Staff-10",
+  "body": "Nominee details updated.",
+  "created_at": "2025-06-17T11:00:00",
+  "note_id": "N0038"
+ },
+ {
+  "account_id": "A0300",
+  "author": "Staff-07",
+  "body": "Nominee details updated.",
+  "created_at": "2025-12-06T11:00:00",
+  "note_id": "N0039"
+ },
+ {
+  "account_id": "A0039",
+  "author": "Staff-07",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2025-01-15T11:00:00",
+  "note_id": "N0040"
+ },
+ {
+  "account_id": "A0164",
+  "author": "Staff-11",
+  "body": "Nominee details updated.",
+  "created_at": "2026-03-23T11:00:00",
+  "note_id": "N0041"
+ },
+ {
+  "account_id": "A0082",
+  "author": "Staff-14",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2024-03-04T11:00:00",
+  "note_id": "N0042"
+ },
+ {
+  "account_id": "A0284",
+  "author": "Staff-08",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2025-08-27T11:00:00",
+  "note_id": "N0043"
+ },
+ {
+  "account_id": "A0262",
+  "author": "Staff-08",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2024-02-08T11:00:00",
+  "note_id": "N0044"
+ },
+ {
+  "account_id": "A0271",
+  "author": "Staff-07",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2025-11-12T11:00:00",
+  "note_id": "N0045"
+ },
+ {
+  "account_id": "A0118",
+  "author": "Staff-10",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-08-11T11:00:00",
+  "note_id": "N0046"
+ },
+ {
+  "account_id": "A0239",
+  "author": "Staff-01",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2024-01-12T11:00:00",
+  "note_id": "N0047"
+ },
+ {
+  "account_id": "A0007",
+  "author": "Staff-08",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2025-05-04T11:00:00",
+  "note_id": "N0048"
+ },
+ {
+  "account_id": "A0069",
+  "author": "Staff-13",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-03-12T11:00:00",
+  "note_id": "N0049"
+ },
+ {
+  "account_id": "A0174",
+  "author": "Staff-09",
+  "body": "Nominee details updated.",
+  "created_at": "2026-08-10T11:00:00",
+  "note_id": "N0050"
+ },
+ {
+  "account_id": "A0299",
+  "author": "Staff-12",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2024-12-13T11:00:00",
+  "note_id": "N0051"
+ },
+ {
+  "account_id": "A0286",
+  "author": "Staff-10",
+  "body": "Customer visited branch to ask about fixed deposits.",
+  "created_at": "2026-03-01T11:00:00",
+  "note_id": "N0052"
+ },
+ {
+  "account_id": "A0087",
+  "author": "Staff-03",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2024-12-02T11:00:00",
+  "note_id": "N0053"
+ },
+ {
+  "account_id": "A0202",
+  "author": "Staff-05",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2024-04-25T11:00:00",
+  "note_id": "N0054"
+ },
+ {
+  "account_id": "A0249",
+  "author": "Staff-01",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-09-09T11:00:00",
+  "note_id": "N0055"
+ },
+ {
+  "account_id": "A0271",
+  "author": "Staff-11",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2024-06-16T11:00:00",
+  "note_id": "N0056"
+ },
+ {
+  "account_id": "A0258",
+  "author": "Staff-01",
+  "body": "Customer visited branch to ask about fixed deposits.",
+  "created_at": "2025-04-27T11:00:00",
+  "note_id": "N0057"
+ },
+ {
+  "account_id": "A0196",
+  "author": "Staff-11",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2024-07-24T11:00:00",
+  "note_id": "N0058"
+ },
+ {
+  "account_id": "A0074",
+  "author": "Staff-06",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-09-05T11:00:00",
+  "note_id": "N0059"
+ },
+ {
+  "account_id": "A0136",
+  "author": "Staff-06",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2026-01-07T11:00:00",
+  "note_id": "N0060"
+ },
+ {
+  "account_id": "A0072",
+  "author": "Staff-05",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2026-09-01T11:00:00",
+  "note_id": "N0061"
+ },
+ {
+  "account_id": "A0244",
+  "author": "Staff-10",
+  "body": "Customer prefers communication in Hinglish.",
+  "created_at": "2025-03-23T11:00:00",
+  "note_id": "N0062"
+ },
+ {
+  "account_id": "A0099",
+  "author": "Staff-11",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2024-01-07T11:00:00",
+  "note_id": "N0063"
+ },
+ {
+  "account_id": "A0124",
+  "author": "Staff-03",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2024-04-02T11:00:00",
+  "note_id": "N0064"
+ },
+ {
+  "account_id": "A0171",
+  "author": "Staff-01",
+  "body": "Nominee details updated.",
+  "created_at": "2026-03-28T11:00:00",
+  "note_id": "N0065"
+ },
+ {
+  "account_id": "A0291",
+  "author": "Staff-15",
+  "body": "Customer prefers communication in Hindi.",
+  "created_at": "2024-07-31T11:00:00",
+  "note_id": "N0066"
+ },
+ {
+  "account_id": "A0142",
+  "author": "Staff-15",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2025-12-31T11:00:00",
+  "note_id": "N0067"
+ },
+ {
+  "account_id": "A0223",
+  "author": "Staff-14",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-12-06T11:00:00",
+  "note_id": "N0068"
+ },
+ {
+  "account_id": "A0009",
+  "author": "Staff-01",
+  "body": "Customer prefers communication in Hinglish.",
+  "created_at": "2024-11-13T11:00:00",
+  "note_id": "N0069"
+ },
+ {
+  "account_id": "A0007",
+  "author": "Staff-04",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2026-05-07T11:00:00",
+  "note_id": "N0070"
+ },
+ {
+  "account_id": "A0101",
+  "author": "Staff-14",
+  "body": "Customer visited branch to ask about fixed deposits.",
+  "created_at": "2026-02-04T11:00:00",
+  "note_id": "N0071"
+ },
+ {
+  "account_id": "A0280",
+  "author": "Staff-13",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2024-07-12T11:00:00",
+  "note_id": "N0072"
+ },
+ {
+  "account_id": "A0288",
+  "author": "Staff-04",
+  "body": "Nominee details updated.",
+  "created_at": "2025-09-10T11:00:00",
+  "note_id": "N0073"
+ },
+ {
+  "account_id": "A0127",
+  "author": "Staff-02",
+  "body": "Customer visited branch to ask about fixed deposits.",
+  "created_at": "2026-01-11T11:00:00",
+  "note_id": "N0074"
+ },
+ {
+  "account_id": "A0293",
+  "author": "Staff-12",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-07-31T11:00:00",
+  "note_id": "N0075"
+ },
+ {
+  "account_id": "A0168",
+  "author": "Staff-14",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2025-11-30T11:00:00",
+  "note_id": "N0076"
+ },
+ {
+  "account_id": "A0004",
+  "author": "Staff-10",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2025-07-10T11:00:00",
+  "note_id": "N0077"
+ },
+ {
+  "account_id": "A0299",
+  "author": "Staff-07",
+  "body": "Customer prefers communication in Hindi.",
+  "created_at": "2024-05-04T11:00:00",
+  "note_id": "N0078"
+ },
+ {
+  "account_id": "A0235",
+  "author": "Staff-06",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2026-06-27T11:00:00",
+  "note_id": "N0079"
+ },
+ {
+  "account_id": "A0075",
+  "author": "Staff-12",
+  "body": "Nominee details updated.",
+  "created_at": "2024-10-21T11:00:00",
+  "note_id": "N0080"
+ },
+ {
+  "account_id": "A0241",
+  "author": "Staff-11",
+  "body": "Customer visited branch to ask about fixed deposits.",
+  "created_at": "2026-06-15T11:00:00",
+  "note_id": "N0081"
+ },
+ {
+  "account_id": "A0173",
+  "author": "Staff-12",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2025-10-02T11:00:00",
+  "note_id": "N0082"
+ },
+ {
+  "account_id": "A0048",
+  "author": "Staff-11",
+  "body": "Customer prefers communication in Hindi (Roman script).",
+  "created_at": "2024-02-18T11:00:00",
+  "note_id": "N0083"
+ },
+ {
+  "account_id": "A0177",
+  "author": "Staff-09",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2026-08-08T11:00:00",
+  "note_id": "N0084"
+ },
+ {
+  "account_id": "A0269",
+  "author": "Staff-11",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-02-25T11:00:00",
+  "note_id": "N0085"
+ },
+ {
+  "account_id": "A0010",
+  "author": "Staff-11",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2024-08-22T11:00:00",
+  "note_id": "N0086"
+ },
+ {
+  "account_id": "A0052",
+  "author": "Staff-08",
+  "body": "Debit card PIN reset at branch ATM with staff assistance.",
+  "created_at": "2025-12-15T11:00:00",
+  "note_id": "N0087"
+ },
+ {
+  "account_id": "A0219",
+  "author": "Staff-14",
+  "body": "Customer prefers communication in Hindi (Roman script).",
+  "created_at": "2026-07-27T11:00:00",
+  "note_id": "N0088"
+ },
+ {
+  "account_id": "A0004",
+  "author": "Staff-10",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2025-06-28T11:00:00",
+  "note_id": "N0089"
+ },
+ {
+  "account_id": "A0263",
+  "author": "Staff-08",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2024-02-18T11:00:00",
+  "note_id": "N0090"
+ },
+ {
+  "account_id": "A0102",
+  "author": "Staff-07",
+  "body": "KYC documents verified at branch.",
+  "created_at": "2024-06-15T11:00:00",
+  "note_id": "N0091"
+ },
+ {
+  "account_id": "A0084",
+  "author": "Staff-01",
+  "body": "Customer prefers communication in English.",
+  "created_at": "2026-05-07T11:00:00",
+  "note_id": "N0092"
+ },
+ {
+  "account_id": "A0016",
+  "author": "Staff-12",
+  "body": "Cheque book issued at customer's request.",
+  "created_at": "2026-01-19T11:00:00",
+  "note_id": "N0093"
+ },
+ {
+  "account_id": "A0032",
+  "author": "Staff-09",
+  "body": "Nominee details updated.",
+  "created_at": "2026-08-20T11:00:00",
+  "note_id": "N0094"
+ },
+ {
+  "account_id": "A0047",
+  "author": "Staff-04",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-04-08T11:00:00",
+  "note_id": "N0095"
+ },
+ {
+  "account_id": "A0073",
+  "author": "Staff-03",
+  "body": "Customer prefers communication in Hinglish.",
+  "created_at": "2025-12-10T11:00:00",
+  "note_id": "N0096"
+ },
+ {
+  "account_id": "A0152",
+  "author": "Staff-15",
+  "body": "Customer visited branch to ask about fixed deposits.",
+  "created_at": "2024-11-09T11:00:00",
+  "note_id": "N0097"
+ },
+ {
+  "account_id": "A0036",
+  "author": "Staff-04",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2025-09-26T11:00:00",
+  "note_id": "N0098"
+ },
+ {
+  "account_id": "A0078",
+  "author": "Staff-14",
+  "body": "Address proof updated after relocation.",
+  "created_at": "2024-11-10T11:00:00",
+  "note_id": "N0099"
+ },
+ {
+  "account_id": "A0060",
+  "author": "Staff-14",
+  "body": "Customer informed about SMS alert charges.",
+  "created_at": "2025-04-11T11:00:00",
+  "note_id": "N0100"
+ }
+]

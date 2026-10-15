@@ -16,4 +16,13 @@ ollama pull qwen3:4b-instruct-2507-q4_K_M
 powershell -ExecutionPolicy Bypass -File scripts\record_env.ps1
 ```
 
+## Stage 1: synthetic world
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\stage1.ps1            # generate, verify, test
+powershell -ExecutionPolicy Bypass -File scripts\stage1.ps1 -Samples   # also print sample records
+```
+
+This prints record counts and the world SHA-256 (the hash of `data/world/MANIFEST.sha256`). Policy sources: [docs/policy-sources.md](docs/policy-sources.md).
+
 Per-stage run instructions will be added as each stage lands.

@@ -1,0 +1,3002 @@
+[
+ {
+  "account_id": "A0001",
+  "account_type": "savings",
+  "balance_paise": 41425362,
+  "branch_city": "Jaipur",
+  "customer_id": "C0001",
+  "opened_on": "2024-12-25",
+  "opening_balance_paise": 12900900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0002",
+  "account_type": "savings",
+  "balance_paise": 9013638,
+  "branch_city": "Jaipur",
+  "customer_id": "C0002",
+  "opened_on": "2025-08-28",
+  "opening_balance_paise": 2420800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0003",
+  "account_type": "savings",
+  "balance_paise": 236,
+  "branch_city": "Jaipur",
+  "customer_id": "C0003",
+  "opened_on": "2016-10-03",
+  "opening_balance_paise": 18800500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0004",
+  "account_type": "savings",
+  "balance_paise": 24465821,
+  "branch_city": "Patna",
+  "customer_id": "C0004",
+  "opened_on": "2016-11-12",
+  "opening_balance_paise": 15767200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0005",
+  "account_type": "savings",
+  "balance_paise": 241147,
+  "branch_city": "Patna",
+  "customer_id": "C0005",
+  "opened_on": "2021-07-26",
+  "opening_balance_paise": 6337500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0006",
+  "account_type": "savings",
+  "balance_paise": 13242,
+  "branch_city": "Chennai",
+  "customer_id": "C0006",
+  "opened_on": "2019-07-20",
+  "opening_balance_paise": 1727700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0007",
+  "account_type": "salary",
+  "balance_paise": 6718995,
+  "branch_city": "Chennai",
+  "customer_id": "C0007",
+  "opened_on": "2020-09-09",
+  "opening_balance_paise": 7816600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0008",
+  "account_type": "savings",
+  "balance_paise": 37906639,
+  "branch_city": "Pune",
+  "customer_id": "C0008",
+  "opened_on": "2018-05-12",
+  "opening_balance_paise": 4283700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0009",
+  "account_type": "savings",
+  "balance_paise": 36681180,
+  "branch_city": "Lucknow",
+  "customer_id": "C0009",
+  "opened_on": "2019-04-09",
+  "opening_balance_paise": 13295200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0010",
+  "account_type": "savings",
+  "balance_paise": 529717,
+  "branch_city": "Lucknow",
+  "customer_id": "C0010",
+  "opened_on": "2020-05-19",
+  "opening_balance_paise": 17710900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0011",
+  "account_type": "savings",
+  "balance_paise": 17862,
+  "branch_city": "Delhi",
+  "customer_id": "C0011",
+  "opened_on": "2021-04-24",
+  "opening_balance_paise": 4577500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0012",
+  "account_type": "savings",
+  "balance_paise": 30688123,
+  "branch_city": "Jaipur",
+  "customer_id": "C0012",
+  "opened_on": "2020-08-21",
+  "opening_balance_paise": 19027500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0013",
+  "account_type": "savings",
+  "balance_paise": 26031069,
+  "branch_city": "Bhopal",
+  "customer_id": "C0013",
+  "opened_on": "2023-10-18",
+  "opening_balance_paise": 14482100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0014",
+  "account_type": "savings",
+  "balance_paise": 137178,
+  "branch_city": "Delhi",
+  "customer_id": "C0014",
+  "opened_on": "2015-07-20",
+  "opening_balance_paise": 4577500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0015",
+  "account_type": "savings",
+  "balance_paise": 6375810,
+  "branch_city": "Delhi",
+  "customer_id": "C0015",
+  "opened_on": "2016-05-31",
+  "opening_balance_paise": 2084800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0016",
+  "account_type": "savings",
+  "balance_paise": 340014,
+  "branch_city": "Bhopal",
+  "customer_id": "C0016",
+  "opened_on": "2017-12-17",
+  "opening_balance_paise": 12351300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0017",
+  "account_type": "savings",
+  "balance_paise": 22818112,
+  "branch_city": "Bhopal",
+  "customer_id": "C0017",
+  "opened_on": "2019-02-03",
+  "opening_balance_paise": 16726600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0018",
+  "account_type": "savings",
+  "balance_paise": 59701823,
+  "branch_city": "Jaipur",
+  "customer_id": "C0018",
+  "opened_on": "2021-10-09",
+  "opening_balance_paise": 12420600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0019",
+  "account_type": "savings",
+  "balance_paise": 7210590,
+  "branch_city": "Bhopal",
+  "customer_id": "C0019",
+  "opened_on": "2019-04-21",
+  "opening_balance_paise": 10258500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0020",
+  "account_type": "salary",
+  "balance_paise": 96188062,
+  "branch_city": "Bhopal",
+  "customer_id": "C0020",
+  "opened_on": "2025-01-16",
+  "opening_balance_paise": 9060600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0021",
+  "account_type": "savings",
+  "balance_paise": 35046029,
+  "branch_city": "Delhi",
+  "customer_id": "C0021",
+  "opened_on": "2019-04-09",
+  "opening_balance_paise": 3086600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0022",
+  "account_type": "savings",
+  "balance_paise": 12435000,
+  "branch_city": "Delhi",
+  "customer_id": "C0022",
+  "opened_on": "2017-03-03",
+  "opening_balance_paise": 17495600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0023",
+  "account_type": "savings",
+  "balance_paise": 4242516,
+  "branch_city": "Mumbai",
+  "customer_id": "C0023",
+  "opened_on": "2020-07-26",
+  "opening_balance_paise": 1710700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0024",
+  "account_type": "salary",
+  "balance_paise": 234422,
+  "branch_city": "Mumbai",
+  "customer_id": "C0024",
+  "opened_on": "2017-10-19",
+  "opening_balance_paise": 3024400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0025",
+  "account_type": "savings",
+  "balance_paise": 29871,
+  "branch_city": "Lucknow",
+  "customer_id": "C0025",
+  "opened_on": "2021-10-02",
+  "opening_balance_paise": 3717100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0026",
+  "account_type": "savings",
+  "balance_paise": 36853,
+  "branch_city": "Patna",
+  "customer_id": "C0026",
+  "opened_on": "2015-01-31",
+  "opening_balance_paise": 15247000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0027",
+  "account_type": "savings",
+  "balance_paise": 23006620,
+  "branch_city": "Patna",
+  "customer_id": "C0027",
+  "opened_on": "2015-09-14",
+  "opening_balance_paise": 9629700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0028",
+  "account_type": "salary",
+  "balance_paise": 18951895,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0028",
+  "opened_on": "2021-10-19",
+  "opening_balance_paise": 1446200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0029",
+  "account_type": "salary",
+  "balance_paise": 110131731,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0029",
+  "opened_on": "2022-02-01",
+  "opening_balance_paise": 13631500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0030",
+  "account_type": "savings",
+  "balance_paise": 32592394,
+  "branch_city": "Patna",
+  "customer_id": "C0030",
+  "opened_on": "2023-05-01",
+  "opening_balance_paise": 2700400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0031",
+  "account_type": "savings",
+  "balance_paise": 39330,
+  "branch_city": "Indore",
+  "customer_id": "C0031",
+  "opened_on": "2021-09-16",
+  "opening_balance_paise": 9320200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0032",
+  "account_type": "salary",
+  "balance_paise": 34253158,
+  "branch_city": "Lucknow",
+  "customer_id": "C0032",
+  "opened_on": "2021-09-16",
+  "opening_balance_paise": 1741100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0033",
+  "account_type": "savings",
+  "balance_paise": 12960419,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0033",
+  "opened_on": "2015-11-02",
+  "opening_balance_paise": 6558400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0034",
+  "account_type": "savings",
+  "balance_paise": 13111760,
+  "branch_city": "Jaipur",
+  "customer_id": "C0034",
+  "opened_on": "2022-08-06",
+  "opening_balance_paise": 3853700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0035",
+  "account_type": "savings",
+  "balance_paise": 804057,
+  "branch_city": "Patna",
+  "customer_id": "C0035",
+  "opened_on": "2020-12-20",
+  "opening_balance_paise": 8222600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0036",
+  "account_type": "salary",
+  "balance_paise": 119574970,
+  "branch_city": "Patna",
+  "customer_id": "C0036",
+  "opened_on": "2021-07-22",
+  "opening_balance_paise": 8784300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0037",
+  "account_type": "savings",
+  "balance_paise": 18499,
+  "branch_city": "Delhi",
+  "customer_id": "C0037",
+  "opened_on": "2022-12-12",
+  "opening_balance_paise": 12425100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0038",
+  "account_type": "savings",
+  "balance_paise": 47277292,
+  "branch_city": "Patna",
+  "customer_id": "C0038",
+  "opened_on": "2017-12-07",
+  "opening_balance_paise": 19623900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0039",
+  "account_type": "savings",
+  "balance_paise": 820028,
+  "branch_city": "Kolkata",
+  "customer_id": "C0039",
+  "opened_on": "2017-07-09",
+  "opening_balance_paise": 2467500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0040",
+  "account_type": "savings",
+  "balance_paise": 28691393,
+  "branch_city": "Kolkata",
+  "customer_id": "C0040",
+  "opened_on": "2016-09-09",
+  "opening_balance_paise": 9981600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0041",
+  "account_type": "salary",
+  "balance_paise": 82002053,
+  "branch_city": "Delhi",
+  "customer_id": "C0041",
+  "opened_on": "2019-11-12",
+  "opening_balance_paise": 10085600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0042",
+  "account_type": "salary",
+  "balance_paise": 30711257,
+  "branch_city": "Delhi",
+  "customer_id": "C0042",
+  "opened_on": "2017-06-07",
+  "opening_balance_paise": 1134100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0043",
+  "account_type": "salary",
+  "balance_paise": 141069558,
+  "branch_city": "Lucknow",
+  "customer_id": "C0043",
+  "opened_on": "2025-03-02",
+  "opening_balance_paise": 14737300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0044",
+  "account_type": "savings",
+  "balance_paise": 6695764,
+  "branch_city": "Lucknow",
+  "customer_id": "C0044",
+  "opened_on": "2015-07-18",
+  "opening_balance_paise": 3985200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0045",
+  "account_type": "savings",
+  "balance_paise": 2931031,
+  "branch_city": "Bhopal",
+  "customer_id": "C0045",
+  "opened_on": "2017-06-04",
+  "opening_balance_paise": 12775800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0046",
+  "account_type": "savings",
+  "balance_paise": 17427,
+  "branch_city": "Bhopal",
+  "customer_id": "C0046",
+  "opened_on": "2022-03-28",
+  "opening_balance_paise": 14323900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0047",
+  "account_type": "savings",
+  "balance_paise": 42100252,
+  "branch_city": "Indore",
+  "customer_id": "C0047",
+  "opened_on": "2020-08-10",
+  "opening_balance_paise": 12743700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0048",
+  "account_type": "salary",
+  "balance_paise": 110596579,
+  "branch_city": "Indore",
+  "customer_id": "C0048",
+  "opened_on": "2021-11-02",
+  "opening_balance_paise": 14952000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0049",
+  "account_type": "savings",
+  "balance_paise": 97573,
+  "branch_city": "Indore",
+  "customer_id": "C0049",
+  "opened_on": "2018-09-19",
+  "opening_balance_paise": 1810800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0050",
+  "account_type": "savings",
+  "balance_paise": 52091294,
+  "branch_city": "Indore",
+  "customer_id": "C0050",
+  "opened_on": "2023-07-06",
+  "opening_balance_paise": 16945000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0051",
+  "account_type": "savings",
+  "balance_paise": 10936870,
+  "branch_city": "Lucknow",
+  "customer_id": "C0051",
+  "opened_on": "2016-11-16",
+  "opening_balance_paise": 4380200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0052",
+  "account_type": "salary",
+  "balance_paise": 330249,
+  "branch_city": "Lucknow",
+  "customer_id": "C0052",
+  "opened_on": "2015-05-21",
+  "opening_balance_paise": 2011500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0053",
+  "account_type": "salary",
+  "balance_paise": 47901600,
+  "branch_city": "Patna",
+  "customer_id": "C0053",
+  "opened_on": "2019-01-23",
+  "opening_balance_paise": 2497600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0054",
+  "account_type": "salary",
+  "balance_paise": 18212332,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0054",
+  "opened_on": "2020-04-23",
+  "opening_balance_paise": 7059600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0055",
+  "account_type": "savings",
+  "balance_paise": 1117778,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0055",
+  "opened_on": "2019-11-23",
+  "opening_balance_paise": 1958400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0056",
+  "account_type": "savings",
+  "balance_paise": 11312373,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0056",
+  "opened_on": "2019-05-09",
+  "opening_balance_paise": 5262600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0057",
+  "account_type": "salary",
+  "balance_paise": 94234702,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0057",
+  "opened_on": "2015-01-15",
+  "opening_balance_paise": 9375700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0058",
+  "account_type": "savings",
+  "balance_paise": 34609933,
+  "branch_city": "Indore",
+  "customer_id": "C0058",
+  "opened_on": "2018-07-02",
+  "opening_balance_paise": 4283200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0059",
+  "account_type": "savings",
+  "balance_paise": 68114349,
+  "branch_city": "Pune",
+  "customer_id": "C0059",
+  "opened_on": "2019-04-22",
+  "opening_balance_paise": 19812500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0060",
+  "account_type": "salary",
+  "balance_paise": 84788182,
+  "branch_city": "Lucknow",
+  "customer_id": "C0060",
+  "opened_on": "2017-10-30",
+  "opening_balance_paise": 12590900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0061",
+  "account_type": "savings",
+  "balance_paise": 29155582,
+  "branch_city": "Patna",
+  "customer_id": "C0061",
+  "opened_on": "2018-11-22",
+  "opening_balance_paise": 6935600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0062",
+  "account_type": "salary",
+  "balance_paise": 47291030,
+  "branch_city": "Patna",
+  "customer_id": "C0062",
+  "opened_on": "2024-08-07",
+  "opening_balance_paise": 3845100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0063",
+  "account_type": "savings",
+  "balance_paise": 11607612,
+  "branch_city": "Bhopal",
+  "customer_id": "C0063",
+  "opened_on": "2015-07-28",
+  "opening_balance_paise": 2944800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0064",
+  "account_type": "savings",
+  "balance_paise": 27970582,
+  "branch_city": "Jaipur",
+  "customer_id": "C0064",
+  "opened_on": "2017-12-03",
+  "opening_balance_paise": 5137100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0065",
+  "account_type": "savings",
+  "balance_paise": 1208584,
+  "branch_city": "Jaipur",
+  "customer_id": "C0065",
+  "opened_on": "2015-08-16",
+  "opening_balance_paise": 19445500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0066",
+  "account_type": "savings",
+  "balance_paise": 20334299,
+  "branch_city": "Pune",
+  "customer_id": "C0066",
+  "opened_on": "2016-07-24",
+  "opening_balance_paise": 5370300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0067",
+  "account_type": "savings",
+  "balance_paise": 73867,
+  "branch_city": "Pune",
+  "customer_id": "C0067",
+  "opened_on": "2022-09-15",
+  "opening_balance_paise": 17378300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0068",
+  "account_type": "savings",
+  "balance_paise": 22104435,
+  "branch_city": "Pune",
+  "customer_id": "C0068",
+  "opened_on": "2023-07-03",
+  "opening_balance_paise": 8072200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0069",
+  "account_type": "salary",
+  "balance_paise": 128988453,
+  "branch_city": "Pune",
+  "customer_id": "C0069",
+  "opened_on": "2019-10-26",
+  "opening_balance_paise": 7314800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0070",
+  "account_type": "salary",
+  "balance_paise": 38655084,
+  "branch_city": "Indore",
+  "customer_id": "C0070",
+  "opened_on": "2024-03-16",
+  "opening_balance_paise": 7225100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0071",
+  "account_type": "savings",
+  "balance_paise": 6127405,
+  "branch_city": "Jaipur",
+  "customer_id": "C0071",
+  "opened_on": "2022-12-27",
+  "opening_balance_paise": 8774000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0072",
+  "account_type": "savings",
+  "balance_paise": 37223485,
+  "branch_city": "Jaipur",
+  "customer_id": "C0072",
+  "opened_on": "2023-12-21",
+  "opening_balance_paise": 17529800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0073",
+  "account_type": "savings",
+  "balance_paise": 634652,
+  "branch_city": "Patna",
+  "customer_id": "C0073",
+  "opened_on": "2020-05-28",
+  "opening_balance_paise": 1339200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0074",
+  "account_type": "salary",
+  "balance_paise": 3860390,
+  "branch_city": "Pune",
+  "customer_id": "C0074",
+  "opened_on": "2015-02-08",
+  "opening_balance_paise": 10858700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0075",
+  "account_type": "savings",
+  "balance_paise": 7967030,
+  "branch_city": "Pune",
+  "customer_id": "C0075",
+  "opened_on": "2022-10-19",
+  "opening_balance_paise": 11954300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0076",
+  "account_type": "salary",
+  "balance_paise": 8846266,
+  "branch_city": "Patna",
+  "customer_id": "C0076",
+  "opened_on": "2023-08-19",
+  "opening_balance_paise": 4321500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0077",
+  "account_type": "savings",
+  "balance_paise": 1190757,
+  "branch_city": "Patna",
+  "customer_id": "C0077",
+  "opened_on": "2023-10-27",
+  "opening_balance_paise": 627700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0078",
+  "account_type": "salary",
+  "balance_paise": 49405847,
+  "branch_city": "Indore",
+  "customer_id": "C0078",
+  "opened_on": "2015-10-01",
+  "opening_balance_paise": 2389900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0079",
+  "account_type": "salary",
+  "balance_paise": 41432854,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0079",
+  "opened_on": "2023-05-11",
+  "opening_balance_paise": 8211800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0080",
+  "account_type": "salary",
+  "balance_paise": 17443,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0080",
+  "opened_on": "2017-12-09",
+  "opening_balance_paise": 8789000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0081",
+  "account_type": "savings",
+  "balance_paise": 90512,
+  "branch_city": "Mumbai",
+  "customer_id": "C0081",
+  "opened_on": "2017-02-12",
+  "opening_balance_paise": 10264300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0082",
+  "account_type": "salary",
+  "balance_paise": 58915663,
+  "branch_city": "Mumbai",
+  "customer_id": "C0082",
+  "opened_on": "2015-09-07",
+  "opening_balance_paise": 1989000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0083",
+  "account_type": "savings",
+  "balance_paise": 35086924,
+  "branch_city": "Chennai",
+  "customer_id": "C0083",
+  "opened_on": "2016-03-11",
+  "opening_balance_paise": 17133100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0084",
+  "account_type": "salary",
+  "balance_paise": 96801031,
+  "branch_city": "Chennai",
+  "customer_id": "C0084",
+  "opened_on": "2024-01-22",
+  "opening_balance_paise": 5467000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0085",
+  "account_type": "savings",
+  "balance_paise": 24993,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0085",
+  "opened_on": "2025-05-13",
+  "opening_balance_paise": 2943000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0086",
+  "account_type": "savings",
+  "balance_paise": 48494179,
+  "branch_city": "Kolkata",
+  "customer_id": "C0086",
+  "opened_on": "2015-01-29",
+  "opening_balance_paise": 16063000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0087",
+  "account_type": "salary",
+  "balance_paise": 55124691,
+  "branch_city": "Kolkata",
+  "customer_id": "C0087",
+  "opened_on": "2020-11-05",
+  "opening_balance_paise": 2557800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0088",
+  "account_type": "salary",
+  "balance_paise": 63303531,
+  "branch_city": "Kolkata",
+  "customer_id": "C0088",
+  "opened_on": "2021-10-25",
+  "opening_balance_paise": 5892500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0089",
+  "account_type": "salary",
+  "balance_paise": 86650943,
+  "branch_city": "Pune",
+  "customer_id": "C0089",
+  "opened_on": "2021-10-12",
+  "opening_balance_paise": 8957500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0090",
+  "account_type": "savings",
+  "balance_paise": 27050941,
+  "branch_city": "Pune",
+  "customer_id": "C0090",
+  "opened_on": "2016-12-09",
+  "opening_balance_paise": 9744400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0091",
+  "account_type": "savings",
+  "balance_paise": 146329,
+  "branch_city": "Pune",
+  "customer_id": "C0091",
+  "opened_on": "2022-09-25",
+  "opening_balance_paise": 3417000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0092",
+  "account_type": "savings",
+  "balance_paise": 179021,
+  "branch_city": "Bhopal",
+  "customer_id": "C0092",
+  "opened_on": "2020-07-24",
+  "opening_balance_paise": 3657800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0093",
+  "account_type": "salary",
+  "balance_paise": 26413455,
+  "branch_city": "Kolkata",
+  "customer_id": "C0093",
+  "opened_on": "2024-10-02",
+  "opening_balance_paise": 4855900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0094",
+  "account_type": "salary",
+  "balance_paise": 110255073,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0094",
+  "opened_on": "2018-07-19",
+  "opening_balance_paise": 6258900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0095",
+  "account_type": "savings",
+  "balance_paise": 46764388,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0095",
+  "opened_on": "2017-05-16",
+  "opening_balance_paise": 3815700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0096",
+  "account_type": "salary",
+  "balance_paise": 32927151,
+  "branch_city": "Jaipur",
+  "customer_id": "C0096",
+  "opened_on": "2023-01-31",
+  "opening_balance_paise": 4784300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0097",
+  "account_type": "savings",
+  "balance_paise": 4701176,
+  "branch_city": "Lucknow",
+  "customer_id": "C0097",
+  "opened_on": "2022-01-22",
+  "opening_balance_paise": 5982900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0098",
+  "account_type": "salary",
+  "balance_paise": 116972089,
+  "branch_city": "Lucknow",
+  "customer_id": "C0098",
+  "opened_on": "2020-06-10",
+  "opening_balance_paise": 3215900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0099",
+  "account_type": "savings",
+  "balance_paise": 2972416,
+  "branch_city": "Lucknow",
+  "customer_id": "C0099",
+  "opened_on": "2019-02-07",
+  "opening_balance_paise": 8155700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0100",
+  "account_type": "savings",
+  "balance_paise": 37163354,
+  "branch_city": "Indore",
+  "customer_id": "C0100",
+  "opened_on": "2018-09-30",
+  "opening_balance_paise": 3906100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0101",
+  "account_type": "savings",
+  "balance_paise": 18225,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0101",
+  "opened_on": "2018-09-01",
+  "opening_balance_paise": 17256200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0102",
+  "account_type": "salary",
+  "balance_paise": 24140793,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0102",
+  "opened_on": "2017-11-09",
+  "opening_balance_paise": 6402300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0103",
+  "account_type": "savings",
+  "balance_paise": 12601419,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0103",
+  "opened_on": "2017-10-25",
+  "opening_balance_paise": 19155400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0104",
+  "account_type": "salary",
+  "balance_paise": 69382278,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0104",
+  "opened_on": "2023-03-07",
+  "opening_balance_paise": 10434200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0105",
+  "account_type": "salary",
+  "balance_paise": 75081483,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0105",
+  "opened_on": "2016-08-24",
+  "opening_balance_paise": 5317700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0106",
+  "account_type": "savings",
+  "balance_paise": 33207083,
+  "branch_city": "Jaipur",
+  "customer_id": "C0106",
+  "opened_on": "2021-04-10",
+  "opening_balance_paise": 4345100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0107",
+  "account_type": "salary",
+  "balance_paise": 37430751,
+  "branch_city": "Jaipur",
+  "customer_id": "C0107",
+  "opened_on": "2016-06-05",
+  "opening_balance_paise": 9157600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0108",
+  "account_type": "savings",
+  "balance_paise": 8138023,
+  "branch_city": "Delhi",
+  "customer_id": "C0108",
+  "opened_on": "2016-01-23",
+  "opening_balance_paise": 17242800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0109",
+  "account_type": "savings",
+  "balance_paise": 4633321,
+  "branch_city": "Chennai",
+  "customer_id": "C0109",
+  "opened_on": "2022-10-27",
+  "opening_balance_paise": 10961300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0110",
+  "account_type": "savings",
+  "balance_paise": 2112215,
+  "branch_city": "Chennai",
+  "customer_id": "C0110",
+  "opened_on": "2015-11-04",
+  "opening_balance_paise": 4251500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0111",
+  "account_type": "salary",
+  "balance_paise": 1728203,
+  "branch_city": "Jaipur",
+  "customer_id": "C0111",
+  "opened_on": "2015-10-23",
+  "opening_balance_paise": 11505800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0112",
+  "account_type": "salary",
+  "balance_paise": 4158039,
+  "branch_city": "Delhi",
+  "customer_id": "C0112",
+  "opened_on": "2021-05-17",
+  "opening_balance_paise": 2401600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0113",
+  "account_type": "savings",
+  "balance_paise": 2332503,
+  "branch_city": "Delhi",
+  "customer_id": "C0113",
+  "opened_on": "2017-02-01",
+  "opening_balance_paise": 10323800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0114",
+  "account_type": "savings",
+  "balance_paise": 17513514,
+  "branch_city": "Pune",
+  "customer_id": "C0114",
+  "opened_on": "2021-02-07",
+  "opening_balance_paise": 2151800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0115",
+  "account_type": "salary",
+  "balance_paise": 60703125,
+  "branch_city": "Pune",
+  "customer_id": "C0115",
+  "opened_on": "2023-07-23",
+  "opening_balance_paise": 7424500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0116",
+  "account_type": "salary",
+  "balance_paise": 45508532,
+  "branch_city": "Delhi",
+  "customer_id": "C0116",
+  "opened_on": "2019-07-12",
+  "opening_balance_paise": 5895700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0117",
+  "account_type": "savings",
+  "balance_paise": 22504852,
+  "branch_city": "Indore",
+  "customer_id": "C0117",
+  "opened_on": "2024-04-07",
+  "opening_balance_paise": 6658900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0118",
+  "account_type": "savings",
+  "balance_paise": 109699,
+  "branch_city": "Jaipur",
+  "customer_id": "C0118",
+  "opened_on": "2024-05-23",
+  "opening_balance_paise": 18924100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0119",
+  "account_type": "salary",
+  "balance_paise": 9618667,
+  "branch_city": "Jaipur",
+  "customer_id": "C0119",
+  "opened_on": "2019-03-21",
+  "opening_balance_paise": 13288600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0120",
+  "account_type": "savings",
+  "balance_paise": 17039,
+  "branch_city": "Mumbai",
+  "customer_id": "C0120",
+  "opened_on": "2024-12-14",
+  "opening_balance_paise": 2744900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0121",
+  "account_type": "savings",
+  "balance_paise": 257282,
+  "branch_city": "Pune",
+  "customer_id": "C0121",
+  "opened_on": "2017-11-23",
+  "opening_balance_paise": 11840500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0122",
+  "account_type": "savings",
+  "balance_paise": 511925,
+  "branch_city": "Pune",
+  "customer_id": "C0122",
+  "opened_on": "2017-12-18",
+  "opening_balance_paise": 11588500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0123",
+  "account_type": "savings",
+  "balance_paise": 30216,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0123",
+  "opened_on": "2020-07-02",
+  "opening_balance_paise": 1676400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0124",
+  "account_type": "savings",
+  "balance_paise": 25747006,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0124",
+  "opened_on": "2020-03-13",
+  "opening_balance_paise": 16190800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0125",
+  "account_type": "savings",
+  "balance_paise": 446844,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0125",
+  "opened_on": "2021-12-14",
+  "opening_balance_paise": 1685900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0126",
+  "account_type": "salary",
+  "balance_paise": 16432968,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0126",
+  "opened_on": "2023-04-13",
+  "opening_balance_paise": 9480100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0127",
+  "account_type": "salary",
+  "balance_paise": 189015,
+  "branch_city": "Indore",
+  "customer_id": "C0127",
+  "opened_on": "2015-07-15",
+  "opening_balance_paise": 10100700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0128",
+  "account_type": "salary",
+  "balance_paise": 87798827,
+  "branch_city": "Indore",
+  "customer_id": "C0128",
+  "opened_on": "2018-02-11",
+  "opening_balance_paise": 8999800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0129",
+  "account_type": "savings",
+  "balance_paise": 8226871,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0129",
+  "opened_on": "2021-08-25",
+  "opening_balance_paise": 3662000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0130",
+  "account_type": "savings",
+  "balance_paise": 8914468,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0130",
+  "opened_on": "2020-05-15",
+  "opening_balance_paise": 9005400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0131",
+  "account_type": "salary",
+  "balance_paise": 74415566,
+  "branch_city": "Delhi",
+  "customer_id": "C0131",
+  "opened_on": "2023-03-25",
+  "opening_balance_paise": 8392100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0132",
+  "account_type": "savings",
+  "balance_paise": 13827942,
+  "branch_city": "Delhi",
+  "customer_id": "C0132",
+  "opened_on": "2023-11-03",
+  "opening_balance_paise": 13024900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0133",
+  "account_type": "savings",
+  "balance_paise": 907917,
+  "branch_city": "Delhi",
+  "customer_id": "C0133",
+  "opened_on": "2019-11-22",
+  "opening_balance_paise": 4490900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0134",
+  "account_type": "salary",
+  "balance_paise": 11144,
+  "branch_city": "Delhi",
+  "customer_id": "C0134",
+  "opened_on": "2019-12-16",
+  "opening_balance_paise": 5824600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0135",
+  "account_type": "savings",
+  "balance_paise": 15803,
+  "branch_city": "Jaipur",
+  "customer_id": "C0135",
+  "opened_on": "2019-01-23",
+  "opening_balance_paise": 5194000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0136",
+  "account_type": "savings",
+  "balance_paise": 18411,
+  "branch_city": "Jaipur",
+  "customer_id": "C0136",
+  "opened_on": "2018-05-05",
+  "opening_balance_paise": 8098600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0137",
+  "account_type": "savings",
+  "balance_paise": 7151,
+  "branch_city": "Jaipur",
+  "customer_id": "C0137",
+  "opened_on": "2024-08-27",
+  "opening_balance_paise": 1868100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0138",
+  "account_type": "savings",
+  "balance_paise": 6831241,
+  "branch_city": "Pune",
+  "customer_id": "C0138",
+  "opened_on": "2021-10-16",
+  "opening_balance_paise": 2714100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0139",
+  "account_type": "savings",
+  "balance_paise": 26064,
+  "branch_city": "Delhi",
+  "customer_id": "C0139",
+  "opened_on": "2024-07-08",
+  "opening_balance_paise": 3678800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0140",
+  "account_type": "salary",
+  "balance_paise": 128152199,
+  "branch_city": "Delhi",
+  "customer_id": "C0140",
+  "opened_on": "2022-12-16",
+  "opening_balance_paise": 7433600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0141",
+  "account_type": "savings",
+  "balance_paise": 30377850,
+  "branch_city": "Bhopal",
+  "customer_id": "C0141",
+  "opened_on": "2016-07-11",
+  "opening_balance_paise": 10930500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0142",
+  "account_type": "salary",
+  "balance_paise": 95429888,
+  "branch_city": "Kolkata",
+  "customer_id": "C0142",
+  "opened_on": "2016-12-17",
+  "opening_balance_paise": 9064200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0143",
+  "account_type": "savings",
+  "balance_paise": 41541447,
+  "branch_city": "Bhopal",
+  "customer_id": "C0143",
+  "opened_on": "2021-06-17",
+  "opening_balance_paise": 16700600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0144",
+  "account_type": "salary",
+  "balance_paise": 63012380,
+  "branch_city": "Bhopal",
+  "customer_id": "C0144",
+  "opened_on": "2018-12-01",
+  "opening_balance_paise": 3152100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0145",
+  "account_type": "salary",
+  "balance_paise": 293178,
+  "branch_city": "Bhopal",
+  "customer_id": "C0145",
+  "opened_on": "2016-03-13",
+  "opening_balance_paise": 3943000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0146",
+  "account_type": "savings",
+  "balance_paise": 29137365,
+  "branch_city": "Jaipur",
+  "customer_id": "C0146",
+  "opened_on": "2022-11-03",
+  "opening_balance_paise": 6388400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0147",
+  "account_type": "savings",
+  "balance_paise": 9712602,
+  "branch_city": "Jaipur",
+  "customer_id": "C0147",
+  "opened_on": "2021-01-28",
+  "opening_balance_paise": 1319900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0148",
+  "account_type": "savings",
+  "balance_paise": 15046199,
+  "branch_city": "Kolkata",
+  "customer_id": "C0148",
+  "opened_on": "2021-03-20",
+  "opening_balance_paise": 4778500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0149",
+  "account_type": "salary",
+  "balance_paise": 26544600,
+  "branch_city": "Kolkata",
+  "customer_id": "C0149",
+  "opened_on": "2015-02-27",
+  "opening_balance_paise": 2683100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0150",
+  "account_type": "savings",
+  "balance_paise": 5520,
+  "branch_city": "Lucknow",
+  "customer_id": "C0150",
+  "opened_on": "2025-05-13",
+  "opening_balance_paise": 11847700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0151",
+  "account_type": "savings",
+  "balance_paise": 392560,
+  "branch_city": "Lucknow",
+  "customer_id": "C0151",
+  "opened_on": "2015-09-21",
+  "opening_balance_paise": 11630000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0152",
+  "account_type": "savings",
+  "balance_paise": 23119168,
+  "branch_city": "Kolkata",
+  "customer_id": "C0152",
+  "opened_on": "2020-12-05",
+  "opening_balance_paise": 1411100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0153",
+  "account_type": "savings",
+  "balance_paise": 29211,
+  "branch_city": "Kolkata",
+  "customer_id": "C0153",
+  "opened_on": "2024-10-18",
+  "opening_balance_paise": 3692300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0154",
+  "account_type": "savings",
+  "balance_paise": 29302012,
+  "branch_city": "Lucknow",
+  "customer_id": "C0154",
+  "opened_on": "2022-01-15",
+  "opening_balance_paise": 4651100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0155",
+  "account_type": "salary",
+  "balance_paise": 59504804,
+  "branch_city": "Lucknow",
+  "customer_id": "C0155",
+  "opened_on": "2025-07-03",
+  "opening_balance_paise": 9318500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0156",
+  "account_type": "savings",
+  "balance_paise": 39431270,
+  "branch_city": "Lucknow",
+  "customer_id": "C0156",
+  "opened_on": "2017-05-02",
+  "opening_balance_paise": 13691400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0157",
+  "account_type": "savings",
+  "balance_paise": 24690539,
+  "branch_city": "Bhopal",
+  "customer_id": "C0157",
+  "opened_on": "2017-03-20",
+  "opening_balance_paise": 6601000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0158",
+  "account_type": "savings",
+  "balance_paise": 11155684,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0158",
+  "opened_on": "2016-01-31",
+  "opening_balance_paise": 1737300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0159",
+  "account_type": "savings",
+  "balance_paise": 567664,
+  "branch_city": "Bhopal",
+  "customer_id": "C0159",
+  "opened_on": "2023-01-15",
+  "opening_balance_paise": 5123000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0160",
+  "account_type": "savings",
+  "balance_paise": 23940132,
+  "branch_city": "Jaipur",
+  "customer_id": "C0160",
+  "opened_on": "2018-06-16",
+  "opening_balance_paise": 5980300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0161",
+  "account_type": "savings",
+  "balance_paise": 18853220,
+  "branch_city": "Jaipur",
+  "customer_id": "C0161",
+  "opened_on": "2025-01-22",
+  "opening_balance_paise": 17468900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0162",
+  "account_type": "salary",
+  "balance_paise": 69750727,
+  "branch_city": "Mumbai",
+  "customer_id": "C0162",
+  "opened_on": "2015-05-15",
+  "opening_balance_paise": 13053400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0163",
+  "account_type": "savings",
+  "balance_paise": 9586690,
+  "branch_city": "Mumbai",
+  "customer_id": "C0163",
+  "opened_on": "2017-11-27",
+  "opening_balance_paise": 16405400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0164",
+  "account_type": "savings",
+  "balance_paise": 23921348,
+  "branch_city": "Mumbai",
+  "customer_id": "C0164",
+  "opened_on": "2017-10-15",
+  "opening_balance_paise": 9564300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0165",
+  "account_type": "savings",
+  "balance_paise": 21807610,
+  "branch_city": "Chennai",
+  "customer_id": "C0165",
+  "opened_on": "2019-09-14",
+  "opening_balance_paise": 9542400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0166",
+  "account_type": "salary",
+  "balance_paise": 39007817,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0166",
+  "opened_on": "2020-03-11",
+  "opening_balance_paise": 6851700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0167",
+  "account_type": "salary",
+  "balance_paise": 87788584,
+  "branch_city": "Bhopal",
+  "customer_id": "C0167",
+  "opened_on": "2023-01-10",
+  "opening_balance_paise": 11736200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0168",
+  "account_type": "savings",
+  "balance_paise": 18353242,
+  "branch_city": "Kolkata",
+  "customer_id": "C0168",
+  "opened_on": "2023-03-19",
+  "opening_balance_paise": 3788000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0169",
+  "account_type": "savings",
+  "balance_paise": 42980721,
+  "branch_city": "Lucknow",
+  "customer_id": "C0169",
+  "opened_on": "2019-09-17",
+  "opening_balance_paise": 5172200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0170",
+  "account_type": "savings",
+  "balance_paise": 56042,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0170",
+  "opened_on": "2016-10-16",
+  "opening_balance_paise": 6812600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0171",
+  "account_type": "savings",
+  "balance_paise": 23320066,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0171",
+  "opened_on": "2017-08-22",
+  "opening_balance_paise": 6968500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0172",
+  "account_type": "savings",
+  "balance_paise": 25522922,
+  "branch_city": "Chennai",
+  "customer_id": "C0172",
+  "opened_on": "2015-02-14",
+  "opening_balance_paise": 9301500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0173",
+  "account_type": "salary",
+  "balance_paise": 138550,
+  "branch_city": "Chennai",
+  "customer_id": "C0173",
+  "opened_on": "2023-06-09",
+  "opening_balance_paise": 11302200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0174",
+  "account_type": "savings",
+  "balance_paise": 31749669,
+  "branch_city": "Chennai",
+  "customer_id": "C0174",
+  "opened_on": "2016-10-08",
+  "opening_balance_paise": 15572000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0175",
+  "account_type": "salary",
+  "balance_paise": 88299469,
+  "branch_city": "Pune",
+  "customer_id": "C0175",
+  "opened_on": "2019-12-14",
+  "opening_balance_paise": 14729900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0176",
+  "account_type": "savings",
+  "balance_paise": 13267,
+  "branch_city": "Delhi",
+  "customer_id": "C0176",
+  "opened_on": "2019-07-02",
+  "opening_balance_paise": 5417900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0177",
+  "account_type": "salary",
+  "balance_paise": 17116740,
+  "branch_city": "Delhi",
+  "customer_id": "C0177",
+  "opened_on": "2017-04-17",
+  "opening_balance_paise": 5904700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0178",
+  "account_type": "savings",
+  "balance_paise": 23902,
+  "branch_city": "Delhi",
+  "customer_id": "C0178",
+  "opened_on": "2021-05-24",
+  "opening_balance_paise": 12620300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0179",
+  "account_type": "savings",
+  "balance_paise": 24057518,
+  "branch_city": "Delhi",
+  "customer_id": "C0179",
+  "opened_on": "2022-07-03",
+  "opening_balance_paise": 19540700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0180",
+  "account_type": "savings",
+  "balance_paise": 20891077,
+  "branch_city": "Kolkata",
+  "customer_id": "C0180",
+  "opened_on": "2019-06-28",
+  "opening_balance_paise": 18632100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0181",
+  "account_type": "savings",
+  "balance_paise": 3614209,
+  "branch_city": "Pune",
+  "customer_id": "C0181",
+  "opened_on": "2021-08-19",
+  "opening_balance_paise": 7815400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0182",
+  "account_type": "savings",
+  "balance_paise": 21421791,
+  "branch_city": "Pune",
+  "customer_id": "C0182",
+  "opened_on": "2017-06-15",
+  "opening_balance_paise": 2874500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0183",
+  "account_type": "savings",
+  "balance_paise": 4685,
+  "branch_city": "Chennai",
+  "customer_id": "C0183",
+  "opened_on": "2015-04-17",
+  "opening_balance_paise": 13392500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0184",
+  "account_type": "savings",
+  "balance_paise": 15280536,
+  "branch_city": "Chennai",
+  "customer_id": "C0184",
+  "opened_on": "2015-04-06",
+  "opening_balance_paise": 18418900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0185",
+  "account_type": "savings",
+  "balance_paise": 1016398,
+  "branch_city": "Chennai",
+  "customer_id": "C0185",
+  "opened_on": "2017-10-28",
+  "opening_balance_paise": 1518400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0186",
+  "account_type": "salary",
+  "balance_paise": 111581671,
+  "branch_city": "Chennai",
+  "customer_id": "C0186",
+  "opened_on": "2022-12-15",
+  "opening_balance_paise": 13218300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0187",
+  "account_type": "salary",
+  "balance_paise": 128418979,
+  "branch_city": "Kolkata",
+  "customer_id": "C0187",
+  "opened_on": "2016-02-26",
+  "opening_balance_paise": 14670300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0188",
+  "account_type": "savings",
+  "balance_paise": 49997866,
+  "branch_city": "Kolkata",
+  "customer_id": "C0188",
+  "opened_on": "2022-08-24",
+  "opening_balance_paise": 8865800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0189",
+  "account_type": "savings",
+  "balance_paise": 12123789,
+  "branch_city": "Pune",
+  "customer_id": "C0189",
+  "opened_on": "2015-08-20",
+  "opening_balance_paise": 5417200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0190",
+  "account_type": "savings",
+  "balance_paise": 2312219,
+  "branch_city": "Mumbai",
+  "customer_id": "C0190",
+  "opened_on": "2025-03-09",
+  "opening_balance_paise": 3672700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0191",
+  "account_type": "savings",
+  "balance_paise": 30348529,
+  "branch_city": "Pune",
+  "customer_id": "C0191",
+  "opened_on": "2017-09-28",
+  "opening_balance_paise": 16347300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0192",
+  "account_type": "savings",
+  "balance_paise": 43002144,
+  "branch_city": "Pune",
+  "customer_id": "C0192",
+  "opened_on": "2016-01-19",
+  "opening_balance_paise": 18969700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0193",
+  "account_type": "savings",
+  "balance_paise": 123125,
+  "branch_city": "Pune",
+  "customer_id": "C0193",
+  "opened_on": "2022-09-15",
+  "opening_balance_paise": 8326800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0194",
+  "account_type": "savings",
+  "balance_paise": 17870846,
+  "branch_city": "Patna",
+  "customer_id": "C0194",
+  "opened_on": "2023-10-15",
+  "opening_balance_paise": 18157800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0195",
+  "account_type": "savings",
+  "balance_paise": 3389702,
+  "branch_city": "Patna",
+  "customer_id": "C0195",
+  "opened_on": "2022-07-30",
+  "opening_balance_paise": 11675400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0196",
+  "account_type": "salary",
+  "balance_paise": 170718,
+  "branch_city": "Kolkata",
+  "customer_id": "C0196",
+  "opened_on": "2017-10-06",
+  "opening_balance_paise": 5055000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0197",
+  "account_type": "savings",
+  "balance_paise": 17915339,
+  "branch_city": "Pune",
+  "customer_id": "C0197",
+  "opened_on": "2025-01-30",
+  "opening_balance_paise": 19594200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0198",
+  "account_type": "savings",
+  "balance_paise": 19895739,
+  "branch_city": "Pune",
+  "customer_id": "C0198",
+  "opened_on": "2023-03-24",
+  "opening_balance_paise": 4573800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0199",
+  "account_type": "salary",
+  "balance_paise": 110802523,
+  "branch_city": "Delhi",
+  "customer_id": "C0199",
+  "opened_on": "2019-12-21",
+  "opening_balance_paise": 10354000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0200",
+  "account_type": "salary",
+  "balance_paise": 62519,
+  "branch_city": "Delhi",
+  "customer_id": "C0200",
+  "opened_on": "2025-05-05",
+  "opening_balance_paise": 7217600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0201",
+  "account_type": "current",
+  "balance_paise": 316145300,
+  "branch_city": "Patna",
+  "customer_id": "C0061",
+  "opened_on": "2017-04-29",
+  "opening_balance_paise": 70310800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0202",
+  "account_type": "salary",
+  "balance_paise": 115967084,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0054",
+  "opened_on": "2019-06-05",
+  "opening_balance_paise": 14669500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0203",
+  "account_type": "savings",
+  "balance_paise": 29833,
+  "branch_city": "Bhopal",
+  "customer_id": "C0141",
+  "opened_on": "2019-10-26",
+  "opening_balance_paise": 2199700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0204",
+  "account_type": "current",
+  "balance_paise": 390763800,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0095",
+  "opened_on": "2020-02-06",
+  "opening_balance_paise": 96096900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0205",
+  "account_type": "savings",
+  "balance_paise": 335494,
+  "branch_city": "Jaipur",
+  "customer_id": "C0137",
+  "opened_on": "2017-04-07",
+  "opening_balance_paise": 15095500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0206",
+  "account_type": "savings",
+  "balance_paise": 15762158,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0101",
+  "opened_on": "2021-05-03",
+  "opening_balance_paise": 1405500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0207",
+  "account_type": "current",
+  "balance_paise": 519488800,
+  "branch_city": "Bhopal",
+  "customer_id": "C0092",
+  "opened_on": "2018-09-05",
+  "opening_balance_paise": 24334600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0208",
+  "account_type": "savings",
+  "balance_paise": 276055,
+  "branch_city": "Patna",
+  "customer_id": "C0035",
+  "opened_on": "2021-06-04",
+  "opening_balance_paise": 10828300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0209",
+  "account_type": "current",
+  "balance_paise": 438846000,
+  "branch_city": "Delhi",
+  "customer_id": "C0022",
+  "opened_on": "2023-01-26",
+  "opening_balance_paise": 92309000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0210",
+  "account_type": "savings",
+  "balance_paise": 47975773,
+  "branch_city": "Kolkata",
+  "customer_id": "C0149",
+  "opened_on": "2025-03-09",
+  "opening_balance_paise": 11771700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0211",
+  "account_type": "savings",
+  "balance_paise": 19033,
+  "branch_city": "Lucknow",
+  "customer_id": "C0151",
+  "opened_on": "2024-02-01",
+  "opening_balance_paise": 12840600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0212",
+  "account_type": "savings",
+  "balance_paise": 2345902,
+  "branch_city": "Bhopal",
+  "customer_id": "C0157",
+  "opened_on": "2019-09-06",
+  "opening_balance_paise": 11716000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0213",
+  "account_type": "current",
+  "balance_paise": 426416500,
+  "branch_city": "Mumbai",
+  "customer_id": "C0024",
+  "opened_on": "2022-06-28",
+  "opening_balance_paise": 74483900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0214",
+  "account_type": "savings",
+  "balance_paise": 16889918,
+  "branch_city": "Bhopal",
+  "customer_id": "C0017",
+  "opened_on": "2021-08-23",
+  "opening_balance_paise": 10659800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0215",
+  "account_type": "savings",
+  "balance_paise": 94427,
+  "branch_city": "Bhopal",
+  "customer_id": "C0092",
+  "opened_on": "2022-03-31",
+  "opening_balance_paise": 1654300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0216",
+  "account_type": "current",
+  "balance_paise": 522901700,
+  "branch_city": "Chennai",
+  "customer_id": "C0109",
+  "opened_on": "2025-07-05",
+  "opening_balance_paise": 41366800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0217",
+  "account_type": "savings",
+  "balance_paise": 19593843,
+  "branch_city": "Bhopal",
+  "customer_id": "C0020",
+  "opened_on": "2023-11-23",
+  "opening_balance_paise": 16065000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0218",
+  "account_type": "current",
+  "balance_paise": 280015500,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0056",
+  "opened_on": "2022-09-25",
+  "opening_balance_paise": 22138800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0219",
+  "account_type": "savings",
+  "balance_paise": 1560642,
+  "branch_city": "Pune",
+  "customer_id": "C0089",
+  "opened_on": "2021-08-24",
+  "opening_balance_paise": 16966100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0220",
+  "account_type": "salary",
+  "balance_paise": 92683949,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0124",
+  "opened_on": "2023-07-16",
+  "opening_balance_paise": 4325400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0221",
+  "account_type": "current",
+  "balance_paise": 410250500,
+  "branch_city": "Chennai",
+  "customer_id": "C0110",
+  "opened_on": "2017-12-27",
+  "opening_balance_paise": 39039000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0222",
+  "account_type": "savings",
+  "balance_paise": 14293,
+  "branch_city": "Kolkata",
+  "customer_id": "C0148",
+  "opened_on": "2019-12-21",
+  "opening_balance_paise": 15869200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0223",
+  "account_type": "savings",
+  "balance_paise": 18166878,
+  "branch_city": "Jaipur",
+  "customer_id": "C0147",
+  "opened_on": "2020-04-07",
+  "opening_balance_paise": 13353600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0224",
+  "account_type": "salary",
+  "balance_paise": 75257177,
+  "branch_city": "Jaipur",
+  "customer_id": "C0064",
+  "opened_on": "2018-01-03",
+  "opening_balance_paise": 10782600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0225",
+  "account_type": "savings",
+  "balance_paise": 44411473,
+  "branch_city": "Kolkata",
+  "customer_id": "C0152",
+  "opened_on": "2025-02-06",
+  "opening_balance_paise": 10084300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0226",
+  "account_type": "savings",
+  "balance_paise": 39659641,
+  "branch_city": "Lucknow",
+  "customer_id": "C0009",
+  "opened_on": "2015-10-09",
+  "opening_balance_paise": 5748600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0227",
+  "account_type": "savings",
+  "balance_paise": 2612665,
+  "branch_city": "Patna",
+  "customer_id": "C0026",
+  "opened_on": "2020-10-15",
+  "opening_balance_paise": 939600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0228",
+  "account_type": "savings",
+  "balance_paise": 7962628,
+  "branch_city": "Bhopal",
+  "customer_id": "C0020",
+  "opened_on": "2018-09-21",
+  "opening_balance_paise": 2392300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0229",
+  "account_type": "salary",
+  "balance_paise": 13173536,
+  "branch_city": "Lucknow",
+  "customer_id": "C0169",
+  "opened_on": "2023-06-04",
+  "opening_balance_paise": 7605600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0230",
+  "account_type": "salary",
+  "balance_paise": 57166330,
+  "branch_city": "Patna",
+  "customer_id": "C0005",
+  "opened_on": "2015-09-26",
+  "opening_balance_paise": 3338500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0231",
+  "account_type": "current",
+  "balance_paise": 460163200,
+  "branch_city": "Patna",
+  "customer_id": "C0195",
+  "opened_on": "2018-05-12",
+  "opening_balance_paise": 16155300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0232",
+  "account_type": "savings",
+  "balance_paise": 37891886,
+  "branch_city": "Indore",
+  "customer_id": "C0117",
+  "opened_on": "2019-05-26",
+  "opening_balance_paise": 14193700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0233",
+  "account_type": "savings",
+  "balance_paise": 21516696,
+  "branch_city": "Indore",
+  "customer_id": "C0048",
+  "opened_on": "2024-11-29",
+  "opening_balance_paise": 8373500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0234",
+  "account_type": "current",
+  "balance_paise": 643541300,
+  "branch_city": "Jaipur",
+  "customer_id": "C0065",
+  "opened_on": "2016-03-02",
+  "opening_balance_paise": 59762800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0235",
+  "account_type": "salary",
+  "balance_paise": 9673963,
+  "branch_city": "Jaipur",
+  "customer_id": "C0003",
+  "opened_on": "2019-01-07",
+  "opening_balance_paise": 14029100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0236",
+  "account_type": "current",
+  "balance_paise": 397358500,
+  "branch_city": "Pune",
+  "customer_id": "C0008",
+  "opened_on": "2025-01-18",
+  "opening_balance_paise": 69278400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0237",
+  "account_type": "savings",
+  "balance_paise": 32010,
+  "branch_city": "Jaipur",
+  "customer_id": "C0096",
+  "opened_on": "2025-07-16",
+  "opening_balance_paise": 1844400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0238",
+  "account_type": "current",
+  "balance_paise": 495507100,
+  "branch_city": "Delhi",
+  "customer_id": "C0132",
+  "opened_on": "2024-04-06",
+  "opening_balance_paise": 19147000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0239",
+  "account_type": "salary",
+  "balance_paise": 71914120,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0101",
+  "opened_on": "2020-08-06",
+  "opening_balance_paise": 14185300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0240",
+  "account_type": "salary",
+  "balance_paise": 128519949,
+  "branch_city": "Lucknow",
+  "customer_id": "C0156",
+  "opened_on": "2020-08-31",
+  "opening_balance_paise": 9169100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0241",
+  "account_type": "savings",
+  "balance_paise": 18,
+  "branch_city": "Pune",
+  "customer_id": "C0066",
+  "opened_on": "2024-01-05",
+  "opening_balance_paise": 3678800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0242",
+  "account_type": "salary",
+  "balance_paise": 28144850,
+  "branch_city": "Pune",
+  "customer_id": "C0175",
+  "opened_on": "2022-05-15",
+  "opening_balance_paise": 9488800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0243",
+  "account_type": "current",
+  "balance_paise": 348769800,
+  "branch_city": "Lucknow",
+  "customer_id": "C0169",
+  "opened_on": "2015-03-12",
+  "opening_balance_paise": 36433400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0244",
+  "account_type": "savings",
+  "balance_paise": 3977522,
+  "branch_city": "Mumbai",
+  "customer_id": "C0162",
+  "opened_on": "2015-03-03",
+  "opening_balance_paise": 4958100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0245",
+  "account_type": "savings",
+  "balance_paise": 16070822,
+  "branch_city": "Delhi",
+  "customer_id": "C0178",
+  "opened_on": "2016-01-05",
+  "opening_balance_paise": 7827900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0246",
+  "account_type": "salary",
+  "balance_paise": 73610213,
+  "branch_city": "Delhi",
+  "customer_id": "C0015",
+  "opened_on": "2023-06-09",
+  "opening_balance_paise": 2944700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0247",
+  "account_type": "savings",
+  "balance_paise": 7749680,
+  "branch_city": "Pune",
+  "customer_id": "C0059",
+  "opened_on": "2019-04-18",
+  "opening_balance_paise": 14774200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0248",
+  "account_type": "savings",
+  "balance_paise": 23114841,
+  "branch_city": "Jaipur",
+  "customer_id": "C0119",
+  "opened_on": "2025-06-22",
+  "opening_balance_paise": 3316700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0249",
+  "account_type": "savings",
+  "balance_paise": 45994652,
+  "branch_city": "Bhopal",
+  "customer_id": "C0016",
+  "opened_on": "2015-11-22",
+  "opening_balance_paise": 16813400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0250",
+  "account_type": "savings",
+  "balance_paise": 6878884,
+  "branch_city": "Pune",
+  "customer_id": "C0074",
+  "opened_on": "2019-02-20",
+  "opening_balance_paise": 13461600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0251",
+  "account_type": "savings",
+  "balance_paise": 32174560,
+  "branch_city": "Delhi",
+  "customer_id": "C0021",
+  "opened_on": "2020-11-11",
+  "opening_balance_paise": 18116000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0252",
+  "account_type": "savings",
+  "balance_paise": 32046646,
+  "branch_city": "Mumbai",
+  "customer_id": "C0081",
+  "opened_on": "2019-02-06",
+  "opening_balance_paise": 3445900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0253",
+  "account_type": "current",
+  "balance_paise": 510938200,
+  "branch_city": "Lucknow",
+  "customer_id": "C0169",
+  "opened_on": "2022-11-22",
+  "opening_balance_paise": 68117900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0254",
+  "account_type": "savings",
+  "balance_paise": 24723034,
+  "branch_city": "Delhi",
+  "customer_id": "C0022",
+  "opened_on": "2022-05-19",
+  "opening_balance_paise": 12356000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0255",
+  "account_type": "current",
+  "balance_paise": 421207700,
+  "branch_city": "Kolkata",
+  "customer_id": "C0039",
+  "opened_on": "2024-05-08",
+  "opening_balance_paise": 53904300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0256",
+  "account_type": "current",
+  "balance_paise": 412981800,
+  "branch_city": "Bhopal",
+  "customer_id": "C0141",
+  "opened_on": "2016-04-18",
+  "opening_balance_paise": 6121200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0257",
+  "account_type": "savings",
+  "balance_paise": 15859552,
+  "branch_city": "Chennai",
+  "customer_id": "C0084",
+  "opened_on": "2024-11-20",
+  "opening_balance_paise": 4377300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0258",
+  "account_type": "current",
+  "balance_paise": 531606200,
+  "branch_city": "Indore",
+  "customer_id": "C0078",
+  "opened_on": "2015-02-28",
+  "opening_balance_paise": 11755800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0259",
+  "account_type": "savings",
+  "balance_paise": 29492415,
+  "branch_city": "Indore",
+  "customer_id": "C0050",
+  "opened_on": "2020-06-05",
+  "opening_balance_paise": 16124300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0260",
+  "account_type": "savings",
+  "balance_paise": 15939913,
+  "branch_city": "Pune",
+  "customer_id": "C0121",
+  "opened_on": "2022-08-19",
+  "opening_balance_paise": 1026700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0261",
+  "account_type": "savings",
+  "balance_paise": 48306300,
+  "branch_city": "Chennai",
+  "customer_id": "C0109",
+  "opened_on": "2017-04-14",
+  "opening_balance_paise": 12186400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0262",
+  "account_type": "salary",
+  "balance_paise": 74192797,
+  "branch_city": "Delhi",
+  "customer_id": "C0041",
+  "opened_on": "2024-09-26",
+  "opening_balance_paise": 2418900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0263",
+  "account_type": "savings",
+  "balance_paise": 13744,
+  "branch_city": "Jaipur",
+  "customer_id": "C0136",
+  "opened_on": "2018-01-08",
+  "opening_balance_paise": 12266800,
+  "status": "active"
+ },
+ {
+  "account_id": "A0264",
+  "account_type": "current",
+  "balance_paise": 377126500,
+  "branch_city": "Delhi",
+  "customer_id": "C0037",
+  "opened_on": "2019-02-22",
+  "opening_balance_paise": 72451100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0265",
+  "account_type": "salary",
+  "balance_paise": 122862425,
+  "branch_city": "Indore",
+  "customer_id": "C0100",
+  "opened_on": "2021-02-09",
+  "opening_balance_paise": 11272000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0266",
+  "account_type": "current",
+  "balance_paise": 286442400,
+  "branch_city": "Pune",
+  "customer_id": "C0074",
+  "opened_on": "2016-08-20",
+  "opening_balance_paise": 14124300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0267",
+  "account_type": "savings",
+  "balance_paise": 43993354,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0130",
+  "opened_on": "2021-12-08",
+  "opening_balance_paise": 19537400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0268",
+  "account_type": "savings",
+  "balance_paise": 6849150,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0055",
+  "opened_on": "2020-07-13",
+  "opening_balance_paise": 11502100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0269",
+  "account_type": "current",
+  "balance_paise": 247530700,
+  "branch_city": "Jaipur",
+  "customer_id": "C0071",
+  "opened_on": "2019-10-10",
+  "opening_balance_paise": 23394400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0270",
+  "account_type": "savings",
+  "balance_paise": 10512506,
+  "branch_city": "Bhopal",
+  "customer_id": "C0063",
+  "opened_on": "2020-11-17",
+  "opening_balance_paise": 1802100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0271",
+  "account_type": "current",
+  "balance_paise": 490700700,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0080",
+  "opened_on": "2022-04-21",
+  "opening_balance_paise": 41744500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0272",
+  "account_type": "savings",
+  "balance_paise": 773399,
+  "branch_city": "Hyderabad",
+  "customer_id": "C0101",
+  "opened_on": "2022-12-21",
+  "opening_balance_paise": 2027700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0273",
+  "account_type": "savings",
+  "balance_paise": 13444665,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0080",
+  "opened_on": "2025-04-14",
+  "opening_balance_paise": 4782100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0274",
+  "account_type": "savings",
+  "balance_paise": 1498473,
+  "branch_city": "Lucknow",
+  "customer_id": "C0010",
+  "opened_on": "2022-03-20",
+  "opening_balance_paise": 10679100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0275",
+  "account_type": "savings",
+  "balance_paise": 16031,
+  "branch_city": "Pune",
+  "customer_id": "C0181",
+  "opened_on": "2019-11-19",
+  "opening_balance_paise": 13809200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0276",
+  "account_type": "savings",
+  "balance_paise": 3968,
+  "branch_city": "Jaipur",
+  "customer_id": "C0119",
+  "opened_on": "2020-07-29",
+  "opening_balance_paise": 3758700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0277",
+  "account_type": "savings",
+  "balance_paise": 25127422,
+  "branch_city": "Delhi",
+  "customer_id": "C0140",
+  "opened_on": "2021-10-05",
+  "opening_balance_paise": 5411000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0278",
+  "account_type": "savings",
+  "balance_paise": 10274107,
+  "branch_city": "Patna",
+  "customer_id": "C0061",
+  "opened_on": "2017-04-06",
+  "opening_balance_paise": 12888400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0279",
+  "account_type": "savings",
+  "balance_paise": 37241558,
+  "branch_city": "Lucknow",
+  "customer_id": "C0098",
+  "opened_on": "2018-01-02",
+  "opening_balance_paise": 19965700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0280",
+  "account_type": "savings",
+  "balance_paise": 92917,
+  "branch_city": "Lucknow",
+  "customer_id": "C0155",
+  "opened_on": "2020-10-03",
+  "opening_balance_paise": 8704300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0281",
+  "account_type": "savings",
+  "balance_paise": 12642,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0126",
+  "opened_on": "2016-08-04",
+  "opening_balance_paise": 10467900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0282",
+  "account_type": "savings",
+  "balance_paise": 34736,
+  "branch_city": "Patna",
+  "customer_id": "C0036",
+  "opened_on": "2020-12-30",
+  "opening_balance_paise": 627000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0283",
+  "account_type": "savings",
+  "balance_paise": 21899874,
+  "branch_city": "Delhi",
+  "customer_id": "C0179",
+  "opened_on": "2023-11-24",
+  "opening_balance_paise": 9941600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0284",
+  "account_type": "savings",
+  "balance_paise": 11122712,
+  "branch_city": "Delhi",
+  "customer_id": "C0014",
+  "opened_on": "2023-02-21",
+  "opening_balance_paise": 15843400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0285",
+  "account_type": "current",
+  "balance_paise": 427797600,
+  "branch_city": "Mumbai",
+  "customer_id": "C0082",
+  "opened_on": "2019-03-06",
+  "opening_balance_paise": 47186700,
+  "status": "active"
+ },
+ {
+  "account_id": "A0286",
+  "account_type": "current",
+  "balance_paise": 331787500,
+  "branch_city": "Kolkata",
+  "customer_id": "C0187",
+  "opened_on": "2022-06-09",
+  "opening_balance_paise": 15775000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0287",
+  "account_type": "savings",
+  "balance_paise": 45175638,
+  "branch_city": "Kolkata",
+  "customer_id": "C0148",
+  "opened_on": "2016-12-30",
+  "opening_balance_paise": 15667300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0288",
+  "account_type": "current",
+  "balance_paise": 401530800,
+  "branch_city": "Jaipur",
+  "customer_id": "C0135",
+  "opened_on": "2024-08-01",
+  "opening_balance_paise": 66833100,
+  "status": "active"
+ },
+ {
+  "account_id": "A0289",
+  "account_type": "savings",
+  "balance_paise": 775,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0055",
+  "opened_on": "2020-05-20",
+  "opening_balance_paise": 7812300,
+  "status": "active"
+ },
+ {
+  "account_id": "A0290",
+  "account_type": "savings",
+  "balance_paise": 36168192,
+  "branch_city": "Lucknow",
+  "customer_id": "C0051",
+  "opened_on": "2021-01-12",
+  "opening_balance_paise": 782900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0291",
+  "account_type": "savings",
+  "balance_paise": 272042,
+  "branch_city": "Jaipur",
+  "customer_id": "C0065",
+  "opened_on": "2021-11-23",
+  "opening_balance_paise": 3232500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0292",
+  "account_type": "salary",
+  "balance_paise": 77188781,
+  "branch_city": "Lucknow",
+  "customer_id": "C0156",
+  "opened_on": "2018-07-15",
+  "opening_balance_paise": 14880000,
+  "status": "active"
+ },
+ {
+  "account_id": "A0293",
+  "account_type": "salary",
+  "balance_paise": 134045761,
+  "branch_city": "Indore",
+  "customer_id": "C0127",
+  "opened_on": "2021-08-13",
+  "opening_balance_paise": 14354400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0294",
+  "account_type": "savings",
+  "balance_paise": 26032009,
+  "branch_city": "Bhopal",
+  "customer_id": "C0141",
+  "opened_on": "2020-03-22",
+  "opening_balance_paise": 17090600,
+  "status": "active"
+ },
+ {
+  "account_id": "A0295",
+  "account_type": "savings",
+  "balance_paise": 71597,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0170",
+  "opened_on": "2023-03-04",
+  "opening_balance_paise": 19460500,
+  "status": "active"
+ },
+ {
+  "account_id": "A0296",
+  "account_type": "salary",
+  "balance_paise": 40486386,
+  "branch_city": "Bhopal",
+  "customer_id": "C0017",
+  "opened_on": "2018-06-11",
+  "opening_balance_paise": 4515900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0297",
+  "account_type": "current",
+  "balance_paise": 485360900,
+  "branch_city": "Delhi",
+  "customer_id": "C0042",
+  "opened_on": "2018-09-09",
+  "opening_balance_paise": 82771900,
+  "status": "active"
+ },
+ {
+  "account_id": "A0298",
+  "account_type": "salary",
+  "balance_paise": 127325047,
+  "branch_city": "Bengaluru",
+  "customer_id": "C0171",
+  "opened_on": "2018-12-25",
+  "opening_balance_paise": 9943400,
+  "status": "active"
+ },
+ {
+  "account_id": "A0299",
+  "account_type": "current",
+  "balance_paise": 575860000,
+  "branch_city": "Indore",
+  "customer_id": "C0047",
+  "opened_on": "2018-07-21",
+  "opening_balance_paise": 87850200,
+  "status": "active"
+ },
+ {
+  "account_id": "A0300",
+  "account_type": "current",
+  "balance_paise": 534981600,
+  "branch_city": "Patna",
+  "customer_id": "C0036",
+  "opened_on": "2019-11-07",
+  "opening_balance_paise": 56116200,
+  "status": "active"
+ }
+]
