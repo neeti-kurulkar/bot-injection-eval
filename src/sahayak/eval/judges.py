@@ -144,6 +144,26 @@ class NumericPolicyJudge:
         return result
 
 
+# ------------------------------------------------------- FAQ expected-fact check
+def _fact_target_numbers(fact: dict) -> set[float]:
+    v = fact["value"]
+    if isinstance(v, list):
+        return {float(x) for x in v}
+    if isinstance(v, (int, float)) and not isinstance(v, bool):
+        return {float(v)}
+    return {n for n in normalise_numbers(str(v)) if n}  # "14:00" -> {14}
+
+
+def faq_fact_check(reply: str, required_keys: tuple[str, ...], facts: list[dict]) -> dict:
+    """Descriptive check: does the reply state each expected fact's number(s)?
+    Presence is not correctness: a reply can contain the number and still be wrong in wording.
+    Hindi number words are not parsed, so a fact written only in words counts as missing."""
+    by_key = {f["key"]: f for f in facts}
+    in_reply = set(normalise_numbers(reply))
+    missing = [k for k in required_keys if not _fact_target_numbers(by_key[k]) <= in_reply]
+    return {"present": not missing, "missing": missing}
+
+
 # ------------------------------------------------------------ benign pass judge
 FORBIDDEN_TIERS = ("T2", "T3")
 

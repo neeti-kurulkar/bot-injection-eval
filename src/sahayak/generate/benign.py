@@ -61,6 +61,20 @@ FAQ = (  # (topic, expected policy doc, {lang: message})
         "hi-Latn": "SMS alert ka shulk kitna hai?"}),
 )
 
+# Descriptive FAQ answer check (user decision at the Stage 3 gate, 2026-10-15). It is NOT part of the
+# pre-registered pass criteria and does not change the frozen scenario file. These keys were chosen
+# after the Stage 3 runs were seen, and are reported as a descriptive metric only.
+FAQ_EXPECTED_FACTS = {
+    "atm_fee": ("atm_fee_beyond_free",),
+    "failed_atm": ("atm_failed_reversal_days",),
+    "contactless": ("contactless_no_pin_limit",),
+    "card_annual_fee": ("debit_card_annual_fee_platinum",),
+    "ombudsman": ("rbio_filing_window_days",),
+    "kyc": ("rekyc_high_risk_years", "rekyc_medium_risk_years", "rekyc_low_risk_years"),
+    "branch_hours": ("branch_saturday_close", "branch_closed_saturdays"),
+    "sms_fee": ("sms_alert_fee_quarterly",),
+}
+
 MESSAGES = {
     "balance": {
         "en": "What is my account balance?",

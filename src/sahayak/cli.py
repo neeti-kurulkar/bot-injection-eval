@@ -203,7 +203,8 @@ def cmd_run_benign(args: argparse.Namespace) -> int:
     records = run(scenarios, Condition(args.condition), backend, settings, args.db, policies,
                   load_facts(settings.world_dir), out, args.run_id, notes=args.notes)
     meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
-    summary = summarize(load_records(records), meta, BENIGN_THRESHOLD if len(scenarios) == 30 else None)
+    summary = summarize(load_records(records), meta, BENIGN_THRESHOLD if len(scenarios) == 30 else None,
+                        scenarios=scenarios, facts=load_facts(settings.world_dir))
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     md = summary_markdown(summary, f"Benign run {args.run_id}")
     (out / "summary.md").write_text(md, encoding="utf-8")
@@ -212,13 +213,18 @@ def cmd_run_benign(args: argparse.Namespace) -> int:
 
 
 def cmd_summarize(args: argparse.Namespace) -> int:
+    from sahayak.eval.judges import load_facts
     from sahayak.eval.runner import load_records, summarize
     from sahayak.eval.report import summary_markdown
+    from sahayak.generate.benign import SET_NAME, load_scenarios
 
-    out = _runs_dir(load_settings()) / args.run_id
+    settings = load_settings()
+    out = _runs_dir(settings) / args.run_id
     meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
     recs = load_records(out / "records.jsonl")
-    summary = summarize(recs, meta, BENIGN_THRESHOLD if len(recs) == 30 else None)
+    scenarios = load_scenarios(settings.data_dir / "tickets" / f"{SET_NAME}.json")
+    summary = summarize(recs, meta, BENIGN_THRESHOLD if len(recs) == 30 else None,
+                        scenarios=scenarios, facts=load_facts(settings.world_dir))
     print(summary_markdown(summary, f"Benign run {args.run_id}"))
     return 0
 

@@ -169,7 +169,28 @@ def load_records(records: Path) -> list[dict]:
     return [json.loads(line) for line in records.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
-def summarize(records: list[dict], meta: dict, threshold_count: int | None = None) -> dict:
+def faq_fact_summary(records: list[dict], scenarios: list[dict], facts: list[dict]) -> dict:
+    """Descriptive FAQ expected-fact presence, overall and by language (not a pass criterion)."""
+    from sahayak.eval.judges import faq_fact_check
+    from sahayak.generate.benign import FAQ_EXPECTED_FACTS
+
+    topic = {s["scenario_id"]: s.get("topic") for s in scenarios}
+    rows = []
+    for r in records:
+        t = topic.get(r["scenario_id"])
+        if r.get("category") == "faq" and t in FAQ_EXPECTED_FACTS:
+            rows.append((r["scenario_id"], r["language"], faq_fact_check(r["reply"], FAQ_EXPECTED_FACTS[t], facts)))
+    langs = sorted({lang for _, lang, _ in rows})
+    return {
+        "overall": proportion(sum(c["present"] for _, _, c in rows), len(rows)),
+        "by_language": {lang: proportion(sum(c["present"] for _, x, c in rows if x == lang),
+                                         sum(1 for _, x, _ in rows if x == lang)) for lang in langs},
+        "missing": {sid: c["missing"] for sid, _, c in rows if not c["present"]},
+    }
+
+
+def summarize(records: list[dict], meta: dict, threshold_count: int | None = None,
+              scenarios: list[dict] | None = None, facts: list[dict] | None = None) -> dict:
     n = len(records)
     judged = [r for r in records if r["judgement"] is not None]
     passes = sum(r["judgement"]["pass"] for r in judged)
@@ -219,6 +240,8 @@ def summarize(records: list[dict], meta: dict, threshold_count: int | None = Non
             "retries": sum(r["cost"]["retries"] for r in records),
         },
     }
+    if scenarios is not None and facts is not None:
+        summary["faq_expected_fact"] = faq_fact_summary(records, scenarios, facts)
     if threshold_count is not None:
         summary["threshold"] = {"required_passes": threshold_count, "of": len(judged),
                                 "met": passes >= threshold_count}

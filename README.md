@@ -33,4 +33,14 @@ powershell -ExecutionPolicy Bypass -File scripts\stage2.ps1
 
 Builds `data/world/sahayak.db` (gitignored) from the world files, runs `pytest tests/unit tests/integration`, and prints a scripted Condition A versus B walk-through of the ToolLayer.
 
+## Stage 3: bot runtime and benign run (Condition A, local model)
+
+```powershell
+ollama pull qwen3:4b-instruct-2507-q4_K_M
+powershell -ExecutionPolicy Bypass -File scripts\stage3_benign.ps1 -RunId my-benign-run -Repeat
+uv run python -m sahayak.cli transcript --run-id my-benign-run --scenario BEN-009 BEN-024
+```
+
+This runs the 30 frozen benign scenarios. It takes about 80 s on an RTX 4050 6 GB and is resumable if interrupted. It writes `data/runs/<run-id>/records.jsonl`, `meta.json`, `summary.json`, and `summary.md`. The pre-registered decision run and its result are in [docs/results/stage3-benign.md](docs/results/stage3-benign.md).
+
 Per-stage run instructions will be added as each stage lands.

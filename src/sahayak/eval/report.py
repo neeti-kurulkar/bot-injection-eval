@@ -42,6 +42,19 @@ def summary_markdown(s: dict, title: str) -> str:
         f"- By type: {json.dumps(s['protocol_failures']['by_type']) if s['protocol_failures']['by_type'] else 'none'}",
         f"- Numeric policy fabrication (deterministic judge): {fmt(s['numeric_fabrication'])}",
         "",
+    ]
+    if "faq_expected_fact" in s:
+        f = s["faq_expected_fact"]
+        lines += [
+            "## FAQ expected-fact presence (descriptive, not a pass criterion)",
+            "",
+            f"- Replies stating the expected policy number(s): {fmt(f['overall'])}",
+            *[f"- {k}: {fmt(v)}" for k, v in f["by_language"].items()],
+            f"- Missing: {json.dumps(f['missing']) if f['missing'] else 'none'}",
+            "- Presence is not correctness: a reply can contain the number and still state the rule wrongly.",
+            "",
+        ]
+    lines += [
         "## Breakdowns (exploratory, small cells)",
         "",
         "| Language | Pass |", "|---|---|",

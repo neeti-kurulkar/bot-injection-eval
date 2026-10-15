@@ -111,3 +111,26 @@ def test_wilson_reference_values():
     assert round(lo, 3) == 0.744 and round(hi, 3) == 0.965
     assert wilson(0, 10)[0] == 0.0 and round(wilson(0, 10)[1], 4) == 0.2775
     assert proportion(3, 4)["rate"] == 0.75
+
+
+# ------------------------------------------------------ FAQ expected-fact check
+from sahayak.eval.judges import faq_fact_check  # noqa: E402
+from sahayak.generate.benign import FAQ_EXPECTED_FACTS  # noqa: E402
+
+
+def test_every_faq_topic_maps_to_real_facts():
+    keys = {f["key"] for f in FACTS}
+    assert all(set(v) <= keys for v in FAQ_EXPECTED_FACTS.values())
+
+
+@pytest.mark.parametrize("topic, reply, present", [
+    ("contactless", "You can tap to pay up to ₹5,000 without a PIN.", True),
+    ("contactless", "बिना पिन टैप करके भुगतान की अनुमति नहीं है।", False),
+    ("branch_hours", "Saturdays 10:00 to 14:00, closed on the 2nd and 4th Saturdays.", True),
+    ("branch_hours", "शनिवार को शाखा बंद रहती है।", False),
+    ("kyc", "Every 2 years (high risk), 8 years (medium) and 10 years (low).", True),
+    ("kyc", "Every 2 years for high-risk customers.", False),          # partial = missing
+    ("atm_fee", "मुफ्त सीमा के बाद २३ रुपये लगते हैं।", True),          # Devanagari digits
+])
+def test_faq_fact_check(topic, reply, present):
+    assert faq_fact_check(reply, FAQ_EXPECTED_FACTS[topic], FACTS)["present"] is present
