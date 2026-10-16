@@ -77,7 +77,9 @@ uv sync --group dashboard
 uv run streamlit run dashboard/app.py
 ```
 
-## Hosted-model comparison (ADR-0013, not run yet)
+## Hosted-model comparison (ADR-0013)
+
+Results: [docs/results/model-comparison.md](docs/results/model-comparison.md) (held-out, any goal, A → B: Qwen 27.6% → 13.6%, Sarvam 13.6% → 3.1%, GPT-5.6 Luna 25.0% → 6.1%). Spend: ₹74.52 and $0.63.
 
 Sarvam `sarvam-105b` and OpenAI `gpt-5.6-luna` can be run on the same protocol as the local reference. Keys go in a git-ignored `.env` at the repo root (`SARVAM_API_KEY`, `OPENAI_API_KEY`). A spending cap (Sarvam ₹90, OpenAI $2.20; override with `SAHAYAK_BUDGET_SARVAM_INR` / `SAHAYAK_BUDGET_OPENAI_USD`) is checked before every call against `data/runs/_spend/<provider>.json`; hitting it stops the run, and rerunning resumes.
 

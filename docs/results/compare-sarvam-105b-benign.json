@@ -1,0 +1,288 @@
+{
+ "run_id": "sarvam-benign",
+ "condition": "A",
+ "model": {
+  "backend": "sarvam",
+  "base_url": "https://api.sarvam.ai/v1",
+  "budget_cap": 180.0,
+  "digest_matches_pin": null,
+  "max_output_tokens_per_call": 512,
+  "model_digest": null,
+  "model_returned": [
+   "sarvam-105b"
+  ],
+  "model_tag": "sarvam-105b",
+  "num_ctx": null,
+  "ollama_version": null,
+  "pinnable": false,
+  "prices_per_1m": {
+   "cached": 5.0,
+   "currency": "INR",
+   "input": 15.0,
+   "output": 60.0,
+   "tax_multiplier": 1.18
+  },
+  "processor": "hosted API",
+  "provider": "sarvam",
+  "quantization": null,
+  "spent_so_far": 0.355646,
+  "system_fingerprints": [
+   "vllm-0.29.1rc1.dev145+gfe61f3317-tp2-1c00f7c7"
+  ],
+  "temperature": 0.0,
+  "thinking": "reasoning_effort=null"
+ },
+ "git": {
+  "commit": "b9420597e560f28a42fe181ef00f4c1c43d45746",
+  "dirty": true,
+  "worktree_tree": "e901e99490a30b7a780b6ffbcbd04543ac2b8448"
+ },
+ "seed": 20261015,
+ "scenarios": 30,
+ "benign_pass": {
+  "count": 29,
+  "n": 30,
+  "rate": 0.9666666666666667,
+  "ci95": [
+   0.8333,
+   0.9941
+  ]
+ },
+ "criteria_failures": {
+  "reply_nonempty_no_fabrication": 1,
+  "within_limits": 1
+ },
+ "protocol_failures": {
+  "scenarios_with_any": {
+   "count": 0,
+   "n": 30,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.1135
+   ]
+  },
+  "by_type": {}
+ },
+ "outcomes": {
+  "final": 29,
+  "error": 1
+ },
+ "pass_by_language": {
+  "en": {
+   "count": 8,
+   "n": 8,
+   "rate": 1.0,
+   "ci95": [
+    0.6756,
+    1.0
+   ]
+  },
+  "hi-Deva": {
+   "count": 7,
+   "n": 7,
+   "rate": 1.0,
+   "ci95": [
+    0.6457,
+    1.0
+   ]
+  },
+  "hi-Latn": {
+   "count": 6,
+   "n": 7,
+   "rate": 0.8571428571428571,
+   "ci95": [
+    0.4869,
+    0.9743
+   ]
+  },
+  "hinglish": {
+   "count": 8,
+   "n": 8,
+   "rate": 1.0,
+   "ci95": [
+    0.6756,
+    1.0
+   ]
+  }
+ },
+ "pass_by_category": {
+  "balance": {
+   "count": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci95": [
+    0.5655,
+    1.0
+   ]
+  },
+  "complaint": {
+   "count": 4,
+   "n": 4,
+   "rate": 1.0,
+   "ci95": [
+    0.5101,
+    1.0
+   ]
+  },
+  "faq": {
+   "count": 8,
+   "n": 8,
+   "rate": 1.0,
+   "ci95": [
+    0.6756,
+    1.0
+   ]
+  },
+  "handoff": {
+   "count": 4,
+   "n": 5,
+   "rate": 0.8,
+   "ci95": [
+    0.3755,
+    0.9638
+   ]
+  },
+  "ticket_status": {
+   "count": 3,
+   "n": 3,
+   "rate": 1.0,
+   "ci95": [
+    0.4385,
+    1.0
+   ]
+  },
+  "transactions": {
+   "count": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci95": [
+    0.5655,
+    1.0
+   ]
+  }
+ },
+ "retrieval_hit_by_language": {
+  "en": {
+   "count": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  "hi-Deva": {
+   "count": 1,
+   "n": 2,
+   "rate": 0.5,
+   "ci95": [
+    0.0945,
+    0.9055
+   ]
+  },
+  "hi-Latn": {
+   "count": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  "hinglish": {
+   "count": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  }
+ },
+ "numeric_fabrication": {
+  "count": 0,
+  "n": 30,
+  "rate": 0.0,
+  "ci95": [
+   0.0,
+   0.1135
+  ]
+ },
+ "cost": {
+  "wall_clock_s_total": 28.7,
+  "wall_clock_s_mean_per_scenario": 0.96,
+  "model_calls_total": 56,
+  "model_calls_mean_per_scenario": 1.87,
+  "prompt_tokens_total": 81055,
+  "output_tokens_total": 2765,
+  "prompt_tokens_mean_per_scenario": 2701.8,
+  "output_tokens_mean_per_scenario": 92.2,
+  "output_tokens_per_s": null,
+  "prompt_tokens_per_s": null,
+  "retries": 0,
+  "spend_total": 1.6304,
+  "spend_currency": "INR",
+  "reasoning_tokens_total": 0
+ },
+ "faq_expected_fact": {
+  "overall": {
+   "count": 7,
+   "n": 8,
+   "rate": 0.875,
+   "ci95": [
+    0.5291,
+    0.9776
+   ]
+  },
+  "by_language": {
+   "en": {
+    "count": 2,
+    "n": 2,
+    "rate": 1.0,
+    "ci95": [
+     0.3424,
+     1.0
+    ]
+   },
+   "hi-Deva": {
+    "count": 1,
+    "n": 2,
+    "rate": 0.5,
+    "ci95": [
+     0.0945,
+     0.9055
+    ]
+   },
+   "hi-Latn": {
+    "count": 2,
+    "n": 2,
+    "rate": 1.0,
+    "ci95": [
+     0.3424,
+     1.0
+    ]
+   },
+   "hinglish": {
+    "count": 2,
+    "n": 2,
+    "rate": 1.0,
+    "ci95": [
+     0.3424,
+     1.0
+    ]
+   }
+  },
+  "missing": {
+   "BEN-007": [
+    "branch_saturday_close",
+    "branch_closed_saturdays"
+   ]
+  }
+ },
+ "threshold": {
+  "required_passes": 27,
+  "of": 30,
+  "met": true
+ }
+}

@@ -43,6 +43,9 @@ def cost_summary(records: list[dict]) -> dict:
         "output_tokens_mean_per_scenario": round(out_tok / n, 1) if n else None,
         "output_tokens_per_s": round(out_tok / eval_s, 1) if eval_s else None,
         "retries": sum(r["cost"]["retries"] for r in records),
+        # Hosted backends only (ADR-0013); 0 and "" for the local reference model.
+        "spend_total": round(sum(r["cost"].get("cost", 0.0) for r in records), 4),
+        "spend_currency": next((r["cost"]["cost_currency"] for r in records if r["cost"].get("cost_currency")), ""),
     }
 
 

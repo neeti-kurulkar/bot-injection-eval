@@ -40,6 +40,10 @@ Paired by scenario, 228 attacks and 40 benign look-alikes. G1 and G2 use the str
 
 **No money moved in any run.** In Condition A, unrequested transfer proposals reached the approval queue, but the core-bank controls (policy engine plus human approval queue) are kept in both conditions, and no approval record was ever created.
 
+## Hosted-model comparison (added 2026-10-16, ADR-0013)
+
+The same protocol was later run on Sarvam 105B and GPT-5.6 Luna; full results in [model-comparison.md](model-comparison.md). Held-out, any goal: Qwen 27.6% → 13.6% (A → B), Sarvam 13.6% → 3.1%, GPT 25.0% → 6.1%. B's code checks removed balance leaks, card/contact changes and unrequested transfers on every model; the planted wrong policy is the main remaining failure on all three. Those held-out families had already been run on Qwen, and hosted models cannot be pinned (see that file's caveats).
+
 ## Findings
 
 1. **Without in-code checks, the bot is steerable at meaningful rates** (RQ1). On held-out families:

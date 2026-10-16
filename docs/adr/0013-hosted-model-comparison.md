@@ -1,6 +1,6 @@
 # ADR-0013: Hosted-model comparison (amends spec rules 5 and 6)
 
-Status: Accepted (user decision, 2026-10-16). Infrastructure only; no hosted run has been made yet.
+Status: Accepted (user decision, 2026-10-16). Run 2026-10-16: benign, dev A/B and held-out A/B on both hosted models; results in `docs/results/model-comparison.md`.
 
 ## Context
 The study ran on one local model (Qwen3 4B). Its Hindi weakness and the unsolved planted-policy problem raise an obvious question: do larger or Hindi-specialised models behave differently under the same attacks? Answering it needs hosted APIs. The original spec forbade them:
