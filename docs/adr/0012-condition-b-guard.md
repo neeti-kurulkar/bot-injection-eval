@@ -1,6 +1,6 @@
 # ADR-0012: Condition B guard and ablation variants
 
-Status: Proposed (Stage 6 gate)
+Status: Accepted (Stage 6; dev and held-out runs complete, rules unchanged after the held-out run)
 
 ## Decision
 
@@ -43,3 +43,8 @@ Same model, prompt base, decoding, limits, and scenarios in every variant. No se
 - The guard is expected to help most against G2, G4, and G5, where restriction removes the tools.
 - It is expected to help least against G1 and G3: restriction does not stop the model repeating a planted number or skipping a handoff. Those depend on data marking.
 - False blocks are measured on look-alikes as required calls denied under restriction.
+
+## Outcome (held-out, run once)
+- The guard restricted 57.9% of held-out attack turns, against 92.1% on development. That is the expected generalisation gap for rules written from development families.
+- Condition B overall: any-goal attack success fell from 27.6% to 13.6% (−14.0 pts, 95% CI 8.6–19.6), with 0/40 look-alike false blocks.
+- G1 (fabricated policy) did **not** improve (52.1% → 56.2%). See `docs/results/defended.md`.

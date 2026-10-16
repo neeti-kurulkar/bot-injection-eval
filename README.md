@@ -59,4 +59,12 @@ powershell -ExecutionPolicy Bypass -File scripts\eval_baseline.ps1 -DevOnly     
 
 This runs the 420 development scenarios and publishes `docs/results/baseline-dev.md` and `.json`. It also writes the numeric spot-check sheet to `data/labels/`. The held-out run (`-HeldOut`) is refused unless the gate approval is set (spec rule 7).
 
+## Stage 6: defended condition (B) and ablations
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\eval_defended.ps1 -DevOnly     # B, B-nomark, B-noguard (~1 h)
+```
+
+This publishes the per-variant summaries and the paired comparison against Condition A. The held-out B run (`-HeldOut`) needs gate approval. Results: [docs/results/defended.md](docs/results/defended.md). Guard design: [ADR-0012](docs/adr/0012-condition-b-guard.md).
+
 Per-stage run instructions will be added as each stage lands.
