@@ -34,12 +34,22 @@ class CallCost:
     load_duration_ns: int = 0
     wall_clock_s: float = 0.0
     retries: int = 0
+    # Hosted backends only (ADR-0013); zero for the local reference model.
+    cached_tokens: int = 0
+    reasoning_tokens: int = 0
+    cost: float = 0.0
+    cost_currency: str = ""
+
+
+class BudgetExceeded(RuntimeError):
+    """Raised before a hosted call that could cross the spending cap. Stops the run (it is resumable)."""
 
 
 @dataclass(frozen=True)
 class ModelToolCall:
     name: str
     arguments: object  # dict when well-formed
+    id: str = ""  # set by hosted backends, which need it to match tool results to calls
 
 
 @dataclass(frozen=True)

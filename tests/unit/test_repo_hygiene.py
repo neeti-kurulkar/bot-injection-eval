@@ -16,7 +16,9 @@ NEGATION = re.compile(r"\b(not|neither|never|no|nothing|nor)\b", re.I)
 KEY_PATTERNS = (re.compile(r"sk-[A-Za-z0-9_-]{20,}"), re.compile(r"AKIA[0-9A-Z]{16}"), re.compile(r"ghp_[A-Za-z0-9]{30,}"),
                 re.compile(r"(api[_-]?key|secret|token)\s*[:=]\s*['\"][A-Za-z0-9_\-]{16,}['\"]", re.I))
 HOSTED = re.compile(r"api\.openai\.com|api\.anthropic\.com|generativelanguage\.googleapis|api\.groq\.com|"
-                    r"api\.together\.|api\.mistral\.ai", re.I)
+                    r"api\.together\.|api\.mistral\.ai|api\.sarvam\.ai", re.I)
+# ADR-0013: the one module allowed to name hosted endpoints (comparison study only).
+HOSTED_ALLOWLIST = ("src/sahayak/agent/hosted.py",)
 EMAIL = re.compile(r"[\w.+-]+@([\w-]+\.)+[\w-]+")
 ALLOWED_EMAIL_DOMAINS = ("example.invalid", "sahayak.example", "anthropic.com")
 
@@ -65,8 +67,15 @@ def test_no_api_keys_or_hosted_endpoints():
         # The held-out gate phrase is a documented approval string (README), not a credential.
         text = text.replace('HELDOUT_TOKEN = "stage5-heldout-gate-approved"', "")
         assert not any(p.search(text) for p in KEY_PATTERNS), path
-        if path.suffix in (".py", ".ps1", ".toml"):
+        rel = path.relative_to(REPO_ROOT).as_posix()
+        if path.suffix in (".py", ".ps1", ".toml") and rel not in HOSTED_ALLOWLIST:
             assert not HOSTED.search(text), path
+
+
+def test_hosted_endpoints_only_in_the_allowlisted_module():
+    hits = [p.relative_to(REPO_ROOT).as_posix() for p in tracked(".py")
+            if p.name != "test_repo_hygiene.py" and HOSTED.search(p.read_text(encoding="utf-8", errors="ignore"))]
+    assert hits == list(HOSTED_ALLOWLIST), hits
 
 
 @pytest.mark.parametrize("folder", ["data/world", "data/tickets", "docs"])

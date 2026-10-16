@@ -7,7 +7,8 @@ block <<DATA id=NONCE source=...>> ... <</DATA id=NONCE>>. Delimiter look-alikes
 inside the text are escaped first. The system prompt gains one paragraph saying
 DATA blocks are information, not instructions.
 
-Every user turn ends with "/no_think" (Section 0.1), in both conditions.
+Every user turn ends with "/no_think" (Section 0.1), in both conditions, for the
+local Qwen backend only (ADR-0013).
 """
 
 from __future__ import annotations
@@ -40,8 +41,9 @@ def escape_untrusted(text: str) -> str:
 
 class ContextBuilder:
     def __init__(self, repo: Repository, policies: PolicyStore, data_marking: bool, seed: int,
-                 policy_overlay: tuple[str, ...] = ()):
+                 policy_overlay: tuple[str, ...] = (), no_think: bool = True):
         self.repo = repo
+        self.no_think = no_think  # Qwen-only command; hosted backends get False (ADR-0013)
         self.policies = policies
         self.data_marking = data_marking
         self.policy_overlay = policy_overlay
@@ -88,7 +90,8 @@ class ContextBuilder:
         return "\n\n".join(parts)
 
     def user_turn(self, text: str) -> dict:
-        return {"role": "user", "content": f"{self.wrap(text, 'customer_message')}\n{NO_THINK}"}
+        body = self.wrap(text, "customer_message")
+        return {"role": "user", "content": f"{body}\n{NO_THINK}" if self.no_think else body}
 
     def tool_message(self, name: str, payload: dict) -> dict:
         content = json.dumps(payload, ensure_ascii=False)

@@ -16,6 +16,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+from sahayak.agent.backend import BudgetExceeded
 from sahayak.agent.context import ContextBuilder, escape_untrusted
 from sahayak.agent.loop import LLMAgent
 from sahayak.config import REPO_ROOT, Settings
@@ -112,7 +113,8 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
         marking = (condition is Condition.B) if data_marking is None else data_marking
         guard = guard or NoGuard()
         context = ContextBuilder(repo, policies, data_marking=marking,
-                                 seed=scenario["seed"], policy_overlay=overlay)
+                                 seed=scenario["seed"], policy_overlay=overlay,
+                                 no_think=getattr(backend, "wants_no_think", True))
         agent = LLMAgent(backend.with_seed(scenario["seed"]), tools, context,
                          settings.max_steps, settings.max_output_tokens_per_turn)
         s = sessions.create(condition)
@@ -181,6 +183,10 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
             "prompt_eval_duration_ns": sum(c["prompt_eval_duration_ns"] for c in costs),
             "load_duration_ns": sum(c["load_duration_ns"] for c in costs),
             "retries": sum(c["retries"] for c in costs),
+            "cached_tokens": sum(c.get("cached_tokens", 0) for c in costs),
+            "reasoning_tokens": sum(c.get("reasoning_tokens", 0) for c in costs),
+            "cost": round(sum(c.get("cost", 0.0) for c in costs), 6),
+            "cost_currency": next((c["cost_currency"] for c in costs if c.get("cost_currency")), ""),
             "wall_clock_s": round(time.perf_counter() - t0, 3),
         },
     }
@@ -209,19 +215,26 @@ def run(scenarios: list[dict], condition: Condition, backend, settings: Settings
     session_log = {"resumed_at": datetime.now(timezone.utc).isoformat(), "skipped": len(done), "ran": 0,
                    "torn_bytes_removed": torn}
     meta["sessions"].append(session_log)
-    with tempfile.TemporaryDirectory() as tmp, records.open("a", encoding="utf-8", newline="\n") as f:
-        for i, sc in enumerate(todo, 1):
-            rec = run_scenario(sc, condition, backend, settings, template_db, policies, numeric, Path(tmp),
-                               data_marking=marking, guard=guard)
-            f.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
-            f.flush()
-            session_log["ran"] += 1
-            j = rec["judgement"]
-            verdict = ("HIT " if j["attack_success"] else "miss") if rec["kind"] == "attack" else ("PASS" if j["pass"] else "FAIL")
-            progress(f"  [{i}/{len(todo)}] {sc['scenario_id']} {sc['language']:<8} {rec['outcome']:<11} "
-                     f"{verdict:<4} {rec['cost']['wall_clock_s']:.1f}s")
-            if i == 1:
-                meta["model"] = backend.metadata()  # after the first call, so the model is loaded
+    try:
+        with tempfile.TemporaryDirectory() as tmp, records.open("a", encoding="utf-8", newline="\n") as f:
+            for i, sc in enumerate(todo, 1):
+                rec = run_scenario(sc, condition, backend, settings, template_db, policies, numeric, Path(tmp),
+                                   data_marking=marking, guard=guard)
+                f.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
+                f.flush()
+                session_log["ran"] += 1
+                j = rec["judgement"]
+                verdict = ("HIT " if j["attack_success"] else "miss") if rec["kind"] == "attack" else ("PASS" if j["pass"] else "FAIL")
+                progress(f"  [{i}/{len(todo)}] {sc['scenario_id']} {sc['language']:<8} {rec['outcome']:<11} "
+                         f"{verdict:<4} {rec['cost']['wall_clock_s']:.1f}s")
+                if i == 1:
+                    meta["model"] = backend.metadata()  # after the first call, so the model is loaded
+    except BudgetExceeded as e:  # hosted spending cap (ADR-0013): stop cleanly; rerunning resumes
+        session_log["stopped"] = f"budget: {e}"
+        progress(f"{run_id}: stopped at the spending cap. {e}")
+        meta.setdefault("model", backend.metadata())
+        meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+        raise
     meta.setdefault("model", backend.metadata())
     meta["finished_at"] = datetime.now(timezone.utc).isoformat()
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
@@ -325,6 +338,11 @@ def summarize(records: list[dict], meta: dict, threshold_count: int | None = Non
             "output_tokens_per_s": round(out_tok / eval_s, 1) if eval_s else None,
             "prompt_tokens_per_s": round(prompt_tok / prompt_s, 1) if prompt_s else None,
             "retries": sum(r["cost"]["retries"] for r in records),
+            # Hosted backends only (ADR-0013); 0 and "" for the local reference model.
+            "spend_total": round(sum(r["cost"].get("cost", 0.0) for r in records), 4),
+            "spend_currency": next((r["cost"]["cost_currency"] for r in records
+                                    if r["cost"].get("cost_currency")), ""),
+            "reasoning_tokens_total": sum(r["cost"].get("reasoning_tokens", 0) for r in records),
         },
     }
     if scenarios is not None and facts is not None:

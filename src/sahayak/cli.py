@@ -20,6 +20,7 @@ import json
 import sys
 from pathlib import Path
 
+from sahayak.agent.backend import BudgetExceeded
 from sahayak.config import REPO_ROOT, load_settings
 
 
@@ -168,6 +169,14 @@ def _backend(name: str, settings):
         def script(messages, i):
             return {"role": "assistant", "content": "This is a stub reply."}
         return StubBackend(script)
+    if name in ("sarvam", "openai"):  # hosted comparison models (ADR-0013)
+        from sahayak.agent.hosted import HostedChatClient
+
+        client = HostedChatClient(name, settings)
+        m = client.metadata()
+        print(f"hosted backend {name}: model {m['model_tag']}, spent so far {m['spent_so_far']:.4f} "
+              f"{m['prices_per_1m']['currency']} of cap {m['budget_cap']:.2f}")
+        return client
     from sahayak.agent.backend import OllamaClient
 
     return OllamaClient(settings)
@@ -201,14 +210,22 @@ def cmd_run_benign(args: argparse.Namespace) -> int:
             return 1
     out = _runs_dir(settings) / args.run_id
     policies = PolicyStore.from_dir(settings.world_dir / "policies")
-    records = run(scenarios, Condition(args.condition), backend, settings, args.db, policies,
-                  load_facts(settings.world_dir), out, args.run_id, notes=args.notes)
+    try:
+        records = run(scenarios, Condition(args.condition), backend, settings, args.db, policies,
+                      load_facts(settings.world_dir), out, args.run_id, notes=args.notes)
+    except BudgetExceeded as e:
+        print(f"stopped at the spending cap: {e}\nrerun the same command to resume after raising the cap")
+        return 2
     meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
     summary = summarize(load_records(records), meta, BENIGN_THRESHOLD if len(scenarios) == 30 else None,
                         scenarios=scenarios, facts=load_facts(settings.world_dir))
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     md = summary_markdown(summary, f"Benign run {args.run_id}")
     (out / "summary.md").write_text(md, encoding="utf-8")
+    if args.publish:  # e.g. compare-sarvam-105b-benign (ADR-0013 naming, read by the dashboard)
+        (REPO_ROOT / "docs" / "results" / f"{args.publish}.json").write_text(
+            json.dumps(summary, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
+        print(f"published docs/results/{args.publish}.json")
     print(md)
     return 0
 
@@ -355,10 +372,14 @@ def cmd_run_eval(args: argparse.Namespace) -> int:
     out = _runs_dir(settings) / args.run_id
     quiet = args.suite == "heldout"  # held-out: aggregate output only, no per-scenario lines
     variant = args.variant or args.condition
-    run(scenarios, Condition(args.condition), backend, settings, args.db,
-        PolicyStore.from_dir(settings.world_dir / "policies"), load_facts(settings.world_dir), out, args.run_id,
-        notes=f"suite={args.suite}; variant={variant}; {args.notes}", progress=(lambda *_: None) if quiet else print,
-        variant=variant)
+    try:
+        run(scenarios, Condition(args.condition), backend, settings, args.db,
+            PolicyStore.from_dir(settings.world_dir / "policies"), load_facts(settings.world_dir), out, args.run_id,
+            notes=f"suite={args.suite}; variant={variant}; {args.notes}",
+            progress=(lambda *_: None) if quiet else print, variant=variant)
+    except BudgetExceeded as e:
+        print(f"stopped at the spending cap: {e}\nrerun the same command to resume after raising the cap")
+        return 2
     return cmd_summarize_eval(argparse.Namespace(run_id=args.run_id, publish=None, scope=args.suite))
 
 
@@ -505,12 +526,13 @@ def main(argv: list[str] | None = None) -> int:
 
     r = sub.add_parser("run-benign", help="Stage 3: run the benign set (resumable)")
     r.add_argument("--run-id", required=True)
-    r.add_argument("--backend", choices=["ollama", "stub"], default="ollama")
+    r.add_argument("--backend", choices=["ollama", "stub", "sarvam", "openai"], default="ollama")
     r.add_argument("--condition", choices=["A", "B"], default="A")
     r.add_argument("--db", type=Path, default=db_default)
     r.add_argument("--limit", type=int, default=0)
     r.add_argument("--notes", default="")
     r.add_argument("--allow-digest-mismatch", action="store_true")
+    r.add_argument("--publish", default=None, help="also write docs/results/NAME.json")
     r.set_defaults(fn=cmd_run_benign)
 
     m = sub.add_parser("summarize", help="Re-summarize a run from its records")
@@ -545,7 +567,7 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--condition", choices=["A", "B"], default="A")
     e.add_argument("--variant", choices=["A", "B", "B-nomark", "B-noguard"], default=None,
                    help="overrides --condition: B = enforcement + data marking + rule guard; ablations drop one")
-    e.add_argument("--backend", choices=["ollama", "stub"], default="ollama")
+    e.add_argument("--backend", choices=["ollama", "stub", "sarvam", "openai"], default="ollama")
     e.add_argument("--db", type=Path, default=db_default)
     e.add_argument("--limit", type=int, default=0)
     e.add_argument("--notes", default="")

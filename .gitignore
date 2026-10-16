@@ -6,3 +6,4 @@ data/runs/*
 !data/runs/.gitkeep
 *.db-journal
 data/world/sahayak.db
+.env

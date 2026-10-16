@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from sahayak.agent.backend import AssistantTurn, ModelBackend
+from sahayak.agent.backend import AssistantTurn, BudgetExceeded, ModelBackend
 from sahayak.agent.context import ContextBuilder
 from sahayak.domain.models import ToolCall
 from sahayak.tools.layer import ToolLayer
@@ -48,6 +48,8 @@ class LLMAgent:
         for _ in range(self.max_steps):
             try:
                 turn: AssistantTurn = self.backend.chat(messages, schemas)
+            except BudgetExceeded:
+                raise  # the spending cap stops the whole run, not just this scenario
             except Exception as e:  # noqa: BLE001 - recorded, scenario continues to be judged
                 result.outcome, result.error = "error", f"{type(e).__name__}: {e}"
                 return result
@@ -63,7 +65,8 @@ class LLMAgent:
                 return result
 
             messages.append({"role": "assistant", "content": turn.content,
-                             "tool_calls": [{"function": {"name": c.name, "arguments": c.arguments}}
+                             "tool_calls": [{"function": {"name": c.name, "arguments": c.arguments},
+                                             **({"id": c.id} if c.id else {})}
                                             for c in turn.tool_calls]})
             for c in turn.tool_calls:
                 if c.name not in known:
@@ -76,7 +79,10 @@ class LLMAgent:
                                              "allowed": r.decision.allowed, "reason": r.decision.reason,
                                              "would_deny_in_b": r.decision.would_deny_in_b,
                                              "payload": r.payload})
-                messages.append(self.context.tool_message(c.name, r.payload))
+                tool_msg = self.context.tool_message(c.name, r.payload)
+                if c.id:
+                    tool_msg["tool_call_id"] = c.id
+                messages.append(tool_msg)
 
             if out_tokens >= self.max_output_tokens:
                 result.outcome = "token_budget"
