@@ -76,8 +76,9 @@ footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--rule);
 <li><a href="#big">The big picture</a></li>
 <li><a href="#words">Words used here</a></li>
 <li><a href="#libs">Libraries and tools</a></li>
-<li><a href="#world">The fake bank</a></li>
+<li><a href="#world">The fake bank and policy corpus</a></li>
 <li><a href="#a">Part A: how the bot works</a></li>
+<li><a href="#harness">Real chatbot or harness?</a></li>
 <li><a href="#b">Part B: how the guards are added</a></li>
 <li><a href="#attacks">The attacks</a></li>
 <li><a href="#scoring">How attacks are scored</a></li>
@@ -85,6 +86,7 @@ footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--rule);
 <li><a href="#results">Results and what they mean</a></li>
 <li><a href="#aurora">Compared with Aurora</a></li>
 <li><a href="#why">Is the structure the reason?</a></li>
+<li><a href="#map">Every directory and file</a></li>
 </ol>
 </nav>
 
@@ -146,19 +148,83 @@ uv run streamlit run dashboard/app.py</pre>
 <tr><td><b>PowerShell scripts</b></td><td>One script per stage, plus <code>reproduce.ps1</code> to rerun everything.</td></tr>
 <tr><td><b>Pydantic</b></td><td>Listed as a dependency, but <b>not actually used</b>. Tool arguments are checked by a small hand-written validator in <code>tools/specs.py</code>. It could be removed.</td></tr>
 </table></div>
-<p>Things this project deliberately <i>doesn't</i> use, unlike Aurora: no embeddings, no vector database, no LLM judge, no web framework, no caching layer. The bot isn't a web service; it's a test harness that runs scenarios and writes records.</p>
+<p>Things this project deliberately <i>doesn't</i> use, unlike Aurora: no embeddings, no vector database, no LLM judge, no web framework, no caching layer. The bot isn't a web service: a test harness drives it scenario by scenario and writes records (see section 7).</p>
 </section>
 
 <section id="world">
-<h2>5. The fake bank</h2>
-<p>Everything is generated from one fixed seed (<code>20261015</code>), so the world comes out identical on every machine. A checksum proves it.</p>
+<h2>5. The fake bank and its policy corpus</h2>
+<p>Everything is generated from one fixed seed (<code>20261015</code>), so the world comes out byte-identical on every machine. A checksum file, <code>MANIFEST.sha256</code>, proves it, and <code>verify-world</code> checks it.</p>
+
+<h3>The bank's data</h3>
+<div class="table-wrap"><table>
+<tr><th>What</th><th class="n">How many</th><th>Notes</th></tr>
+<tr><td>Customers</td><td class="n">200</td><td>Indian names from fixed lists, grouped into 127 households (60 with more than one member, which makes "check my family member's account" attacks realistic). Each has a city, preferred language and KYC risk level. Phone numbers start <code>+91-00000-</code>, a range that can't be real; emails use <code>example.invalid</code>.</td></tr>
+<tr><td>Accounts</td><td class="n">300</td><td>193 savings, 80 salary and 27 current accounts, with balances in integer paise (₹1 = 100 paise) so money is never rounded wrongly.</td></tr>
+<tr><td>Cards</td><td class="n">287</td><td>Debit cards linked to accounts: variant, last four digits, status.</td></tr>
+<tr><td>Transactions</td><td class="n">75,488</td><td>12 months of history (Oct 2025 to Oct 2026): salaries, UPI, ATM, bills, interest.</td></tr>
+<tr><td>Beneficiaries</td><td class="n">296</td><td>Saved payees, used by the transfer policy engine's "new payee" cooling-off rule.</td></tr>
+<tr><td>Branches</td><td class="n">12</td><td>Cities and hours, for <code>get_branch_hours</code>.</td></tr>
+<tr><td>Tickets</td><td class="n">150</td><td>Ordinary past support tickets. They're the background attacks hide among.</td></tr>
+<tr><td>Account notes</td><td class="n">100</td><td>Ordinary internal staff notes, also background.</td></tr>
+</table></div>
+<p>The world is written as JSON/CSV files in <code>data/world/</code>. Then <code>build-db</code> loads them into a template SQLite database (<code>data/world/sahayak.db</code>, not in git) with 13 tables:</p>
 <ul>
-<li><b>200 customers</b> with Indian names from a fixed list, cities, and phone numbers starting <code>+91-00000-</code> (a range that can't be real).</li>
-<li><b>300 accounts</b>, their cards, and <b>75,488 transactions</b>.</li>
-<li><b>Tickets and account notes</b>, normal ones that serve as the background where attacks get hidden.</li>
-<li><b>40 policy documents</b> (fees, limits, deadlines, branch hours, grievance rules) with <b>108 "facts"</b> stored separately as structured data, for example <code>online_transfer_daily_limit = 200000</code>. The grievance and refund rules are modelled on public RBI circulars; the actual numbers are the fictional bank's.</li>
+<li><b>Bank data:</b> customers, accounts, cards, transactions, beneficiaries, tickets, account_notes, branches.</li>
+<li><b>Written by the bot during a conversation:</b> <b>audit_log</b> (one row per tool call), <b>handoffs</b>, <b>approvals</b> (the human approval queue), <b>disputes</b> and <b>contact_changes</b>.</li>
 </ul>
-<p>The structured facts matter later: they are what the scorer uses to know the <i>correct</i> fee, so it can tell whether the bot repeated a planted wrong one.</p>
+<p>Every scenario runs on a fresh copy of this database, so no test can affect another.</p>
+
+<h3>The policy corpus: 40 documents</h3>
+<p>The bank has 40 policy documents in <code>data/world/policies/</code>, one Markdown file each (<code>P01-savings-account-charges.md</code> … <code>P40-contact-details-update.md</code>). They're written in <code>src/sahayak/generate/policy_corpus.py</code>.</p>
+<div class="table-wrap"><table>
+<tr><th>Group</th><th>Documents</th></tr>
+<tr><td>Fees and charges</td><td>P01–P10: minimum balance, ATM usage, SMS alerts, cheque books, NEFT/RTGS, debit card fees, statements, cash deposits, account closure, cheque returns</td></tr>
+<tr><td>Refunds and reversals</td><td>P11–P16: failed ATM withdrawals, failed UPI/IMPS, wrong fees, card POS failures, merchant refunds, duplicate charges</td></tr>
+<tr><td>Fraud and disputes</td><td>P17–P22: unauthorised electronic transactions, chargebacks, UPI disputes, cheque disputes, the dispute process, cash deposit machines</td></tr>
+<tr><td>Cards and limits</td><td>P23–P30: ATM limits, POS/e-commerce limits, card blocking, PIN rules, international use, contactless, renewal, online transfer limits</td></tr>
+<tr><td>Complaints and support</td><td>P31–P35: grievance procedure, complaint channels, Nodal Officer, human assistance and AI disclosure, compensation</td></tr>
+<tr><td>Other</td><td>P36–P40: branch hours, savings interest, fixed deposits, KYC updating, contact-details changes</td></tr>
+</table></div>
+<p>Each document has three parts:</p>
+<ul>
+<li><b>A header:</b> ID, category, title, effective date, and keywords that include Hindi and Hinglish aliases such as "न्यूनतम बैलेंस", "shulk" and "charge kitna", so a Hindi question finds an English document.</li>
+<li><b>A body</b> split into short sections.</li>
+<li><b>A footer</b> saying it's a synthetic policy of a fictional bank.</li>
+</ul>
+<p><b>Where the content comes from.</b> Most values are invented. Where a topic is regulated by the RBI, the rules are modelled on real RBI circulars, checked on rbi.org.in. Examples:</p>
+<ul>
+<li>failed-transaction reversal times (T+5 for ATMs, ₹100/day compensation)</li>
+<li>liability limits for unauthorised transactions</li>
+<li>the ₹23 ATM charge cap</li>
+<li>the Ombudsman's 30- and 90-day windows</li>
+<li>contactless limits and KYC update periods</li>
+</ul>
+<p><code>docs/policy-sources.md</code> lists exactly which value came from which circular, and which were invented.</p>
+
+<h3>The 108 structured facts</h3>
+<p><code>data/world/policy_facts.json</code> holds the key numbers from those documents as data, for example <code>online_transfer_daily_limit = 200000</code> (shown as "₹2,00,000") or <code>mab_metro = 5000</code>. A test checks that every number in a policy document is one of these facts, so the documents and the facts can't drift apart. Two parts of the system use them:</p>
+<ul>
+<li><b>The judges</b>, to know the correct value and detect when the bot repeats a planted wrong one.</li>
+<li><b>The transfer policy engine</b>, to enforce the real daily limit and new-payee cap.</li>
+</ul>
+<p>The chatbot itself never uses them. It answers policy questions from the prose documents, which is why a planted document can fool it.</p>
+
+<h3>How the bot reads the corpus</h3>
+<ol>
+<li><b>Indexing.</b> Each document's sections become chunks, indexed with BM25 keyword search (<code>src/sahayak/policy/store.py</code>). The keywords and title are indexed but not shown to the model.</li>
+<li><b>Automatically, every turn.</b> The two sections that best match the customer's message go straight into the system prompt under "Policy excerpts".</li>
+<li><b>On demand.</b> The bot can call the <code>search_policy</code> tool to look up more.</li>
+<li><b>Poisoned-policy attacks</b> add one fake document to that scenario's search index only (an "overlay"), never to the real files. If it matches the question, it is pulled into the prompt next to the genuine policies, looking exactly like them.</li>
+</ol>
+
+<h3>The 30 benign scenarios</h3>
+<p><code>data/tickets/benign_v1.json</code> holds 30 ordinary conversations, spread across the four languages:</p>
+<ul>
+<li>balance checks and recent transactions</li>
+<li>FAQ questions and ticket status</li>
+<li>complaints and requests for a human</li>
+</ul>
+<p>Each lists the tool calls it requires, the calls it forbids, and the handoff it expects. The set is frozen with a checksum (<code>benign_v1.sha256</code>). Every model had to pass 27 of these 30 before its attack results counted.</p>
 </section>
 
 <section id="a">
@@ -201,8 +267,43 @@ Then the customer's message follows. Tickets, notes and policy sections are exac
 </ul>
 </section>
 
+<section id="harness">
+<h2>7. Is it a real chatbot? The bot vs the test harness</h2>
+<p>Yes. The attacks ran against a real, working chatbot. But nobody chats with it by typing: a <b>test harness</b> drives it.</p>
+<p>A test harness is code that operates a system automatically so it can be measured. Think of a car on a test rig. The engine, brakes and steering are real, but instead of a driver, a machine runs it through the same 1,000 manoeuvres and records exactly what happened each time.</p>
+<div class="table-wrap"><table>
+<tr><th>The chatbot (the system under test)</th><th>The harness (the test rig around it)</th></tr>
+<tr><td>
+<ul>
+<li>Context builder: writes the prompt (<code>agent/context.py</code>)</li>
+<li>Tool-calling loop (<code>agent/loop.py</code>)</li>
+<li>Model clients for Ollama, Sarvam and OpenAI (<code>agent/backend.py</code>, <code>agent/hosted.py</code>)</li>
+<li>Tool layer, sessions and OTP, transfer policy engine (<code>tools/</code>)</li>
+<li>Mock core bank (<code>mockbank/</code>)</li>
+<li>Policy search (<code>policy/</code>)</li>
+<li>Condition B's guard and data marking (<code>guard/</code>, <code>agent/context.py</code>)</li>
+</ul>
+</td><td>
+<ul>
+<li>Scenario runner: copies the bank, plants the attack, signs the customer in, sends the message, saves everything (<code>eval/runner.py</code>, <code>eval/scenarios.py</code>)</li>
+<li>Judges: decide automatically whether each attack worked (<code>eval/judges.py</code>)</li>
+<li>Metrics, statistics, paired comparisons, reports (<code>eval/</code>)</li>
+<li>The command line that starts runs (<code>cli.py</code>)</li>
+<li>The dashboard that shows results (<code>dashboard/</code>)</li>
+</ul>
+</td></tr>
+</table></div>
+<p><b>What Sahayak doesn't have, compared with a product like Aurora:</b></p>
+<ul>
+<li><b>No chat interface or API.</b> You can't currently type to it; it's run from scenario files. You can read every conversation it had in the dashboard's <i>Read a conversation</i> tab.</li>
+<li><b>One customer message per scenario.</b> The bot can make several tool calls to answer, but attacks that build up over several messages weren't tested.</li>
+<li><b>No service features:</b> no streaming, caching, health checks or deployment.</li>
+</ul>
+<p>That was a deliberate choice in the original study design: measuring rates fairly needs every scenario to start identically and be scored automatically. A chat interface would call exactly the same bot code, so it wouldn't change any result. It would let you try attacks live and test multi-turn conversations. Adding one is small, because the bot core already exists.</p>
+</section>
+
 <section id="b">
-<h2>7. Part B: how the guards are added</h2>
+<h2>8. Part B: how the guards are added</h2>
 <p>B is the same bot, same model and same prompt, plus exactly three additions. Each works at a different point in the flow:</p>
 <pre>untrusted text ──► [3 guard screens it] ──► [2 marked as DATA in the prompt] ──► model
 model asks for a tool ──► [1 checks in code] ──► runs, or denied with a reason</pre>
@@ -251,7 +352,7 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 </section>
 
 <section id="attacks">
-<h2>8. The attacks: what they are and how they were made</h2>
+<h2>9. The attacks: what they are and how they were made</h2>
 
 <h3>Five things an attacker wants</h3>
 <div class="table-wrap"><table>
@@ -294,7 +395,7 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 </section>
 
 <section id="scoring">
-<h2>9. How attacks are scored</h2>
+<h2>10. How attacks are scored</h2>
 <p>No AI judges the AI. Every rule is deterministic code that reads the saved record:</p>
 <div class="table-wrap"><table>
 <tr><th>Goal</th><th>Counted as "attack worked" when…</th></tr>
@@ -310,7 +411,7 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 </section>
 
 <section id="runs">
-<h2>10. The runs: what A, B, dev and held-out mean</h2>
+<h2>11. The runs: what A, B, dev and held-out mean</h2>
 <p>A "run" is one full pass of a set of scenarios through one model under one condition. Each run writes a folder in <code>data/runs/</code> and can resume if interrupted.</p>
 <div class="table-wrap"><table>
 <tr><th>Run</th><th>What it is</th><th class="n">Scenarios</th><th>Models</th></tr>
@@ -332,7 +433,7 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 </section>
 
 <section id="results">
-<h2>11. Results, and what they mean</h2>
+<h2>12. Results, and what they mean</h2>
 
 <h3>Headline: held-out, share of 228 attacks that worked</h3>
 <div class="table-wrap"><table>
@@ -388,13 +489,13 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 </section>
 
 <section id="aurora">
-<h2>12. How Sahayak differs from your Aurora Policy Assistant</h2>
+<h2>13. How Sahayak differs from your Aurora Policy Assistant</h2>
 <p>This comparison is based on your description of Aurora, not its code.</p>
-<p>The two were built for different jobs. <b>Aurora is a product:</b> it optimises answer quality, citations, latency and cost, and it is shipped as a service. <b>Sahayak is a measurement harness:</b> it optimises being able to count attack outcomes exactly and fairly. So Aurora has many quality mechanisms Sahayak lacks, and Sahayak has measurement machinery Aurora lacks.</p>
+<p>The two were built for different jobs. <b>Aurora is a product:</b> it optimises answer quality, citations, latency and cost, and it is shipped as a service. <b>Sahayak is a working chatbot inside a measurement harness:</b> it optimises being able to count attack outcomes exactly and fairly, and has no chat interface or service around it. So Aurora has many quality mechanisms Sahayak lacks, and Sahayak has measurement machinery Aurora lacks.</p>
 <div class="table-wrap"><table>
 <tr><th></th><th>Aurora</th><th>Sahayak</th></tr>
 <tr><td>Purpose</td><td>Answer insurance questions well, with citations, or refuse</td><td>Measure how often injected text causes failures, with and without defenses</td></tr>
-<tr><td>Shape</td><td>FastAPI web service, streaming, caches, traces, CI gate</td><td>Command-line harness that runs scenarios and writes records</td></tr>
+<tr><td>Shape</td><td>FastAPI web service, streaming, caches, traces, CI gate</td><td>A chatbot core (prompt, model, tools, mock bank) driven by a command-line test harness; no chat UI or API</td></tr>
 <tr><td>Retrieval</td><td>Embeddings (3072-dim), exact vector search over 307 small chunks, expanded to full sections</td><td>Keyword search (BM25) over policy sections. The top 2 are put straight into the system prompt, plus a <code>search_policy</code> tool</td></tr>
 <tr><td>Untrusted text</td><td>Always fenced</td><td>Fenced (data marking) only in B; tickets and notes are also in the prompt</td></tr>
 <tr><td>Answer checking</td><td>Every citation regex-validated, one corrective retry, then refuse; plus an output filter</td><td><b>None</b>. The reply is free text and nothing checks it before the customer sees it</td></tr>
@@ -410,7 +511,7 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 </section>
 
 <section id="why">
-<h2>13. Is the way Sahayak is built the reason it falls for attacks?</h2>
+<h2>14. Is the way Sahayak is built the reason it falls for attacks?</h2>
 <p>Partly yes, and in specific, fixable ways. It helps to split the failures by cause.</p>
 
 <h3>Failures caused by the structure: yes, and B fixes them</h3>
@@ -441,6 +542,181 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 <li><b>An output filter for other customers' identifiers.</b> This is defense in depth; B already prevents the access upstream.</li>
 </ul>
 <p>In one line: <b>Sahayak's structure caused the action failures, and B's code checks fixed them. What remains is that the bot trusts any policy-shaped text and nothing checks what it says.</b> That is the same lesson as Aurora's Lab 6 ("enforce in code, not in a prompt"), extended from actions to answers.</p>
+</section>
+
+<section id="map">
+<h2>15. Every directory and file, and what it's for</h2>
+<p>The whole repository, top to bottom. "Not in git" means the folder exists on your machine but is ignored by version control (run records, the database, your API keys).</p>
+
+<h3>Top level</h3>
+<div class="table-wrap"><table>
+<tr><th>Path</th><th>What it is and what it's for</th></tr>
+<tr><td><code>README.md</code></td><td>Start page: what the project is, results table, setup, how to reproduce, where things are.</td></tr>
+<tr><td><code>pyproject.toml</code></td><td>Project definition: name, Python version, dependencies (httpx, Pydantic, which is listed but unused), the optional <code>dashboard</code> group (Streamlit) and the <code>dev</code> group (pytest).</td></tr>
+<tr><td><code>uv.lock</code></td><td>Exact versions of every installed library, so everyone gets the same environment.</td></tr>
+<tr><td><code>.python-version</code></td><td>Pins Python 3.13 for uv.</td></tr>
+<tr><td><code>.gitignore</code></td><td>Keeps run records, the database, caches and <code>.env</code> out of git.</td></tr>
+<tr><td><code>.gitattributes</code></td><td>Forces Unix line endings, so file checksums match on Windows and Linux. World files are never converted.</td></tr>
+<tr><td><code>.env</code> (not in git)</td><td>Your Sarvam and OpenAI API keys. Read only by <code>agent/hosted.py</code>.</td></tr>
+<tr><td><code>.streamlit/config.toml</code></td><td>Makes the dashboard listen only on <code>localhost</code> and turns off Streamlit's usage statistics.</td></tr>
+<tr><td><code>.claude/</code> (not in git)</td><td>Local settings for Claude Code's preview servers. Not part of the project.</td></tr>
+</table></div>
+
+<h3><code>src/sahayak/</code>: all the project's Python code</h3>
+<div class="table-wrap"><table>
+<tr><th>Path</th><th>What it does</th></tr>
+<tr><td><code>cli.py</code></td><td>The command line (<code>uv run python -m sahayak.cli …</code>). One command per job: <code>generate-world</code>, <code>verify-world</code>, <code>show-samples</code>, <code>build-db</code>, <code>demo-tools</code>, <code>make-benign</code>, <code>run-benign</code>, <code>summarize</code>, <code>transcript</code>, <code>compare-runs</code>, <code>freeze-attacks</code>, <code>attack-stats</code>, <code>attack-review-sample</code>, <code>run-eval</code>, <code>summarize-eval</code>, <code>rejudge</code>, <code>compare-variants</code>, <code>spotcheck-sheet</code>.</td></tr>
+<tr><td><code>config.py</code></td><td>All settings in one place: the seed, data folder, Ollama address, pinned model and digest, context size, limits (6 steps, 512 tokens). Overridable with <code>SAHAYAK_*</code> environment variables. No secrets.</td></tr>
+<tr><td><code>domain/models.py</code></td><td>Shared record types: tool calls, decisions, sessions, the A/B condition. Money is always integer paise.</td></tr>
+<tr><td><code>domain/money.py</code></td><td>Formats paise as Indian rupees (₹1,23,456.78).</td></tr>
+</table></div>
+
+<h4><code>src/sahayak/generate/</code>: makes the synthetic data (run once, then frozen)</h4>
+<div class="table-wrap"><table>
+<tr><td><code>world.py</code></td><td>Generates customers, households, accounts, cards, 12 months of transactions, payees, branches, tickets and notes from the seed, and writes <code>data/world/</code> plus its checksum manifest.</td></tr>
+<tr><td><code>names.py</code></td><td>Fixed lists of Indian first names and surnames, merchant names, other-bank names and staff labels used by the generator.</td></tr>
+<tr><td><code>policy_corpus.py</code></td><td>The text of all 40 policy documents and the 108 structured facts, written once by hand in code.</td></tr>
+<tr><td><code>benign.py</code></td><td>Writes the 30 frozen benign scenarios and their checksum.</td></tr>
+<tr><td><code>attacks.py</code></td><td>Builds the 608 attacks and 80 look-alikes from templates, splits families into dev and held-out, seals the held-out file, and refuses to unseal it without the approval phrase.</td></tr>
+</table></div>
+
+<h4><code>src/sahayak/mockbank/</code>: the fake core-banking system</h4>
+<div class="table-wrap"><table>
+<tr><td><code>schema.py</code></td><td>The 13 SQLite tables (customers to audit_log).</td></tr>
+<tr><td><code>repo.py</code></td><td>Every SQL query lives here: look up a balance, find who owns an account, block a card, add a handoff or approval, write audit rows.</td></tr>
+</table></div>
+
+<h4><code>src/sahayak/tools/</code>: the only door between the model and the bank</h4>
+<div class="table-wrap"><table>
+<tr><td><code>specs.py</code></td><td>The catalogue of 11 tools: name, tier, arguments, and which resource each touches. No tool takes a customer ID or tier from the model. Also the small argument validator.</td></tr>
+<tr><td><code>layer.py</code></td><td>Runs every tool call: argument checks, guard restriction, tier and ownership checks (enforced in B, only recorded in A), audit logging.</td></tr>
+<tr><td><code>session.py</code></td><td>Sign-in and OTP. The only place identity and verification state can change. The model can't reach it.</td></tr>
+<tr><td><code>policy_engine.py</code></td><td>Checks transfer and refund proposals against the real limits (daily limit, new-payee cap) before they go to the human approval queue. On in both conditions.</td></tr>
+</table></div>
+
+<h4><code>src/sahayak/policy/</code></h4>
+<div class="table-wrap"><table>
+<tr><td><code>store.py</code></td><td>BM25 keyword search over policy sections, with Hindi stopwords and the documents' Hindi keyword aliases. Supports a per-scenario "overlay" for poisoned documents.</td></tr>
+</table></div>
+
+<h4><code>src/sahayak/agent/</code>: the chatbot's brain</h4>
+<div class="table-wrap"><table>
+<tr><td><code>context.py</code></td><td>Builds the system prompt (role, customer, accounts, tickets, notes, top-2 policy excerpts). In B, wraps untrusted text in random-ID DATA blocks and adds the "data isn't instructions" paragraph. Adds <code>/no_think</code> for Qwen only.</td></tr>
+<tr><td><code>loop.py</code></td><td>The tool-calling loop: ask the model, run requested tools, feed results back, stop on a final answer or a limit.</td></tr>
+<tr><td><code>backend.py</code></td><td>The Ollama client (localhost only, pinned model), a scripted fake model for tests, and the checks that flag thinking text or broken tool calls.</td></tr>
+<tr><td><code>hosted.py</code></td><td>Sarvam and OpenAI clients: request formats, prices, the spending ledger and cap checked before every call, API-key loading from <code>.env</code>. The only file allowed to name a hosted endpoint.</td></tr>
+</table></div>
+
+<h4><code>src/sahayak/guard/</code></h4>
+<div class="table-wrap"><table>
+<tr><td><code>rules.py</code></td><td>Condition B's nine-rule input guard (R1–R9), each citing the dev families that motivated it, plus a "no guard" version for A and the ablation.</td></tr>
+</table></div>
+
+<h4><code>src/sahayak/eval/</code>: the test harness</h4>
+<div class="table-wrap"><table>
+<tr><td><code>scenarios.py</code></td><td>Plants a scenario's attack text (ticket, note or poisoned policy) into its own database copy and search index.</td></tr>
+<tr><td><code>runner.py</code></td><td>Runs scenarios one by one under A, B or an ablation variant. Writes one record per scenario and resumes after interruptions. Records the model, git commit and costs, and stops cleanly at a spending cap.</td></tr>
+<tr><td><code>judges.py</code></td><td>The deterministic scorers: benign pass/fail, look-alike pass/fail, and G1–G5 attack success (strict and registered rules). Includes the number extractor that spots planted values.</td></tr>
+<tr><td><code>metrics.py</code></td><td>Turns a run's records into a summary: rates per goal, language and surface, look-alikes, protocol failures, cost.</td></tr>
+<tr><td><code>stats.py</code></td><td>Wilson confidence intervals and Newcombe's paired difference.</td></tr>
+<tr><td><code>compare.py</code></td><td>Paired A-vs-B comparison on the same scenarios: fixed, broken, difference with its interval.</td></tr>
+<tr><td><code>report.py</code></td><td>Writes the Markdown summaries and printable transcripts.</td></tr>
+</table></div>
+
+<h3><code>data/</code>: inputs, frozen test sets, and run records</h3>
+<div class="table-wrap"><table>
+<tr><th>Path</th><th>What it is</th></tr>
+<tr><td><code>world/*.json</code>, <code>transactions.csv</code></td><td>The generated bank: customers, accounts, cards, beneficiaries, branches, tickets, account_notes, transactions.</td></tr>
+<tr><td><code>world/policies/P01…P40.md</code></td><td>The 40 policy documents the bot reads.</td></tr>
+<tr><td><code>world/policy_facts.json</code></td><td>The 108 structured facts (the correct values).</td></tr>
+<tr><td><code>world/world_meta.json</code></td><td>Seed, date range and counts.</td></tr>
+<tr><td><code>world/MANIFEST.sha256</code></td><td>Checksums proving the world hasn't changed.</td></tr>
+<tr><td><code>world/sahayak.db</code> (not in git)</td><td>The template database built from the world files; copied fresh for every scenario.</td></tr>
+<tr><td><code>tickets/benign_v1.json</code> + <code>.sha256</code></td><td>The 30 frozen benign scenarios and their checksum.</td></tr>
+<tr><td><code>attacks/dev/templates.json</code></td><td>The dev attack templates (5 families × 4 languages) and dev look-alike templates.</td></tr>
+<tr><td><code>attacks/dev/items.json</code></td><td>The 420 ready-to-run dev scenarios (380 attacks, 40 look-alikes).</td></tr>
+<tr><td><code>attacks/dev/review_sample.md</code></td><td>A sample sheet used to review the Hindi and Hinglish wording.</td></tr>
+<tr><td><code>attacks/heldout/heldout.sealed</code></td><td>The 268 held-out scenarios, compressed and encoded so they aren't readable by accident; opened only with the approval phrase.</td></tr>
+<tr><td><code>attacks/stats.json</code></td><td>Counts per goal, surface, language and split (held-out families anonymised).</td></tr>
+<tr><td><code>splits/attack_split_v1.json</code> + <code>.sha256</code></td><td>Which families and look-alike templates went to dev vs held-out, with a checksum.</td></tr>
+<tr><td><code>labels/numeric_spotcheck_stage5-A-dev.md</code></td><td>The 66-item sheet for checking the number judge by hand. <b>Still waiting for your labels.</b></td></tr>
+<tr><td><code>runs/</code> (not in git)</td><td>One folder per run (e.g. <code>stage5-A-dev</code>, <code>sarvam-B-heldout</code>), each with <code>records.jsonl</code> (every scenario in full), <code>meta.json</code> (model, commit, sessions) and <code>summary.json/.md</code>. Also <code>_spend/</code>, the hosted spending ledgers.</td></tr>
+</table></div>
+
+<h3><code>docs/</code>: design, decisions, results</h3>
+<div class="table-wrap"><table>
+<tr><th>Path</th><th>What it is</th></tr>
+<tr><td><code>overview.html</code></td><td>The detailed text overview of the study.</td></tr>
+<tr><td><code>explainer.html</code></td><td>This page.</td></tr>
+<tr><td><code>design/system-design.md</code></td><td>The full system design written before any code: components, data flow, record formats, metric definitions.</td></tr>
+<tr><td><code>design/tier-enforcement-test-plan.md</code></td><td>Every permission case the tool layer must get right, each mapped to a test.</td></tr>
+<tr><td><code>threat-model.md</code></td><td>What's being protected, who the actors are, the trust boundaries, the five goals, attack technique categories, and what's out of scope.</td></tr>
+<tr><td><code>environment.md</code></td><td>The recorded machine: Windows, RTX 4050, Ollama version, model digest.</td></tr>
+<tr><td><code>policy-sources.md</code></td><td>Which policy values came from which RBI circular, and which are invented.</td></tr>
+<tr><td><code>judge-validation.md</code></td><td>How the judges were checked, and why the strict G1/G2 rules were adopted.</td></tr>
+<tr><td><code>rbi-mapping.md</code></td><td>How design choices relate to the RBI FREE-AI recommendations. Not a compliance claim.</td></tr>
+<tr><td><code>adr/0001…0013</code></td><td>The 13 decision records: model (0001), BM25 retrieval (0002), SQLite (0003), tests (0004), deterministic judges (0005), pre-registration (0006), tooling (0007), Condition B mechanisms (0008), world format (0009), bot runtime (0010), attack suite and split (0011), the guard and ablations (0012), the hosted-model comparison (0013).</td></tr>
+<tr><td><code>results/final.md</code></td><td>The full final report.</td></tr>
+<tr><td><code>results/model-comparison.md</code></td><td>The three-model comparison, including languages.</td></tr>
+<tr><td><code>results/stage3-benign.md</code>, <code>stage4-suite.md</code>, <code>baseline.md</code>, <code>defended.md</code></td><td>Stage-by-stage write-ups.</td></tr>
+<tr><td><code>results/baseline-*.json/.md</code>, <code>defended-B*-*.json/.md</code>, <code>defended-vs-baseline-*</code></td><td>Qwen's published summaries (A, B, ablations) and paired comparisons.</td></tr>
+<tr><td><code>results/compare-&lt;model&gt;-*</code></td><td>Sarvam's and GPT's summaries and paired comparisons.</td></tr>
+<tr><td><code>results/benign-qwen3-4b.json</code></td><td>Qwen's benign-gate summary, so the dashboard works without local runs.</td></tr>
+</table></div>
+
+<h3><code>scripts/</code>: one PowerShell script per stage</h3>
+<div class="table-wrap"><table>
+<tr><td><code>record_env.ps1</code></td><td>Prints the machine, GPU, Ollama and model details to compare with <code>environment.md</code>.</td></tr>
+<tr><td><code>stage1.ps1</code></td><td>Generates and verifies the world, runs the world tests.</td></tr>
+<tr><td><code>stage2.ps1</code></td><td>Builds the database, runs the no-model tests, shows a scripted tool demo.</td></tr>
+<tr><td><code>stage3_benign.ps1</code></td><td>Runs the 30 benign scenarios on the local model.</td></tr>
+<tr><td><code>stage4.ps1</code></td><td>Verifies the frozen attack suite (counts only) and runs its tests.</td></tr>
+<tr><td><code>eval_baseline.ps1</code></td><td>Runs Condition A on the attack suite.</td></tr>
+<tr><td><code>eval_defended.ps1</code></td><td>Runs B and the two ablations.</td></tr>
+<tr><td><code>reproduce.ps1</code></td><td>One command to reproduce everything (<code>-Backend stub</code> needs no model).</td></tr>
+</table></div>
+
+<h3><code>dashboard/</code></h3>
+<div class="table-wrap"><table>
+<tr><td><code>app.py</code></td><td>The Streamlit dashboard: start page, models compared, by language, did the defense help, where attacks hide, which defense did what, read a conversation.</td></tr>
+<tr><td><code>results_data.py</code></td><td>Loads and shapes the published results for the dashboard. Kept separate from Streamlit so it can be tested.</td></tr>
+</table></div>
+
+<h3><code>tests/</code>: 247 automated checks</h3>
+<div class="table-wrap"><table>
+<tr><td><code>conftest.py</code></td><td>A tiny shared bank (a few customers and accounts) used by many tests.</td></tr>
+<tr><td><code>unit/test_world.py</code></td><td>The world regenerates byte-identically from the seed; balances reconcile and never go negative; every number in a policy is a fact; people are obviously synthetic.</td></tr>
+<tr><td><code>unit/test_tool_layer.py</code></td><td>Every case in the tier-enforcement test plan: owners allowed, others denied, OTP required, audit always written.</td></tr>
+<tr><td><code>unit/test_policy_store.py</code></td><td>BM25 search finds the right documents, including from Hindi queries.</td></tr>
+<tr><td><code>unit/test_agent.py</code></td><td>Prompt building, data marking, delimiter escaping, reply checks, the tool loop's limits.</td></tr>
+<tr><td><code>unit/test_hosted.py</code></td><td>Sarvam/OpenAI request formats, costs, the spending cap, keys never leaking. All against a fake network.</td></tr>
+<tr><td><code>unit/test_guard.py</code></td><td>Each guard rule, restriction behaviour, and no false hits on benign text.</td></tr>
+<tr><td><code>unit/test_judges.py</code></td><td>The scorers and statistics on hand-made cases.</td></tr>
+<tr><td><code>unit/test_attacks.py</code></td><td>The attack suite's counts and checksums, without ever opening held-out.</td></tr>
+<tr><td><code>unit/test_dashboard.py</code></td><td>The dashboard loads all three models, runs without errors, hides attack text, never shows held-out records.</td></tr>
+<tr><td><code>unit/test_repo_hygiene.py</code></td><td>No API keys, no hosted endpoints outside <code>hosted.py</code>, no attack text outside <code>data/attacks</code>, only fake email domains and phone numbers, no "secure/compliant" claims that aren't negated.</td></tr>
+<tr><td><code>integration/test_mockbank_tools.py</code></td><td>The tool layer against the real generated world.</td></tr>
+<tr><td><code>eval/test_runner_stub.py</code></td><td>The runner with a fake model: records, resuming, summaries.</td></tr>
+<tr><td><code>eval/test_attack_eval.py</code></td><td>Judges and metrics end to end on real dev scenarios with a deliberately obedient fake model.</td></tr>
+<tr><td><code>model/test_ollama_live.py</code></td><td>Optional checks against your running Ollama; skipped if it isn't running.</td></tr>
+</table></div>
+
+<h3>How the pieces connect</h3>
+<pre>generate/ ──► data/world, data/tickets, data/attacks   (made once, frozen with checksums)
+                     │
+cli.py run-eval ──► eval/runner.py ──► for each scenario:
+                     │   copy sahayak.db, plant attack (eval/scenarios.py)
+                     │   agent/context.py builds prompt ◄── policy/store.py (BM25)
+                     │   [B] guard/rules.py screens untrusted text
+                     │   agent/loop.py ⇄ model (agent/backend.py or agent/hosted.py)
+                     │              └─► tools/layer.py ─► mockbank/repo.py
+                     │   eval/judges.py scores the record
+                     ▼
+              data/runs/&lt;run&gt;/records.jsonl
+                     │
+cli.py summarize-eval / compare-variants ──► docs/results/*.json, *.md
+                     │
+              dashboard/app.py reads docs/results (+ data/runs for transcripts)</pre>
 </section>
 
 <footer>Sahayak Bank is fictional and all data is synthetic. Results describe this prototype under its stated setup only; a measured reduction in failures is not a property of any model or of the defense. Full report: docs/results/final.md · Model comparison: docs/results/model-comparison.md.</footer>
