@@ -82,16 +82,32 @@ class SpendLedger:
         data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
         self.spent = float(data.get("spent", 0.0))
         self.calls = int(data.get("calls", 0))
+        self.write_errors: list[str] = []
 
     def add(self, amount: float) -> None:
+        """Never raises: the call is already paid for, so a failed write must not fail the scenario.
+        The in-memory total still enforces the cap; the next successful write persists it."""
         self.spent += amount
         self.calls += 1
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = self.path.with_suffix(".tmp")
-        tmp.write_text(json.dumps({"currency": self.currency, "spent": round(self.spent, 6), "calls": self.calls,
-                                   "updated_at": datetime.now(timezone.utc).isoformat()}, indent=1) + "\n",
-                       encoding="utf-8")
-        tmp.replace(self.path)
+        text = json.dumps({"currency": self.currency, "spent": round(self.spent, 6), "calls": self.calls,
+                           "updated_at": datetime.now(timezone.utc).isoformat()}, indent=1) + "\n"
+        try:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            tmp = self.path.with_suffix(".tmp")
+            tmp.write_text(text, encoding="utf-8")
+        except OSError as e:
+            self.write_errors.append(f"{type(e).__name__}: {e}")
+            return
+        # On Windows the target can be briefly locked (antivirus, indexer, an open editor): retry.
+        for attempt in range(5):
+            try:
+                tmp.replace(self.path)
+                return
+            except PermissionError as e:
+                if attempt == 4:
+                    self.write_errors.append(f"{type(e).__name__}: {e}")
+                    return
+                time.sleep(0.2 * (attempt + 1))
 
 
 def to_wire(messages: list[dict]) -> list[dict]:
@@ -232,6 +248,7 @@ class HostedChatClient:
                               "currency": self.p.currency},
             "budget_cap": self.budget,
             "spent_so_far": round(self.ledger.spent, 6),
+            "ledger_write_errors": len(self.ledger.write_errors),
             "quantization": None,
             "num_ctx": None,
             "processor": "hosted API",

@@ -136,3 +136,17 @@ def test_cli_builds_hosted_backend_without_calling_it(provider, tmp_path, monkey
     with pytest.raises(SystemExit):
         cli.main(["run-eval", "--help"])
     assert provider in capsys.readouterr().out
+
+
+def test_locked_ledger_file_does_not_fail_the_call(tmp_path, monkeypatch):
+    from pathlib import Path
+
+    c, _ = client("sarvam", tmp_path, [reply("hi")])
+    monkeypatch.setattr("sahayak.agent.hosted.time.sleep", lambda s: None)
+
+    def locked(self, target):
+        raise PermissionError(5, "Access is denied")
+    monkeypatch.setattr(Path, "replace", locked)
+    t = c.chat([{"role": "user", "content": "u"}], [])  # must not raise
+    assert t.content == "hi" and c.ledger.spent == pytest.approx(t.cost.cost)
+    assert len(c.ledger.write_errors) == 1 and c.metadata()["ledger_write_errors"] == 1
