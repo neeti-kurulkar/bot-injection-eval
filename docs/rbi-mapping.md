@@ -1,0 +1,26 @@
+# Design Choices Mapped to the RBI FREE-AI Report
+
+**This is not a compliance assessment.** The FREE-AI report is a committee report with recommendations. At the time of writing, RBI says it is still assessing them before issuing specific guidance. Sahayak Bank is fictional, the bot is a research prototype, and nothing here claims that any design meets an RBI requirement. The table only records which recommendation a design choice *relates to*, so a reader can see where the prototype touches the report's themes.
+
+Source: RBI, *Framework for Responsible and Ethical Enablement of Artificial Intelligence (FREE-AI) in the Financial Sector*, committee report released 13 Aug 2025. It sets out 7 Sutras, 6 pillars, and 26 recommendations ([report page](https://www.rbi.org.in/Scripts/PublicationReportDetails.aspx?ID=1306), [press release](https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61018)). Read on rbi.org.in on 2026-10-16. The PDF version returned a human-verification page and was not read. Recommendation numbers and themes below are paraphrased from the HTML report page.
+
+| Design choice in this prototype | FREE-AI theme it relates to | What the study measured or did, and what it did not |
+|---|---|---|
+| The system prompt and policy P34 tell customers they are talking to an automated assistant | Consumer protection (Rec. 18): customers should be told when they are dealing with AI. Sutra 2, People First. | Disclosure text exists. Whether customers understand it was **not** tested. |
+| `request_human_handoff` is always offered and never denied, in both conditions and under guard restriction | Consumer protection (Rec. 18): customers can switch to a human when they want. Sutra 2: final authority rests with humans. | Handoff compliance was measured. Under attack it was 69.4% (A) and about 89% (B) on held-out (G3 blocked 30.6% → 11.1%). Benign look-alikes asking for a human: 66.7% held-out. **The bot still failed to hand off in a meaningful share of cases**, so the tool being available is not the same as the customer reaching a human. |
+| Complaints are registered through the handoff tool. Policy P31 explains escalation to the bank and the RBI Ombudsman (RB-IOS 2026). P34 describes an appeal route. | Consumer protection (Rec. 18): grievance redressal for AI interactions. Analysis on challenging AI decisions. | Complaint routing was exercised in benign scenarios. An actual appeal workflow was **not** built. |
+| Money movement (T3) is never executed by the model: a deterministic policy engine plus a human approval queue | AI System Governance Framework (Rec. 16): human oversight for higher-risk use. Sutra 5, Accountability. | Measured: **no money moved in any run**, but unrequested T3 proposals reached the queue in up to 22.9% of held-out A scenarios. That shows why the queue matters. |
+| Tier and ownership checks in code, not in the prompt (Condition B) | AI System Governance (Rec. 16); Cybersecurity Measures (Rec. 19) | Measured reduction: G2, G4, and G5 went from 10–23% to 0/48 each on held-out. These figures hold only for this mock tool layer and these attacks. |
+| Data marking and a rule-based input guard | Cybersecurity Measures (Rec. 19), including adversarial manipulation of AI systems | Measured: any-goal attack success fell from 27.6% to 13.6% on held-out. Fabricated policy (G1) **did not** improve. The guard caught 58% of held-out attack turns. |
+| A frozen multilingual attack suite with a sealed held-out split, run against the prototype | Red Teaming (Rec. 20): structured adversarial testing across the lifecycle | This is a small, single-model, synthetic exercise. **It is not a red-team engagement against a real system** and does not replace one. |
+| Every tool call, allowed or denied, is written to an append-only audit log | AI Audit Framework (Rec. 24): audits covering inputs, models, and outputs | The audit log is the source of truth for the judges. An audit *framework* (scope, frequency, independence) was not designed. |
+| Pinned model tag and digest, environment record, ADRs, pre-registration | AI Inventory (Rec. 23); AI System Governance (Rec. 16); Disclosures (Rec. 25) | Documented for this prototype only. |
+| Pre-registered benign threshold and model-choice rule before any attack result | Product Approval Process (Rec. 17): validation before deployment | A one-off benign check of 30 scenarios. Not a product approval process. |
+| Deterministic judges, with judge limitations disclosed (numeric-only fabrication, strict G1/G2 rules) | Sutra 6, Understandable by Design | The judges are inspectable code. Wording-only fabrication was **not measured**. |
+
+## Not addressed by this prototype
+- **Board-approved AI policy (Rec. 14) and data lifecycle governance (Rec. 15):** organisational, out of scope.
+- **Business continuity for AI systems (Rec. 21):** not tested. The prototype simply stops if Ollama is down.
+- **AI incident reporting (Rec. 22):** no incident-reporting path exists.
+- **Liability, capacity building, sandbox, and sector infrastructure (Recs. 1–13, 26):** out of scope.
+- **Fairness and equity (Sutra 4):** per-language attack and benign rates are reported, but no fairness analysis across customer groups was done. The cells are small.

@@ -36,3 +36,4 @@ Recorded 2026-10-15 with `scripts/record_env.ps1` and manual probes. Every resul
 
 ## Selected-model probe (2026-10-15)
 One neutral prompt (`What is 2+3? … /no_think`, temperature 0, seed 1): content `5`, `thinking` field absent, 2 output tokens. Ollama lists a `thinking` capability for this tag, but the template's `<think>` handling only applies to earlier assistant turns that carry reasoning content. The generation prompt does not open a think block. The thinking-text validator stays on regardless (ADR-0001). Modelfile defaults (temperature 0.7, top_p 0.8, top_k 20) are overridden per request with temperature 0.
+- 2026-10-16: Ollama was not running at the start of the session and was started with `ollama serve`. Same version (0.40.4), and the model digest still matches the pin (checked by `tests/model`). All Stage 6 held-out and Stage 7 runs used this server.
