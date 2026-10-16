@@ -354,9 +354,11 @@ def cmd_run_eval(args: argparse.Namespace) -> int:
             return 1
     out = _runs_dir(settings) / args.run_id
     quiet = args.suite == "heldout"  # held-out: aggregate output only, no per-scenario lines
+    variant = args.variant or args.condition
     run(scenarios, Condition(args.condition), backend, settings, args.db,
         PolicyStore.from_dir(settings.world_dir / "policies"), load_facts(settings.world_dir), out, args.run_id,
-        notes=f"suite={args.suite}; {args.notes}", progress=(lambda *_: None) if quiet else print)
+        notes=f"suite={args.suite}; variant={variant}; {args.notes}", progress=(lambda *_: None) if quiet else print,
+        variant=variant)
     return cmd_summarize_eval(argparse.Namespace(run_id=args.run_id, publish=None, scope=args.suite))
 
 
@@ -373,7 +375,7 @@ def cmd_summarize_eval(args: argparse.Namespace) -> int:
     note = ("DEVELOPMENT families only. These results are used for development decisions; they are not the "
             "held-out estimate." if scope == "dev" else
             "HELD-OUT families (sealed until this gate-approved run). Aggregate results only.")
-    md = eval_markdown(summary, f"Results: condition {summary['condition']}, {scope} suite", note)
+    md = eval_markdown(summary, f"Results: variant {meta.get('variant', summary['condition'])}, {scope} suite", note)
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n", encoding="utf-8",
                                       newline="\n")
     (out / "summary.md").write_text(md, encoding="utf-8", newline="\n")
@@ -414,6 +416,29 @@ def cmd_rejudge(args: argparse.Namespace) -> int:
                                    encoding="utf-8", newline="\n")
     print(f"rejudged {len(records)} records in {args.run_id} (original kept as records.orig.jsonl)")
     return cmd_summarize_eval(argparse.Namespace(run_id=args.run_id, publish=args.publish, scope="dev"))
+
+
+def cmd_compare_variants(args: argparse.Namespace) -> int:
+    """Stage 6: paired baseline-vs-variant comparison with Newcombe intervals."""
+    from sahayak.eval.compare import compare, compare_markdown
+    from sahayak.eval.runner import load_records
+
+    settings = load_settings()
+    runs = _runs_dir(settings)
+    base = load_records(runs / args.base / "records.jsonl")
+    variants = {v: load_records(runs / v / "records.jsonl") for v in args.runs}
+    result = compare(base, variants)
+    scope = ("HELD-OUT families: aggregate results only." if args.heldout else
+             "DEVELOPMENT families only. The guard was written from these families, so these comparisons are "
+             "in-sample for the guard; the held-out comparison is the estimate.")
+    md = compare_markdown(result, args.base, args.title, scope)
+    if args.publish:
+        results = REPO_ROOT / "docs" / "results"
+        (results / f"{args.publish}.md").write_text(md, encoding="utf-8", newline="\n")
+        (results / f"{args.publish}.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n",
+                                                      encoding="utf-8", newline="\n")
+    print(md)
+    return 0
 
 
 def cmd_spotcheck_sheet(args: argparse.Namespace) -> int:
@@ -518,6 +543,8 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--run-id", required=True)
     e.add_argument("--suite", choices=["dev", "heldout"], default="dev")
     e.add_argument("--condition", choices=["A", "B"], default="A")
+    e.add_argument("--variant", choices=["A", "B", "B-nomark", "B-noguard"], default=None,
+                   help="overrides --condition: B = enforcement + data marking + rule guard; ablations drop one")
     e.add_argument("--backend", choices=["ollama", "stub"], default="ollama")
     e.add_argument("--db", type=Path, default=db_default)
     e.add_argument("--limit", type=int, default=0)
@@ -534,6 +561,14 @@ def main(argv: list[str] | None = None) -> int:
     rj.add_argument("--db", type=Path, default=db_default)
     rj.add_argument("--publish", default=None)
     rj.set_defaults(fn=cmd_rejudge)
+
+    cv = sub.add_parser("compare-variants", help="Stage 6: paired baseline vs variant comparison")
+    cv.add_argument("--base", required=True)
+    cv.add_argument("--runs", nargs="+", required=True)
+    cv.add_argument("--title", default="Condition B vs Condition A")
+    cv.add_argument("--heldout", action="store_true")
+    cv.add_argument("--publish", default=None)
+    cv.set_defaults(fn=cmd_compare_variants)
 
     sc = sub.add_parser("spotcheck-sheet", help="Hand spot-check sheet for numeric-fabrication flags (dev runs)")
     sc.add_argument("--run-id", required=True)

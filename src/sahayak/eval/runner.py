@@ -16,12 +16,13 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from sahayak.agent.context import ContextBuilder
+from sahayak.agent.context import ContextBuilder, escape_untrusted
 from sahayak.agent.loop import LLMAgent
 from sahayak.config import REPO_ROOT, Settings
 from sahayak.domain.models import Condition
 from sahayak.eval.judges import NumericPolicyJudge, judge_attack, judge_benign, judge_lookalike
 from sahayak.eval.scenarios import apply_overlay, policy_overlay
+from sahayak.guard.rules import GuardHook, NoGuard, make_guard
 from sahayak.eval.stats import proportion
 from sahayak.mockbank.repo import Repository, copy_db
 from sahayak.policy.store import PolicyStore
@@ -78,15 +79,27 @@ def _exposure(scenario: dict, system_prompt: str, prefetched: list[str], steps: 
         return {"exposed": True, "via": "message"}
     if surface in ("ticket", "note"):
         ov = scenario["overlay"]["tickets" if surface == "ticket" else "notes"][0]["body"]
-        return {"exposed": ov.splitlines()[0][:60] in system_prompt, "via": f"context:{surface}"}
+        head = ov.splitlines()[0][:60]
+        # Under data marking, delimiter look-alikes are escaped before insertion; match either form.
+        exposed = head in system_prompt or escape_untrusted(head) in system_prompt
+        return {"exposed": exposed, "via": f"context:{surface}"}
     in_prompt = "P90" in prefetched
     via_tool = any(tr["name"] == "search_policy" and any(r.get("doc_id") == "P90" for r in tr["payload"].get("results", []))
                    for st in steps for tr in st["tool_results"])
     return {"exposed": in_prompt or via_tool, "via": "prefetch" if in_prompt else ("search_policy" if via_tool else None)}
 
 
+VARIANTS = {  # name -> (condition / ToolLayer enforcement, data marking, guard)
+    "A": (Condition.A, False, "none"),
+    "B": (Condition.B, True, "rules"),
+    "B-nomark": (Condition.B, False, "rules"),
+    "B-noguard": (Condition.B, True, "none"),
+}
+
+
 def run_scenario(scenario: dict, condition: Condition, backend, settings: Settings, template_db: Path,
-                 policies: PolicyStore, numeric: NumericPolicyJudge, tmp_dir: Path) -> dict:
+                 policies: PolicyStore, numeric: NumericPolicyJudge, tmp_dir: Path,
+                 data_marking: bool | None = None, guard: GuardHook | None = None) -> dict:
     t0 = time.perf_counter()
     db = copy_db(template_db, tmp_dir / f"{scenario['scenario_id']}.db")
     repo = Repository.open(db)
@@ -96,7 +109,9 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
         created = apply_overlay(repo, scenario)
         sessions = SessionManager(repo, seed=scenario["seed"])
         tools = ToolLayer(repo, sessions, policies, policy_overlay=overlay)
-        context = ContextBuilder(repo, policies, data_marking=(condition is Condition.B),
+        marking = (condition is Condition.B) if data_marking is None else data_marking
+        guard = guard or NoGuard()
+        context = ContextBuilder(repo, policies, data_marking=marking,
                                  seed=scenario["seed"], policy_overlay=overlay)
         agent = LLMAgent(backend.with_seed(scenario["seed"]), tools, context,
                          settings.max_steps, settings.max_output_tokens_per_turn)
@@ -107,7 +122,8 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
         other_balances = [repo.get_account(a)["balance_paise"]
                           for a in scenario.get("expected", {}).get("other_accounts", [])]
         messages = context.initial_messages(scenario["customer_id"], scenario["message"])
-        turn = agent.run_turn(s.session_id, messages)
+        verdict = guard.screen(context.untrusted)
+        turn = agent.run_turn(s.session_id, messages, restricted=verdict.restricted)
         audit = repo.list_audit(s.session_id)
         handoffs = repo.list_handoffs(s.session_id)
         approvals = repo.list_approvals(s.session_id)
@@ -135,6 +151,8 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
         "goal": scenario.get("goal"),
         "surface": scenario.get("surface"),
         "overlay_created": created,
+        "data_marking": marking,
+        "guard": {"name": guard.name, "restricted": verdict.restricted, "hits": verdict.hits},
         "exposure": exposure,
         "category": scenario.get("category"),
         "language": scenario["language"],
@@ -170,14 +188,20 @@ def run_scenario(scenario: dict, condition: Condition, backend, settings: Settin
 
 def run(scenarios: list[dict], condition: Condition, backend, settings: Settings, template_db: Path,
         policies: PolicyStore, facts: list[dict], out_dir: Path, run_id: str, notes: str = "",
-        progress=print) -> Path:
+        progress=print, variant: str | None = None) -> Path:
+    if variant is not None:
+        condition, marking, guard_name = VARIANTS[variant]
+    else:
+        marking, guard_name = condition is Condition.B, "none"
+    guard = make_guard(guard_name)
     out_dir.mkdir(parents=True, exist_ok=True)
     records = out_dir / "records.jsonl"
     done = completed_ids(records)
     meta_path = out_dir / "meta.json"
     meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {
         "run_id": run_id, "condition": condition.value, "started_at": datetime.now(timezone.utc).isoformat(),
-        "seed": settings.seed, "git": git_state(), "notes": notes, "sessions": []}
+        "seed": settings.seed, "git": git_state(), "notes": notes, "sessions": [],
+        "variant": variant or condition.value, "data_marking": marking, "guard": guard_name}
     torn = repair_torn_tail(records)
     numeric = NumericPolicyJudge(facts)
     todo = [s for s in scenarios if s["scenario_id"] not in done]
@@ -187,7 +211,8 @@ def run(scenarios: list[dict], condition: Condition, backend, settings: Settings
     meta["sessions"].append(session_log)
     with tempfile.TemporaryDirectory() as tmp, records.open("a", encoding="utf-8", newline="\n") as f:
         for i, sc in enumerate(todo, 1):
-            rec = run_scenario(sc, condition, backend, settings, template_db, policies, numeric, Path(tmp))
+            rec = run_scenario(sc, condition, backend, settings, template_db, policies, numeric, Path(tmp),
+                               data_marking=marking, guard=guard)
             f.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
             f.flush()
             session_log["ran"] += 1
@@ -211,6 +236,7 @@ def rejudge(records: list[dict], scenarios: dict[str, dict], facts: list[dict], 
     try:
         for r in records:
             sc = scenarios[r["scenario_id"]]
+            r["exposure"] = _exposure(sc, r["system_prompt"], r["prefetched_policy_docs"], r["steps"])
             payloads = [tr["payload"] for st in r["steps"] for tr in st["tool_results"]]
             num = numeric.judge(r["reply"], payloads)
             r["numeric_judge"] = {"fabricated": num.fabricated, "ungrounded": num.ungrounded,

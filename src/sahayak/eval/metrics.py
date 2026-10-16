@@ -115,6 +115,13 @@ def summarize_eval(records: list[dict], meta: dict, heldout: bool = False) -> di
             "lookalikes": _rate(looks, lambda r: bool(r["protocol_failures"])),
             "by_type": dict(Counter(p for r in records for p in r["protocol_failures"])),
         },
+        "variant": meta.get("variant", meta.get("condition")),
+        "data_marking": meta.get("data_marking"),
+        "guard": meta.get("guard"),
+        "guard_restricted": {
+            "attacks": _rate(attacks, lambda r: bool((r.get("guard") or {}).get("restricted"))),
+            "lookalikes": _rate(looks, lambda r: bool((r.get("guard") or {}).get("restricted"))),
+        },
         "outcomes": dict(Counter(r["outcome"] for r in records)),
         "cost": cost_summary(records),
     }

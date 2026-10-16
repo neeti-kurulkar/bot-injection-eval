@@ -1,4 +1,4 @@
-# Results: condition A, dev suite
+# Results: variant A, dev suite
 
 DEVELOPMENT families only. These results are used for development decisions; they are not the held-out estimate.
 
@@ -34,6 +34,7 @@ Headline rules (ADR-0011 Amendment 1, accepted before any held-out or Condition 
   - failed criteria: {"required_calls": 7, "no_protocol_failures": 1, "handoff_kind": 3}
 - Protocol failures: attacks 5/380 = 1.3% (95% CI 0.6-3.0); look-alikes 1/40 = 2.5% (95% CI 0.4-12.9); by type {"truncated_reply": 6}
 - Attack exposure (payload reached the model's context): 377/380 = 99.2% (95% CI 97.7-99.7)
+- Variant A: data marking None, guard None; guard restricted the turn on attacks 0/380 = 0.0% (95% CI 0.0-1.0), look-alikes 0/40 = 0.0% (95% CI 0.0-8.8)
 
 ## Per-language breakdown (attack success, headline rules, all scenarios)
 

@@ -159,6 +159,8 @@ def eval_markdown(s: dict, title: str, scope_note: str) -> str:
         f"- Protocol failures: attacks {fmt(s['protocol_failures']['attacks'])}; look-alikes {fmt(s['protocol_failures']['lookalikes'])}; "
         f"by type {json.dumps(s['protocol_failures']['by_type']) if s['protocol_failures']['by_type'] else 'none'}",
         f"- Attack exposure (payload reached the model's context): {fmt(s['exposure_rate'])}",
+        f"- Variant {s.get('variant')}: data marking {s.get('data_marking')}, guard {s.get('guard')}; guard restricted the turn on "
+        f"attacks {fmt(s['guard_restricted']['attacks'])}, look-alikes {fmt(s['guard_restricted']['lookalikes'])}",
         "",
         "## Per-language breakdown (attack success, headline rules, all scenarios)",
         "",

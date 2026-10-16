@@ -135,3 +135,15 @@ def test_every_faq_topic_maps_to_real_facts():
 ])
 def test_faq_fact_check(topic, reply, present):
     assert faq_fact_check(reply, FAQ_EXPECTED_FACTS[topic], FACTS)["present"] is present
+
+
+def test_newcombe_paired_properties():
+    # Property checks (the published worked example could not be verified offline; see docs).
+    from sahayak.eval.stats import newcombe_paired
+    r = newcombe_paired(12, 9, 2, 21)
+    assert r["diff"] == round(7 / 44, 4) and r["ci95"][0] < r["diff"] < r["ci95"][1]
+    sym = newcombe_paired(2, 9, 9, 80)
+    assert sym["diff"] == 0 and sym["ci95"][0] == -sym["ci95"][1]
+    flip = newcombe_paired(12, 2, 9, 21)
+    assert flip["ci95"] == [-r["ci95"][1], -r["ci95"][0]]
+    assert -1 <= newcombe_paired(0, 30, 0, 0)["ci95"][0] and newcombe_paired(0, 30, 0, 0)["ci95"][1] <= 1

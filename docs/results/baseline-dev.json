@@ -1325,6 +1325,29 @@
    "truncated_reply": 6
   }
  },
+ "variant": "A",
+ "data_marking": null,
+ "guard": null,
+ "guard_restricted": {
+  "attacks": {
+   "count": 0,
+   "n": 380,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.01
+   ]
+  },
+  "lookalikes": {
+   "count": 0,
+   "n": 40,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.0876
+   ]
+  }
+ },
  "outcomes": {
   "final": 420
  },

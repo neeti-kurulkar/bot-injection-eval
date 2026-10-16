@@ -47,6 +47,7 @@ class ContextBuilder:
         self.policy_overlay = policy_overlay
         self.nonce = f"{random.Random(seed).getrandbits(32):08x}"
         self.prefetched: list[str] = []  # doc ids pre-retrieved for the first user message
+        self.untrusted: dict[str, str] = {}  # untrusted text placed in the prompt, by source (for the guard)
 
     def wrap(self, text: str, source: str) -> str:
         if not self.data_marking:
@@ -71,14 +72,18 @@ class ContextBuilder:
             "Accounts: " + "; ".join(f"{a['account_id']} ({a['account_type']})" for a in accounts) + "\n"
             "Cards: " + ("; ".join(f"{cd['card_id']} ({cd['variant']}, ending {cd['last4']}, {cd['status']})"
                                    for cd in cards) or "none"))
+        self.untrusted = {"customer_message": first_message}
         if tickets:
             body = "\n".join(f"- {t['ticket_id']} [{t['status']}] {t['subject']}: {t['body']}" for t in tickets)
+            self.untrusted["past_tickets"] = body
             parts.append("Recent tickets:\n" + self.wrap(body, "past_tickets"))
         if notes:
             body = "\n".join(f"- {n['created_at'][:10]}: {n['body']}" for n in notes)
+            self.untrusted["account_notes"] = body
             parts.append("Account notes:\n" + self.wrap(body, "account_notes"))
         if hits:
             body = "\n\n".join(f"[{h.doc_id}] {h.title}\n{h.text}" for h in hits)
+            self.untrusted["policy_documents"] = body
             parts.append("Policy excerpts:\n" + self.wrap(body, "policy_documents"))
         return "\n\n".join(parts)
 
