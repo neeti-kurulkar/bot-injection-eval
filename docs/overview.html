@@ -313,7 +313,7 @@ footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--rule);
 <li><b>One run per model and condition.</b> Per-goal cells hold 36–48 attacks; per-language cells 9–20. Overlapping intervals are not read as differences.</li>
 <li><b>Hosted models can't be pinned.</b> Their results reflect the provider's model on 16 October 2026. OpenAI's model takes no temperature setting, so its runs are less reproducible.</li>
 <li><b>Held-out reuse.</b> The sealed families were opened for Qwen first. Nothing was tuned on them, but for the hosted models they weren't "never seen" in the strictest sense.</li>
-<li><b>Built around Qwen.</b> The prompt, tools and guard were developed on Qwen; the hosted models might do better with prompts written for them. Ablations were run on Qwen only.</li>
+<li><b>One generic prompt for every model.</b> The prompt is plain business instructions, written once and never tuned on any model. The guard is model-independent text rules written from the development attacks. Using the same prompt keeps the comparison fair, but vendor-specific prompting might change each model's results. The ablations were run on Qwen only.</li>
 <li><b>Single-turn, non-adaptive attacks.</b> Real attackers iterate. Transaction-note injection and multi-turn attacks weren't tested.</li>
 <li><b>Deterministic judges.</b> They measure planted numbers, leaked balances, tool calls and handoffs exactly, but not subtler wrong wording. They were validated against Qwen's outputs; hosted replies weren't separately spot-checked.</li>
 <li><b>A mock bank.</b> Real core-banking systems, OTP flows and approval processes have their own controls that this prototype simplifies.</li>

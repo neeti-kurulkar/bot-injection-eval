@@ -189,7 +189,8 @@ with tabs[2]:
             "comparisons.\n"
             "- **Held-out reuse**: those attacks had been run on Qwen first (nothing was tuned on them).\n"
             "- **Hosted models can't be pinned**: results are for the models as served on 16 October 2026.\n"
-            "- **One prompt for all, built on Qwen**: each model might do better with its own prompting.\n"
+            "- **One generic prompt for all models**: plain business instructions, never tuned on any model. That "
+            "keeps the comparison fair, but vendor-specific prompting might change each model's results.\n"
             "- **Judges were validated on Qwen's replies only**; hosted replies weren't hand-checked.\n"
             "- **Single-turn, non-adaptive attacks** on a mock bank.")
 

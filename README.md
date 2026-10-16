@@ -147,7 +147,7 @@ The study ran in gated stages. Each stage has a script in `scripts/` and a resul
 - Single-turn, non-adaptive attacks.
 - One run per model and condition, with small per-goal and per-language cells.
 - Only numeric policy fabrication is measured.
-- The prompt and guard were built on Qwen.
+- One generic prompt was used for every model (fair comparison, but vendor-specific prompting might change each model's results).
 - Hosted models aren't pinnable.
 - The judges were spot-checked on Qwen only, and the 66-item spot-check sheet isn't labelled yet.
 
