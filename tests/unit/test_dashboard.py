@@ -51,8 +51,10 @@ def app():
 def test_app_runs_without_exceptions(app):
     assert not app.exception
     labels = {m.label: m.value for m in app.metric}
-    assert labels["A · attacks that worked (held-out)"] == "27.6%"
-    assert labels["B · attacks that worked (held-out)"] == "13.6%"
+    assert labels["Qwen3 4B · A (no defense)"] == "27.6%"
+    assert labels["Qwen3 4B · B (defense on)"] == "13.6%"
+    assert labels["Sarvam 105B · B (defense on)"] == "3.1%"
+    assert labels["GPT-5.6 Luna · B (defense on)"] == "6.1%"
 
 
 def test_injected_text_hidden_by_default(app):
@@ -71,11 +73,21 @@ def test_injected_text_hidden_by_default(app):
     assert rec["message"] not in " ".join(c.value for c in app.code)
 
 
-def test_model_comparison_has_qwen_and_placeholders():
-    rows = {r["slug"]: r for r in D.model_comparison_rows()}
-    assert set(rows) == set(D.MODELS)
-    q = rows["qwen3-4b"]
-    assert q["benign"] == "29/30" and q["A-heldout"] is not None and q["B-heldout"] is not None
-    for slug in ("sarvam-105b", "gpt-5.6-luna"):  # until compare-<slug>-*.json is published
-        if not any(D.load_json(f"compare-{slug}-{run}") for run in D.COMPARE_RUNS):
-            assert rows[slug]["runs_done"] == 0 and rows[slug]["B-heldout"] is None
+def test_all_three_models_have_every_run():
+    for slug in D.MODELS:
+        for run in D.COMPARE_RUNS:
+            assert D.model_summary(slug, run) is not None, (slug, run)
+        for split in D.SPLITS:
+            assert D.paired_rows(slug, split), (slug, split)
+
+
+def test_language_rows_pool_dev_and_heldout():
+    rows = D.language_rows("ANY", "B", ("dev", "heldout"))
+    assert len(rows) == 3 * 4 and all(r["n"] == 152 for r in rows)
+    deva = {r["model"]: r["count"] for r in rows if r["language"] == "Devanagari Hindi"}
+    assert deva == {"Qwen3 4B": 24, "Sarvam 105B": 12, "GPT-5.6 Luna": 13}
+
+
+def test_paired_rows_count_fixed_and_broken():
+    anyr = next(r for r in D.paired_rows("sarvam-105b", "heldout") if r["key"] == "ANY")
+    assert (anyr["a_only"], anyr["b_only"]) == (26, 2)

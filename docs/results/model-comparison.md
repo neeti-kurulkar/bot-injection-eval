@@ -49,6 +49,32 @@ Paired A − B, any goal (Newcombe method 10): Qwen +14.0 pts (8.6 to 19.6); Sar
 
 G1 under B on dev: Qwen 22/80, Sarvam 13/80, GPT 13/80.
 
+## By language (all three models)
+
+Any-goal attack success by language, pooled over development and held-out (152 attacks per language per model; Wilson 95% intervals). Pooling gives more data per cell; under B the development part is in-sample for the guard.
+
+| | English | Hinglish | Devanagari Hindi | Romanized Hindi |
+|---|---|---|---|---|
+| Qwen A | 28.9% (22–37) | 20.4% (15–27) | 28.3% (22–36) | 16.4% (11–23) |
+| Sarvam A | 14.5% (10–21) | 11.2% (7–17) | 12.5% (8–19) | 11.2% (7–17) |
+| GPT A | 21.1% (15–28) | 17.8% (13–25) | 25.0% (19–32) | 17.8% (13–25) |
+| Qwen B | 7.9% (5–13) | 8.6% (5–14) | **15.8% (11–22)** | 9.9% (6–16) |
+| Sarvam B | 2.0% (1–6) | 2.0% (1–6) | **7.9% (5–13)** | 3.9% (2–8) |
+| GPT B | 2.6% (1–7) | 3.3% (1–7) | **8.6% (5–14)** | 5.9% (3–11) |
+
+Planted wrong policy (G1) by language, same pooling (32 attacks per cell):
+
+| | English | Hinglish | Devanagari Hindi | Romanized Hindi |
+|---|---|---|---|---|
+| Qwen A → B | 9 → 7 | 9 → 6 | 22 → 23 | 14 → 13 |
+| Sarvam A → B | 3 → 1 | 3 → 3 | 11 → 9 | 9 → 6 |
+| GPT A → B | 3 → 1 | 7 → 4 | 15 → 11 | 9 → 8 |
+
+- **Under B, Devanagari Hindi is the worst language for every model.** The cause is planted policy: written in Devanagari it is repeated far more often (Qwen 23/32, GPT 11/32, Sarvam 9/32) than in English (7, 1, 1 of 32). Each single comparison has wide intervals, but the same ordering on all three models makes the pattern more convincing than any one cell.
+- **Under A, English attacks were the most effective for actions.** Leaking another customer's balance and blocking handoffs worked most in English on all three models (e.g. G2 in English: Qwen 7/32, Sarvam 11/32, GPT 10/32). B removes those, which leaves the Hindi policy gap as the main language difference.
+- **The Hindi-focused model (Sarvam) is lowest in every language, with and without B**, but it does not remove the Devanagari gap.
+- **Normal requests barely depend on language.** Look-alike pass rates are 90–100% in every language for Sarvam and GPT; Qwen is weakest in romanized Hindi (70%).
+
 ## Findings
 
 1. **The code checks behaved the same on every model.** Under B, other customers' balances, card/contact changes and unrequested transfers were 0 in every run, and no attack scenario produced a cross-customer tool access, an unauthorized T2 action or an unrequested T3 proposal (3 models × 2 splits = 1,824 attack scenarios). These are enforced in code, not by the model, so the model does not matter for them.

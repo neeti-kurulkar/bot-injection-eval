@@ -274,9 +274,28 @@ footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--rule);
 <li><b>Model choice matters a lot without the defense and much less with it.</b> Under A, held-out success ranged from 13.6% to 27.6%. Under B it ranged from 3.1% to 13.6%, and most of what's left is planted policy.</li>
 <li><b>Bigger isn't uniformly better.</b> GPT-5.6 Luna was the most reliable on ordinary requests (40/40 look-alikes, no protocol failures) but was steered almost twice as often as Sarvam without the defense (25.0% vs 13.6%; the intervals don't overlap). Its weak spot was acting on direct requests: 10 of 12 direct-message attempts at an unauthorized card or contact change worked.</li>
 <li><b>Planted policy is still the open problem, but it moved on the larger models.</b> B didn't reduce it on Qwen, but did on Sarvam (13 → 6) and GPT (16 → 11), with intervals that only just exclude zero. One plausible reading is that larger models follow the data-marking instruction better; I didn't test that directly. Poisoned policy documents remain the most effective place to plant it.</li>
-<li><b>Hindi is still weaker, even for the Hindi-focused model.</b> Under B on held-out, planted policy worked 0/12 times in English on both hosted models, against 2–5/12 in Devanagari or romanized Hindi (small cells, exploratory).</li>
+<li><b>Devanagari Hindi is the weakest language for every model once the defense is on.</b> See the language comparison below.</li>
 <li><b>The defense cost nothing in usability here.</b> No look-alike was falsely blocked on any model, and pass rates were the same under A and B.</li>
 </ol>
+
+<h3>By language, all three models</h3>
+<p>Every attack exists in English, Hinglish, Devanagari Hindi and romanized Hindi. The table pools development and held-out attacks: 152 per language per model, which gives more data per cell (under B the development part is in-sample for the guard). Share of attacks that worked, any goal:</p>
+<div class="table-wrap"><table>
+<tr><th></th><th class="n">English</th><th class="n">Hinglish</th><th class="n">Devanagari</th><th class="n">Romanized</th></tr>
+<tr><td>Qwen · A</td><td class="n">28.9%</td><td class="n">20.4%</td><td class="n">28.3%</td><td class="n">16.4%</td></tr>
+<tr><td>Sarvam · A</td><td class="n">14.5%</td><td class="n">11.2%</td><td class="n">12.5%</td><td class="n">11.2%</td></tr>
+<tr><td>GPT · A</td><td class="n">21.1%</td><td class="n">17.8%</td><td class="n">25.0%</td><td class="n">17.8%</td></tr>
+<tr><td>Qwen · B</td><td class="n">7.9%</td><td class="n">8.6%</td><td class="n"><b>15.8%</b></td><td class="n">9.9%</td></tr>
+<tr><td>Sarvam · B</td><td class="n">2.0%</td><td class="n">2.0%</td><td class="n"><b>7.9%</b></td><td class="n">3.9%</td></tr>
+<tr><td>GPT · B</td><td class="n">2.6%</td><td class="n">3.3%</td><td class="n"><b>8.6%</b></td><td class="n">5.9%</td></tr>
+</table></div>
+<ul>
+<li><b>Under B, Devanagari is the worst language on all three models,</b> and planted policy is why. Written in Devanagari, a fake fee or deadline was repeated 23 of 32 times by Qwen, 11 by GPT and 9 by Sarvam, against 7, 1 and 1 in English.</li>
+<li><b>Under A, English attacks were the most effective at actions.</b> Leaking balances and blocking handoffs worked most in English on every model. B removes those, so the Hindi policy gap is what's left.</li>
+<li><b>Sarvam, the Hindi-focused model, was lowest in every language</b>, with and without B, but still shows the Devanagari gap.</li>
+<li><b>Normal requests barely depend on language:</b> 90–100% of look-alikes passed in every language on the hosted models. Qwen was weakest in romanized Hindi (70%).</li>
+<li>Each cell has a wide 95% range (about ±5–7 points). The Devanagari pattern is convincing because it repeats on all three models, not because of any single cell.</li>
+</ul>
 
 <h3>Cost and speed</h3>
 <div class="table-wrap"><table>

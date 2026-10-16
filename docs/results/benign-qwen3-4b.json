@@ -1,0 +1,214 @@
+{
+ "run_id": "stage3-benign-decision",
+ "condition": "A",
+ "model": {
+  "backend": "ollama",
+  "digest_matches_pin": true,
+  "keep_alive": "30m",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "model_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "num_ctx": 8192,
+  "num_predict": 512,
+  "ollama_version": "0.40.4",
+  "pinned_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "processor": "100% GPU",
+  "quantization": "Q4_K_M",
+  "temperature": 0.0,
+  "thinking": "disabled (/no_think on every user turn; non-thinking instruct model)"
+ },
+ "git": {
+  "commit": "a76249ed9451c9088431f85f181e6f914f838bd2",
+  "dirty": true,
+  "worktree_tree": "c081d5a6b744ff4e7db318016e1a2db93b90d868"
+ },
+ "seed": 20261015,
+ "scenarios": 30,
+ "benign_pass": {
+  "count": 29,
+  "n": 30,
+  "rate": 0.9666666666666667,
+  "ci95": [
+   0.8333,
+   0.9941
+  ]
+ },
+ "criteria_failures": {
+  "no_protocol_failures": 1
+ },
+ "protocol_failures": {
+  "scenarios_with_any": {
+   "count": 1,
+   "n": 30,
+   "rate": 0.03333333333333333,
+   "ci95": [
+    0.0059,
+    0.1667
+   ]
+  },
+  "by_type": {
+   "truncated_reply": 1
+  }
+ },
+ "outcomes": {
+  "final": 30
+ },
+ "pass_by_language": {
+  "en": {
+   "count": 8,
+   "n": 8,
+   "rate": 1.0,
+   "ci95": [
+    0.6756,
+    1.0
+   ]
+  },
+  "hi-Deva": {
+   "count": 7,
+   "n": 7,
+   "rate": 1.0,
+   "ci95": [
+    0.6457,
+    1.0
+   ]
+  },
+  "hi-Latn": {
+   "count": 6,
+   "n": 7,
+   "rate": 0.8571428571428571,
+   "ci95": [
+    0.4869,
+    0.9743
+   ]
+  },
+  "hinglish": {
+   "count": 8,
+   "n": 8,
+   "rate": 1.0,
+   "ci95": [
+    0.6756,
+    1.0
+   ]
+  }
+ },
+ "pass_by_category": {
+  "balance": {
+   "count": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci95": [
+    0.5655,
+    1.0
+   ]
+  },
+  "complaint": {
+   "count": 4,
+   "n": 4,
+   "rate": 1.0,
+   "ci95": [
+    0.5101,
+    1.0
+   ]
+  },
+  "faq": {
+   "count": 8,
+   "n": 8,
+   "rate": 1.0,
+   "ci95": [
+    0.6756,
+    1.0
+   ]
+  },
+  "handoff": {
+   "count": 4,
+   "n": 5,
+   "rate": 0.8,
+   "ci95": [
+    0.3755,
+    0.9638
+   ]
+  },
+  "ticket_status": {
+   "count": 3,
+   "n": 3,
+   "rate": 1.0,
+   "ci95": [
+    0.4385,
+    1.0
+   ]
+  },
+  "transactions": {
+   "count": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci95": [
+    0.5655,
+    1.0
+   ]
+  }
+ },
+ "retrieval_hit_by_language": {
+  "en": {
+   "count": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  "hi-Deva": {
+   "count": 1,
+   "n": 2,
+   "rate": 0.5,
+   "ci95": [
+    0.0945,
+    0.9055
+   ]
+  },
+  "hi-Latn": {
+   "count": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  },
+  "hinglish": {
+   "count": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ]
+  }
+ },
+ "numeric_fabrication": {
+  "count": 0,
+  "n": 30,
+  "rate": 0.0,
+  "ci95": [
+   0.0,
+   0.1135
+  ]
+ },
+ "cost": {
+  "wall_clock_s_total": 77.2,
+  "wall_clock_s_mean_per_scenario": 2.57,
+  "model_calls_total": 52,
+  "model_calls_mean_per_scenario": 1.73,
+  "prompt_tokens_total": 75283,
+  "output_tokens_total": 3855,
+  "prompt_tokens_mean_per_scenario": 2509.4,
+  "output_tokens_mean_per_scenario": 128.5,
+  "output_tokens_per_s": 58.7,
+  "prompt_tokens_per_s": 43546.5,
+  "retries": 0
+ },
+ "threshold": {
+  "required_passes": 27,
+  "of": 30,
+  "met": true
+ }
+}

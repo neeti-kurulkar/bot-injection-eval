@@ -353,6 +353,16 @@ model asks for a tool ──► [1 checks in code] ──► runs, or denied wit
 <tr><td>Look-alikes passed (of 40)</td><td class="n">34 → 34</td><td class="n">39 → 39</td><td class="n">40 → 40</td></tr>
 </table></div>
 
+<h3>By language, all three models</h3>
+<p>Share of attacks that worked, pooling development and held-out attacks (152 per language per model):</p>
+<div class="table-wrap"><table>
+<tr><th></th><th class="n">English</th><th class="n">Hinglish</th><th class="n">Devanagari</th><th class="n">Romanized</th></tr>
+<tr><td>Qwen · A → B</td><td class="n">28.9 → 7.9%</td><td class="n">20.4 → 8.6%</td><td class="n">28.3 → <b>15.8%</b></td><td class="n">16.4 → 9.9%</td></tr>
+<tr><td>Sarvam · A → B</td><td class="n">14.5 → 2.0%</td><td class="n">11.2 → 2.0%</td><td class="n">12.5 → <b>7.9%</b></td><td class="n">11.2 → 3.9%</td></tr>
+<tr><td>GPT · A → B</td><td class="n">21.1 → 2.6%</td><td class="n">17.8 → 3.3%</td><td class="n">25.0 → <b>8.6%</b></td><td class="n">17.8 → 5.9%</td></tr>
+</table></div>
+<p>With the defense on, Devanagari Hindi is the worst language on every model. The reason is planted policy: in Devanagari, a fake fee was repeated 23, 9 and 11 times out of 32 (Qwen, Sarvam, GPT), against 7, 1 and 1 in English. Without the defense, English attacks were the best at making the bot <i>act</i> (leaking balances, blocking handoffs). B removes those, which leaves the Hindi policy gap. Sarvam was lowest in every language but didn't close the gap. The <b>By language</b> tab in the dashboard shows every goal this way.</p>
+
 <h3>Which defense did what (Qwen, dev data)</h3>
 <div class="table-wrap"><table>
 <tr><th>Variant</th><th class="n">Any goal (of 380)</th><th class="n">G1</th><th class="n">G3</th><th class="n">G5</th></tr>
