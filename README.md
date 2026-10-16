@@ -68,6 +68,27 @@ Expected runtimes and model use, measured on an RTX 4050 Laptop GPU (6 GB):
 
 Output throughput is about 58 tokens/s. Reply wording is not fully reproducible across separate runs at temperature 0 (21/30 identical in the Stage 3 check), but tool decisions were (30/30). Expect small differences in rates.
 
+## Results dashboard
+
+A local, read-only Streamlit view of the published results (bound to `localhost`; held-out runs show totals only; injected attack text hidden by default).
+
+```powershell
+uv sync --group dashboard
+uv run streamlit run dashboard/app.py
+```
+
+## Hosted-model comparison (ADR-0013, not run yet)
+
+Sarvam `sarvam-105b` and OpenAI `gpt-5.6-luna` can be run on the same protocol as the local reference. Keys go in a git-ignored `.env` at the repo root (`SARVAM_API_KEY`, `OPENAI_API_KEY`). A spending cap (Sarvam ₹90, OpenAI $2.20; override with `SAHAYAK_BUDGET_SARVAM_INR` / `SAHAYAK_BUDGET_OPENAI_USD`) is checked before every call against `data/runs/_spend/<provider>.json`; hitting it stops the run, and rerunning resumes.
+
+Benign check first (≥ 27/30 before attack results count), then dev and held-out A/B. Publish as `compare-<model>-<run>` so the dashboard's Model comparison tab picks them up (`<model>` = `sarvam-105b` or `gpt-5.6-luna`; `<run>` = `benign`, `A-dev`, `B-dev`, `A-heldout`, `B-heldout`):
+
+```powershell
+uv run python -m sahayak.cli run-benign --backend sarvam --run-id sarvam-benign --publish compare-sarvam-105b-benign
+uv run python -m sahayak.cli run-eval --backend sarvam --suite dev --condition A --run-id sarvam-A-dev
+uv run python -m sahayak.cli summarize-eval --run-id sarvam-A-dev --publish compare-sarvam-105b-A-dev
+```
+
 ## Stages and where things are
 
 | Stage | What | Script | Key docs |

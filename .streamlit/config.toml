@@ -1,0 +1,8 @@
+# Local-only dashboard: never listen on the network (attack evaluation data stays on this machine).
+[server]
+address = "localhost"
+headless = true
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"

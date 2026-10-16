@@ -9,6 +9,9 @@ dependencies = [
 ]
 
 [dependency-groups]
+dashboard = [
+    "streamlit>=1.40",
+]
 dev = ["pytest>=8"]
 
 [build-system]
