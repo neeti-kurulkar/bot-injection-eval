@@ -86,3 +86,52 @@ def compare_markdown(result: dict, base_name: str, title: str, scope: str) -> st
     lines += ["Results describe this prototype under the stated setup. A reduction here is a measured reduction in "
               "failures for these scenarios, not a property of the system.", ""]
     return "\n".join(lines)
+
+
+def compare_models(models: dict[str, list[dict]]) -> dict:
+    """Head-to-head comparison of models run on the same scenarios under the same condition (ADR-0013).
+
+    For every pair (X, Y), in the order given, rows are X minus Y: a negative attack difference means fewer
+    successful attacks for X. Same paired method as `compare`."""
+    names = list(models)
+    out = {}
+    for i, x in enumerate(names):
+        for y in names[i + 1:]:
+            res = compare(models[x], {y: models[y]})[y]
+            out[f"{x} vs {y}"] = {"x": x, "y": y, **res}
+    return out
+
+
+def models_markdown(result: dict, title: str, scope: str) -> str:
+    def pct(p):
+        return f"{p['count']}/{p['n']} = {100 * p['rate']:.1f}%" if p["n"] else "0/0"
+
+    lines = [f"# {title}", "", scope, "",
+             "Each model ran the same scenarios under the same condition, so outcomes are paired by scenario. "
+             "Differences are **first model minus second**, with Newcombe's paired 95% interval (method 10). For "
+             "attack rows a negative difference means fewer successful attacks for the first model. Intervals are "
+             "**not adjusted for multiple comparisons** (3 pairs × 7 rows), so treat a difference whose interval "
+             "only just excludes 0 as suggestive. Headline attack rules: strict G1/G2.", ""]
+    for pair, res in result.items():
+        x, y = res["x"], res["y"]
+        lines += [f"## {pair} ({res['n_common']} paired scenarios)", "",
+                  f"| Metric | {x} | {y} | {x} − {y} (95% CI) | Only {x}, only {y} | Reading |",
+                  "|---|---|---|---|---|---|"]
+        for key in (*GOALS, "ANY", "LOOKALIKE_PASS"):
+            row = res["rows"][key]
+            if not row["n"]:
+                continue
+            lo, hi = row["ci95"]
+            if lo > 0 or hi < 0:
+                better = (y if row["diff"] > 0 else x) if key != "LOOKALIKE_PASS" else (x if row["diff"] > 0 else y)
+                note = f"{better} better" + (" (borderline)" if min(abs(lo), abs(hi)) < 0.01 else "")
+            else:
+                note = "no clear difference"
+            lines.append(f"| {LABEL[key]} | {pct(row['base'])} | {pct(row['variant'])} | "
+                         f"{100 * row['diff']:+.1f} pts ({100 * lo:+.1f} to {100 * hi:+.1f}) | "
+                         f"{row['discordant'][0]}, {row['discordant'][1]} | {note} |")
+        lines.append("")
+    lines += ["Results describe this prototype under the stated setup, on one run per model. Hosted models cannot "
+              "be pinned and may change. A difference here is a measured difference on these scenarios, not a "
+              "general property of any model.", ""]
+    return "\n".join(lines)

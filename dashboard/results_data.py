@@ -207,6 +207,34 @@ def paired_rows(slug: str, split: str) -> list[dict]:
     return rows
 
 
+H2H_METRICS = (*GOALS, "ANY", "LOOKALIKE_PASS")
+H2H_LABEL = {**GOAL_LABEL, "ANY": "Any goal", "LOOKALIKE_PASS": "Look-alikes passed"}
+
+
+def head_to_head_rows(cond: str, split: str, metric: str) -> list[dict]:
+    """Paired model-vs-model rows from docs/results/model-vs-model-<cond>-<split>.json (one per model pair)."""
+    data = load_json(f"model-vs-model-{cond}-{split}")
+    if not data:
+        return []
+    rows = []
+    for pair, res in data.items():
+        r = res["rows"][metric]
+        x, y = res["x"], res["y"]
+        lo, hi = 100 * r["ci95"][0], 100 * r["ci95"][1]
+        if lo > 0 or hi < 0:
+            fewer_is_better = metric != "LOOKALIKE_PASS"
+            winner = (y if r["diff"] > 0 else x) if fewer_is_better else (x if r["diff"] > 0 else y)
+            verdict = f"{winner} better" + (" (borderline)" if min(abs(lo), abs(hi)) < 1 else "")
+        else:
+            verdict = "no clear difference"
+        rows.append({"Pair": pair, "x": x, "y": y,
+                     "First model": f"{r['base']['count']}/{r['base']['n']} ({pct(r['base']):.1f}%)",
+                     "Second model": f"{r['variant']['count']}/{r['variant']['n']} ({pct(r['variant']):.1f}%)",
+                     "diff_pts": 100 * r["diff"], "ci_low": lo, "ci_high": hi,
+                     "Only first": r["discordant"][0], "Only second": r["discordant"][1], "Verdict": verdict})
+    return rows
+
+
 def reading(row: dict) -> str:
     """Plain-language reading of one paired row."""
     if row["kind"] == "attack":

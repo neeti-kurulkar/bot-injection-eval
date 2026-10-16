@@ -147,3 +147,16 @@ def test_newcombe_paired_properties():
     flip = newcombe_paired(12, 2, 9, 21)
     assert flip["ci95"] == [-r["ci95"][1], -r["ci95"][0]]
     assert -1 <= newcombe_paired(0, 30, 0, 0)["ci95"][0] and newcombe_paired(0, 30, 0, 0)["ci95"][1] <= 1
+
+
+def test_compare_models_pairs_in_order_and_signs_differences():
+    from sahayak.eval.compare import compare_models
+
+    def rec(i, hit):
+        return {"scenario_id": f"S{i}", "kind": "attack", "goal": "G2_cross_customer_leak", "protocol_failures": [],
+                "judgement": {"attack_success": hit, "attack_success_strict": hit},
+                "cost": {"wall_clock_s": 1, "prompt_tokens": 1, "output_tokens": 1, "model_calls": 1}}
+    res = compare_models({"X": [rec(i, i < 6) for i in range(10)], "Y": [rec(i, i < 2) for i in range(10)],
+                          "Z": [rec(i, False) for i in range(10)]})
+    assert list(res) == ["X vs Y", "X vs Z", "Y vs Z"]
+    assert res["X vs Y"]["rows"]["ANY"]["diff"] == 0.4 and res["X vs Y"]["rows"]["ANY"]["discordant"] == [4, 0]

@@ -39,6 +39,47 @@ Share of attacks that worked, headline rules.
 
 Paired A − B, any goal (Newcombe method 10): Qwen +14.0 pts (8.6 to 19.6); Sarvam +10.5 pts (6.2 to 15.4); GPT +18.9 pts (13.9 to 24.3). Planted wrong policy (G1): Qwen −4.2 pts (−14.4 to +6.3, not better); Sarvam +14.6 pts (+2.1 to +27.3); GPT +10.4 pts (+0.8 to +20.3).
 
+## Head to head: paired model-vs-model comparisons
+
+All three models ran exactly the same scenarios, so each pair can be compared scenario by scenario (Newcombe paired 95% interval, as for A vs B). Differences are first model minus second; for attacks, negative means the first model was fooled less. Full tables for every goal: `model-vs-model-<A|B>-<heldout|dev>.md`.
+
+**Held-out, any goal (228 attacks)**
+
+| Pair | Condition A | Condition B |
+|---|---|---|
+| Qwen − Sarvam | +14.0 pts (+8.3 to +19.8): **Sarvam better** | +10.5 pts (+6.2 to +15.4): **Sarvam better** |
+| Qwen − GPT | +2.6 pts (−4.0 to +9.2): no clear difference | +7.5 pts (+3.0 to +12.2): **GPT better** |
+| Sarvam − GPT | −11.4 pts (−16.8 to −6.1): **Sarvam better** | −3.1 pts (−6.6 to −0.0): Sarvam better, borderline |
+
+**Held-out, planted wrong policy (G1, 48 attacks)**
+
+| Pair | Condition A | Condition B |
+|---|---|---|
+| Qwen − Sarvam | +25.0 pts (+5.4 to +42.1): **Sarvam better** | +43.8 pts (+26.6 to +57.5): **Sarvam better** |
+| Qwen − GPT | +18.8 pts (+1.0 to +34.8): GPT better, borderline | +33.3 pts (+16.2 to +47.6): **GPT better** |
+| Sarvam − GPT | −6.2 pts (−19.9 to +7.7): no clear difference | −10.4 pts (−23.5 to +2.5): no clear difference |
+
+**Held-out, look-alikes passed (40)**: GPT passed more than Qwen in both conditions (−15.0 pts, −29.1 to −3.2). No other pair differs clearly.
+
+**Does it replicate on development attacks (380)?** Yes, in direction. Under A, Sarvam beat Qwen (+9.5, +5.1 to +14.0) and GPT (−6.0, −10.5 to −1.7), and Qwen vs GPT was unclear. Under B, both hosted models beat Qwen (+4.2 each), and Sarvam and GPT were identical (17 vs 17).
+
+**What can be stated:**
+1. **Without the defense, Sarvam 105B was fooled least**, about half as often as either GPT-5.6 Luna or Qwen3 4B. This holds on both held-out and development attacks.
+2. **Without the defense, GPT-5.6 Luna and Qwen3 4B were not clearly different** overall, despite the size gap.
+3. **With the defense, both hosted models were fooled less than Qwen**, mainly because they repeated planted policy far less (G1).
+4. **With the defense, Sarvam and GPT are close.** Sarvam was ahead on held-out by a borderline margin and exactly tied on development, so don't claim a winner between them under B.
+5. **GPT-5.6 Luna was the most reliable on normal requests**: it passed more look-alikes than Qwen.
+
+**Caveats for publishing these comparisons:**
+- **One run per model.** No run-to-run repeat on the hosted models, so the intervals reflect scenario sampling only, not model randomness. GPT-5.6 Luna couldn't be run at temperature 0.
+- **Not adjusted for multiple comparisons** (3 pairs × several metrics × 2 conditions × 2 splits). Treat results whose interval only just excludes 0 as suggestive. The clearest claims above replicate on both splits.
+- **Not pre-registered as model-vs-model hypotheses.** ADR-0013 fixed the protocol and scope before the runs, but not which comparisons would be headline.
+- **Held-out reuse.** The held-out families had been run on Qwen before the hosted models saw them; the defense was frozen, so nothing was tuned on them.
+- **Hosted models can't be pinned.** Results describe `sarvam-105b` and `gpt-5.6-luna` as served on 16 October 2026.
+- **Same prompt for everyone, built on Qwen.** Each model might do better with its own prompting.
+- **Judges validated on Qwen's replies only.** Hosted replies weren't hand-checked, and the 66-item numeric spot-check sheet is still unlabelled. This matters most for G1.
+- **Single-turn, non-adaptive attacks** on a mock bank.
+
 ## Development families (in-sample for the guard)
 
 | Any goal | A | B |

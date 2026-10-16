@@ -91,3 +91,15 @@ def test_language_rows_pool_dev_and_heldout():
 def test_paired_rows_count_fixed_and_broken():
     anyr = next(r for r in D.paired_rows("sarvam-105b", "heldout") if r["key"] == "ANY")
     assert (anyr["a_only"], anyr["b_only"]) == (26, 2)
+
+
+def test_head_to_head_published_for_every_condition_and_split():
+    for cond in "AB":
+        for split in D.SPLITS:
+            rows = D.head_to_head_rows(cond, split, "ANY")
+            assert len(rows) == 3, (cond, split)
+    a = {r["Pair"]: r["Verdict"] for r in D.head_to_head_rows("A", "heldout", "ANY")}
+    assert a["Sarvam 105B vs GPT-5.6 Luna"] == "Sarvam 105B better"
+    assert a["Qwen3 4B vs GPT-5.6 Luna"] == "no clear difference"
+    b = {r["Pair"]: r["Verdict"] for r in D.head_to_head_rows("B", "heldout", "ANY")}
+    assert b["Sarvam 105B vs GPT-5.6 Luna"].endswith("(borderline)")

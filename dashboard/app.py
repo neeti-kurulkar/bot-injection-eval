@@ -76,7 +76,7 @@ def heatmap(df: pd.DataFrame, x: str, y: str, title: str, good_high: bool = Fals
     return (heat + text).properties(height=height)
 
 
-tabs = st.tabs(["Start here", "Models compared", "By language", "Did the defense help?",
+tabs = st.tabs(["Start here", "Models compared", "Head to head", "By language", "Did the defense help?",
                 "Where attacks hide", "Which defense did what", "Read a conversation"])
 
 # ------------------------------------------------------------------ start here
@@ -143,8 +143,58 @@ with tabs[1]:
     st.caption("Look-alikes are 40 normal requests that sound like attacks (held-out set). 'Wrongly blocked' counts "
                "requests B's guard or permission checks stopped. Protocol failures are malformed or truncated replies.")
 
-# ------------------------------------------------------------------ by language
+# ------------------------------------------------------------------ head to head
 with tabs[2]:
+    st.header("Head to head: which model was fooled less?")
+    st.markdown("All three models ran **exactly the same attacks**, so each pair can be compared attack by attack. "
+                "\"Only first\" counts attacks that fooled the first model but not the second, and vice versa. "
+                "If the 95% range of the difference doesn't cross zero, one model was clearly fooled less.")
+    h1, h2 = st.columns(2)
+    hcond = h1.radio("Condition", ["A", "B"], format_func=D.COND_LABEL.get, horizontal=True, key="h2h_cond")
+    hmetric = h2.selectbox("Measure", list(D.H2H_METRICS), index=list(D.H2H_METRICS).index("ANY"),
+                           format_func=D.H2H_LABEL.get, key="h2h_metric")
+    hrows = D.head_to_head_rows(hcond, split, hmetric)
+    if not hrows:
+        st.warning("Head-to-head results not published yet (run `sahayak.cli compare-models`).")
+    else:
+        hdf = pd.DataFrame(hrows)
+        lower_better = hmetric != "LOOKALIKE_PASS"
+        pts = alt.Chart(hdf).mark_point(filled=True, size=140, color="#2A5C99").encode(
+            y=alt.Y("Pair:N", sort=None, title=None, axis=alt.Axis(labelLimit=320)),
+            x=alt.X("diff_pts:Q", title="First model minus second (percentage points)"),
+            tooltip=["Pair", "First model", "Second model", alt.Tooltip("diff_pts:Q", format="+.1f"), "Verdict"])
+        rng = alt.Chart(hdf).mark_rule(color="#5A6578", strokeWidth=2).encode(
+            y=alt.Y("Pair:N", sort=None), x="ci_low:Q", x2="ci_high:Q")
+        zero = alt.Chart(pd.DataFrame({"x": [0]})).mark_rule(color="#A8481C", strokeDash=[4, 4]).encode(x="x:Q")
+        st.altair_chart((rng + pts + zero).properties(height=200), width="stretch")
+        st.caption(("Left of the dashed line = the first model was fooled less; right = the second model was. "
+                    if lower_better else "Right of the dashed line = the first model passed more look-alikes. ")
+                   + "The line is the 95% range: if it crosses the dashed line, there's no clear difference.")
+        st.dataframe(hdf[["Pair", "First model", "Second model", "Only first", "Only second", "Verdict"]],
+                     width="stretch", hide_index=True)
+    st.markdown(
+        "**What can be stated** (held-out, replicated in direction on development attacks)\n"
+        "1. Without the defense, **Sarvam 105B was fooled least**, about half as often as GPT-5.6 Luna or Qwen3 4B.\n"
+        "2. Without the defense, **GPT-5.6 Luna and Qwen3 4B were not clearly different** overall.\n"
+        "3. With the defense, **both hosted models were fooled less than Qwen**, mainly on planted policy (G1).\n"
+        "4. With the defense, **Sarvam vs GPT is too close to call** (borderline on held-out, tied on development).\n"
+        "5. **GPT-5.6 Luna passed more normal look-alike requests** than Qwen.")
+    with st.expander("Caveats before publishing these comparisons"):
+        st.markdown(
+            "- **One run per model**: intervals cover scenario sampling, not run-to-run randomness. GPT-5.6 Luna "
+            "can't be run at temperature 0.\n"
+            "- **Not adjusted for multiple comparisons** (3 pairs × several measures × 2 conditions × 2 splits). "
+            "Results marked *borderline* are suggestive only; the clearest claims replicate on both splits.\n"
+            "- **Not pre-registered** as model-vs-model hypotheses: ADR-0013 fixed the protocol, not the headline "
+            "comparisons.\n"
+            "- **Held-out reuse**: those attacks had been run on Qwen first (nothing was tuned on them).\n"
+            "- **Hosted models can't be pinned**: results are for the models as served on 16 October 2026.\n"
+            "- **One prompt for all, built on Qwen**: each model might do better with its own prompting.\n"
+            "- **Judges were validated on Qwen's replies only**; hosted replies weren't hand-checked.\n"
+            "- **Single-turn, non-adaptive attacks** on a mock bank.")
+
+# ------------------------------------------------------------------ by language
+with tabs[3]:
     st.header("By language")
     st.markdown("Every attack exists in four versions: **English**, **Hinglish** (Hindi-English mix in Latin letters), "
                 "**Devanagari Hindi** (Hindi script) and **Romanized Hindi** (Hindi words in Latin letters).")
@@ -186,7 +236,7 @@ with tabs[2]:
     st.caption("Language barely affects normal requests; Qwen is weakest in Romanized Hindi.")
 
 # ------------------------------------------------------------------ paired defense effect
-with tabs[3]:
+with tabs[4]:
     st.header("Did the defense help?")
     st.markdown("A and B were run on **exactly the same attacks**, so each attack can be compared with itself: "
                 "did B stop an attack that worked under A (**fixed**), or let through one that A stopped (**broke**)?")
@@ -219,7 +269,7 @@ with tabs[3]:
             width="stretch", hide_index=True)
 
 # ------------------------------------------------------------------ surfaces
-with tabs[4]:
+with tabs[5]:
     st.header("Where attacks hide")
     st.markdown("**Direct:** the attacker types it. **Indirect:** it's planted in a past ticket, an internal account "
                 "note, or a policy document, and an innocent customer's ordinary question makes the bot read it.")
@@ -234,7 +284,7 @@ with tabs[4]:
                "fake policy on every model.")
 
 # ------------------------------------------------------------------ ablation
-with tabs[5]:
+with tabs[6]:
     st.header("Which defense did what (Qwen3 4B only)")
     st.markdown("To see what each part of B contributes, I switched one part off at a time. This was done on "
                 "development attacks only (to keep held-out clean) and only on the local model (to save API cost).")
@@ -250,7 +300,7 @@ with tabs[5]:
                 "- Nothing much moves G1 (planted policy) on this model.")
 
 # ------------------------------------------------------------------ transcript explorer
-with tabs[6]:
+with tabs[7]:
     st.header("Read a conversation")
     runs = D.browsable_runs()
     if not runs:

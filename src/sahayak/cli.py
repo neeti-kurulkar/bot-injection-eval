@@ -462,6 +462,27 @@ def cmd_compare_variants(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_compare_models(args: argparse.Namespace) -> int:
+    """ADR-0013: paired head-to-head comparison of models on the same scenarios and condition."""
+    from sahayak.eval.compare import compare_models, models_markdown
+    from sahayak.eval.runner import load_records
+
+    runs = _runs_dir(load_settings())
+    models = dict(spec.split("=", 1) for spec in args.runs)
+    result = compare_models({name: load_records(runs / run / "records.jsonl") for name, run in models.items()})
+    scope = ("HELD-OUT families: aggregate results only. These families had already been run on Qwen3 4B before "
+             "the hosted models saw them." if args.heldout else
+             "DEVELOPMENT families. Under Condition B these are in-sample for the guard.")
+    md = models_markdown(result, args.title, scope)
+    if args.publish:
+        results = REPO_ROOT / "docs" / "results"
+        (results / f"{args.publish}.md").write_text(md, encoding="utf-8", newline="\n")
+        (results / f"{args.publish}.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n",
+                                                      encoding="utf-8", newline="\n")
+    print(md)
+    return 0
+
+
 def cmd_spotcheck_sheet(args: argparse.Namespace) -> int:
     """ADR-0005: hand spot-check sheet of numeric-fabrication flags (DEVELOPMENT runs only)."""
     from sahayak.eval.runner import load_records
@@ -591,6 +612,13 @@ def main(argv: list[str] | None = None) -> int:
     cv.add_argument("--heldout", action="store_true")
     cv.add_argument("--publish", default=None)
     cv.set_defaults(fn=cmd_compare_variants)
+
+    cm = sub.add_parser("compare-models", help="ADR-0013: paired model-vs-model comparison on the same runs")
+    cm.add_argument("--runs", nargs="+", required=True, help="NAME=RUN_ID, e.g. qwen3-4b=stage6-B-heldout")
+    cm.add_argument("--title", default="Model vs model")
+    cm.add_argument("--heldout", action="store_true")
+    cm.add_argument("--publish", default=None)
+    cm.set_defaults(fn=cmd_compare_models)
 
     sc = sub.add_parser("spotcheck-sheet", help="Hand spot-check sheet for numeric-fabrication flags (dev runs)")
     sc.add_argument("--run-id", required=True)
