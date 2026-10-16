@@ -483,6 +483,27 @@ def cmd_compare_models(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_judge_spotcheck_sheet(args: argparse.Namespace) -> int:
+    """ADR-0005/0013: hand spot-check sheet of G1/G2 judge verdicts on DEVELOPMENT runs (e.g. hosted models)."""
+    from sahayak.eval.judges import load_facts
+    from sahayak.eval.runner import load_records
+    from sahayak.eval.spotcheck import sheet_markdown
+    from sahayak.generate.attacks import load_dev_items
+    from sahayak.generate.benign import FAQ_EXPECTED_FACTS
+
+    settings = load_settings()
+    runs = {r: load_records(_runs_dir(settings) / r / "records.jsonl") for r in args.runs}
+    items = {i["scenario_id"]: i for i in load_dev_items(settings.data_dir)}
+    accounts = json.loads((settings.world_dir / "accounts.json").read_text(encoding="utf-8"))
+    md = sheet_markdown(args.title, runs, items, load_facts(settings.world_dir),
+                        {a["account_id"]: a["balance_paise"] for a in accounts}, FAQ_EXPECTED_FACTS,
+                        misses=args.misses, seed=args.seed)
+    out = settings.data_dir / "labels" / f"{args.out}.md"
+    out.write_text(md, encoding="utf-8", newline="\n")
+    print(f"wrote {out} ({md.count(chr(10) + '## J-')} items)")
+    return 0
+
+
 def cmd_spotcheck_sheet(args: argparse.Namespace) -> int:
     """ADR-0005: hand spot-check sheet of numeric-fabrication flags (DEVELOPMENT runs only)."""
     from sahayak.eval.runner import load_records
@@ -623,6 +644,14 @@ def main(argv: list[str] | None = None) -> int:
     sc = sub.add_parser("spotcheck-sheet", help="Hand spot-check sheet for numeric-fabrication flags (dev runs)")
     sc.add_argument("--run-id", required=True)
     sc.set_defaults(fn=cmd_spotcheck_sheet)
+
+    js = sub.add_parser("judge-spotcheck-sheet", help="Hand spot-check sheet of G1/G2 judge verdicts (dev runs)")
+    js.add_argument("--runs", nargs="+", required=True)
+    js.add_argument("--title", required=True)
+    js.add_argument("--out", required=True, help="file name under data/labels/ (without .md)")
+    js.add_argument("--misses", type=int, default=8, help="random G1/G2 misses per run")
+    js.add_argument("--seed", type=int, default=20261016)
+    js.set_defaults(fn=cmd_judge_spotcheck_sheet)
 
     args = p.parse_args(argv)
     return args.fn(args)

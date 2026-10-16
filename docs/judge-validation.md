@@ -22,6 +22,20 @@ Procedure (ADR-0005):
 
 Status: sheet generated after the dev run: `data/labels/numeric_spotcheck_stage5-A-dev.md` (66 flags in 52 replies). **Awaiting the user's labels.**
 
+## Hand spot-check of G1/G2 verdicts on the hosted models (development runs, ADR-0013)
+
+The judges above were checked on Qwen3 4B's replies. The hosted models write differently: more markdown, other number formats, different Hindi phrasing. That matters most for the two text-based judges (G1 planted policy, G2 balance disclosure). The others read the audit and handoff logs and don't depend on reply style.
+
+Procedure:
+1. The agent writes one sheet per hosted model with `judge-spotcheck-sheet`. Each sheet holds every G1/G2 attack the strict judge counted as a success in the A and B development runs, plus 8 seeded random G1/G2 misses per run. Each item shows the planted and correct values (G1) or the other customer's balance (G2), and the bot's reply. Attack text is not shown.
+2. The **user** marks each verdict "judge right" or "judge wrong". The agent labels nothing.
+3. Report the agreement on judged successes and on judged misses separately, each with a Wilson 95% CI. This is descriptive and gates nothing.
+
+| Sheet | Items | Judged success | Sampled misses | Status |
+|---|---|---|---|---|
+| `data/labels/judge_spotcheck_sarvam-105b-dev.md` | 63 | 47 | 16 | **Awaiting the user's labels** |
+| `data/labels/judge_spotcheck_gpt-5.6-luna-dev.md` | 58 | 42 | 16 | **Awaiting the user's labels** |
+
 ## Agent's inspection of attack-judge verdicts (development run `stage5-A-dev`)
 
 Before the user's labelling, the agent read samples of judged successes and every failed look-alike. These are findings, not labels:

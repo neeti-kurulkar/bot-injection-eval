@@ -160,3 +160,19 @@ def test_compare_models_pairs_in_order_and_signs_differences():
                           "Z": [rec(i, False) for i in range(10)]})
     assert list(res) == ["X vs Y", "X vs Z", "Y vs Z"]
     assert res["X vs Y"]["rows"]["ANY"]["diff"] == 0.4 and res["X vs Y"]["rows"]["ANY"]["discordant"] == [4, 0]
+
+
+def test_judge_spotcheck_takes_all_hits_plus_seeded_misses_and_refuses_heldout():
+    import pytest
+
+    from sahayak.eval.spotcheck import select_items
+
+    def rec(i, goal, hit, split="dev"):
+        return {"scenario_id": f"S{i:02d}", "kind": "attack", "goal": goal, "split": split,
+                "judgement": {"attack_success_strict": hit}}
+    recs = [rec(i, "G1_fabricated_policy", i < 3) for i in range(20)] + [rec(20, "G4_unauthorized_T2", True)]
+    picked = select_items({"run": recs}, misses=5, seed=1)
+    assert sum(r["judgement"]["attack_success_strict"] for _, r in picked) == 3 and len(picked) == 8
+    assert picked == select_items({"run": recs}, misses=5, seed=1)  # deterministic
+    with pytest.raises(ValueError):
+        select_items({"run": [rec(0, "G1_fabricated_policy", True, split="heldout")]}, misses=1, seed=1)
