@@ -106,9 +106,47 @@ def language_heatmap() -> str:
     return svg(w, y + 44, body, "Attack success by language and model with the defense on")
 
 
+def overview() -> str:
+    """Method figure: the bot's turn and where each Condition B defense acts."""
+    w, h = 760, 330
+
+    def box(x, y, bw, bh, label, sub="", fill="#FFFDF8", stroke=RULE, bold=True):
+        out = [f"<rect x='{x}' y='{y}' width='{bw}' height='{bh}' rx='8' fill='{fill}' stroke='{stroke}'/>",
+               text(x + bw / 2, y + (bh / 2 + 5 if not sub else bh / 2 - 3), label, 14, INK, 600 if bold else 400, "middle")]
+        if sub:
+            out.append(text(x + bw / 2, y + bh / 2 + 15, sub, 11.5, MUTED, anchor="middle"))
+        return out
+
+    def arrow(x1, y1, x2, y2, dashed=False, col=MUTED):
+        dash = " stroke-dasharray='5 4'" if dashed else ""
+        return f"<line x1='{x1}' y1='{y1}' x2='{x2}' y2='{y2}' stroke='{col}' stroke-width='1.6'{dash} marker-end='url(#ah)'/>"
+
+    body = ["<defs><marker id='ah' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'>"
+            f"<path d='M0,0 L10,5 L0,10 z' fill='{MUTED}'/></marker></defs>",
+            text(24, 34, "System under test and the three Condition B defenses", 17, weight=600)]
+    body += box(24, 70, 160, 50, "Customer message", "direct injection")
+    body += box(24, 140, 160, 64, "Tickets, notes,", "policy documents · indirect", bold=True)
+    body += box(236, 100, 130, 60, "Prompt builder")
+    body += box(418, 100, 110, 60, "Model", "Qwen · Sarvam · GPT")
+    body += box(580, 100, 156, 60, "Tool layer", "11 tools · audit log")
+    body += box(580, 214, 156, 50, "Mock core bank", "SQLite")
+    body += [arrow(184, 95, 234, 120), arrow(184, 172, 234, 142), arrow(366, 130, 416, 130),
+             arrow(528, 122, 578, 122), arrow(578, 140, 530, 140), arrow(658, 160, 658, 212)]
+    blue, bfill = B_COL, "#E3ECF7"
+    body += box(24, 248, 160, 54, "3 · Input guard", "screens all untrusted text", bfill, blue)
+    body += box(236, 248, 130, 54, "2 · Data marking", "untrusted text = DATA", bfill, blue)
+    body += box(400, 248, 150, 54, "1 · Checks in code", "owner · sign-in · OTP", bfill, blue)
+    body += [arrow(104, 248, 104, 206, True, blue), arrow(301, 248, 301, 162, True, blue),
+             f"<path d='M550,275 C600,275 600,190 640,162' fill='none' stroke='{blue}' stroke-width='1.6' "
+             "stroke-dasharray='5 4' marker-end='url(#ah)'/>",
+             text(w - 24, 318, "Kept in both conditions: human approval for money · handoff always available", 11.5, MUTED, anchor="end")]
+    return svg(w, h, body, "System under test and the three Condition B defenses")
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, fn in (("heldout-by-model", heldout_by_model), ("goals-heldout", goals_table), ("language-b", language_heatmap)):
+    for name, fn in (("overview", overview), ("heldout-by-model", heldout_by_model), ("goals-heldout", goals_table),
+                     ("language-b", language_heatmap)):
         (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8", newline="\n")
         print(f"wrote docs/img/{name}.svg")
 
