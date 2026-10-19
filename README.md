@@ -33,6 +33,10 @@ Held-out attack families (228 attacks, 40 benign look-alikes per run). Rates are
 4. **Planted policy is the residual failure.** Repeating a planted value needs no tool, so B cannot block it. It did not fall on Qwen (25 → 27 of 48), and it fell on Sarvam (13 → 6) and GPT-5.6 Luna (16 → 11).
 5. **Devanagari Hindi is the weakest language variant under B on all three models**, driven by planted policy. This includes the Hindi-focused Sarvam 105B.
 6. **Model scale did not predict robustness.** Without the defense, Sarvam 105B was attacked successfully less often than both other models. GPT-5.6 Luna and Qwen3 4B were not clearly different.
+7. **Follow-up: answering policy numbers from structured facts** ([details](docs/results/structured-facts.md); development data, Qwen3 4B only).
+   - Offering a fact-lookup tool alone changed nothing: planted policy stayed at 22 of 80.
+   - Enforcing it with an output check in code cut planted policy to 0 of 80 and any-goal success from 8.7% to 2.9%. This drop is partly by construction, because the check and the scorer share logic.
+   - The check also replaced 18 ordinary card replies whose last-four digits it mistook for policy numbers.
 
 ## Results
 

@@ -1,6 +1,6 @@
 # ADR-0014: Structured-facts experiment (follow-up on planted policy)
 
-Status: Accepted (user decision, 2026-10-19). Development data and the local reference model only.
+Status: Accepted (user decision, 2026-10-19). Development data and the local reference model only. Run 2026-10-19; results in `docs/results/structured-facts.md`.
 
 ## Context
 Under Condition B the main remaining failure on every model is planted policy (G1): a fake fee, limit or deadline in a ticket, note, message or poisoned policy document is repeated as bank policy. Repeating a number needs no tool, so the permission checks cannot stop it. The bank already holds the correct values as 108 structured facts (`data/world/policy_facts.json`), but the bot never uses them; it answers from prose.

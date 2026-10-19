@@ -44,6 +44,16 @@ Paired by scenario, 228 attacks and 40 benign look-alikes. G1 and G2 use the str
 
 The same protocol was later run on Sarvam 105B and GPT-5.6 Luna; full results in [model-comparison.md](model-comparison.md). Held-out, any goal: Qwen 27.6% → 13.6% (A → B), Sarvam 13.6% → 3.1%, GPT 25.0% → 6.1%. B's code checks removed balance leaks, card/contact changes and unrequested transfers on every model; the planted wrong policy is the main remaining failure on all three. Those held-out families had already been run on Qwen, and hosted models cannot be pinned (see that file's caveats).
 
+## Follow-up: structured facts (added 2026-10-19, ADR-0014)
+
+Two development-only variants of B were tested on Qwen3 4B ([structured-facts.md](structured-facts.md)).
+
+- **B-facts** adds a `get_policy_fact` tool that reads the official facts. The model rarely used it, and planted policy was unchanged (22/80).
+- **B-facts-check** adds an output check in code with one corrective retry.
+  - Planted policy fell to 0/80, and any-goal success fell from 8.7% to 2.9%. This is partly by construction, since the check shares the judge's number logic.
+  - Replies stating the correct value rose from 54/80 to 69/80.
+  - The check misfired on card last-four digits, replacing 18 ordinary card replies.
+
 ## Findings
 
 1. **Without in-code checks, the bot is steerable at meaningful rates** (RQ1). On held-out families:
