@@ -62,6 +62,12 @@ TOOLS: dict[str, ToolSpec] = {t.name: t for t in (
 
 RESTRICTED_ALLOWED = frozenset({"search_policy", "get_branch_hours", "request_human_handoff"})
 
+# ADR-0014: opt-in tool for the structured-facts variants only (not part of A, B or the ablations).
+FACT_TOOL = ToolSpec("get_policy_fact", "T0",
+                     "Official value of a bank policy number (fee, charge, limit, rate, deadline, timing) from the "
+                     "bank's policy records.",
+                     {"query": Param("string", "What the customer is asking about, e.g. 'contactless limit'")})
+
 
 def validate_args(spec: ToolSpec, args: object) -> str | None:
     """Return an error string, or None if the arguments are valid."""

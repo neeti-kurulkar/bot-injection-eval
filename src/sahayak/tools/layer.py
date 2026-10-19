@@ -25,9 +25,19 @@ from sahayak.mockbank.repo import Repository
 from sahayak.policy.store import PolicyStore
 from sahayak.tools.policy_engine import PolicyEngine
 from sahayak.tools.session import SessionManager
-from sahayak.tools.specs import RESTRICTED_ALLOWED, TOOLS, ToolSpec, ollama_schema, validate_args
+from sahayak.tools.specs import FACT_TOOL, RESTRICTED_ALLOWED, TOOLS, ToolSpec, ollama_schema, validate_args
 
 RECENT_TXN_CAP = 5  # core-bank cap, kept in both conditions
+_FACTS: list[dict] | None = None
+
+
+def official_facts() -> list[dict]:
+    """The 108 structured facts, rendered from the authored corpus (ADR-0014)."""
+    global _FACTS
+    if _FACTS is None:
+        from sahayak.generate.policy_corpus import DOCS, render_doc
+        _FACTS = [f for d in DOCS for f in render_doc(d)[1]]
+    return _FACTS
 
 
 def _digest(payload: dict) -> str:
@@ -40,22 +50,24 @@ def _paise(amount: float) -> int:
 
 class ToolLayer:
     def __init__(self, repo: Repository, sessions: SessionManager, policies: PolicyStore,
-                 policy_overlay: tuple[str, ...] = ()):
+                 policy_overlay: tuple[str, ...] = (), fact_tool: bool = False):
         self.repo = repo
         self.sessions = sessions
         self.policies = policies
         self.policy_overlay = policy_overlay  # per-scenario poisoned documents (Stage 4)
         self.engine = PolicyEngine(repo)
+        self.tools = {**TOOLS, FACT_TOOL.name: FACT_TOOL} if fact_tool else TOOLS  # ADR-0014
+        self.restricted_allowed = RESTRICTED_ALLOWED | ({FACT_TOOL.name} if fact_tool else set())
 
     # ------------------------------------------------------------ schemas
     def schemas(self, restricted: bool = False) -> list[dict]:
-        names = [n for n in TOOLS if not restricted or n in RESTRICTED_ALLOWED]
-        return [ollama_schema(TOOLS[n]) for n in names]
+        names = [n for n in self.tools if not restricted or n in self.restricted_allowed]
+        return [ollama_schema(self.tools[n]) for n in names]
 
     # ------------------------------------------------------------ execute
     def execute(self, session_id: str, call: ToolCall, restricted: bool = False) -> ToolResult:
         session = self.sessions.get(session_id)
-        spec = TOOLS.get(call.name)
+        spec = self.tools.get(call.name)
         if spec is None:
             return self._finish(session, call, "UNKNOWN", False, "unknown_tool",
                                 {"denied": True, "reason": "unknown_tool"})
@@ -63,7 +75,7 @@ class ToolLayer:
         if err:
             return self._finish(session, call, spec.tier, False, "invalid_arguments",
                                 {"denied": True, "reason": "invalid_arguments", "detail": err})
-        if restricted and call.name not in RESTRICTED_ALLOWED:
+        if restricted and call.name not in self.restricted_allowed:
             return self._finish(session, call, spec.tier, False, "guard_restricted",
                                 {"denied": True, "reason": "guard_restricted"})
 
@@ -112,6 +124,15 @@ class ToolLayer:
     def _t_search_policy(self, s, a):
         hits = self.policies.search(a["query"], k=3, overlay=self.policy_overlay)
         return True, "ok", {"results": [{"doc_id": h.doc_id, "title": h.title, "text": h.text} for h in hits]}
+
+    def _t_get_policy_fact(self, s, a):
+        """ADR-0014: official structured facts of the two best-matching documents. Searches the base index only
+        (never the per-scenario overlay), so a poisoned document cannot supply a value."""
+        hits = self.policies.search(a["query"], k=2)
+        docs = list(dict.fromkeys(h.doc_id for h in hits))
+        facts = [{"doc_id": f["doc_id"], "description": f["description"], "value": f["rendered"]}
+                 for f in official_facts() if f["doc_id"] in docs]
+        return True, "ok", {"source": "official policy records", "facts": facts}
 
     def _t_get_branch_hours(self, s, a):
         branch = self.repo.branch_by_city(a["city"])

@@ -212,7 +212,7 @@ def cmd_run_benign(args: argparse.Namespace) -> int:
     policies = PolicyStore.from_dir(settings.world_dir / "policies")
     try:
         records = run(scenarios, Condition(args.condition), backend, settings, args.db, policies,
-                      load_facts(settings.world_dir), out, args.run_id, notes=args.notes)
+                      load_facts(settings.world_dir), out, args.run_id, notes=args.notes, variant=args.variant)
     except BudgetExceeded as e:
         print(f"stopped at the spending cap: {e}\nrerun the same command to resume after raising the cap")
         return 2
@@ -570,6 +570,8 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--run-id", required=True)
     r.add_argument("--backend", choices=["ollama", "stub", "sarvam", "openai"], default="ollama")
     r.add_argument("--condition", choices=["A", "B"], default="A")
+    r.add_argument("--variant", choices=["A", "B", "B-nomark", "B-noguard", "B-facts", "B-facts-check"],
+                   default=None, help="overrides --condition (ADR-0012, ADR-0014)")
     r.add_argument("--db", type=Path, default=db_default)
     r.add_argument("--limit", type=int, default=0)
     r.add_argument("--notes", default="")
@@ -607,7 +609,7 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--run-id", required=True)
     e.add_argument("--suite", choices=["dev", "heldout"], default="dev")
     e.add_argument("--condition", choices=["A", "B"], default="A")
-    e.add_argument("--variant", choices=["A", "B", "B-nomark", "B-noguard"], default=None,
+    e.add_argument("--variant", choices=["A", "B", "B-nomark", "B-noguard", "B-facts", "B-facts-check"], default=None,
                    help="overrides --condition: B = enforcement + data marking + rule guard; ablations drop one")
     e.add_argument("--backend", choices=["ollama", "stub", "sarvam", "openai"], default="ollama")
     e.add_argument("--db", type=Path, default=db_default)
