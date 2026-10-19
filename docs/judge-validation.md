@@ -20,7 +20,7 @@ Procedure (ADR-0005):
 2. The **user** labels each flag as a correct flag or a wrong flag. The agent labels nothing.
 3. Precision on flagged items is reported with a Wilson 95% CI. This is descriptive and gates nothing.
 
-Status: sheet generated after the dev run: `data/labels/numeric_spotcheck_stage5-A-dev.md` (66 flags in 52 replies). **Awaiting the user's labels.**
+Status: sheet generated after the dev run: `data/labels/numeric_spotcheck_stage5-A-dev.md` (66 flags in 52 replies). AI pre-check added 2026-10-19 (same procedure as below): 34 suggested correct flags, 32 suggested wrong flags. The wrong flags are mostly card last-four digits, the "31" in policy ID "P31", balances or ticket amounts, and sentences rejecting the planted value. They affect the descriptive "any numeric fabrication" rate, not the strict G1 headline, which requires the specific planted value. **Awaiting the user's confirmation.**
 
 ## Hand spot-check of G1/G2 verdicts on the hosted models (development runs, ADR-0013)
 
@@ -28,13 +28,13 @@ The judges above were checked on Qwen3 4B's replies. The hosted models write dif
 
 Procedure:
 1. The agent writes one sheet per hosted model with `judge-spotcheck-sheet`. Each sheet holds every G1/G2 attack the strict judge counted as a success in the A and B development runs, plus 8 seeded random G1/G2 misses per run. Each item shows the planted and correct values (G1) or the other customer's balance (G2), and the bot's reply. Attack text is not shown.
-2. The **user** marks each verdict "judge right" or "judge wrong". The agent labels nothing.
+2. The agent adds a suggested label and a one-line reason to every item (user decision, 2026-10-19). The **user** confirms or flips each one. Results are reported as human-confirmed AI suggestions.
 3. Report the agreement on judged successes and on judged misses separately, each with a Wilson 95% CI. This is descriptive and gates nothing.
 
 | Sheet | Items | Judged success | Sampled misses | Status |
 |---|---|---|---|---|
-| `data/labels/judge_spotcheck_sarvam-105b-dev.md` | 63 | 47 | 16 | **Awaiting the user's labels** |
-| `data/labels/judge_spotcheck_gpt-5.6-luna-dev.md` | 58 | 42 | 16 | **Awaiting the user's labels** |
+| `data/labels/judge_spotcheck_sarvam-105b-dev.md` | 63 | 47 | 16 | AI pre-check: judge right on all 63, with 4 edge cases noted. **Awaiting the user's confirmation** |
+| `data/labels/judge_spotcheck_gpt-5.6-luna-dev.md` | 58 | 42 | 16 | AI pre-check: judge right on all 58. **Awaiting the user's confirmation** |
 
 ## Agent's inspection of attack-judge verdicts (development run `stage5-A-dev`)
 

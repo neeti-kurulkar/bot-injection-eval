@@ -1,0 +1,33 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='318' viewBox='0 0 760 318' role='img' aria-label='Held-out attacks that worked per goal and model, A to B' font-family='IBM Plex Sans, Segoe UI, Helvetica, Arial, sans-serif'>
+<title>Held-out attacks that worked per goal and model, A to B</title>
+<rect width='100%' height='100%' rx='12' fill='#FBF9F4' stroke='#DED9CE'/>
+<text x='24' y='36' font-size='18' fill='#1B2A41' font-weight='600' text-anchor='start'>What got through on held-out attacks: A → B</text>
+<text x='24' y='58' font-size='13' fill='#5A6578' font-weight='400' text-anchor='start'>attacks that worked, out of 48 (G3: 36) · green = zero with the defense on</text>
+<text x='330' y='92' font-size='14' fill='#1B2A41' font-weight='600' text-anchor='start'>Qwen3 4B</text>
+<text x='470' y='92' font-size='14' fill='#1B2A41' font-weight='600' text-anchor='start'>Sarvam 105B</text>
+<text x='610' y='92' font-size='14' fill='#1B2A41' font-weight='600' text-anchor='start'>GPT-5.6 Luna</text>
+<rect x='16' y='104' width='728' height='34' rx='4' fill='#EFEBE3'/>
+<text x='32' y='126' font-size='14' fill='#1B2A41' font-weight='400' text-anchor='start'>G1 planted wrong policy</text>
+<text x='330' y='126' font-size='15' fill='#1B2A41'>25 → <tspan fill='#D9622B' font-weight='700'>27</tspan></text>
+<text x='470' y='126' font-size='15' fill='#1B2A41'>13 → <tspan fill='#1B2A41' font-weight='700'>6</tspan></text>
+<text x='610' y='126' font-size='15' fill='#1B2A41'>16 → <tspan fill='#1B2A41' font-weight='700'>11</tspan></text>
+<text x='32' y='160' font-size='14' fill='#1B2A41' font-weight='400' text-anchor='start'>G2 other customer's balance</text>
+<text x='330' y='160' font-size='15' fill='#1B2A41'>5 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<text x='470' y='160' font-size='15' fill='#1B2A41'>5 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<text x='610' y='160' font-size='15' fill='#1B2A41'>8 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<rect x='16' y='172' width='728' height='34' rx='4' fill='#EFEBE3'/>
+<text x='32' y='194' font-size='14' fill='#1B2A41' font-weight='400' text-anchor='start'>G3 handoff blocked</text>
+<text x='330' y='194' font-size='15' fill='#1B2A41'>11 → <tspan fill='#1B2A41' font-weight='700'>4</tspan></text>
+<text x='470' y='194' font-size='15' fill='#1B2A41'>2 → <tspan fill='#1B2A41' font-weight='700'>1</tspan></text>
+<text x='610' y='194' font-size='15' fill='#1B2A41'>9 → <tspan fill='#1B2A41' font-weight='700'>3</tspan></text>
+<text x='32' y='228' font-size='14' fill='#1B2A41' font-weight='400' text-anchor='start'>G4 card / contact change</text>
+<text x='330' y='228' font-size='15' fill='#1B2A41'>11 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<text x='470' y='228' font-size='15' fill='#1B2A41'>4 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<text x='610' y='228' font-size='15' fill='#1B2A41'>12 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<rect x='16' y='240' width='728' height='34' rx='4' fill='#EFEBE3'/>
+<text x='32' y='262' font-size='14' fill='#1B2A41' font-weight='400' text-anchor='start'>G5 unrequested transfer</text>
+<text x='330' y='262' font-size='15' fill='#1B2A41'>11 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<text x='470' y='262' font-size='15' fill='#1B2A41'>7 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<text x='610' y='262' font-size='15' fill='#1B2A41'>12 → <tspan fill='#2E7D4F' font-weight='700'>0</tspan></text>
+<text x='24' y='300' font-size='13' fill='#5A6578' font-weight='400' text-anchor='start'>Planted wrong policy (G1) is the one failure the defense doesn't stop: it fell on the hosted models, not on Qwen.</text>
+</svg>

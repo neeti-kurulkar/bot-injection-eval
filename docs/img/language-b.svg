@@ -1,0 +1,38 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='272' viewBox='0 0 760 272' role='img' aria-label='Attack success by language and model with the defense on' font-family='IBM Plex Sans, Segoe UI, Helvetica, Arial, sans-serif'>
+<title>Attack success by language and model with the defense on</title>
+<rect width='100%' height='100%' rx='12' fill='#FBF9F4' stroke='#DED9CE'/>
+<text x='24' y='36' font-size='18' fill='#1B2A41' font-weight='600' text-anchor='start'>With the defense on, by language</text>
+<text x='24' y='58' font-size='13' fill='#5A6578' font-weight='400' text-anchor='start'>% of attacks that worked · dev + held-out pooled, 152 per cell · darker = worse</text>
+<text x='240.0' y='86' font-size='13' fill='#1B2A41' font-weight='600' text-anchor='middle'>English</text>
+<text x='380.0' y='86' font-size='13' fill='#1B2A41' font-weight='600' text-anchor='middle'>Hinglish</text>
+<text x='520.0' y='86' font-size='13' fill='#1B2A41' font-weight='600' text-anchor='middle'>Devanagari Hindi</text>
+<text x='660.0' y='86' font-size='13' fill='#1B2A41' font-weight='600' text-anchor='middle'>Romanized Hindi</text>
+<text x='24' y='123' font-size='14' fill='#1B2A41' font-weight='600' text-anchor='start'>Qwen3 4B</text>
+<rect x='173' y='99' width='134' height='38' rx='5' fill='rgb(234,170,139)'/>
+<text x='240.0' y='124' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>7.9%</text>
+<rect x='313' y='99' width='134' height='38' rx='5' fill='rgb(232,164,131)'/>
+<text x='380.0' y='124' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>8.6%</text>
+<rect x='453' y='99' width='134' height='38' rx='5' fill='rgb(217,98,43)'/>
+<text x='520.0' y='124' font-size='15' fill='#FBF9F4' font-weight='600' text-anchor='middle'>15.8%</text>
+<rect x='593' y='99' width='134' height='38' rx='5' fill='rgb(229,152,115)'/>
+<text x='660.0' y='124' font-size='15' fill='#FBF9F4' font-weight='600' text-anchor='middle'>9.9%</text>
+<text x='24' y='167' font-size='14' fill='#1B2A41' font-weight='600' text-anchor='start'>Sarvam 105B</text>
+<rect x='173' y='143' width='134' height='38' rx='5' fill='rgb(246,224,211)'/>
+<text x='240.0' y='168' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>2.0%</text>
+<rect x='313' y='143' width='134' height='38' rx='5' fill='rgb(246,224,211)'/>
+<text x='380.0' y='168' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>2.0%</text>
+<rect x='453' y='143' width='134' height='38' rx='5' fill='rgb(234,170,139)'/>
+<text x='520.0' y='168' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>7.9%</text>
+<rect x='593' y='143' width='134' height='38' rx='5' fill='rgb(242,206,187)'/>
+<text x='660.0' y='168' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>3.9%</text>
+<text x='24' y='211' font-size='14' fill='#1B2A41' font-weight='600' text-anchor='start'>GPT-5.6 Luna</text>
+<rect x='173' y='187' width='134' height='38' rx='5' fill='rgb(245,218,203)'/>
+<text x='240.0' y='212' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>2.6%</text>
+<rect x='313' y='187' width='134' height='38' rx='5' fill='rgb(243,212,195)'/>
+<text x='380.0' y='212' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>3.3%</text>
+<rect x='453' y='187' width='134' height='38' rx='5' fill='rgb(232,164,131)'/>
+<text x='520.0' y='212' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>8.6%</text>
+<rect x='593' y='187' width='134' height='38' rx='5' fill='rgb(238,188,163)'/>
+<text x='660.0' y='212' font-size='15' fill='#1B2A41' font-weight='600' text-anchor='middle'>5.9%</text>
+<text x='24' y='254' font-size='13' fill='#5A6578' font-weight='400' text-anchor='start'>Devanagari Hindi is the worst language for every model, mostly because planted policy written in it is repeated more.</text>
+</svg>
