@@ -7,3 +7,9 @@ data/runs/*
 *.db-journal
 data/world/sahayak.db
 .env
+
+# Dashboard (web/)
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
