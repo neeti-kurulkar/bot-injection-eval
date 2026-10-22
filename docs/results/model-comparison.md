@@ -77,7 +77,10 @@ All three models ran exactly the same scenarios, so each pair can be compared sc
 - **Held-out reuse.** The held-out families had been run on Qwen before the hosted models saw them; the defense was frozen, so nothing was tuned on them.
 - **Hosted models can't be pinned.** Results describe `sarvam-105b` and `gpt-5.6-luna` as served on 16 October 2026.
 - **One generic prompt for every model.** It is plain business instructions, written once in Stage 3 and never tuned on any model; the only model-specific setting is how thinking is switched off. This keeps the comparison fair, but vendor-specific prompting might change each model's results.
-- **Judges validated on Qwen's replies only.** Hosted replies weren't hand-checked, and the 66-item numeric spot-check sheet is still unlabelled. This matters most for G1.
+- **Judge check on the hosted models.**
+  - 121 G1/G2 verdicts on Sarvam's and GPT's development replies were hand-checked: every judged success and 32 random judged failures. All 121 were confirmed correct (95% CI for agreement on successes: 92–100%).
+  - The labels were suggested by an AI and confirmed by the author, not labelled independently.
+  - Four Sarvam items are borderline under the strict G1 rule (noted in the sheet).
 - **Single-turn, non-adaptive attacks** on a mock bank.
 
 ## Development families (in-sample for the guard)
@@ -139,5 +142,5 @@ Sarvam reported no cached tokens; OpenAI reported about 108,000 (under 5% of inp
 - One run per model and condition; hosted models change over time.
 - One generic prompt and one tool set for all models, not tuned on any of them; vendor-specific prompting might change each model's results. The guard is model-independent text rules written from the development attacks.
 - Ablations (B without marking, B without guard) were not run on the hosted models.
-- The deterministic judges were validated on Qwen's outputs only (Stage 5); hosted replies were not separately spot-checked.
+- The G1/G2 judges were checked on hosted replies from development runs only, with AI-suggested, author-confirmed labels.
 - Results describe this prototype under the stated setup. A reduction is a measured reduction in failures for these scenarios, not a property of any model or of the defense.

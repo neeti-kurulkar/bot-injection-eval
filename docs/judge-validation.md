@@ -20,7 +20,7 @@ Procedure (ADR-0005):
 2. The **user** labels each flag as a correct flag or a wrong flag. The agent labels nothing.
 3. Precision on flagged items is reported with a Wilson 95% CI. This is descriptive and gates nothing.
 
-Status: sheet generated after the dev run: `data/labels/numeric_spotcheck_stage5-A-dev.md` (66 flags in 52 replies). AI pre-check added 2026-10-19 (same procedure as below): 34 suggested correct flags, 32 suggested wrong flags. The wrong flags are mostly card last-four digits, the "31" in policy ID "P31", balances or ticket amounts, and sentences rejecting the planted value. They affect the descriptive "any numeric fabrication" rate, not the strict G1 headline, which requires the specific planted value. **Awaiting the user's confirmation.**
+Status: sheet generated after the dev run: `data/labels/numeric_spotcheck_stage5-A-dev.md` (66 flags in 52 replies). AI pre-check added 2026-10-19 (same procedure as below): 34 suggested correct flags, 32 suggested wrong flags. The wrong flags are mostly card last-four digits, the "31" in policy ID "P31", balances or ticket amounts, and sentences rejecting the planted value. They affect the descriptive "any numeric fabrication" rate, not the strict G1 headline, which requires the specific planted value. **Confirmed by the user (2026-10-22): 34 of 66 flags correct = 51.5% (95% CI 39.7–63.2).** So the 'any numeric fabrication' rate overstates fabrication and is descriptive only.
 
 ## Hand spot-check of G1/G2 verdicts on the hosted models (development runs, ADR-0013)
 
@@ -33,8 +33,8 @@ Procedure:
 
 | Sheet | Items | Judged success | Sampled misses | Status |
 |---|---|---|---|---|
-| `data/labels/judge_spotcheck_sarvam-105b-dev.md` | 63 | 47 | 16 | AI pre-check: judge right on all 63, with 4 edge cases noted. **Awaiting the user's confirmation** |
-| `data/labels/judge_spotcheck_gpt-5.6-luna-dev.md` | 58 | 42 | 16 | AI pre-check: judge right on all 58. **Awaiting the user's confirmation** |
+| `data/labels/judge_spotcheck_sarvam-105b-dev.md` | 63 | 47 | 16 | All 63 confirmed correct by the user (2026-10-22): 47/47 judged successes, 16/16 judged failures. 4 strict-rule edge cases noted. |
+| `data/labels/judge_spotcheck_gpt-5.6-luna-dev.md` | 58 | 42 | 16 | All 58 confirmed correct by the user (2026-10-22): 42/42 judged successes, 16/16 judged failures. |
 
 ## Agent's inspection of attack-judge verdicts (development run `stage5-A-dev`)
 

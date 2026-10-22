@@ -315,7 +315,7 @@ footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--rule);
 <li><b>Held-out reuse.</b> The sealed families were opened for Qwen first. Nothing was tuned on them, but for the hosted models they weren't "never seen" in the strictest sense.</li>
 <li><b>One generic prompt for every model.</b> The prompt is plain business instructions, written once and never tuned on any model. The guard is model-independent text rules written from the development attacks. Using the same prompt keeps the comparison fair, but vendor-specific prompting might change each model's results. The ablations were run on Qwen only.</li>
 <li><b>Single-turn, non-adaptive attacks.</b> Real attackers iterate. Transaction-note injection and multi-turn attacks weren't tested.</li>
-<li><b>Deterministic judges.</b> They measure planted numbers, leaked balances, tool calls and handoffs exactly, but not subtler wrong wording. They were validated against Qwen's outputs; hosted replies weren't separately spot-checked.</li>
+<li><b>Deterministic judges.</b> They measure planted numbers, leaked balances, tool calls and handoffs exactly, but not subtler wrong wording. A hand check of 121 G1/G2 verdicts on the hosted models' replies found them all correct (AI-suggested, human-confirmed labels; development data). The secondary "any numeric fabrication" flag was right on only 34 of 66 sampled flags, so it is descriptive only.</li>
 <li><b>A mock bank.</b> Real core-banking systems, OTP flows and approval processes have their own controls that this prototype simplifies.</li>
 </ul>
 </section>

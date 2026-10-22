@@ -134,7 +134,7 @@ tests/         unit, integration and evaluation tests
 - **Small samples.** One run per model and condition. Per-goal cells have 36–48 attacks and per-language cells 57 on held-out.
 - **Prompt and models.** One generic prompt is used for all models. Hosted models cannot be pinned, and results reflect them as served in October 2026.
 - **Held-out reuse.** The held-out families were run on Qwen3 4B before the hosted models. The defense was frozen and nothing was tuned on them.
-- **Scoring coverage.** Only numeric policy fabrication is measured. Judge spot-checks on hosted-model replies are pending human confirmation.
+- **Scoring coverage.** Only numeric policy fabrication is measured. A hand check of 121 G1/G2 verdicts on hosted-model replies confirmed all of them; the labels were AI-suggested and author-confirmed, on development data.
 
 This is not a red-team engagement against any real system, and no regulatory compliance is claimed ([RBI mapping](docs/rbi-mapping.md)).
 
